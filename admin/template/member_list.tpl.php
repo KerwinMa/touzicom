@@ -83,7 +83,7 @@ if ($t['regip']=='223.167.33.43') {
 	echo $t['regip'];
 	}
 ?></td>
-            <td align="left"><?php echo $t['device']; ?></td>
+            <td align="left"><?php if($t['device']){if($t['device'] == 'pc'){echo '电脑端注册';}else{echo '手机端注册';}} ?></td>
 
 			<td align="left"><a href="<?php echo url('member/edit',array('id'=>$t['id'])); ?>">详细</a> | 
 
