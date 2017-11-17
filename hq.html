@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>全国中小企业股份转让系统</title>
+<link type="text/css" rel="stylesheet" href="./hq/global.css">
+<link type="text/css" rel="stylesheet" href="./hq/top.css">
+<script type="text/javascript" src="./hq/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//异步加载头尾
+		 getDailyList();
+	});
+	function getPageSelect(cruPage){
+		$("#pageId").val(cruPage);
+		return getSpecialList();
+	}
+	function add0(m){return m<10?'0'+m:m; }
+	
+	//取小数点后两位
+	function formateFix(str){
+		if(str==undefined || isNaN(str)){
+			return "--";
+		}else{
+			return str.toFixed(2);
+		}		
+	}
+	
+	//格式化数据(万)
+	function formatNumWan(str){
+		if(str!=null && str!=''){
+		    return (str/10000).toFixed(2);
+		}else if(str=='0'){
+			return "0";
+		}else{
+			return "--";
+		}
+	}
+	//格式化数据(亿)
+	function formatNumYi(str){
+		if(str!=null && str!=''){
+		  return (str/100000000).toFixed(2);
+		}else if(str=='0'){
+			return "0";
+		}else{
+			return "--";
+		}  
+	}
+	//格式化数据(百分号)
+	function formatePercent(str){
+		if(str!=null && str!=''){
+		  return (str*100).toFixed(2)+"%";
+		}else{
+			return "--";
+		}
+	}
+	//格式化数据(转让方式)
+	function formateTMway(str){
+		if(str=='T'){
+			return "协议";
+		}else if (str=='M'){
+			return "做市";
+		}else if (str=='C'){
+			return "竞价";
+		}
+	}
+	//环比变动
+	function formateRing(str1,str2){
+		if(str1!=null && str1!=''&&str2!=null && str2!=''){
+		  var str=(str2-str1)*100/str1;
+	        return str.toFixed(2)+"%";
+		}else{
+			return "--";
+		}
+	}
+	//除法运算(除数为0处理)
+	function formateDivide(str1,str2){
+		if(str1!=null && str1!=''&&str2!=null && str2!=''){
+			return (str1/str2).toFixed(2);
+		}else{
+			return "--";
+		}
+	}
+	//未识别字符判断
+	function formateNan(str){
+		if(str==undefined || isNaN(str)){
+			return "--";
+		}else{
+			return str;
+		}
+	}
+	//
+	function formatZero(str){
+		if(str==undefined || isNaN(str)){
+			return 0;
+		}else{
+			return str;
+		}
+	}
+	
+	//日报
+	function getDailyList(){
+		var dailyDate=$("#dailyDate").val();
+		$.ajax({
+			type : 'post',
+			url : 'http://www.neeq.com.cn/marketStatController/dailyReport.do',
+			data : {
+				HQJSRQ : dailyDate
+			},
+			dataType : 'jsonp',
+			success : function(result) {
+				$("#dailyReport").empty();
+				var dailySource ="";
+				if(result != '' && result != null){
+					if(result.length < 3){
+						dailySource	+="<tr><th width='200' class='tc'>项目</th><th class='tc'>做市转让</th><th class='tc'>协议转让</th><th class='tc'>合计</th></tr>"
+									+"<tr><td class='tc'>挂牌公司家数</td><td class='tc'>"+result[1].gpgsjs+"</td><td class='tc'>"+result[0].gpgsjs+"</td><td class='tc'>"+(result[0].gpgsjs+result[1].gpgsjs)+"</td></tr>"
+				                    +"<tr><td class='tc'>当日新增家数</td><td class='tc'>"+result[1].drxzjs+"</td><td class='tc'>"+result[0].drxzjs+"</td><td class='tc'>"+(result[0].drxzjs+result[1].drxzjs)+"</td></tr>"
+				                    +"<tr><td class='tc'>总股本（亿股）</td><td class='tc'>"+formatNumYi(result[1].xxzgb)+"</td><td class='tc'>"+formatNumYi(result[0].xxzgb)+"</td><td class='tc'>"+formatNumYi(result[0].xxzgb+result[1].xxzgb)+"</td></tr>"
+				                    +"<tr><td class='tc'>流通股本（亿股）</td><td class='tc'>"+formatNumYi(result[1].xxfxsgb)+"</td><td class='tc'>"+formatNumYi(result[0].xxfxsgb)+"</td><td class='tc'>"+formatNumYi(result[0].xxfxsgb+result[1].xxfxsgb)+"</td></tr>"
+				                    +"<tr><td class='tc'>成交股票只数</td><td class='tc'>"+result[1].hqcjzs+"</td><td class='tc'>"+result[0].hqcjzs+"</td><td class='tc'>"+(result[0].hqcjzs+result[1].hqcjzs)+"</td></tr>"
+				                    +"<tr><td class='tc'>成交金额（万元）</td><td class='tc'>"+formatNumWan(result[1].hqcjje)+"</td><td class='tc'>"+formatNumWan(result[0].hqcjje)+"</td><td class='tc'>"+formatNumWan(result[0].hqcjje+result[1].hqcjje)+"</td></tr>"
+				                    +"<tr><td class='tc'>成交数量（万股）</td><td class='tc'>"+formatNumWan(result[1].hqcjsl)+"</td><td class='tc'>"+formatNumWan(result[0].hqcjsl)+"</td><td class='tc'>"+formatNumWan(result[0].hqcjsl+result[1].hqcjsl)+"</td></tr>";
+					}else{
+						dailySource	+="<div class='gua_item'><div class='guat'>总挂牌（家）</br><span>"+(result[0].gpgsjs+result[1].gpgsjs)+"</span></div><div class='guab'><p>新股挂牌</br>共<u>"+(result[0].drxzjs+result[1].drxzjs)+"</u>只</p></div></div>"
+			                    +"<div class='gua_item'><div class='guat'>做市转让（家）</br><span>"+result[1].gpgsjs+"</span></div><div class='guab'><p>做市股票新增</br>共<u>"+result[1].drxzjs+"</u>只</p></div></div>"
+			                    +"<div class='gua_item'><div class='guat'>协议转让（家）</br><span>"+result[0].gpgsjs+"</span></div><div class='guab'><p>协议股票新增</br>共<u>"+result[0].drxzjs+"</u>只</p></div></div>"
+			              	    +"<div class='gua_item'><div class='guat'>成交股数（万股）</br><span>"+formatNumWan(result[0].hqcjsl+result[1].hqcjsl)+"</span></div><div class='guab'><p>成交股票个数</br>共<u>"+(result[0].hqcjzs+result[1].hqcjzs)+"</u>只</p></div></div>"
+			                    +"<div class='gua_item'><div class='guat'>成交金额（万元）</br><span>"+formatNumWan(result[0].hqcjje+result[1].hqcjje)+"</span></div><div class='guab'><p>做市成交股</br>共<u>"+result[1].hqcjzs+"</u>只</p></div></div>"
+			                    +"<div class='gua_item te1'><div class='guat'>流通股本（亿股）</br><span>"+formatNumYi(result[0].xxfxsgb+result[1].xxfxsgb)+"</span></div><div class='guab'><p>协议成交股</br>共<u>"+result[0].hqcjzs+"</u>只</p></div></div>";
+					}
+					if($("#dailyDate").val() == '' || $("#dailyDate").val() == null){
+						dailySource = "";
+						$("#dailyDate").val(result[0].rq);
+						getDailyList();
+					}
+				}else{
+					dailySource +="<div>暂无数据!</div>";
+				}
+				$("#dailyReport").append(dailySource);
+		}
+	});
+	}
+</script>
+</head>
+<body>
+<div>
+  <input type="hidden" id="pageId" value="0">
+  <input type="text" onfocus="WdatePicker({dateFmt:&#39;yyyyMMdd&#39;,maxDate:&#39;%y%M%d&#39;,disabledDays:[0,6]});" id="dailyDate" class="time3 mr10 input" style="width:179px; height:35px;  padding-left:5px; display:none;">
+</div>
+<div class="gua_list" id="dailyReport"><div class="gua_item"><div class="guat">总挂牌（家）<br><span>11284</span></div><div class="guab"><p>新股挂牌<br>共<u>1</u>只</p></div></div><div class="gua_item"><div class="guat">做市转让（家）<br><span>1513</span></div><div class="guab"><p>做市股票新增<br>共<u>-2</u>只</p></div></div><div class="gua_item"><div class="guat">协议转让（家）<br><span>9771</span></div><div class="guab"><p>协议股票新增<br>共<u>3</u>只</p></div></div><div class="gua_item"><div class="guat">成交股数（万股）<br><span>11769.69</span></div><div class="guab"><p>成交股票个数<br>共<u>868</u>只</p></div></div><div class="gua_item"><div class="guat">成交金额（万元）<br><span>60141.05</span></div><div class="guab"><p>做市成交股<br>共<u>503</u>只</p></div></div><div class="gua_item te1"><div class="guat">流通股本（亿股）<br><span>3114.43</span></div><div class="guab"><p>协议成交股<br>共<u>365</u>只</p></div></div></div>
+
+
+</body></html>

@@ -1,0 +1,958 @@
+{xiao:template header.html}
+
+ 
+
+<div id="banner">
+
+  <div class="main_visual">
+
+    <!--黑白圆点代码开始-->
+
+    <div class="flicking_con">
+
+      <div class="flicking_inner"><a href=""></a>
+
+<a href=""></a>
+
+<a href=""></a>
+
+<a href=""></a>
+
+<a href=""></a>
+
+</div>
+
+    </div>
+
+    <!--黑白圆点代码结束-->
+
+    <!--banner主图开始-->
+
+    <div class="main_image">
+
+      <ul>
+
+<li><a target="_blank" href="#"><span style="background:url({xiao:block 4}) center top no-repeat"></span></a></li>
+
+<li><a target="_blank" href="#"><span style="background:url({xiao:block 2}) center top no-repeat"></span></a></li>
+
+<li><a target="_blank" href="#"><span style="background:url({xiao:block 3}) center top no-repeat"></span></a></li>
+
+<li><a target="_blank" href="#"><span style="background:url({xiao:block 1}) center top no-repeat"></span></a></li>
+
+<li><a target="_blank" href="#"><span style="background:url({xiao:block 5}) center top no-repeat"></span></a></li>
+
+
+
+      </ul>
+
+      <!--圆点之间自动切换开始-->
+
+      <a href="javascript:;" id="btn_prev"></a> <a href="javascript:;" id="btn_next"></a>
+
+      <!--圆点之间自动切换结束-->
+
+    </div>
+
+    <!--banner主图结束-->
+
+  </div>
+
+</div>
+
+<!--banner结束-->
+
+<!--第一部分开始-->
+
+<div class="simu1">
+
+  <ul class="simu-list">
+
+    <li class="simu-item"> <em class="simu-icon simu-list1"></em> <span>八家风投公司注资</span> </li>
+
+    <li class="simu-item"> <em class="simu-icon simu-list2"></em> <span>专业投顾一对一服务</span> </li>
+
+    <li class="simu-item"> <em class="simu-icon simu-list3"></em> <span>10000会员的信任</span> </li>
+
+    <li class="simu-item"> <em class="simu-icon simu-list4"></em> <span>咨询热线：<em style="font-size: 20px;font-weight: 700;color: #f60">{xiao:block 6}</em></span> </li>
+
+  </ul>
+
+</div>
+
+<!--第一部分结束-->
+
+<!--主体案例开始-->
+
+<div id="container">
+
+<div class="container">
+<div class="gua1">
+      <div class="title1">
+        <div class="tit2"> <span>挂牌统计</span> </div>
+        <div class="tnav"> <span>LISTING STATISTICS </span>
+          <ul class="tnav_list">
+            <li class="tnav_item on"><a href="http://www.touzitop.com/index.php?catid=6" target="_blank">行情中心</a><i>|</i></li>
+            <li class="tnav_item"><a href="http://www.touzitop.com/index.php?catid=27" target="_blank">排行情况</a><i>|</i></li>
+          </ul>
+          <a href="http://www.touzitop.com/index.php?catid=6" target="_blank" class="ptype">查看更多&gt;&gt;</a> </div>
+      </div>
+      	 <iframe src="http://www.touzitop.com/hq.html" width="100%" height="200" marginheight="0" marginwidth="0" frameborder="0" scrolling="no"></iframe>
+    </div>
+<div class="contain1">
+
+  <!--标题1开始-->
+
+  <div class="title1"> <em></em><a target="_blank" href="{xiao:$cats[1][url]}"> 优选项目</a> <a class="ptype" target="_blank" href="{xiao:$cats[1][url]}">更多项目</a> </div>
+
+  <!--标题1结束-->
+
+  <div class="pro-list"> 
+
+  {xiao:list catid=1 xiaocms=1   num=4 cache=0   status=3}
+
+  <dl class="pro-list1">
+
+      <a href="{xiao:$xiao['url']}">
+
+      <dd class="pro-logo"> <img src="{xiao:function.image($xiao[thumb])}" width="192" height="134">
+
+        <div class="cover">
+
+          <p>查看详情</p>
+
+        </div>
+
+      </dd>
+
+      <dt class="pro-mes">
+
+        <div class="pro-mes1">{xiao:$xiao['title']}</div>
+
+        <ul class="right_list">
+
+          <li class="right_item"> <em class="project_item"><img src="{xiao:$site_template}images/picon1.png"></em>
+
+            <p class="project_item2"><span class="item2_type">所属行业:</span><span class="item2_detail">{xiao:$xiao['industry']}</span></p>
+
+          </li>
+
+          <li class="right_item"> <em class="project_item"><img src="{xiao:$site_template}images/picon2.png"></em>
+
+            <p class="project_item2"><span class="item2_type">所属地区:</span><span class="item2_detail">{xiao:$xiao['area']}</span></p>
+
+          </li>
+
+          <li class="right_item"> <em class="project_item"><img src="{xiao:$site_template}images/picon3.png"></em>
+
+            <p class="project_item2"><span class="item2_type">项目状态:</span><span class="item2_detail">{xiao:$xiao['state']}</span></p>
+
+          </li>
+
+          <li class="right_item"> <em class="project_item"><img src="{xiao:$site_template}images/picon4.png"></em>
+
+            <p class="project_item2"><span class="item2_type">投资类型:</span><span class="item2_detail">{xiao:$xiao['leixing']}</span></p>
+
+          </li>
+
+        </ul>
+
+      </dt>
+
+      </a>
+
+    </dl>
+
+{/xiao:list}
+
+ </div>
+
+</div>
+
+<!--专题开始-->
+
+<div class="contain2">
+
+  <div class="title1"> <em></em> <a  target="_blank" href="{xiao:$cats[2][url]}"> 热门专题</a> <a class="ptype" target="_blank" href="{xiao:$cats[26][url]}">更多专题</a></div>
+
+  <ul class="sub-list">{xiao:list catid=26    num=4 cache=0  xiaocms=1  }
+
+    <li class="sub-item"> <a href="{xiao:$xiao['url']}"><img src="{xiao:$xiao['shouyetupian']}" alt="{xiao:$xiao['title']}"  width="290" height="150"></a> </li>
+
+{/xiao:list}
+
+
+
+  </ul>
+
+</div>
+
+<!--专题结束-->
+
+<div class="contain3">
+
+  <div class="contain-left">
+
+    <div class="title2"> <em></em> <a target="{xiao:$cats[1][url]}" href="http://www.touzitop.com/index.php?catid=1"> 股权项目</a> </div>
+
+    <div class="Rlist">
+
+      <ul class="Rlist1">
+
+        <li class="Rlist1-item selected">全部</li>
+
+        <li class="Rlist1-item">信息通讯</li>
+
+        <li class="Rlist1-item">消费服务</li>
+
+        <li class="Rlist1-item">移动互联</li>
+
+        <li class="Rlist1-item">文化传媒</li>
+
+        <li class="Rlist1-item">能源材料</li>
+
+        <li class="Rlist1-item">金融服务</li>
+
+        <li class="Rlist1-item">节能环保</li>
+
+        <li class="Rlist1-item1"><a target="_blank" href="/deals">更多>></a></li>
+
+      </ul>
+
+      <div>
+
+        <div class="form1">
+
+          <ul class="formtittle">
+
+            <li class="item1">排名</li>
+
+            <li class="item2">产品名称</li>
+
+            <li class="item3">所属行业</li>
+
+            <li class="item4">产品状态</li>
+
+            <li class="item5">所处地区</li>
+
+            <li class="item5">咨询企业</li>
+
+            <li class="btn1">操作</li>
+
+          </ul>
+{xiao:php $i = 1; }{xiao:list catid=1 num=10 cache=0 xiaocms=1 }
+          <ul class="formtittle part{xiao:if $i%2==0}1{/xiao:if}
+">
+
+          <li class="item1 bg{xiao:php echo $i ;}">{xiao:php echo $i ;}</li>
+
+          <li class="item2"><a href="{xiao:$xiao['url']}">{xiao:$xiao['title']}</a></li>
+
+          <li class="item3">{xiao:$xiao['leixing']}</li>
+
+          <li class="item4">{xiao:$xiao['state']}</li>
+
+          <li class="item5">{xiao:$xiao['area']}</li>
+
+          <li class="item5"><a href="http://ala.zoosnet.net/lr/chatpre.aspx?id=ala52875673" rel="nofollow" >联系企业</a></li>
+
+          <li class="btn1"><a href="{xiao:$xiao['url']}">查看详情</a></li>
+
+          </ul> {xiao:php $i++;} {/xiao:list}</div>
+ 
+        <div class="form1" style="display:none;">
+
+          <ul class="formtittle">
+
+            <li class="item1">排名</li>
+
+            <li class="item2">产品名称</li>
+
+            <li class="item3">所属行业</li>
+
+            <li class="item4">产品状态</li>
+
+            <li class="item5">所处地区</li>
+
+            <li class="item5">咨询企业</li>
+
+            <li class="btn1">操作</li>
+
+          </ul>
+{xiao:php $i = 1; }{xiao:list catid=1 num=10 cache=0 xiaocms=1   industry=信息通讯}
+          <ul class="formtittle part1">
+
+          <li class="item1 bg{xiao:php echo $i ;}">{xiao:php echo $i ;}</li>
+
+          <li class="item2"><a href="{xiao:$xiao['url']}">{xiao:$xiao['title']}</a></li>
+
+          <li class="item3">信息通讯</li>
+
+          <li class="item4">{xiao:$xiao['state']}</li>
+
+          <li class="item5">{xiao:$xiao['area']}</li>
+
+          <li class="item5"><a href="http://ala.zoosnet.net/lr/chatpre.aspx?id=ala52875673" rel="nofollow" >联系企业</a></li>
+
+          <li class="btn1"><a href="{xiao:$xiao['url']}">查看详情</a></li>
+
+          </ul> {xiao:php $i++;} {/xiao:list} </div>
+          
+   
+
+        <div class="form1" style="display:none;">
+
+          <ul class="formtittle">
+
+            <li class="item1">排名</li>
+
+            <li class="item2">产品名称</li>
+
+            <li class="item3">所属行业</li>
+
+            <li class="item4">产品状态</li>
+
+            <li class="item5">所处地区</li>
+
+            <li class="item5">咨询企业</li>
+
+            <li class="btn1">操作</li>
+
+          </ul>
+  {xiao:php $i = 1; }{xiao:list catid=1 num=10 cache=0 xiaocms=1   industry=消费服务}
+          <ul class="formtittle part1">
+
+          <li class="item1 bg{xiao:php echo $i ;}">{xiao:php echo $i ;}</li>
+
+          <li class="item2"><a href="{xiao:$xiao['url']}">{xiao:$xiao['title']}</a></li>
+
+          <li class="item3">消费服务</li>
+
+          <li class="item4">{xiao:$xiao['state']}</li>
+
+          <li class="item5">{xiao:$xiao['area']}</li>
+
+          <li class="item5"><a href="http://ala.zoosnet.net/lr/chatpre.aspx?id=ala52875673" rel="nofollow" >联系企业</a></li>
+
+          <li class="btn1"><a href="{xiao:$xiao['url']}">查看详情</a></li>
+
+          </ul> {xiao:php $i++;} {/xiao:list} </div>
+
+        <div class="form1" style="display:none;">
+
+          <ul class="formtittle">
+
+            <li class="item1">排名</li>
+
+            <li class="item2">产品名称</li>
+
+            <li class="item3">所属行业</li>
+
+            <li class="item4">产品状态</li>
+
+            <li class="item5">所处地区</li>
+
+            <li class="item5">咨询企业</li>
+
+            <li class="btn1">操作</li>
+
+          </ul>
+
+         {xiao:php $i = 1; }{xiao:list catid=1 num=10 cache=0 xiaocms=1   industry=移动互联}
+          <ul class="formtittle part1">
+
+          <li class="item1 bg{xiao:php echo $i ;}">{xiao:php echo $i ;}</li>
+
+          <li class="item2"><a href="{xiao:$xiao['url']}">{xiao:$xiao['title']}</a></li>
+
+          <li class="item3">移动互联</li>
+
+          <li class="item4">{xiao:$xiao['state']}</li>
+
+          <li class="item5">{xiao:$xiao['area']}</li>
+
+          <li class="item5"><a href="http://ala.zoosnet.net/lr/chatpre.aspx?id=ala52875673" rel="nofollow" >联系企业</a></li>
+
+          <li class="btn1"><a href="{xiao:$xiao['url']}">查看详情</a></li>
+
+          </ul> {xiao:php $i++;} {/xiao:list} </div>
+
+        <div class="form1" style="display:none;">
+
+          <ul class="formtittle">
+
+            <li class="item1">排名</li>
+
+            <li class="item2">产品名称</li>
+
+            <li class="item3">所属行业</li>
+
+            <li class="item4">产品状态</li>
+
+            <li class="item5">所处地区</li>
+
+            <li class="item5">咨询企业</li>
+
+            <li class="btn1">操作</li>
+
+          </ul>
+
+       {xiao:php $i = 1; }{xiao:list catid=1 num=10 cache=0 xiaocms=1   industry=文化传媒}
+          <ul class="formtittle part1">
+
+          <li class="item1 bg{xiao:php echo $i ;}">{xiao:php echo $i ;}</li>
+
+          <li class="item2"><a href="{xiao:$xiao['url']}">{xiao:$xiao['title']}</a></li>
+
+          <li class="item3">文化传媒</li>
+
+          <li class="item4">{xiao:$xiao['state']}</li>
+
+          <li class="item5">{xiao:$xiao['area']}</li>
+
+          <li class="item5"><a href="http://ala.zoosnet.net/lr/chatpre.aspx?id=ala52875673" rel="nofollow" >联系企业</a></li>
+
+          <li class="btn1"><a href="{xiao:$xiao['url']}">查看详情</a></li>
+
+          </ul> {xiao:php $i++;} {/xiao:list} </div>
+
+        <div class="form1" style="display:none;">
+
+          <ul class="formtittle">
+
+            <li class="item1">排名</li>
+
+            <li class="item2">产品名称</li>
+
+            <li class="item3">所属行业</li>
+
+            <li class="item4">产品状态</li>
+
+            <li class="item5">所处地区</li>
+
+            <li class="item5">咨询企业</li>
+
+            <li class="btn1">操作</li>
+
+          </ul>
+
+             {xiao:php $i = 1; }{xiao:list catid=1 num=10 cache=0 xiaocms=1   industry=能源材料}
+          <ul class="formtittle part1">
+
+          <li class="item1 bg{xiao:php echo $i ;}">{xiao:php echo $i ;}</li>
+
+          <li class="item2"><a href="{xiao:$xiao['url']}">{xiao:$xiao['title']}</a></li>
+
+          <li class="item3">能源材料</li>
+
+          <li class="item4">{xiao:$xiao['state']}</li>
+
+          <li class="item5">{xiao:$xiao['area']}</li>
+
+          <li class="item5"><a href="http://ala.zoosnet.net/lr/chatpre.aspx?id=ala52875673" rel="nofollow" >联系企业</a></li>
+
+          <li class="btn1"><a href="{xiao:$xiao['url']}">查看详情</a></li>
+
+          </ul> {xiao:php $i++;} {/xiao:list}</div>
+
+        <div class="form1" style="display:none;">
+
+          <ul class="formtittle">
+
+            <li class="item1">排名</li>
+
+            <li class="item2">产品名称</li>
+
+            <li class="item3">所属行业</li>
+
+            <li class="item4">产品状态</li>
+
+            <li class="item5">所处地区</li>
+
+            <li class="item5">咨询企业</li>
+
+            <li class="btn1">操作</li>
+
+          </ul>
+
+                     {xiao:php $i = 1; }{xiao:list catid=1 num=10 cache=0 xiaocms=1   industry=金融服务}
+          <ul class="formtittle part1">
+
+          <li class="item1 bg{xiao:php echo $i ;}">{xiao:php echo $i ;}</li>
+
+          <li class="item2"><a href="{xiao:$xiao['url']}">{xiao:$xiao['title']}</a></li>
+
+          <li class="item3">金融服务</li>
+
+          <li class="item4">{xiao:$xiao['state']}</li>
+
+          <li class="item5">{xiao:$xiao['area']}</li>
+
+          <li class="item5"><a href="http://ala.zoosnet.net/lr/chatpre.aspx?id=ala52875673" rel="nofollow" >联系企业</a></li>
+
+          <li class="btn1"><a href="{xiao:$xiao['url']}">查看详情</a></li>
+
+          </ul> {xiao:php $i++;} {/xiao:list} </div>
+
+        <div class="form1" style="display:none;">
+
+          <ul class="formtittle">
+
+            <li class="item1">排名</li>
+
+            <li class="item2">产品名称</li>
+
+            <li class="item3">所属行业</li>
+
+            <li class="item4">产品状态</li>
+
+            <li class="item5">所处地区</li>
+
+            <li class="item5">咨询企业</li>
+
+            <li class="btn1">操作</li>
+
+          </ul>
+
+                     {xiao:php $i = 1; }{xiao:list catid=1 num=10 cache=0 xiaocms=1   industry=节能环保}
+          <ul class="formtittle part1">
+
+          <li class="item1 bg{xiao:php echo $i ;}">{xiao:php echo $i ;}</li>
+
+          <li class="item2"><a href="{xiao:$xiao['url']}">{xiao:$xiao['title']}</a></li>
+
+          <li class="item3">节能环保</li>
+
+          <li class="item4">{xiao:$xiao['state']}</li>
+
+          <li class="item5">{xiao:$xiao['area']}</li>
+
+          <li class="item5"><a href="http://ala.zoosnet.net/lr/chatpre.aspx?id=ala52875673" rel="nofollow" >联系企业</a></li>
+
+          <li class="btn1"><a href="{xiao:$xiao['url']}">查看详情</a></li>
+
+          </ul> {xiao:php $i++;} {/xiao:list}</div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!--右部分理财服务-->
+
+  <div class="contain-right">
+
+    <div class="title1 item"> <em></em> <a target="_blank" href="http://www.touzitop.com/index.php?catid=6">新三板指数一览</a> <a class="ptype" target="_blank" href="http://www.touzitop.com/index.php?catid=6">查看详情</a></div>
+
+    <div class="service">
+
+     <iframe src="http://xinsanban.10jqka.com.cn/hq_r.html#code=120_899002&type=fs" width="100%" height="265" marginheight="0" marginwidth="0" frameborder="0" scrolling="no"></iframe>
+
+    </div>
+
+
+
+    <div class="service">
+
+	<iframe src="http://xinsanban.10jqka.com.cn/hq_r.html#code=120_899001&type=kl" width="100%" height="265" marginheight="0" marginwidth="0" frameborder="0" scrolling="no"></iframe>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!--视频直播-->
+
+<div class="video1">
+
+  <div class="title1"> <em></em> <a target="_blank" href="{xiao:$cats[5][url]}"> 视频中心</a> <a class="ptype" target="_blank" href="{xiao:$cats[5][url]}">更多视频</a></div>
+
+  <ul class="video-list">{xiao:php $i =1; }{xiao:list catid=5 num=3 cache=0 }
+
+    <li class="video-item item{xiao:php echo $i;}"> <a href="{xiao:$xiao['url']}" target="_blank"><img src="{xiao:function.image($xiao[thumb])}" width="380px" height="176px" alt="{xiao:$xiao['title']}"></a></li>
+
+ {xiao:php $i++;}
+
+{/xiao:list}
+
+
+
+  </ul>
+
+</div>
+
+<!--视频直播结束-->
+
+<!--原创研究开始-->
+
+<div class="report1">
+
+<div class="title1"> <em></em><a target="_blank" href="{xiao:$cats[4][url]}"> 原创·研究</a> <a class="ptype" target="_blank" href="{xiao:$cats[4][url]}">查看更多</a> </div>
+
+<div class="report-list"> 
+
+  <div class="report-item item1">
+
+      <div class="ritem-top">
+
+        <div class="ritem-topleft">
+
+          <div class="type">三板调研</div>
+
+          <div class="label"> <span>行业</span> <span>市场</span> <span>调研</span> </div>
+
+        </div>
+
+        <a href="/index.php?catid=13">更多...</a> </div>
+
+      <ul class="listmes">{xiao:list catid=13 num=4 cache=0 }
+
+        <li class="listmes-item"><a href="{xiao:$xiao['url']}" target="_blank">·{xiao:function.strcut($xiao[title],40)}...</a></li>
+
+{/xiao:list}
+
+
+
+
+
+      </ul>
+
+    </div>
+
+    <div class="report-item">
+
+      <div class="ritem-top">
+
+        <div class="ritem-topleft">
+
+          <div class="type">机构观点</div>
+
+          <div class="label"> <span>行业</span> <span>市场</span> <span>调研</span> </div>
+
+        </div>
+
+        <a href="/index.php?catid=14">更多...</a> </div>
+
+      <ul class="listmes">{xiao:list catid=14 num=4 cache=0 }
+
+        <li class="listmes-item"><a href="{xiao:$xiao['url']}" target="_blank">·{xiao:function.strcut($xiao[title],40)}...</a></li>
+
+{/xiao:list}
+
+
+
+      </ul>
+
+    </div>
+
+    <div class="report-item">
+
+      <div class="ritem-top">
+
+        <div class="ritem-topleft">
+
+          <div class="type">项目分析</div>
+
+          <div class="label"> <span>行业</span> <span>市场</span> <span>调研</span> </div>
+
+        </div>
+
+        <a href="/index.php?catid=15">更多...</a> </div>
+
+      <ul class="listmes">{xiao:list catid=15 num=4 cache=0 }
+
+        <li class="listmes-item"><a href="{xiao:$xiao['url']}" target="_blank">·{xiao:function.strcut($xiao[title],40)}...</a></li>
+
+{/xiao:list}
+
+
+
+      </ul>
+
+    </div> </div>
+
+</div>
+
+<!--原创研究结束-->
+
+<!--三板资讯开始-->
+
+<div class="news">
+
+  <div class="title1"> <em></em><a target="_blank" href="http://www.touzitop.com/index.php?catid=3"> {xiao:$cats[3][catname]}</a> <a  class="ptype" target="_blank" href="{xiao:$cats[3][url]}">查看更多</a> </div>
+
+  <div class="news-list">
+
+    <ul class="news-nav">
+
+        {xiao:php $i = 0; }{xiao:nav num=10 parentid=3} 
+
+      <li class="nav-item {xiao:if $i==0} select{/xiao:if}"> <a href='{xiao:$xiao['url']}'>{xiao:$xiao['catname']}</a></li>
+
+  {xiao:php $i++;}{/xiao:nav} 
+
+    </ul>
+
+    <div> 	 
+
+      <div class="news-item">
+
+          <div class="news-item1">{xiao:list catid=8 num=2 cache=0 } <div class="news1">
+
+              <div class="newsp"><img src="{xiao:function.image($xiao[thumb])}" alt="{xiao:$xiao['title']}"></div>
+
+              <div class="newsmes">
+
+                <div><a href="{xiao:$xiao['url']}">{xiao:function.strcut($xiao[title],34)}</a></div>
+
+                <p>{xiao:function.strcut($xiao[description],92)}...<a href="{xiao:$xiao['url']}">【详细】</a></p>
+
+              </div>
+
+            </div>
+
+{/xiao:list}
+
+ </div>
+
+          <div class="news-right">
+
+            <ul class="news-rlist">{xiao:list catid=8 num=6 order=time cache=0 }
+
+              <li class="news-ritem"><em></em><a href="{xiao:$xiao['url']}" target="_blank">{xiao:$xiao['title']}</a><span>{xiao:function.date("Y-m-d", $xiao['time'])}</span></li>
+
+{/xiao:list}
+
+
+
+            </ul>
+
+          </div>
+
+        </div>
+
+        <div class="news-item" style="display:none">
+
+            <div class="news-item1">{xiao:list catid=9 num=2 cache=0 } <div class="news1">
+
+              <div class="newsp"><img src="{xiao:function.image($xiao[thumb])}" alt="{xiao:$xiao['title']}"></div>
+
+              <div class="newsmes">
+
+                <div><a href="{xiao:$xiao['url']}">{xiao:function.strcut($xiao[title],34)}</a></div>
+
+                <p>{xiao:function.strcut($xiao[description],92)}...<a href="{xiao:$xiao['url']}">【详细】</a></p>
+
+              </div>
+
+            </div>
+
+{/xiao:list}
+
+ </div>
+
+          <div class="news-right">
+
+            <ul class="news-rlist">{xiao:list catid=9 num=6 order=time cache=0 }
+
+              <li class="news-ritem"><em></em><a href="{xiao:$xiao['url']}" target="_blank">{xiao:$xiao['title']}</a><span>{xiao:function.date("Y-m-d", $xiao['time'])}</span></li>
+
+{/xiao:list}
+
+
+
+            </ul>
+
+          </div>
+
+        </div>
+
+        <div class="news-item" style="display:none">
+
+            <div class="news-item1">{xiao:list catid=10 num=2 cache=0 } <div class="news1">
+
+              <div class="newsp"><img src="{xiao:function.image($xiao[thumb])}" alt="{xiao:$xiao['title']}"></div>
+
+              <div class="newsmes">
+
+                <div><a href="{xiao:$xiao['url']}">{xiao:function.strcut($xiao[title],34)}</a></div>
+
+                <p>{xiao:function.strcut($xiao[description],92)}...<a href="{xiao:$xiao['url']}">【详细】</a></p>
+
+              </div>
+
+            </div>
+
+{/xiao:list}
+
+ </div>
+
+          <div class="news-right">
+
+            <ul class="news-rlist">{xiao:list catid=10 num=6 order=time cache=0 }
+
+              <li class="news-ritem"><em></em><a href="{xiao:$xiao['url']}" target="_blank">{xiao:$xiao['title']}</a><span>{xiao:function.date("Y-m-d", $xiao['time'])}</span></li>
+
+{/xiao:list}
+
+
+
+            </ul>
+
+          </div>
+
+        </div>
+
+        <div class="news-item" style="display:none">
+
+             <div class="news-item1">{xiao:list catid=11 num=2 cache=0 } <div class="news1">
+
+              <div class="newsp"><img src="{xiao:function.image($xiao[thumb])}" alt="{xiao:$xiao['title']}"></div>
+
+              <div class="newsmes">
+
+                <div><a href="{xiao:$xiao['url']}">{xiao:function.strcut($xiao[title],34)}</a></div>
+
+                <p>{xiao:function.strcut($xiao[description],92)}...<a href="{xiao:$xiao['url']}">【详细】</a></p>
+
+              </div>
+
+            </div>
+
+{/xiao:list}
+
+ </div>
+
+          <div class="news-right">
+
+            <ul class="news-rlist">{xiao:list catid=11 num=6 order=time cache=0 }
+
+              <li class="news-ritem"><em></em><a href="{xiao:$xiao['url']}" target="_blank">{xiao:$xiao['title']}</a><span>{xiao:function.date("Y-m-d", $xiao['time'])}</span></li>
+
+{/xiao:list}
+
+
+
+            </ul>
+
+          </div>
+
+        </div>
+
+        <div class="news-item" style="display:none">
+
+          <div class="news-item1">{xiao:list catid=12 num=2 cache=0 } <div class="news1">
+
+              <div class="newsp"><img src="{xiao:function.image($xiao[thumb])}" alt="{xiao:$xiao['title']}"></div>
+
+              <div class="newsmes">
+
+                <div><a href="{xiao:$xiao['url']}">{xiao:function.strcut($xiao[title],34)}</a></div>
+
+                <p>{xiao:function.strcut($xiao[description],92)}...<a href="{xiao:$xiao['url']}">【详细】</a></p>
+
+              </div>
+
+            </div>
+
+{/xiao:list}
+
+ </div>
+
+          <div class="news-right">
+
+            <ul class="news-rlist">{xiao:list catid=12 num=6 order=time cache=0 }
+
+              <li class="news-ritem"><em></em><a href="{xiao:$xiao['url']}" target="_blank">{xiao:$xiao['title']}</a><span>{xiao:function.date("Y-m-d", $xiao['time'])}</span></li>
+
+{/xiao:list}
+
+
+
+            </ul>
+
+          </div>
+
+        </div> </div>
+
+    </div>
+
+  </div>
+
+  <!--资讯结束-->
+
+  <!--宣传图片1开始-->
+
+  <div class="xbanner"><a href="{xiao:$cats[1][url]}" target="_blank"><img src="{xiao:$site_template}images/xbanner.jpg"></a>  </div>
+
+  <!--宣传图片1结束-->
+
+  <!--投资资讯开始-->
+
+  <div class="simuclass">
+
+    <div class="title1"> <em></em> <a target="_blank" href="{xiao:$cats[16][url]}"> 投资资讯</a> <a class="ptype" target="_blank" href="{xiao:$cats[16][url]}">查看更多</a> </div>
+
+    <div class="class-list"> 
+
+      <div class="class-list1 item">
+
+          <div class="class-tittle"> 投资要闻<a href="{xiao:$cats[17][url]}">更多..</a> </div>
+
+          <ul class="class-msg">{xiao:list catid=17 num=5 cache=0 }
+
+          
+
+            <li class="class-item"><em></em><a href="{xiao:$xiao['url']}">【投资要闻】{xiao:function.strcut($xiao[title],30)}</a></li>
+
+{/xiao:list}
+
+
+
+          </ul>
+
+        </div>
+
+        <div class="class-list1">
+
+          <div class="class-tittle"> 投资走向<a href="{xiao:$cats[18][url]}">更多..</a> </div>
+
+          <ul class="class-msg">{xiao:list catid=18 num=5 cache=0 }
+
+            <li class="class-item"><em></em><a href="{xiao:$xiao['url']}">【投资走向】{xiao:function.strcut($xiao[title],30)}</a></li>
+
+{/xiao:list}
+
+
+
+          </ul>
+
+        </div>
+
+        <div class="class-list1">
+
+          <div class="class-tittle"> 投资百科<a href="{xiao:$cats[19][url]}">更多..</a> </div>
+
+          <ul class="class-msg">{xiao:list catid=19 num=5 cache=0 }
+
+            <li class="class-item"><em></em><a href="{xiao:$xiao['url']}">【投资百科】{xiao:function.strcut($xiao[title],30)}</a></li>
+
+{/xiao:list}
+
+
+
+          </ul>
+
+        </div> </div>
+
+    </div>
+
+    <!--投资资讯结束-->
+
+  </div>
+
+</div>
+
+{xiao:template footer.html}

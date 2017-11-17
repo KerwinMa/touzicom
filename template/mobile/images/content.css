@@ -1,0 +1,94 @@
+﻿/*大图开始*/
+.slider{display:none}/*用于获取更加体验*/
+.focus span{width:10px;height:10px;margin-right:10px;border-radius:50%;background:#666;font-size:0}
+.focus span.current{background:#fff}
+/*大图结束*/
+/*图标导航开始*/
+.content{width:100%;background-color:#f2f2f2;float:left;margin-bottom:5rem;}
+.icon_list{width:96%;background:#fff;margin-top:5px;float:left;padding: 2%;}
+.icon_item{width:33%;float:left;text-align: center;border-right: 1px solid #eaeaea;}
+.icon_item:last-child{border:none;}
+.icon_item a{color:#333;font-size:1.6rem;line-height:2em;}
+.picon{padding:0 20%;}
+.picon img{width:65%;}
+/*图标导航结束*/
+.swiper-container {
+        width: 96%;
+        height:100%;
+        padding:0 2%;
+        float:left;
+    }
+.swiper-container1{
+        width:100%;
+        height:100%;
+        float:left;
+        overflow: hidden;
+        position:relative;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: block;
+        
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+/*热门专题开始*/
+.hot{width:100%;background:#fff;margin-top:5px;float:left;}
+.htit{width:96%;margin:0 2%;float:left;height:40px;line-height:40px;color:#f5c67c;}
+.mtit{width:18px;float:left;margin-right:10px;margin-top:10px;}
+.mtit img{width:100%;float:left;}
+.htit span{font-size:1.6rem;float:left;letter-spacing:1px;}
+.htit a{float: right;font-size:1.2rem;color:#f5c67c;}
+.swiper-slide a{width:100%;display: block;float:left;color:#333;font-size:1rem;}
+.swiper-slide a img{width:100%;}
+.swiper-slide p{width:100%; text-align: center;line-height:1.5rem;font-size:1rem;margin:0.5rem 0;float:left;}
+
+.htitle{width:96%;margin:0 2%;float:left;height:40px;line-height:40px;color:#f5c67c;}
+.htitle span{font-size:1.6rem;float:left;letter-spacing:1px;}
+.htitle a{float: right;font-size:1.2rem;color:#f5c67c;}
+/*热门专题结束*/
+/*股权项目开始*/
+.gu{width:100%;background:#fff;margin-top:5px;float:left;}
+.gulist{width:96%;margin:2%;float:left;}
+.guitem{width:47%;float:left;margin-bottom:10px;box-shadow:3px 3px 3px #eaeaea;border:0.5px solid #efefef;}
+.guitem:nth-of-type(odd){margin-right:4%;}
+.guitem:nth-of-type(even){margin-right:0}
+.guitem img{width:96%;margin:2%;}
+.guitem a{color:#333;}
+.ptit{font-size:1.6rem;text-align: center;line-height:1.5em;}
+.pbiao{width:100%;position:relative;margin:7% 0;justify-content:center;float:left;}
+.pbl{width:47%;float:left;line-height:20px;margin-left:2%;}
+.pbl:nth-of-type(even){text-align: right;margin-right: 2%;}
+.line{width:1px;height:20px;background:#eaeaea;position: absolute;}
+.pbl img{width:20%;align-items:center;}
+.pbl span{color:#666;align-items:center;font-size:1rem;}
+/*股权项目结束*/
+/*三板资讯开始*/
+.xun{width:100%;background:#fff;margin-top:5px;float:left;}
+.newsv{width:100%;float:left;margin:5px 0;padding:5px 0;}
+.newsitem{width:25%;font-size:1.4rem;background:#fff;float:left;margin-left:6%;text-align: center;height:4rem;border-radius:5px;line-height:4rem;}
+.newsitem.cur1{background:#f5c67c;color:#fff;font-weight:bold;}
+.xunlist{width:100%;background:#fff;float:left;}
+.xunitem{display: none;}
+.xunitem a{display: block;padding:5% 2%;display: -webkit-box;-webkit-box-sizing: border-box;color:#333;border-bottom:1px dashed #eaeaea;}
+.xunitem a:last-child{border:none;}
+.xpic{width:120px;height:60px;}
+.xpicr{-webkit-box-flex:1;padding-left:5%;overflow: hidden;}
+.xptit{font-size:1.4rem;line-height:3rem;height:3rem;overflow: hidden;}
+.newsd{width:100%; height: 2rem;line-height: 2rem;float:left;color:#999;}
+.newsd span{width:15px;float:left;margin-right:5%;}
+.newsd span img{width:100%;align-items:center;}
+/*三板资讯结束*/

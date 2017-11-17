@@ -1,0 +1,451 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>行情中心-中国新三板股权投资平台_第一股权网</title>
+<meta name="keywords" content="行情中心,新三板数据行情,新三板数据中心" />
+<meta name="description" content="" />
+<link href="{xiao:$site_template}images/1.css" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet" href="{xiao:$site_template}images/main.css">
+<link type="text/css" rel="stylesheet" href="{xiao:$site_template}images/demo.css">
+<link type="text/css" rel="stylesheet" href="{xiao:$site_template}images/common.css">
+<script type="text/javascript" src="{xiao:$site_template}images/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="{xiao:$site_template}images/base.js"></script>
+<script type="text/javascript" src="{xiao:$site_template}images/com.js"></script>
+<script type="text/javascript" src="{xiao:$site_template}images/jquery.pagination.js"></script>
+ 
+ 
+</head>
+ 
+<script type="text/javascript">
+$(function() {
+	 var tabId = getQueryString("tabId");
+	 var type = (tabId == null || tabId == "") ? 'G' : tabId;
+
+	 if(type == "CX" || type == "JC" || type == "L"|| type == "A"|| type == "B") {
+	 	$(".tab_none").hide();
+	 } else {
+	 	$(".tab_none").show();
+	 }
+
+	 $("#xxfcbj").val("");
+	 var xxfcbjParam = getQueryString("xxfcbj");
+	 if(xxfcbjParam != "0" && xxfcbjParam != "1") {
+		 xxfcbjParam = "";
+	 }
+	 if(xxfcbjParam != null && xxfcbjParam != "") {
+		 $("#xxfcbj").val(xxfcbjParam);
+		 $(".tab_none ul li").each(function () {
+		 	$(".tab_none ul li").siblings().attr("class", "");
+	 	 });
+	 	 $(".tab_none ul li[flag='" + xxfcbjParam + "']").attr("class", "add");
+	 }
+	 //异步加载数据,默认加载
+	 loadQuotationData(type);
+	 $("#" + type).css("color", "#d34038");
+	 
+	 $(".cont dl").click(function(){
+		$(".cont dl dt").removeClass('add_subm');
+		$(this).find('dt').addClass('add_subm').css('color','#d34038');
+	 });
+	 
+});
+
+function getPageSelect(cruPage){
+	var type = $("#typename").val();
+	$("#pageId").val(cruPage);
+	loadQuotationData(type);
+}
+
+function tabClick(type){
+	$("#pageId").val(0);
+	$("#Pagination").empty();
+	window.location.href = "http://www.neeq.com.cn/nq/quotation.html?tabId="+type;
+	//loadQuotationData(type);
+}
+
+/**
+ * 排序
+ */
+function sortable(fieldName){
+	$("#dmsortLabel").val("");
+	$("#lxsortLabel").val("");
+	$("#spsortLabel").val("");
+	$("#kpsortLabel").val("");
+	$("#cjsortLabel").val("");
+	$("#slsortLabel").val("");
+	$("#cjesortLabel").val("");
+	$("#zgcjsortLabel").val("");
+	$("#zdcjsortLabel").val("");
+	$("#bjsortLabel").val("");
+	$("#sjsortLabel").val("");
+	$("#zdsortLabel").val("");
+	$("#zdfsortLabel").val("");
+	var str = "<em>↑</em>";
+	//排序的字段
+	$("#sortfield").val(fieldName);
+	//排序方式 desc 、asc
+	var sort = $("#sorttype").val();
+	var sorttype = (sort == null || sort == "") ? "asc" : sort ;
+	if (sorttype == 'desc' || sorttype == 'DESC'){
+		str = "<em><img src='http://www.touzitop.com/template/san/images/icon-change-down.png'></em>";
+		$("#sorttype").val('asc');
+	}else{
+		str = "<em><img src='http://www.touzitop.com/template/san/images/icon-change-up.png'></em>";
+		$("#sorttype").val('desc');
+	}
+	//排序箭头标识
+	switch(fieldName){
+		case "hqzqdm":
+			$("#dmsortLabel").val(str);	
+			break;
+		case "xxzrlx":
+			$("#lxsortLabel").val(str);
+			break;
+		case "hqzrsp":
+			$("#spsortLabel").val(str);
+			break;
+		case "hqjrkp":
+			$("#kpsortLabel").val(str);
+			break;
+		case "hqzjcj":
+			$("#cjsortLabel").val(str);
+			break;
+		case "hqcjsl":
+			$("#slsortLabel").val(str);
+			break;
+		case "hqcjje":
+			$("#cjesortLabel").val(str);
+			break;
+		case "hqzgcj":
+			$("#zgcjsortLabel").val(str);
+			break;
+		case "hqzdcj":
+			$("#zdcjsortLabel").val(str);
+			break;
+		case "hqbjw1":
+			$("#bjsortLabel").val(str);
+			break;
+		case "hqsjw1":
+			$("#sjsortLabel").val(str);
+			break;
+		case "hqzdf":
+			$("#zdfsortLabel").val(str);
+			break;
+		default:
+			$("#dmsortLabel").val(str);	
+	}
+	loadQuotationData($("#typename").val());
+}
+
+function loadQuotationData(type){
+	var dmsort = $("#dmsortLabel").val();
+	var lxsort = $("#lxsortLabel").val();
+	var spsort = $("#spsortLabel").val();
+	var kpsort = $("#kpsortLabel").val();
+	var cjsort = $("#cjsortLabel").val();
+	var slsort = $("#slsortLabel").val();
+	var cjesort = $("#cjesortLabel").val();
+	var zgcjsort = $("#zgcjsortLabel").val();
+	var zdcjsort = $("#zdcjsortLabel").val();
+	var bjsort = $("#bjsortLabel").val();
+	var sjsort = $("#sjsortLabel").val();
+	var zdfsort = $("#zdfsortLabel").val();
+	var code = getQueryString("companyCode");
+	var zqdm = ($("#companyCode").val() == null || $("#companyCode").val() == "") ? code : $("#companyCode").val();
+	var xxfcbj = $("#xxfcbj").val();
+	var keyword = $("#keyword").val() == "关键字" ? "" : $("#keyword").val();
+	//type :'ALL'： 交易行情(所有)，'G':挂牌公司，'T':协议方式，'Z'：做市方式，'J':竞价方式，'L':两网及退市， 'A'：A股，'B':B股
+	$("#typename").val(type);
+	//标题文本
+	setTitle($("#titlespan"), type);
+	setTitle($("#titlespan2"), type);
+
+	if(type == "JC" || type == "CX") {
+		xxfcbj = "";
+	}
+
+		$.ajax({
+			url : 'http://www.neeq.com.cn/nqhqController/nqhq.do',
+			data:{
+				page : $("#pageId").val(),
+				type : type,
+				zqdm : zqdm,
+				sortfield : $("#sortfield").val(),
+				sorttype : $("#sorttype").val(),
+				xxfcbj: xxfcbj,
+				keyword: keyword
+			},
+			dataType : 'jsonp',
+			success : function(result) {
+				$("#quotationbody").empty();
+				$("#Pagination").empty();
+				var source= "";
+				if (result[0].totalElements > 0){
+					if(type == 'G'){
+						//处理挂牌公司查询 申报明细、成交明细入口不一致问题
+						if (result[0].totalElements == 1 && result[0].content[0].xxzrlx == "协议"){
+							source += "<table width='100%' border='0' cellpadding='0' cellspacing='0'>"
+							 source += "<tbody><tr class='store'>"
+							 source += "<th class='tc' width='10%' style='cursor:pointer' id='hqzqdm' onclick='sortable(\"hqzqdm\");'><a>代码"+dmsort+"</a></th>"
+							 source += "<th class='tc' width='10%'><font class='tcol'>简称</font></th>"
+							 source += "<th class='tc' width='5%' style='cursor:pointer' id='hqzrsp' onclick='sortable(\"hqzrsp\");'><a>前收"+spsort+"</a></th>"
+							 source += "<th class='tc' width='5%' style='cursor:pointer' id='hqjrkp' onclick='sortable(\"hqjrkp\");'><a>开盘"+kpsort+"</a></th>"
+							 source += "<th class='tc' width='7%' style='cursor:pointer' id='hqzjcj' onclick='sortable(\"hqzjcj\");'><a>成交价"+cjsort+"</a></th>"
+							 source += "<th class='tc' width='7%' style='cursor:pointer' id='hqcjsl' onclick='sortable(\"hqcjsl\");'><a>成交量<p>(万股)"+slsort+"</p></a></th>"
+							 source += "<th class='tc' width='9%' style='cursor:pointer' id='hqcjje' onclick='sortable(\"hqcjje\");'><a>成交额<p>(万元)"+cjesort+"</p></a></th>"
+							 source += "<th class='tc' width='6%' style='cursor:pointer' id='hqzgcj' onclick='sortable(\"hqzgcj\");'><a>最高"+zgcjsort+"</a></th>"
+							 source += "<th class='tc' width='6%' style='cursor:pointer' id='hqzdcj' onclick='sortable(\"hqzdcj\");'><a>最低"+zdcjsort+"</a></th>"
+							 source += "<th class='tc' width='7%' style='cursor:pointer' id='hqbjw1' onclick='sortable(\"hqbjw1\");'><a>买一价"+bjsort+"</a></th>"
+
+							 source += "<th class='tc' width='7%' style='cursor:pointer' id='hqsjw1' onclick='sortable(\"hqsjw1\");'><a>卖一价"+sjsort+"</a></th>"
+							 source += "<th class='tc' width='10%' style='cursor:pointer' id='hqzdf' onclick='sortable(\"hqzdf\");'><a>涨跌幅"+zdfsort+"</a></th>"
+							 source += "<th class='tc' width='11%'><font class='tcol'>详细</font></th></tr>"
+							 for (var i=0; i<result[0].content.length;i++){
+								 source += "<tr>"
+								 source +="<td class='tc aunderline'>";
+								 var xxfcbjIcon = "";
+								 if(result[0].content[i].xxfcbj == "0") {
+									 xxfcbjIcon = "base_ico";
+								 } else if(result[0].content[i].xxfcbj == "1") {
+									 xxfcbjIcon = "innovation_ico";
+								 }
+								 source +="<a href='detailcompany.html?companyCode="+result[0].content[i].hqzqdm+"&typename="+type+"&zrlx="+encodeURI(result[0].content[i].xxzrlx)+"' class='"+xxfcbjIcon+"'>"+result[0].content[i].hqzqdm+"</a></td>"
+								 source +="<td class='tc'>"+result[0].content[i].hqzqjc+"</td>"
+								 source +="<td class='tc'>"+result[0].content[i].hqzrsp.toFixed(2)+"</td>"
+								 source +="<td class='tc'>"+result[0].content[i].hqjrkp.toFixed(2)+"</td>"
+								 source +="<td class='tc'>"+result[0].content[i].hqzjcj.toFixed(2)+"</td>"
+								 source +="<td class='tc'>"+(Math.round(result[0].content[i].hqcjsl/10000*100)/100).toFixed(2)+"</td>"
+								 source +="<td class='tc'>"+(Math.round(result[0].content[i].hqcjje/10000*100)/100).toFixed(2)+"</td>"
+								 source +="<td class='tc'>"+result[0].content[i].hqzgcj.toFixed(2)+"</td>"
+								 source +="<td class='tc'>"+result[0].content[i].hqzdcj.toFixed(2)+"</td>"
+								 source +="<td class='tc'>"+result[0].content[i].hqbjw1.toFixed(2)+"</td>"
+								 source +="<td class='tc'>"+result[0].content[i].hqsjw1.toFixed(2)+"</td>"
+								 source +="<td class='tc'>"+changeColor(result[0].content[i].hqzdf.toFixed(2))+"%</b></td>"
+								 source +="<td><a class='abtn1 remk' href='detailcompany.html?companyCode="+result[0].content[i].hqzqdm+"&companyName="+encodeURI(encodeURI(result[0].content[i].hqzqjc))+"&typename="+type+"&zrlx="+encodeURI(result[0].content[i].xxzrlx)+"'>申报</a>"
+								 source +="<a class='abtn2' href='detailcompany.html?companyCode="+result[0].content[i].hqzqdm+"&companyName="+encodeURI(encodeURI(result[0].content[i].hqzqjc))+"&typename="+type+"&zrlx="+encodeURI(result[0].content[i].xxzrlx)+"'>成交</a></td>"
+								 source +="</tr></tbody>"
+							 }
+						 	source += "</table>";
+						}else{
+							 source += "<table width='100%' border='0' cellpadding='0' cellspacing='0'>"
+							 source += "<tbody><tr class='store'>"
+							 source += "<th class='tc' width='10%' style='cursor:pointer' id='hqzqdm' onclick='sortable(\"hqzqdm\");'><a>代码"+dmsort+"</a></th>"
+							 source += "<th class='tc' width='11%'><font class='tcol'>简称</font></th>"
+							 source += "<th class='tc' width='6%' style='cursor:pointer' id='hqzrsp' onclick='sortable(\"hqzrsp\");'><a>前收"+spsort+"</a></th>"
+							 source += "<th class='tc' width='6%' style='cursor:pointer' id='hqjrkp' onclick='sortable(\"hqjrkp\");'><a>开盘"+kpsort+"</a></th>"
+							 source += "<th class='tc' width='7%' style='cursor:pointer' id='hqzjcj' onclick='sortable(\"hqzjcj\");'><a>成交价"+cjsort+"</a></th>"
+							 source += "<th class='tc' width='7%' style='cursor:pointer' id='hqcjsl' onclick='sortable(\"hqcjsl\");'><a>成交量<p>(万股)"+slsort+"</p></a></th>"
+							 source += "<th class='tc' width='11%' style='cursor:pointer' id='hqcjje' onclick='sortable(\"hqcjje\");'><a>成交额<p>(万元)"+cjesort+"</p></a></th>"
+							 source += "<th class='tc' width='7%' style='cursor:pointer' id='hqzgcj' onclick='sortable(\"hqzgcj\");'><a>最高"+zgcjsort+"</a></th>"
+							 source += "<th class='tc' width='7%' style='cursor:pointer' id='hqzdcj' onclick='sortable(\"hqzdcj\");'><a>最低"+zdcjsort+"</a></th>"
+							 source += "<th class='tc' width='8%' style='cursor:pointer' id='hqbjw1' onclick='sortable(\"hqbjw1\");'><a>买一价"+bjsort+"</a></th>"
+							 source += "<th class='tc' width='8%' style='cursor:pointer' id='hqsjw1' onclick='sortable(\"hqsjw1\");'><a>卖一价"+sjsort+"</a></th>"
+							 source += "<th class='tc' width='10%' style='cursor:pointer' id='hqzdf' onclick='sortable(\"hqzdf\");'><a>涨跌幅"+zdfsort+"</a></th>"
+							 for (var i=0; i<result[0].content.length;i++){
+								 source += "<tr>"
+								 source +="<td class='tc aunderline'>";
+								 var xxfcbjIcon = "";
+								 if(result[0].content[i].xxfcbj == "0") {
+									 xxfcbjIcon = "base_ico";
+								 } else if(result[0].content[i].xxfcbj == "1") {
+									 xxfcbjIcon = "innovation_ico";
+								 }
+								 source +="<a href='detailcompany.html?companyCode="+result[0].content[i].hqzqdm+"&typename="+type+"&zrlx="+encodeURI(result[0].content[i].xxzrlx)+"' class='"+xxfcbjIcon+"'>"+result[0].content[i].hqzqdm+"</a></td>"
+								 source +="<td class='tc'>"+result[0].content[i].hqzqjc+"</td>"
+								 source +="<td class='tc'>"+result[0].content[i].hqzrsp.toFixed(2)+"</td>"
+								 source +="<td class='tc'>"+result[0].content[i].hqjrkp.toFixed(2)+"</td>"
+								 source +="<td class='tc'>"+result[0].content[i].hqzjcj.toFixed(2)+"</td>"
+								 source +="<td class='tc'>"+(Math.round(result[0].content[i].hqcjsl/10000*100)/100).toFixed(2)+"</td>"
+								 source +="<td class='tc'>"+(Math.round(result[0].content[i].hqcjje/10000*100)/100).toFixed(2)+"</td>"
+								 source +="<td class='tc'>"+result[0].content[i].hqzgcj.toFixed(2)+"</td>"
+								 source +="<td class='tc'>"+result[0].content[i].hqzdcj.toFixed(2)+"</td>"
+								 source +="<td class='tc'>"+result[0].content[i].hqbjw1.toFixed(2)+"</td>"
+								 source +="<td class='tc'>"+result[0].content[i].hqsjw1.toFixed(2)+"</td>"
+								 source +="<td class='tc'>"+changeColor(result[0].content[i].hqzdf.toFixed(2))+"%</b></td>"
+								 source +="</tr></tbody>"
+							 }
+						 	source += "</table>";
+						}
+					}else if(type == 'X'){
+						 source += "<table width='100%' border='0' cellpadding='0' cellspacing='0'>"
+						 source += "<tbody><tr class='store'>"
+						 source += "<th class='tc' width='10%' style='cursor:pointer' id='hqzqdm' onclick='sortable(\"hqzqdm\");'><a>代码"+dmsort+"</a></th>"
+						 source += "<th class='tc' width='10%'><font class='tcol'>简称</font></th>"
+						 source += "<th class='tc' width='6%' style='cursor:pointer' id='hqzrsp' onclick='sortable(\"hqzrsp\");'><a>前收"+spsort+"</a></th>"
+						 source += "<th class='tc' width='6%' style='cursor:pointer' id='hqjrkp' onclick='sortable(\"hqjrkp\");'><a>开盘"+kpsort+"</a></th>"
+						 source += "<th class='tc' width='7%' style='cursor:pointer' id='hqzjcj' onclick='sortable(\"hqzjcj\");'><a>成交价"+cjsort+"</a></th>"
+						 source += "<th class='tc' width='7%' style='cursor:pointer' id='hqcjsl' onclick='sortable(\"hqcjsl\");'><a>成交量<p>(万股)"+slsort+"</p></a></th>"
+						 source += "<th class='tc' width='9%' style='cursor:pointer' id='hqcjje' onclick='sortable(\"hqcjje\");'><a>成交额<p>(万元)"+cjesort+"</p></a></th>"
+						 source += "<th class='tc' width='6%' style='cursor:pointer' id='hqzgcj' onclick='sortable(\"hqzgcj\");'><a>最高"+zgcjsort+"</a></th>"
+						 source += "<th class='tc' width='6%' style='cursor:pointer' id='hqzdcj' onclick='sortable(\"hqzdcj\");'><a>最低"+zdcjsort+"</a></th>"
+						 source += "<th class='tc' width='6%' style='cursor:pointer' id='hqbjw1' onclick='sortable(\"hqbjw1\");'><a>买一价"+bjsort+"</a></th>"
+						 source += "<th class='tc' width='6%' style='cursor:pointer' id='hqsjw1' onclick='sortable(\"hqsjw1\");'><a>卖一价"+sjsort+"</a></th>"
+						 source += "<th class='tc' width='10%' style='cursor:pointer' id='hqzdf' onclick='sortable(\"hqzdf\");'><a>涨跌幅"+zdfsort+"</a></th>"
+						 source += "<th class='tc' width='11%'><font class='tcol'>详细</font></th></tr>"
+						 for (var i=0; i<result[0].content.length;i++){
+							 source += "<tr>"
+							 source +="<td class='tc aunderline'>";
+							 var xxfcbjIcon = "";
+							 if(result[0].content[i].xxfcbj == "0") {
+								 xxfcbjIcon = "base_ico";
+							 } else if(result[0].content[i].xxfcbj == "1") {
+								 xxfcbjIcon = "innovation_ico";
+							 }
+							 source +="<a href='detailcompany.html?companyCode="+result[0].content[i].hqzqdm+"&typename="+type+"&zrlx="+encodeURI(result[0].content[i].xxzrlx)+"' class='"+xxfcbjIcon+"'>"+result[0].content[i].hqzqdm+"</a></td>"
+							 source +="<td class='tc'>"+result[0].content[i].hqzqjc+"</td>"
+							 source +="<td class='tc'>"+result[0].content[i].hqzrsp.toFixed(2)+"</td>"
+							 source +="<td class='tc'>"+result[0].content[i].hqjrkp.toFixed(2)+"</td>"
+							 source +="<td class='tc'>"+result[0].content[i].hqzjcj.toFixed(2)+"</td>"
+							 source +="<td class='tc'>"+(Math.round(result[0].content[i].hqcjsl/10000*100)/100).toFixed(2)+"</td>"
+							 source +="<td class='tc'>"+(Math.round(result[0].content[i].hqcjje/10000*100)/100).toFixed(2)+"</td>"
+							 source +="<td class='tc'>"+result[0].content[i].hqzgcj.toFixed(2)+"</td>"
+							 source +="<td class='tc'>"+result[0].content[i].hqzdcj.toFixed(2)+"</td>"
+							 source +="<td class='tc'>"+result[0].content[i].hqbjw1.toFixed(2)+"</td>"
+							 source +="<td class='tc'>"+result[0].content[i].hqsjw1.toFixed(2)+"</td>"
+							 source +="<td class='tc'>"+changeColor(result[0].content[i].hqzdf.toFixed(2))+"%</b></td>"
+							 source +="<td><a class='abtn1 remk' href='detailcompany.html?companyCode="+result[0].content[i].hqzqdm+"&companyName="+encodeURI(encodeURI(result[0].content[i].hqzqjc))+"&typename="+type+"&zrlx="+encodeURI(result[0].content[i].xxzrlx)+"'>申报</a>"
+							 source +="<a class='abtn2' href='detailcompany.html?companyCode="+result[0].content[i].hqzqdm+"&companyName="+encodeURI(encodeURI(result[0].content[i].hqzqjc))+"&typename="+type+"&zrlx="+encodeURI(result[0].content[i].xxzrlx)+"'>成交</a></td>"
+							 source +="</tr></tbody>"
+						 }
+					 	source += "</table>";
+					}else {
+						source += "<table width='100%' border='0' cellpadding='0' cellspacing='0'>"
+						 source += "<tbody><tr class='store'>"
+						 source += "<th class='tc' width='6%' style='cursor:pointer' id='hqzqdm' onclick='sortable(\"hqzqdm\");'><a>代码"+dmsort+"</a></th>"
+						 source += "<th class='tc' width='10%'><font class='tcol'>简称</font></th>"
+						if(type == "JC" || type == "CX") {
+							source += "<th class='tc' width='8%'><font class='tcol'>转让方式</font></th>"
+						}
+						 source += "<th class='tc' width='6%' style='cursor:pointer' id='hqzrsp' onclick='sortable(\"hqzrsp\");'><a>前收"+spsort+"</a></th>"
+						 source += "<th class='tc' width='6%' style='cursor:pointer' id='hqjrkp' onclick='sortable(\"hqjrkp\");'><a>开盘"+kpsort+"</a></th>"
+						 source += "<th class='tc' width='7%' style='cursor:pointer' id='hqzjcj' onclick='sortable(\"hqzjcj\");'><a>成交价"+cjsort+"</a></th>"
+						 source += "<th class='tc' width='7%' style='cursor:pointer' id='hqcjsl' onclick='sortable(\"hqcjsl\");'><a>成交量<p>(万股)"+slsort+"</p></a></th>"
+						 source += "<th class='tc' width='10%' style='cursor:pointer' id='hqcjje' onclick='sortable(\"hqcjje\");'><a>成交额<p>(万元)"+cjesort+"</p></a></th>"
+						 source += "<th class='tc' width='7%' style='cursor:pointer' id='hqzgcj' onclick='sortable(\"hqzgcj\");'><a>最高"+zgcjsort+"</a></th>"
+						 source += "<th class='tc' width='7%' style='cursor:pointer' id='hqzdcj' onclick='sortable(\"hqzdcj\");'><a>最低"+zdcjsort+"</a></th>"
+						 source += "<th class='tc' width='8%' style='cursor:pointer' id='hqbjw1' onclick='sortable(\"hqbjw1\");'><a>买一价"+bjsort+"</a></th>"
+						 source += "<th class='tc' width='8%' style='cursor:pointer' id='hqsjw1' onclick='sortable(\"hqsjw1\");'><a>卖一价"+sjsort+"</a></th>"
+						 source += "<th class='tc' width='12%' style='cursor:pointer' id='hqzdf' onclick='sortable(\"hqzdf\");'><a>涨跌幅"+zdfsort+"</a></th>"
+						 for (var i=0; i<result[0].content.length;i++){
+							 source += "<tr>"
+							 source +="<td class='tc aunderline'>";
+							 var xxfcbjIcon = "";
+							 if(result[0].content[i].xxfcbj == "0") {
+								 xxfcbjIcon = "base_ico";
+							 } else if(result[0].content[i].xxfcbj == "1") {
+								 xxfcbjIcon = "innovation_ico";
+							 }
+							 source +="<a href='detailcompany.html?companyCode="+result[0].content[i].hqzqdm+"&typename="+type+"&zrlx="+encodeURI(result[0].content[i].xxzrlx)+"' class='"+xxfcbjIcon+"'>"+result[0].content[i].hqzqdm+"</a></td>"
+							 source +="<td class='tc'>"+result[0].content[i].hqzqjc+"</td>"
+							 if(type == "JC" || type == "CX") {
+								 source += "<td class='tc'>" + result[0].content[i].xxzrlx + "</td>"
+							 }
+							 source +="<td class='tc'>"+result[0].content[i].hqzrsp.toFixed(2)+"</td>"
+							 source +="<td class='tc'>"+result[0].content[i].hqjrkp.toFixed(2)+"</td>"
+							 source +="<td class='tc'>"+result[0].content[i].hqzjcj.toFixed(2)+"</td>"
+							 source +="<td class='tc'>"+(Math.round(result[0].content[i].hqcjsl/10000*100)/100).toFixed(2)+"</td>"
+							 source +="<td class='tc'>"+(Math.round(result[0].content[i].hqcjje/10000*100)/100).toFixed(2)+"</td>"
+							 source +="<td class='tc'>"+result[0].content[i].hqzgcj.toFixed(2)+"</td>"
+							 source +="<td class='tc'>"+result[0].content[i].hqzdcj.toFixed(2)+"</td>"
+							 source +="<td class='tc'>"+result[0].content[i].hqbjw1.toFixed(2)+"</td>"
+							 source +="<td class='tc'>"+result[0].content[i].hqsjw1.toFixed(2)+"</td>"
+							 source +="<td class='tc'>"+changeColor(result[0].content[i].hqzdf.toFixed(2))+"%</b></td>"
+							 source +="</tr></tbody>"
+						 }
+					 	source += "</table>";
+					}
+					$("#Pagination").pagination(result[0].totalElements, {
+						items_per_page : 20,
+						current_page : result[0].number, 				 //当前选中的页面
+						num_edge_entries : 2,           //两侧显示的首尾分页的条目数
+						num_display_entries : 4,        //连续分页主体部分显示的分页条目数
+						ellipse_text : "...",           //省略的页数用什么文字表示
+						callback : getPageSelect
+					});
+				}else{
+					source+="<div style='height:300px'>暂无数据!</div>";
+				}
+				$("#quotationbody").append(source);
+			}
+		});
+}
+
+function queryByCondition(){
+	$("#pageId").val(0);
+	$("#Pagination").empty();
+	var type = $("#typename").val();
+	loadQuotationData(type);
+}
+</script>
+<div>
+  <input type="hidden" id="pageId" value="0" />
+  <input type="hidden" id="sortfield" value='' />
+  <input type="hidden" id="sorttype" value='' />
+  <input type="hidden" id="dmsortLabel" value='' />
+  <input type="hidden" id="lxsortLabel" value='' />
+  <input type="hidden" id="spsortLabel" value='' />
+  <input type="hidden" id="kpsortLabel" value='' />
+  <input type="hidden" id="cjsortLabel" value='' />
+  <input type="hidden" id="slsortLabel" value='' />
+  <input type="hidden" id="cjesortLabel" value='' />
+  <input type="hidden" id="zgcjsortLabel" value='' />
+  <input type="hidden" id="zdcjsortLabel" value='' />
+  <input type="hidden" id="bjsortLabel" value='' />
+  <input type="hidden" id="sjsortLabel" value='' />
+  <input type="hidden" id="zdfsortLabel" value='' />
+</div>
+<body>
+ 
+{xiao:template head.html}
+
+<div class="container fix" style="margin-top:50px;">
+  <div class="content">
+    <div class="crmb_s mb25">
+      <div class="nysearch" style="margin-top:15px;">
+        <div class="suggestbox">
+          <input id="typename" name="typename" value="G" type="hidden"/>
+          <input type="text" id="companyCode" class="arrcity" placeholder="股票代码,如:871365" />
+          <div class="suggest ac_results"></div>
+          <input type="text" id="keyword" placeholder="股票名称,如:北创光电" class="sug_inp input" style="width:150px; margin-left: 5px;"/>
+          <a class="z_btn" onclick="queryByCondition();">查询</a> </div>
+      </div>
+    </div>
+    <!-- hr ==S -->
+    <div class="line">
+      <div class="line_re2"></div>
+    </div>
+    <!-- hr ==E -->
+    <div class="tab_none" style="display: none; margin-top: 10px;">
+      <ul>
+        <li class="add" flag="">全部</li>
+        <li flag="1">创新层</li>
+        <li class="last" flag="0">基础层</li>
+        <input type="hidden" id="xxfcbj" name="xxfcbj"/>
+      </ul>
+    </div>
+    <script type="text/javascript">
+			$(function () {
+				$("#xxfcbj").val("");
+				$(".tab_none ul li").click(function () {
+					$(".tab_none ul li").siblings().attr("class", "");
+					$(this).attr("class", "add");
+					$("#xxfcbj").val($(this).attr("flag"));
+					$("#pageId").val(0);
+					loadQuotationData($("#typename").val());
+				});
+			});
+		</script>
+    <div class="affiche" style="margin-top: -15px;">
+      <div class="modlist">
+        <div id="quotationbody" class="list"></div>
+        <div id="Pagination" class="page"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- footer -->
+
+{xiao:template footer.html}

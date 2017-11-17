@@ -1,0 +1,42 @@
+img{border:0;}
+.clearfix:after {
+content:"";
+display:block;
+height:0;
+clear:both;
+visibility:hidden;
+}
+.clearfix {	display:inline-block;}
+.clearfix {display:block;}
+body,ul,p,dd,dl,dt,h1,h2,h3,h4,h5,h6,h7,table{margin:0;padding:0;}
+i,em{font-style:normal;}
+a{text-decoration:none;}
+a:focus{ outline:none } 
+a:link{outline:none }
+a:visited{outline:none;}
+a:hover{outline:none }
+a:active{outline:none }
+input:focus{ outline:none } 
+input{outline:none }
+li{list-style:none;}
+table,tr,th,td{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input[type="button"], input[type="submit"], input[type="reset"] {-webkit-appearance: none;}
+*{font-family:Microsoft YaHei;}
+body{
+	font-family:Microsoft YaHei;
+	font-size:14px;
+}
+.ellipsis{
+	display:block;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.hide{display:none;}
+input[type="text"]::-webkit-input-placeholder,input[type="password"]::-webkit-input-placeholder /* WebKit browsers */{ color: #999;}
+input[type="text"]:-moz-placeholder,input[type="password"]:-moz-placeholder /* Mozilla Firefox 4 to 18 */{ color: #999;}
+input[type="text"]::-moz-placeholder,input[type="password"]::-moz-placeholder /* Mozilla Firefox 19+ */{ color: #999;}
+input[type="text"]:-ms-input-placeholder,input[type="password"]:-ms-input-placeholder /* Internet Explorer 10+ */{ color: #999;} 

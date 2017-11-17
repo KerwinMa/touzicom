@@ -1,0 +1,303 @@
+{xiao:template header.html}
+
+<link rel="stylesheet" type="text/css" href="{xiao:$site_template}images/subject_list.css">
+
+
+
+
+
+
+
+<!--头部banner开始-->
+
+
+<!--头部banner结束-->
+
+
+
+<!--专题列表开始-->
+
+
+
+<div id="subject">
+
+
+
+  <div class="subject">
+
+
+
+    <div class="subject_left">
+
+
+
+      <div class="stittle"> <em></em> <a  href="{xiao:$site_url}">首页</a> >> "{xiao:$kw}" 搜索结果 </div>
+
+
+
+      <ul class="subject_detail">
+
+ {xiao:if empty($num)}
+
+				<h3>抱歉，没有找到“{xiao:$kw}”相关的内容。</h3>
+
+                {xiao:else}
+
+                    {xiao:loop $data $t}
+
+	  <li class="detail_list">  
+
+
+
+          <div class="product_detail">
+
+
+
+            <div class="pro_type"> <a target="_blank" href="{xiao:$t['url']}" class="ptype1">{xiao:$t['title']}</a></div>
+
+
+ 
+
+
+
+            <div class="pro_date"> <span class="icon1"></span> <span class="date">{xiao:function.date("Y-m-d", $t['time'])}</span> </div>
+
+
+
+          </div>
+
+
+
+        </li>   {/xiao:loop}
+
+                {/xiao:if}   
+
+
+
+
+      </ul>
+
+     <!--分页开始-->
+
+        <style type="text/css">
+
+
+
+		.page li{    background-color: #f1f1f1;
+
+
+
+    display: inline-block;
+
+
+
+    color: #000000;
+
+
+
+	width:50px;
+
+
+
+    margin-left: 8px;
+
+
+
+    height: 30px;
+
+
+
+    line-height: 30px;
+
+
+
+    text-align: center;
+
+
+
+    border: 1px solid #e5e5e5;
+
+
+
+}
+
+.product_detail {
+    width: 589px;
+    height: 175px;
+    float: left;
+}
+.pro_type {
+    margin: 20px;
+}
+.subject_left {
+    width: 870px;
+    min-height: 1650px;
+    border:none;
+    float: left;
+}
+		 </style>
+
+        <div id="pageInfo" class="clearfix">
+
+          <p class="pagempage"></p>
+
+          <ul class="page clearfix">
+
+{xiao:$pagelist}
+
+          </ul>
+
+        </div>
+
+        <!--分页结束-->
+
+    </div>
+
+
+
+    
+
+
+
+    <!--加载更多-->
+
+
+
+  </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!--在线预约开始-->
+
+
+
+<div class="theme-popover">
+
+
+
+  <div class="theme-poptit"> <a href="javascript:;" title="关闭" class="close">×</a>
+
+
+
+    <h3>在线预约</h3>
+
+
+
+  </div>
+
+
+
+  <div class="theme-popbod dform">
+
+
+
+    <form action="/plus/diy.php" enctype="multipart/form-data" method="post" class="theme-signin" name="loginform" id="complain">
+
+
+
+      <input type="hidden" name="action" value="post" />
+
+
+
+      <input type="hidden" name="diyid" value="1" />
+
+
+
+      <input type="hidden" name="do" value="2" />
+
+
+
+<input type="hidden" name="dede_fields" value="name,text;phone,text;time,text;source,text" />
+
+
+
+<input type="hidden" name="dede_fieldshash" value="380d8623c254b3480204696bd657af73" />
+
+
+
+<input type='hidden' name='source' id='source' style='width:250px'  class='intxt' value='' />
+
+
+
+	<input type="hidden" name="time" id="time" value="">
+
+
+
+      <ol>
+
+
+
+        <li><strong>用户姓名：</strong>
+
+
+
+          <input class="ipt" type="text" name='name' id='name'  size="20" placeholder="用户姓名" />
+
+
+
+        </li>
+
+
+
+        <li><strong>手机号码：</strong>
+
+
+
+          <input class="ipt"  type='text' name='phone' id='phone' size="20" placeholder="手机号码" />
+
+
+
+        </li>
+
+
+
+        <li>
+
+
+
+          <input class="btn btn-primary" type="submit" name="submit" value=" 提 交 " />
+
+
+
+        </li>
+
+
+
+      </ol>
+
+
+
+    </form>
+
+
+
+  </div>
+
+
+
+</div>
+
+
+
+<div class="theme-popover-mask"></div>
+
+
+
+<!--在线预约结束-->
+
+
+
+<!--专题列表结束-->
+
+
+
+{xiao:template footer.html}
+

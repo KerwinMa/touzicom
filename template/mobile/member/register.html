@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+<link rel="stylesheet" type="text/css" href="{xiao:$site_template}images/projectx.css"/>
+<link rel="stylesheet" type="text/css" href="{xiao:$site_template}images/top.css"/>
+<link rel="stylesheet" type="text/css" href="{xiao:$site_template}images/login.css"/>
+<script src="{xiao:$site_template}images/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{xiao:$site_template}images/reg_new.js" type="text/javascript" charset="utf-8"></script>
+<title>{xiao:$site_title}</title>
+<meta name="keywords" content="{xiao:$site_keywords}" />
+<meta name="description" content="{xiao:$site_description}" />
+<script type="text/javascript">
+	$(document).ready(function(){
+	var $pro_li = $('.nav_item');
+	$pro_li.click(function(){
+		$(this).addClass('selected').siblings().removeClass('selected');
+		var index = $pro_li.index(this);
+		$('.prod_item').eq(index).show().siblings().hide();
+	});	
+});
+</script>
+<style type="text/css">
+		.border {
+			border-bottom: 1px #222222 solid;
+			
+		}
+		.border span {
+			border-bottom: 4px #e40000 solid;
+		}
+	table,tr td{
+		border: 1px #222222 solid;
+		text-align: center;
+		line-height: 50px;
+	}
+	.pro_detail p {
+		margin: 10px;
+	}
+/*手机注册 登录*/	
+#contain1{width:100%;float:left;margin-bottom:30px;}
+.contain1{width:100%; margin:0 auto;background:#fff;margin-top:30px;}
+.contain1 h1{width:60%; text-align: center; font-size:20px;color:#333;line-height:80px;float:left;}
+.slogin{width:30%;float:left;line-height:70px;font-size:14px;text-align: right;}
+.slogin a{color:#f89901;}
+.formreg{
+	width:100%;
+	min-height:445px;
+	float:left;
+	text-align: center;
+	font-size: 14px;
+}
+.lx{margin-left:20px}
+.pin{width:100%;float:left;margin-top:18px;}
+.pin label{width:30%;height:40px;line-height:40px;font-size:14px;color:#666;float:left;text-align:right;}
+.pin1{width:100%;float:left;margin-top:5px;margin-left: 2%;}
+.pin1.te2 input{width:65%;}
+.pin1.te1 .yan{width:60%;}
+.pin1 label{
+	width:90px;
+	height:40px;
+	line-height:40px;
+	font-size:14px;
+	color:#666;
+	float:left;
+	text-align:right;
+}
+.pin1 input{
+	width:65%;
+	height:38px;
+	border-radius:5px;
+	border:#e5e5e5 solid 1px;
+	text-indent:1em;
+	float:left;
+	outline:medium;
+}
+.join{
+	width:300px;
+	height:20px;
+	margin-top:20px;
+	float:left;
+	margin-left:145px;
+}
+.join p{
+	width:150px;
+	height:20px;
+	float:left;
+	font-size:14px;
+	color:#666;
+}
+.join p a{
+	color:#fc5151;
+}
+.join p a:hover{
+	color:#ff0000;
+}
+.huo{width:80px;height:30px;background:#f89901;border-radius:10px;border:none;color:#fff;margin:5px;cursor: pointer; outline: none;margin-left:30px;}
+.aggree{
+	height:20px;
+	float:left;
+	font-size:14px;
+	text-indent:80px;
+	margin-top:20px;
+	text-align: center;
+}
+.aggree a{
+	color:#fc5151;
+}
+.aggree a:hover{
+	color:#ff0000;
+}
+.lsubmit1{
+    cursor:pointer;
+	width:40%;
+	height:40px;
+	background:#f89901;
+	border:none;
+	color:#fff;
+	border-radius:5px;
+	margin-top:30px;
+	text-align: center;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+.lsubmit2{
+   cursor:pointer;
+	width:138px;
+	height:30px;
+	background:#f89901;
+	border:none;
+	color:#fff;
+	border-radius:5px;
+	margin-left:150px;
+	margin-top:30px;
+	text-align: center;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	font-size:16px;
+}
+/*end*/
+</style>
+</head>
+<body>
+<!--头部开始 -->
+<div class="top">
+  <div class="topic"><a href="http://www.touzitop.com/"><img src="{xiao:$site_template}images/main_logo.png" alt=""></a></div>
+  <form action="/plus/advancedsearch.php" method="post" style="display: -webkit-box;-webkit-box-flex: 1;">
+  <div class="sou">
+    <input type="hidden" name="mid" value="17" />
+    <input type="hidden" name="dopost" value="search" />
+    <input type="text" placeholder="请输入项目关键词"  name="q">
+    <div class="spic"><button style="border:none;"><img src="{xiao:$site_template}images/sou.png" alt=""></button></div>
+  </div>
+  </form>
+</div>
+<!--头部结束 -->
+<!--项目详情开始-->
+
+
+
+<!--
+	<div class="order"> <a href="javascript:;" onClick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">咨询股价</a> </div>
+	
+-->
+<!--项目详情结束-->
+<!--公司详情开始-->
+<div class="pro_detail">
+	 <div id="contain1">
+	  <div class="contain1">
+	 	<h1>注册第一股权网账户</h1>
+	 	   <p class="slogin">已有账户，<a href="/member/index.php?c=login">请登录</a></p>
+	 	   <form class="formreg" method="post" action="" name="myform" id="myform">
+       <p class="pin">
+        <label>会员类型：</label>
+                {xiao:loop $member_model $t}
+       <label class="pl"><input name="data[modelid]"  required type="radio" value="{xiao:$t['modelid']}" {xiao:if $member_default_modelid==$t['modelid']}selected{/xiao:if} />{xiao:$t['modelname']} </label> 
+	{/xiao:loop}
+               </p>
+        <p class="pin1">
+          <label>用户名：</label>
+          <input type="text"  class="username"  placeholder="用户名" required id="txtUsername" name="data[username]">
+        </p>
+        <p class="pin1">
+          <label>设置密码：</label>
+          <input type="password" onKeyUp="setPasswordLevel(this, document.getElementById('passwordLevel'));" class="pwd" placeholder="密码（6-16位字符）" required id="txtPassword" name="data[password]">
+        </p>
+        <p class="pin1">
+          <label>确认密码：</label>
+          <input type="password" class="password_cf"  placeholder="请再次输入密码" required  maxlength="16" id="userpwdok" name="data[password2]" >
+          <span id="_userpwdok"></span> </p>
+        
+           <p class="pin1 te2">
+          <label>手机号码：</label>
+          <input type="num"  placeholder="请输入手机号" required id="tel" name="data[tel]">
+        <!--  <button id="zphone" type="button" class="huo"  onclick="send()">获取验证码</button>-->
+        </p>
+        <!--<p class="pin1 te1">
+          <label>手机验证码：</label>
+          <input class="yan" type="text" placeholder="请输入验证码" required id="mobile_code" name="mobile_code">
+        </p>-->
+        <div class="pin1">
+          <label>验证码：</label>
+          <input type="text" placeholder="请输入验证码" style="width:35%; margin-right:5px; float:left;"  id="vdcode" name="code">
+          <p class="top15 captcha" id="captcha-container"> <img id="code" src="../index.php?c=api&a=checkcode&width=100&height=30" align="absmiddle" title="看不清楚？换一张" onclick="document.getElementById('code').src='../index.php?c=api&a=checkcode&width=100&height=30&'+Math.random();" style="cursor:pointer; margin-top:-3px;"> </p>
+        </div>
+   
+      <!--    <p class="pin1 te1">
+          <label>手机验证码：</label>
+          <input class="yan"  type="text" placeholder="请输入验证码" required id="mobile_code" name="mobile_code">
+        </p>-->
+        <div class="aggree">
+          <input type="checkbox" checked="checked" id="agree" onBlur="">
+          我已阅读并同意《用户协议》</div>
+        <input type="submit" id="btnSignCheck" class="lsubmit1" value="提交注册">
+		<!--短信宝  start-->	
+	  <script type="text/javascript">
+				$("#zphone").click(function(){
+				if($("#tel").val() == ""){
+				 alert("手机号不能为空！");return false;
+				}
+				if (!/^1[34578]\d{9}$/i.test($("#tel").val())) {
+					 alert("手机号码不2对,请正确填写");return false;
+				}	
+			 
+				});
+			 
+	  </script>
+	  <!--短信宝  end-->	
+      </form>
+	 	   
+	 	   
+	 	   
+	 	   
+	 	   
+	 		</div>
+	 </div>
+</div>
+ 
+ 
+  </div>
+</div>
+<!--公司详情结束-->
+ 
+<!--底部结束-->
+﻿{xiao:template footer.html}
+
+<script>
+$(document).ready(function()
+   {
+    //验证
+    $('#light').submit(function ()
+    {
+        if($('#name').val()==""){
+            $('#name').focus();
+            alert("用户名不能为空！");
+            return false;
+        }
+        if($('#phone').val()=="")
+        {
+            $('#phone').focus();
+            alert("联系电话不能为空！");
+            return false;
+        }
+		var myreg = /^1[34578]\d{9}$/; 
+		if(!myreg.test($("#phone").val())) 
+		{ 
+   			alert('请输入有效的手机号码！'); 
+    		return false; 
+		} 
+    })
+});
+
+window.onload = function(){
+
+    var nowDate = new Date();
+
+    var str = nowDate.getFullYear()+"-"+(nowDate.getMonth() + 1)+"-"+nowDate.getDate()+" "+nowDate.getHours()+":"+nowDate.getMinutes()+":"+nowDate.getSeconds();
+
+    document.getElementById("time").value=str;
+
+}
+
+</script>
+
+<link rel="stylesheet" href="{xiao:$site_template}images/demo.css">
+ 
+<div id="fade"></div>
+
+
+
+<script type="text/javascript" src="{xiao:$site_template}images/yxmobileslider.js"></script>
+
+<script>
+
+    $(".slider").yxMobileSlider({width:640,height:320,during:3000})
+
+  </script>
+  
+  
+
+ 
+</body>
+</html>

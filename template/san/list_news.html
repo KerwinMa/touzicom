@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>{xiao:$site_title}</title>
+
+<meta name="keywords" content="{xiao:$site_keywords}" />
+
+<meta name="description" content="{xiao:$site_description}" />
+
+<meta name="robots" content="all">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<meta name="keywords" content="{xiao:$site_keywords}" />
+
+<meta name="description" content="{xiao:$site_description}" />
+
+<script type="text/javascript">function path(){return '';}</script>
+
+<base target="_blank" />
+
+<link rel="stylesheet" type="text/css" href="{xiao:$site_template}images/common.css" />
+
+<link rel="stylesheet" type="text/css" href="{xiao:$site_template}images/module.css" />
+
+<link type="text/css" rel="stylesheet" href="{xiao:$site_template}images/reset.css">
+
+<link type="text/css" rel="stylesheet" href="{xiao:$site_template}images/main.css">
+
+<script type="text/javascript" src="{xiao:$site_template}images/jquery-1.11.0.min.js"></script>
+
+<script type="text/javascript" src="{xiao:$site_template}images/common.js"></script>
+
+<script type="text/javascript" src="{xiao:$site_template}images/jquery.qrcode.min.js"></script>
+
+ 
+
+<link type="text/css" rel="stylesheet" href="{xiao:$site_template}images/mediaquery-index.css">
+
+<script>
+
+
+
+
+
+
+
+$(function(){
+
+
+
+	/*鼠标经过切换*/
+
+	$(".article-title i").mouseenter(function(){
+
+		$(this).addClass("selected").siblings().removeClass("selected");
+
+		var name = $(this).attr('name');
+
+		if(name == 'hotTop10') {
+
+			$("#hotArticleOrder").show();
+
+			$("#weekRecommendationArticle").hide();
+
+		}else {
+
+			$("#hotArticleOrder").hide();
+
+			$("#weekRecommendationArticle").show();
+
+		}
+
+	});
+
+	
+
+	var pageLength=$(".bannerList li").length;
+
+	var pageHtml='';
+
+	for(var l=0;l<pageLength;l++){
+
+		if(l==0){
+
+			pageHtml+="<i class='selected'></i>";
+
+		}else{
+
+			pageHtml+="<i></i>";
+
+		}
+
+	}
+
+	$("#newsBanner-page").html(pageHtml);
+
+	var bannerLeth=$(".bannerList li").length;
+
+	var bannerInx=bannerLeth;
+
+	var bannerHtl=$(".bannerList ul").html();
+
+	$(".bannerList ul").prepend(bannerHtl);
+
+	$(".bannerList ul").append(bannerHtl);
+
+	$(".bannerList").css({"left":-(bannerLeth*$(".banner-img").width())+"px"});
+
+	$("#newsbannerBtn-left").click(function(){
+
+		if(!$(".bannerList").is(":animated")){
+
+			if(bannerInx>bannerLeth){
+
+				bannerInx--;
+
+				$(".bannerList").animate({left:-(bannerInx*$(".banner-img").width())+"px"},500,function(){
+
+					$("#newsBanner-page i").eq(bannerInx-bannerLeth).addClass("selected").siblings().removeClass("selected");
+
+				});
+
+			}else{
+
+				bannerInx--;
+
+				$(".bannerList").animate({left:-(bannerInx*$(".banner-img").width())+"px"},500,function(){
+
+					$(".bannerList").css({"left":-(((bannerLeth*2)-1)*$(".banner-img").width())+"px"});
+
+					bannerInx=(bannerLeth*2)-1;
+
+					$("#newsBanner-page i").eq(bannerLeth-1).addClass("selected").siblings().removeClass("selected");
+
+				});
+
+			}
+
+		}
+
+	});
+
+	$("#newsbannerBtn-right").click(function(){
+
+		if(!$(".bannerList").is(":animated")){
+
+			if(bannerInx<(bannerLeth*2)-1){
+
+				bannerInx++;
+
+				$(".bannerList").animate({left:-(bannerInx*$(".banner-img").width())+"px"},500,function(){
+
+					$("#newsBanner-page i").eq(bannerInx-bannerLeth).addClass("selected").siblings().removeClass("selected");
+
+				});
+
+			}else{
+
+				bannerInx++;
+
+				$(".bannerList").animate({left:-(bannerInx*$(".banner-img").width())+"px"},500,function(){
+
+					$(".bannerList").css({"left":-(bannerLeth*$(".banner-img").width())+"px"});
+
+					bannerInx=bannerLeth;
+
+					$("#newsBanner-page i").eq(bannerInx-bannerLeth).addClass("selected").siblings().removeClass("selected");
+
+				});
+
+			}
+
+		}
+
+	});
+
+
+
+	var t=setInterval(function(){
+
+		if((bannerInx-bannerLeth)<bannerLeth-1){
+
+			bannerInx++;
+
+			$(".bannerList").animate({left:-(bannerInx*$(".banner-img").width())+"px"},500,function(){
+
+				$("#newsBanner-page i").eq(bannerInx-bannerLeth).addClass("selected").siblings().removeClass("selected");
+
+			});
+
+		}else{
+
+			bannerInx++;
+
+			$(".bannerList").animate({left:-(bannerInx*$(".banner-img").width())+"px"},500,function(){
+
+				$(".bannerList").css({"left":-(bannerLeth*$(".banner-img").width())+"px"});
+
+				bannerInx=bannerLeth;
+
+				$("#newsBanner-page i").eq(0).addClass("selected").siblings().removeClass("selected");
+
+			});
+
+		}
+
+	},5000);
+
+
+
+
+
+	$(".banner-img").hover(function(){
+
+		clearInterval(t);
+
+	},function(){
+
+		t=setInterval(function(){
+
+			if((bannerInx-bannerLeth)<bannerLeth-1){
+
+				bannerInx++;
+
+				$(".bannerList").animate({left:-(bannerInx*$(".banner-img").width())+"px"},500,function(){
+
+					$("#newsBanner-page i").eq(bannerInx-bannerLeth).addClass("selected").siblings().removeClass("selected");
+
+				});
+
+			}else{
+
+				bannerInx++;
+
+				$(".bannerList").animate({left:-(bannerInx*$(".banner-img").width())+"px"},500,function(){
+
+					$(".bannerList").css({"left":-(bannerLeth*$(".banner-img").width())+"px"});
+
+					bannerInx=bannerLeth;
+
+					$("#newsBanner-page i").eq(0).addClass("selected").siblings().removeClass("selected");
+
+				});
+
+			}
+
+		},5000);
+
+	});
+
+
+
+	$("#newsBanner-page").on("mouseenter","i",function(){
+
+		if(!$(".bannerList").is(":animated")){
+
+			var pageIndex=$(this).index()+bannerLeth;
+
+			bannerInx=pageIndex;
+
+			$("#newsBanner-page i").eq(bannerInx-bannerLeth).addClass("selected").siblings().removeClass("selected");
+
+			$(".bannerList").animate({left:-(pageIndex*$(".banner-img").width())+"px"},500);
+
+		}
+
+	});	
+
+
+
+
+
+
+
+	var pageStartX,pageMoveX,pageEndX,bannerPistion;
+
+	$(document).on("touchstart",".bannerList",function(e){
+
+		clearInterval(t);
+
+		pageStartX=e.originalEvent.targetTouches[0].pageX;
+
+		pageMoveX=pageStartX;
+
+		bannerPistion=$(".bannerList").position().left;
+
+	});
+
+	
+
+	$(document).on("touchmove",".bannerList",function(e){
+
+		pageMoveX=e.originalEvent.targetTouches[0].pageX;
+
+		var bnanmt=pageMoveX-pageStartX;
+
+		$(".bannerList").css({left:bannerPistion+bnanmt+"px"});
+
+	});
+
+
+
+	$(document).on("touchend",".bannerList",function(e){
+
+		pageEndX=pageMoveX-pageStartX;
+
+		if(Math.abs(pageEndX) > 20){
+
+			if(pageEndX<0){
+
+				if(!$(".bannerList").is(":animated")){
+
+					if(bannerInx<(bannerLeth*2)-1){
+
+						bannerInx++;
+
+						$(".bannerList").animate({left:-(bannerInx*$(".banner-img").width())+"px"},500,function(){
+
+							$("#newsBanner-page i").eq(bannerInx-bannerLeth).addClass("selected").siblings().removeClass("selected");
+
+						});
+
+					}else{
+
+						bannerInx++;
+
+						$(".bannerList").animate({left:-(bannerInx*$(".banner-img").width())+"px"},500,function(){
+
+							$(".bannerList").css({"left":-(bannerLeth*$(".banner-img").width())+"px"});
+
+							bannerInx=bannerLeth;
+
+							$("#newsBanner-page i").eq(bannerInx-bannerLeth).addClass("selected").siblings().removeClass("selected");
+
+						});
+
+					}
+
+				}
+
+			}else{
+
+				if(!$(".bannerList").is(":animated")){
+
+					if(bannerInx>bannerLeth){
+
+						bannerInx--;
+
+						$(".bannerList").animate({left:-(bannerInx*$(".banner-img").width())+"px"},500,function(){
+
+							$("#newsBanner-page i").eq(bannerInx-bannerLeth).addClass("selected").siblings().removeClass("selected");
+
+						});
+
+					}else{
+
+						bannerInx--;
+
+						$(".bannerList").animate({left:-(bannerInx*$(".banner-img").width())+"px"},500,function(){
+
+							$(".bannerList").css({"left":-(((bannerLeth*2)-1)*$(".banner-img").width())+"px"});
+
+							bannerInx=(bannerLeth*2)-1;
+
+							$("#newsBanner-page i").eq(bannerLeth-1).addClass("selected").siblings().removeClass("selected");
+
+						});
+
+					}
+
+				}
+
+			}
+
+		}else{
+
+			$(".bannerList").animate({left:-(bannerInx*$(".banner-img").width())+"px"},500);
+
+		}
+
+		t=setInterval(function(){
+
+			if((bannerInx-bannerLeth)<bannerLeth-1){
+
+				bannerInx++;
+
+				$(".bannerList").animate({left:-(bannerInx*$(".banner-img").width())+"px"},500,function(){
+
+					$("#newsBanner-page i").eq(bannerInx-bannerLeth).addClass("selected").siblings().removeClass("selected");
+
+				});
+
+			}else{
+
+				bannerInx++;
+
+				$(".bannerList").animate({left:-(bannerInx*$(".banner-img").width())+"px"},500,function(){
+
+					$(".bannerList").css({"left":-(bannerLeth*$(".banner-img").width())+"px"});
+
+					bannerInx=bannerLeth;
+
+					$("#newsBanner-page i").eq(0).addClass("selected").siblings().removeClass("selected");
+
+				});
+
+			}
+
+		},5000);
+
+	});
+
+
+
+	/*Responsive Web design*/
+
+	if($(window).width()<800){
+
+		$("html").css({"font-size":$(window).width()/3.75+"px"}); 
+
+		$("#headNav").click(function(){
+
+			if($("#nav").is(":hidden")){
+
+				$("#headNav ul").show();
+
+			}else{
+
+				$("#headNav ul").hide();
+
+			}
+
+		});
+
+	}
+
+})
+
+
+
+function toUtf8(str) {  
+
+    var out, i, len, c;   
+
+    out = "";   
+
+    len = str.length; 
+
+    for(i = 0; i < len; i++) { 
+
+    	c = str.charCodeAt(i);  
+
+    	if ((c >= 0x0001) && (c <= 0x007F)) {
+
+        	out += str.charAt(i);   
+
+    	} else if (c > 0x07FF) {  
+
+        	out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F)); 
+
+        	out += String.fromCharCode(0x80 | ((c >>  6) & 0x3F));  
+
+        	out += String.fromCharCode(0x80 | ((c >>  0) & 0x3F)); 
+
+    	} else { 
+
+        	out += String.fromCharCode(0xC0 | ((c >>  6) & 0x1F)); 
+
+        	out += String.fromCharCode(0x80 | ((c >>  0) & 0x3F)); 
+
+    	}  
+
+    }   
+
+    return out;  
+
+}  
+
+</script>
+
+</head>
+
+<body>
+
+<style type="text/css">
+
+
+
+/*---------- head ---------*/ 
+
+
+
+.header{ 
+
+
+
+width:100%; 
+
+
+
+width:960px; 
+
+
+
+margin:auto; 
+
+
+
+overflow:hidden; 
+
+
+
+} 
+
+
+
+.header_top{ 
+
+
+
+height:32px!important; 
+
+
+
+height:31px; 
+
+
+
+line-height:32px; 
+
+
+
+color:#676767; 
+
+
+
+overflow:hidden; 
+
+
+
+background:url(images/top_bg.gif) repeat-x; 
+
+
+
+} 
+
+
+
+.center{ 
+
+
+
+margin:0px auto; 
+
+
+
+} 
+
+
+
+.w960{ 
+
+
+
+width:960px; 
+
+
+
+/*position:relative;*/ 
+
+
+
+} 
+
+
+
+.header_top .time{ 
+
+
+
+float:left; 
+
+
+
+padding-left:10px; 
+
+
+
+} 
+
+
+
+.header_top .toplinks{ 
+
+
+
+float:right; 
+
+
+
+text-align:right; 
+
+
+
+} 
+
+
+
+.header_top .toplinks a{ 
+
+
+
+margin:0 5px; 
+
+
+
+} 
+
+
+
+.header .top{ 
+
+
+
+clear:both; 
+
+
+
+overflow:hidden; 
+
+
+
+margin-top:10px; 
+
+
+
+} 
+
+
+
+.header .title{ 
+
+
+
+float:left; 
+
+
+
+} 
+
+
+
+.header .title h1 a{ 
+
+
+
+width:386px; 
+
+
+
+height:58px; 
+
+
+
+display:block; 
+
+
+
+overflow:hidden; 
+
+
+
+} 
+
+
+
+.header .banner{ 
+
+
+
+width:434px; 
+
+
+
+height:55px; 
+
+
+
+float:right; 
+
+
+
+margin-left:20px; 
+
+
+
+overflow:hidden; 
+
+
+
+} 
+
+
+
+.ipt-txt{ 
+
+
+
+width:100px; 
+
+
+
+border:1px #CFCFCF solid; 
+
+
+
+} 
+
+
+
+.fb{ 
+
+
+
+color:#333333; 
+
+
+
+} 
+
+
+
+.btn-1{ 
+
+
+
+background: url("{xiao:$site_template}images/comm-bt.gif") no-repeat scroll 0 0 transparent; 
+
+
+
+border: medium none; 
+
+
+
+color: #585858; 
+
+
+
+cursor: pointer; 
+
+
+
+height: 24px; 
+
+
+
+letter-spacing: 1px; 
+
+
+
+line-height: 25px; 
+
+
+
+overflow: hidden; 
+
+
+
+width: 70px; 
+
+
+
+} 
+
+
+
+</style>
+
+
+
+ 
+
+ 
+
+
+
+
+
+<!-- /userlogin -->
+
+
+
+ 
+
+{xiao:template head.html}
+
+
+
+
+
+
+
+
+
+<div class="main">
+
+  <div class="wd">
+
+    <div class="banner">
+
+      <div class="newsBanner">
+
+        <div class="banner-img">
+
+          <p id="newsbannerBtn-left" class="bannerBtn"></p>
+
+          <p id="newsbannerBtn-right" class="bannerBtn"></p>
+
+          <p id="newsBanner-page"><i class=""></i><i class="selected"></i><i class=""></i><i class=""></i></p>
+
+          <div class="bannerList" style="left: -3400px;">
+
+            <ul class="clearfix"> {xiao:list catid=$catid num=4 cache=0 status=3  }
+
+              <li> <a target="_blank" title="{xiao:$xiao['title']}" href="{xiao:$xiao['url']}">
+
+                <p class="img"><i><img alt="{xiao:$xiao['title']}" src="{xiao:function.image($xiao[thumb])}"></i></p>
+
+                <p class="title" title="{xiao:$xiao['title']}"><span>{xiao:$xiao['title']}</span></p>
+
+                </a> </li>
+
+	{/xiao:list}
+
+
+
+            </ul>
+
+          </div>
+
+        </div>
+
+        <div class="head-list">{xiao:list catid=$catid num=3 cache=0  order=time }
+
+         <div class="list-brief">
+
+            <div class="articleleft-title">
+
+              <p class="articletitle"><span class="title ellipsis" title="{xiao:$xiao['title']}"><a target="_blank" href="{xiao:$xiao['url']}" title="{xiao:$xiao['title']}">{xiao:$xiao['title']}</a></span><i class="icon-fire"></i></p>
+
+              <p class="brief-container"><span class="description-brief">{xiao:function.strcut($xiao[description],64)}...</span><span class="blue-color"><a target="_blank" href="{xiao:$xiao['url']}" title="{xiao:$xiao['title']}">[详情]</a></span></p>
+
+            </div>
+
+          </div>
+
+{/xiao:list}
+
+ </div>
+
+      </div>
+
+    </div>
+
+    <div class="clearfix">
+
+      <div class="leftArea left">
+
+        <!--信托资讯-->
+
+        <div class="news-list" id="news-list"> 
+
+          {xiao:list catid=$catid page=$page }
+
+           <div class="list">
+
+            <p class="news-img"> <a target="_blank" href="{xiao:$xiao['url']}" title="{xiao:$xiao['title']}">
+
+              <input type="hidden" class="altHidden" value="{xiao:$xiao['title']}">
+
+              <img alt="{xiao:$xiao['title']}" src="{xiao:function.image($xiao[thumb])}"></a> </p>
+
+            <div class="details">
+
+              <h3 class="news-title ellipsis" title="{xiao:$xiao['title']}"><a target="_blank" href="{xiao:$xiao['url']}" title="{xiao:$xiao['title']}">{xiao:$xiao['title']}</a></h3>
+
+              <p class="list-details"><span class="description">{xiao:function.strcut($xiao[description],144)}...</span><span class="blue-color"><a target="_blank" href="{xiao:$xiao['url']}">[详情]</a></span></p>
+
+              <div class="time">
+
+                <p class="left">第一股权网 {xiao:function.date("Y-m-d", $xiao['time'])}  {xiao:$xiao['keywords']}   </p>
+
+                <p class="right">阅读（{xiao:$xiao['hits']}）</p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+              
+
+  {/xiao:list}</div>
+{xiao:$pagelist}
+      </div>
+
+      <!--右侧开始-->
+
+      
+ 
+
+
+<div class="rightArea left">
+
+
+
+  <p class="headline">本周排行</p>
+
+
+
+  <div class="hot-article">
+
+
+
+    <div class="article-title"> <i class="selected" name="hotTop10">热读排行</i><i name="recommendationTop10" class="">好文推荐</i> </div>
+
+
+
+    <div class="main-container" id="hotArticleOrder" style="display: block;"> 
+
+    {xiao:php $i = 1; }{xiao:list catid=$catid order=time status=1 num=10  }
+
+ <p title="{xiao:$xiao['title']}"><span class="orange{xiao:php echo $i ;}">{xiao:php echo $i;}</span><a class="topion" target="_blank" href="{xiao:$xiao['url']}" title="{xiao:$xiao['title']}">{xiao:function.strcut($xiao[title],28,'')}</a></p>
+
+ {xiao:php   $i++ ;}{/xiao:list}
+
+ </div>
+
+
+
+    <div class="main-container" id="weekRecommendationArticle" style="display: none;"> 
+
+   {xiao:php $i = 1; }{xiao:list catid=$catid order=time status=3 num=10  }
+
+<p title="{xiao:$xiao['title']}"> <i class="articleleft-title"> <span class="orange2">2</span><a class="topion" target="_blank" href="{xiao:$xiao['url']}">{xiao:function.strcut($xiao[title],28,'')}</a> <span class="vxlist_bt clearfix"> </span> </i> </p>
+
+{/xiao:list}
+
+ </div>
+
+
+
+  </div>{xiao:list catid=1 order=time status=3 num=4  }
+
+<p class="img-internet"><a href="{xiao:$xiao['url']}" target="_blank"><img alt="{xiao:$xiao['title']}" src="{xiao:function.image($xiao[thumb])}"></a></p>
+
+{/xiao:list}
+
+
+
+</div>
+
+
+
+
+
+      <!--右侧结束-->
+
+    </div>
+
+  </div>
+
+</div>
+
+{xiao:template footer.html}

@@ -1,0 +1,152 @@
+<div class="mod_topbar_nav">
+
+  <div class="layout_n clearfix">
+
+    <!-- top bar nav start-->
+
+    <div class="topmenu_wrap">
+
+      <ul class="mod_topmenu_list" id="yw0">
+
+        <li class="menu_item menu_item_idx"><a target="_blank" href="{xiao:$site_url}">首页<em class="idx_sep"></em></a></li>
+
+        	{xiao:nav num=7}
+
+        <li class="menu_item {xiao:if $current}menu_item_active{/xiao:if}"><a target="_blank" href="{xiao:$xiao['url']}">{xiao:$xiao['catname']}</a></li>
+
+        <li class="sep"><span></span></li>
+
+    {/xiao:nav}
+
+      </ul>
+
+    </div>
+
+    <!-- top bar nav end-->
+
+    <!-- tools start-->
+
+    <div class="tools_wrap">
+
+      <ul class="tools_list">
+
+        <li class="tools_item">
+
+          <div class="qrcode_tips j_tips">
+
+            <div class="tips_hd"> <span class="txt"><a href="/index.php?catid=34">企业专栏</a></span> </div>
+
+          </div>
+
+        </li>
+
+        <li class="seq"></li>
+
+        <li class="tools_item sns_wrap">
+
+          <div class="qrcode_tips j_tips">
+
+            <div class="tips_hd"> <span class="txt">关注我们</span> </div>
+
+            <div class="tips_bd"> <em class="arrow_up"></em> <img src="{xiao:$site_template}images/wx_jfz_zx_d.jpg" alt=""> </div>
+
+          </div>
+
+        </li>
+
+        <li class="seq"></li>
+
+        <li class="tools_item"> <em class="mt_ico mt_ico_tel_1"></em> <span class="tel">{xiao:block 6}</span> </li>
+
+        <li class="seq"></li>
+<li class="tools_item">
+          <div id="_userlogin">
+            <div class="userlogin">
+        <script type="text/javascript" src="{xiao:$site_url}/index.php?c=api&a=user"></script></div>
+          </div>
+        </li>
+ 
+
+      </ul>
+
+    </div>
+
+    <!-- tools end-->
+
+  </div>
+
+</div>
+
+<!-- top bar end-->
+
+<div class="mod_head">
+
+  <div class="layout_n clearfix">
+
+    <div class="logo_wrap"> <a href="http://www.touzitop.com" class="logo" title="中国第一股权门户网站！"></a> </div>
+
+    <div class="mod_chanel_nav">
+
+      <ul class="mod_chanel_menulist">
+
+        <li class="menu_item"> <a href="{xiao:$site_url}">首页<em class="idx_sep"></em></a> </li>
+
+       {xiao:php $topcat = get_top_cat($catid);}{xiao:if $topcat[catid]}{xiao:nav parentid=$topcat[catid]}
+
+        <li class="menu_item {xiao:if $current}menu_item_active{/xiao:if}"><a target="_blank" href="{xiao:$xiao['url']}">{xiao:$xiao['catname']} {xiao:if $xiao[catid]==1}<em class="ico_hot"></em>{/xiao:if}</a> </li>
+
+     	{/xiao:nav}
+
+{xiao:else}
+
+  <li class="menu_item"><a target="_blank" href="/index.php?catid=1">股权项目<em class="ico_hot"></em></a> </li>
+
+     	        <li class="menu_item "><a target="_blank" href="/index.php?catid=26">专题栏目</a> </li>
+
+     	        <li class="menu_item"><a target="_blank" href="/index.php?catid=3">三板资讯</a> </li>
+
+     	        <li class="menu_item"><a target="_blank" href="/index.php?catid=4">原创研究</a> </li>
+
+     	        <li class="menu_item"><a target="_blank" href="/index.php?catid=5">视频中心</a> </li>
+
+     	        <li class="menu_item"><a target="_blank" href="/index.php?catid=6">行情中心</a> </li>
+
+
+
+    {/xiao:if}
+
+        <li class="menu_search">
+
+          <form action="index.php" method="Get" name="formsearch" id="simuHeadSearchForm">
+<input type="hidden"  value="index"  name="c" />
+
+		<input type="hidden"  value="search"  name="a" />
+            <div class="search_wrap clearfix" style="width: 120px;">
+
+              <input name="kw" type="text" placeholder="请输入关键词" class="search_txt" id="search-keyword" name="keyword" style="width: 90px;">
+
+              <a >
+
+              <button type="submit" class="mt_ico mt_ico_search_2"></button>
+
+              </a> </div>
+
+            <em class="menu_search_right"></em>
+
+          </form>
+
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- top bar start -->
+
+
+
+<!-- top bar end -->

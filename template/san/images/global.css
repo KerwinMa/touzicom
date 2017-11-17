@@ -1,0 +1,49 @@
+*{padding:0;margin:0;font-family: "微软雅黑";}
+a{text-decoration: none;}
+.banner{width:100%;float:left; margin-top:50px;}
+.banner img{width:100%;float:left;}
+#scontain{width:100%;float:left;background:#0a0a0c;}
+.scontain{width:1200px;margin: 0 auto;}
+.scontain_item{width:23%;float:left;border:1px solid #e5de5f;margin-left:1%;color:#fff;text-align: center;font-size:26px;line-height:60px;}
+/*新三板第一部分开始*/
+.scontain1{width:1200px;margin:0 auto;}
+.sctit{width:90%;margin:0 5%;font-size:50px;color:#d0b548;text-align: center;line-height:2em;font-weight: bold;margin-top:5%;float:left;}
+.sctit.te1{margin-top:0px;}
+.sctit img{width:5%;float:left;margin-top:3%;}
+.sctit1{width:100%;font-size:36px;color:#fff;text-align: center;float:left;}
+.csarticle{width:100%;color:#b69f3d;font-size:24px;margin-top:2%;float:left;line-height: 1.5em;}
+.sc2_list{width:100%;}
+.sc2_item{width:30%;border:1px solid #e5de5f;float:left;margin-left:2%;margin-top: 2%;height:230px;}
+.sc2_tit{width:100%;text-align: center;font-size:30px;color:#fff;line-height: 2em;}
+.sdetail{width:45%;background:#fff;float:left;text-align: center;color:#e91a1b;font-size: 24px;font-weight: bold;margin:5% 2%;padding: 5% 0;}
+.sdetail span{width:100%;float:left;font-size:18px;font-weight: normal;color:#333; }
+/*新三板第二部分开始*/
+.sdetail2{width:100%;float:left;}
+.sdetail2 img{width:50%;margin:5% 25%;}
+.sc2zong{width:100%;float:left;font-size:40px;color:#fff;text-align: center;margin:3% 0;}
+.sction{width:100%;float:left;font-size:40px;color:#fff;text-align: center;line-height: 60px;margin-top: 30px;}
+.scontain2{width:100%;float:left;}
+.scotain2pic{width:100%;border-radius: 5px;float:left;}
+.scotain2pic1{width:97%;margin-left: 1%;}
+.scotain2pic1 img{width:90%;margin-left: 5%;}
+.scotain2pic img{width:96%;margin: 2%;}
+.sbt1{width:100%;text-align: center;float:left;}
+.sbt1 a{width:26%;font-size:30px;color:#fff;background:#96292c;padding:1% 5%;border-radius: 5px;float:left;margin-left:32%;margin-top:3%;}
+.sbt1.te2 a{width:70%;margin-left:10%;font-size:24px;margin-top: 20px;}
+/*新三板第三部分开始*/
+.scontain3{width:100%; float:left;}
+.sctit2{font-size:30px;color:#d9bf4d;font-weight: bold;line-height:4em;text-align: center;}
+.sct4_list{width:100%;float:left;margin-bottom: 2%;}
+.sct4_item{width:35%;border:2px solid #e5de5f;border-radius: 5px;background:#fff;float:left;margin-left:10%;position: relative;margin-top:5%;height:250px;}
+.sct4_item img{width:25%;  position: absolute;margin-left:80%;margin-top:-20px;}
+.sctit4{font-size:30px;color:#e5de5f; font-weight: bold;line-height: 2em;margin-top: 2%;text-align: center;}
+.scdetail4{font-size:20px;margin:5%;}
+.scdetail4.te1{margin-top:30px;}
+.scontain5{width: 100%;margin-top:3%;float:left;}
+.sc5_list{width: 100%;float:left;padding-bottom:3%;}
+.sc5_item{width:250px;position:relative;height:329px;margin-left:110px;margin-top:2%;float:left;background:url(bg4.png) no-repeat center;}
+.sc5tit1{width: 100%;text-align: center;font-size:30px;font-weight: bold;color:#fff;line-height: 2em;margin-top: 30px;}
+.sc5tit1.te1{margin-top:30px;}
+.sc5tit2{width: 100%;text-align: center;font-size:24px;color:#e5de5f;line-height:1.5em;}
+.sc5tit3{width: 92%;text-align: center;font-size:16px;color:#ccc;line-height:1.5em;margin:1% 4%;height:100px;}
+/*新三板第一部分开始*/

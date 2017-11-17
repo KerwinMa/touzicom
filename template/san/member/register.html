@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<title>中国新三板股权投资平台_第一股权网- 会员注册</title>
+ 
+<link href="{xiao:$site_template}images/login.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" language="javascript" src='{xiao:$site_template}images/reg_new.js'></script> 
+ <script type="text/javascript" language="javascript">
+<!--
+var reMethod = "POST",pwdmin = 3;
+
+ 
+ 
+
+
+$(document).ready(function(){ 
+	$("#passwordLevel").removeClass().addClass("rank r0");
+	 
+	$("input[type='password']").click(function(){
+	  hideVc()
+	});
+	$("#txtUsername").click(function(){
+	  hideVc()
+	});
+	$("input[type='radio']").focus(function(){
+	  hideVc()
+	});
+ 
+})
+
+-->
+function send() {
+	
+	
+  $.post('../index.php?c=api&a=code2&id='+Math.random(), { phone:$('#tel').val() }, function(data){
+	  
+	  
+	 
+	    if(data==1){
+		    
+		    
+		      alert("你输入手机号有误");
+		    }else{
+		    
+		     alert("发送成功");
+		    }
+	
+	    });	 
+                
+}
+ 
+ 
+
+ 
+</script>
+ 
+</head>
+<body>
+<div id="content">
+  <div id="top">
+    <div class="top">
+      <div class="logo1"><a href="http://www.touzitop.com/" target="_blank"><img src="{xiao:$site_template}images/main_logo.png" alt="" border="0"></a></div>
+      <div class="iphone"> <img src="{xiao:$site_template}images/phone.png" alt=""><a>咨询热线：400-805-4342</a> </div>
+    </div>
+  </div>
+ <div id="contain1">
+    <div class="contain1">
+      <h1>注册第一股权网账户</h1>
+      <p class="slogin">已有账户，<a href="/member/index.php?c=login">请登录</a></p>
+    <form class="formreg" method="post" action="" name="myform" id="myform">
+       <p class="pin">
+        <label>会员类型：</label>
+       {xiao:loop $member_model $t}
+       <label class="pl"><input name="data[modelid]"  required type="radio" value="{xiao:$t['modelid']}" {xiao:if $member_default_modelid==$t['modelid']}selected{/xiao:if} />{xiao:$t['modelname']} </label> 
+	{/xiao:loop}
+	     
+               </p>
+        <p class="pin1">
+          <label>用户名：</label>
+          <input type="text"  class="username"  placeholder="用户名" required id="txtUsername" name="data[username]">
+        </p>
+        <p class="pin1">
+          <label>设置密码：</label>
+          <input type="password" onKeyUp="setPasswordLevel(this, document.getElementById('passwordLevel'));" class="pwd" placeholder="密码（6-16位字符）" required id="txtPassword" name="data[password]">
+        </p>
+        <p class="pin1">
+          <label>确认密码：</label>
+          <input type="password" class="password_cf"  placeholder="请再次输入密码" required  maxlength="16" id="userpwdok" name="data[password2]" >
+          <span id="_userpwdok"></span> </p>
+        
+           <p class="pin1 te2">
+          <label>手机号码：</label>
+          <input type="num"  placeholder="请输入手机号" required id="tel" name="data[tel]">
+        <!--  <button id="zphone" type="button" class="huo"  onclick="send()">获取验证码</button>-->
+        </p>
+        <!--<p class="pin1 te1">
+          <label>手机验证码：</label>
+          <input class="yan" type="text" placeholder="请输入验证码" required id="mobile_code" name="mobile_code">
+        </p>-->
+        <div class="pin1">
+          <label>验证码：</label>
+          <input type="text" placeholder="请输入验证码" style=" width:100px; margin-right:20px; float:left;"  id="vdcode" name="code">
+          <p class="top15 captcha" id="captcha-container"> <img id="code" src="../index.php?c=api&a=checkcode&width=100&height=30" align="absmiddle" title="看不清楚？换一张" onclick="document.getElementById('code').src='../index.php?c=api&a=checkcode&width=100&height=30&'+Math.random();" style="cursor:pointer; margin-top:-3px;"> </p>
+        </div>
+   
+      <!--    <p class="pin1 te1">
+          <label>手机验证码：</label>
+          <input class="yan"  type="text" placeholder="请输入验证码" required id="mobile_code" name="mobile_code">
+        </p>-->
+        <div class="aggree">
+          <input type="checkbox" checked="checked" id="agree" onBlur="">
+          我已阅读并同意《用户协议》</div>
+        <input type="submit" id="btnSignCheck" class="lsubmit1" value="提交注册">
+		<!--短信宝  start-->	
+	  <script type="text/javascript">
+				$("#zphone").click(function(){
+				if($("#tel").val() == ""){
+				 alert("手机号不能为空！");return false;
+				}
+				if (!/^1[34578]\d{9}$/i.test($("#tel").val())) {
+					 alert("手机号码不2对,请正确填写");return false;
+				}	
+			 
+				});
+			 
+	  </script>
+	  <!--短信宝  end-->	
+      </form>
+    </div>
+  </div>
+</div>
+<!--主体结束-->
+<!--底部-->
+<div id="footer">
+  <div class="footer">
+    <div class="footerB"> <span>Copyright © touzitop.com.com. 第一股权网 版权所有</span> </div>
+  </div>
+</div>
+</body>
+</html>

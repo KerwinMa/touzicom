@@ -1,0 +1,196 @@
+{xiao:template header.html}
+<link rel="stylesheet" href="{xiao:$site_template}images/hq.css">
+ 
+<script type="text/javascript" src="{xiao:$site_template}images/base.js"></script>
+<script type="text/javascript" src="{xiao:$site_template}images/jquery.pagination.js"></script>
+<script type="text/javascript" src="{xiao:$site_template}images/echarts.js"></script>
+<script type="text/javascript" src="{xiao:$site_template}images/echar_index.js"></script>
+<script type="text/javascript" src="{xiao:$site_template}images/echar_tpzs.js"></script>
+<script type="text/javascript" src="{xiao:$site_template}images/html_tpzs.js"></script>
+ <script>
+	$(document).ready(function(){
+	    var $tab_li = $('.part2_se');
+	        $tab_li.click(function(){
+		    $(this).addClass('sel').siblings().removeClass('sel');
+		    var index = $tab_li.index(this);
+		    $('div.partd1').eq(index).show().siblings().hide();
+	    });	
+    });
+    $(document).ready(function(){
+	    var $tab_li1 = $('.right_tab');
+	        $tab_li1.click(function(){
+		    $(this).addClass('selected').siblings().removeClass('selected');
+		    var index = $tab_li1.index(this);
+		    $('div.2p_list').eq(index).show().siblings().hide();
+	    });	
+    });
+    $(document).ready(function(){
+	    var $tab_li2 = $('.item3_tab');
+	        $tab_li2.click(function(){
+		    $(this).addClass('se').siblings().removeClass('se');
+		    var index = $tab_li2.index(this);
+		    $('div.b3').eq(index).show().siblings().hide();
+	    });	
+    });
+	</script>
+<script type="text/javascript">
+        $(function () {
+	        $(".right2_item").click(function(){
+		        var thisSpan=$(this);
+		        $(".right2_item ul").prev("a").removeClass("cur");
+		        $("ul", this).prev("a").addClass("cur");
+		        $(this).children("ul").slideDown("fast");
+		        $(this).siblings().children("ul").slideUp("fast");
+	    })
+    });
+</script>
+<!--banner开始 -->
+<div class="ban"> <img src="/template/san/images/hqbanner.jpg" alt=""> </div>
+<!--banner结束 -->
+<!--第一部分开始 -->
+<div id="part1">
+  <div class="part1">
+    <div class="part1_list">
+      <div class="part1_item">
+        <div class="part1_top"> <img src="/template/san/images/hqicon1.png" alt=""> <span>挂牌企业总数</span> </div>
+        <div class="part1_detail">
+          <p><a target="_blank" href="/index.php?catid=27"><span id="qyzs"></span></a>家</p>
+        </div>
+      </div>
+      <div class="part1_item">
+        <div class="part1_top"> <img src="/template/san/images/hqicon2.png" alt=""> <span>市场分层分布</span> </div>
+        <div class="part1_detail">
+          <div class="detail1"><b class="te1">基础层</b><a target="_blank" href="/index.php?catid=27"><span id="jcc"></span></a></div>
+          <div class="detail1"><b>创新层</b><span><a target="_blank" href="/index.php?catid=27"><span id="cxc"></span></a></span></div>
+        </div>
+      </div>
+      <div class="part1_item">
+        <div class="part1_top"> <img src="/template/san/images/hqicon3.png" alt=""> <span>转让方式分布</span> </div>
+        <div class="part1_detail">
+          <div class="mt20" id="container3" style="height: 135px;width:400px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--第一部分结束 -->
+<!--第二部分开始 -->
+<div id="contain">
+  <div class="contain">
+    <!--三板市场开始 -->
+    <div class="part2">
+      <div class="part2_left">
+        <div class="part2_tit">
+          <div class="part2_se sel">三板做市（899002）</div>
+          <div class="part2_se">三板成指（899001）</div>
+        </div>
+        <div class="partd">
+          <div class="partd1">
+            <div class="affiche">
+              <div class="modlist" >
+                <div style="position:absolute; z-index:999; padding-left: 10px;" class="mt20">
+                  <div id="canvasDiv" style="height:390px;width:890px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="partd1" style="display:none">
+            <iframe src="sbc.php"  height="390px" width="890px" scrolling="no" style=" border:none"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="part2_right">
+        <ul class="right2_list">
+          <li  class="right2_item"> <a class="cur" href="javascript:void(0)">市场总貌</a>
+            <ul style="display:block">
+              <div class="right_tit2">截止时间：<span  id="myInfo1"></span></div>
+              <div class="cont" id="market_list"></div>
+            </ul>
+          </li>
+          <li class="right2_item"> <a  href="javascript:void(0)">挂牌公司（按转让方式）</a>
+            <ul>
+              <div class="right_tit2">
+                <div class="right_tab selected">总体</div>
+                <div class="line"></div>
+                <div class="right_tab">协议</div>
+                <div class="line"></div>
+                <div class="right_tab">做市</div>
+              </div>
+              <div class="right2p">
+                <div class="2p_list">
+                  <div class="cont" id="listingcompany"></div>
+                </div>
+                <div class="2p_list" style="display:none">
+                  <div class="cont" id="listingcompany1"></div>
+                </div>
+                <div class="2p_list" style="display:none">
+                  <div class="cont" id="listingcompany2"></div>
+                </div>
+              </div>
+            </ul>
+          </li>
+          <li class="right2_item"> <a  href="javascript:void(0)">挂牌公司（按市场分层）</a>
+            <ul>
+              <div class="right_tit2">
+                <div class="right_tab selected">总体</div>
+                <div class="line"></div>
+                <div class="right_tab">创新层</div>
+                <div class="line"></div>
+                <div class="right_tab">基础层</div>
+              </div>
+              <div class="right2p">
+                <div class="2p_list">
+                  <div class="cont" id="listingcompany3"></div>
+                </div>
+                <div class="2p_list" style="display:none">
+                  <div class="cont" id="listingcompany4"></div>
+                </div>
+                <div class="2p_list" style="display:none">
+                  <div class="cont" id="listingcompany5"></div>
+                </div>
+              </div>
+            </ul>
+          </li>
+          <li class="right2_item"> <a  href="javascript:void(0)">两网及退市公司</a>
+            <ul>
+              <div class="right_tit2">截止时间：2017-05-04</div>
+              <div class="cont" id="delistcompany"> </div>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--三板市场结束 -->
+    <!--今日排行榜开始 -->
+    <div class="part3">
+      <div class="part3_tit"><span>今日排行榜</span><a href="index.php?catid=27" class="more2">更多+</a></div>
+      <div class="part3_list">
+        <div class="part3_item">
+          <div class="item3_tit">
+            <div class="tit2">做市股涨跌幅排行</div>
+            <input type="hidden" id="sfield" value="0" />
+            <input type="hidden" id="sflag" value="0" />
+          </div>
+          <div class="item3_list">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" id="weight_list">
+            </table>
+          </div>
+        </div>
+        <div class="part3_item">
+          <div class="item3_tit te2">
+            <div class="tit2">协议股涨跌幅排行</div>
+          </div>
+          <div class="item3_list">
+            <iframe src="2.php" width="100%" height="100%"  scrolling="no" style=" border:none"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--今日排行榜结束 -->   
+  </div>
+</div>
+<!--第二部分结束 -->
+<div>
+ 
+</div>
+{xiao:template footer.html}

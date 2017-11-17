@@ -1,0 +1,100 @@
+*{padding:0;margin:0;font-family: "微软雅黑"}
+a{text-decoration: none;}
+ul{list-style: none;}
+/*banner开始 */
+.ban{width:100%;float:left;}
+.ban img{width:100%;float:left;}
+/*banner结束 */
+/*第一部分开始 */
+#part1{width: 100%;float:left;background:#efefef;}
+.part1{width:1200px;margin:0 auto;}
+.part1_list{width:1200px;float:left;margin: 30px auto;}
+.part1_item{width:300px; float:left;margin-left: 100px;}
+.part1_top{width: 300px;float:left;line-height:60px;}
+.part1_top img{float:left;margin: 0px 20px;}
+.part1_top span{margin-left: 15px;font-size: 24px;}
+.part1_detail{width: 300px;text-align: center;margin-top:25px;float:left;background:#fff;height:120px;}
+.part1_detail p{line-height: 100px;}
+.part1_detail span{font-size:36px;color:#ce2f24;}
+.detail1{width: 300px;line-height:40px;float:left;margin-top:10px;float:left;}
+.detail1 b.te1{background:#e63c23;}
+.detail1 b{width:80px;line-height:30px; background:#ffa346;color:#fff;font-size: 14px;float:left;margin:5px 20px;}
+.detail1 span{float:left;}
+.part1_detail img{float:left;margin:10px 20px;}
+.biaop2{width:150px; float:left;font-size: 14px;color:#666;margin-top: 50px;}
+.biao_item{float:left;}
+.biao_item.te1{}
+.biaop2 b{width:10px;height:8px;background:#ffa346;display: block;float:left;margin:8px;}
+.biaop2 b.te1{background:#e63c23;}
+/*第一部分结束 */
+/*第二部分开始 */
+#contain{width:100%;float:left;}
+.contain{width:1200px;margin:0 auto;}
+/*市场分析开始 */
+.part2{width:1200px;float:left;margin-top: 50px;}
+.part2_left{width:870px;float:left;}
+.part2_tit{width:870px;line-height: 40px;font-size:20px;border-bottom: 1px solid #ccc;float:left;}
+.part2_se{padding: 5px auto;float:left;margin-right:20px;cursor:pointer;}
+.part2_se.sel{color:#ffa346;border-bottom:3px solid #ffa346}
+.partd{width:870px;margin-top:40px;float:left;}
+.part2_right{width:300px;border:1px solid #ccc;float:left;margin-top:30px;margin-left:25px;overflow:hidden;height:422px;}
+.right2_list{width:300px;float:left;overflow:hidden;}
+.right2_item{width:300px;float:left;}
+.right2_item a{padding:0px 15px;line-height: 44px; height:44px;display: block;color:#fff;font-size: 18px;background:url(../image/icon5.png) no-repeat right;background-color:#ccc;border-bottom: 1px solid #fff;}
+.right2_item a.cur{background:url(../image/icon6.png) no-repeat right;background-color:#ffa346;border-bottom:none;}
+.right2_item ul{display: none;}
+.right_tit2{width:270px; padding:0px 15px;height:40px;background:#ffa346;color:#fff;font-size: 16px;float:left;}
+.right2_item ul li{padding:0px 15px;line-height:40px;border-bottom:1px solid #ccc;font-size: 14px;}
+.right2_item ul li span{float:right;color:#ffa346;}
+.right_tab{width:85px;height:40px; float:left;text-align: center;margin-top:8px;cursor: pointer;}
+.line{width:1px;height:15px;float:left;background:#fff;margin-top:12px;}
+.selected{background:url(../image/icon7.png) no-repeat bottom;}
+/*市场分析结束*/
+/*今日排行榜开始*/
+.part3{width:1200px;float:left;margin-top: 40px;}
+.part3_tit{width:1200px;height:50px;line-height: 50px;font-size: 20px;border-bottom: 1px solid #ccc;}
+.part3_tit span{padding:10px 0px;border-bottom:3px solid #ffa346;}
+.part3_list{width:1200px;float:left;margin-top: 25px;}
+.part3_item{width:49%;float:left;margin-right: 10px;}
+.item3_tit{ height:50px;line-height: 50px;color:#fff;background:#ffa346;}
+.item3_tit.te1{background:#ee7a7a;}
+.item3_tit.te2{background:#bb89d2;}
+.tit2{min-width:120px;float:left;text-align: center;font-size: 18px;}
+.item3_tab{min-width: 50px;float:left;text-align: center;margin-left: 15px;font-size: 16px;cursor: pointer;}
+.item3_tab.se{background:url(../image/icon8.png) no-repeat center;color:#fff;}
+.more1{width:50px;float:right;color:#eee;font-size: 16px;}
+.more1 a{color:#eee;}
+.more1 a:hover{color:#fff;}
+.item3_list{width:99.7%; height:256px;float:left;border:1px solid #ccc;}
+.bi2{width:388px;float:left;}
+.tit4{width:388px;background:#eee;float:left;}
+.bi2 li{width:388px;float:left;height:50px;line-height: 50px;font-size: 14px;border-bottom: 1px solid #ccc;}
+.bi2 li ul{width:388px;height:50px;float:left;}
+.bi2 li ul li{width:85px;text-align: center; float:left;}
+.cha1{width:130px;float:left;text-align: center;color:#ffa346;}
+.cha1.te1{color:#333;}
+.more2{width:50px;line-height: 50px;float:right;color:#ffa346;color:#666;font-size: 16px;}
+.more2:hover{color:#ffa346;}
+/*今日排行榜结束*/
+/*新股挂牌开始*/
+.part5{width:1180px;float:left;margin-top:25px;margin-left:8px;border:1px solid #ccc;margin-bottom:50px;}
+.tit5{background:#ffa346;float:left;color:#fff;}
+.part5 li{width:1180px;float:left;height:50px;line-height: 50px;font-size: 14px;border-bottom: 1px solid #ccc;}
+.part5 li ul{width:1180px;height:50px;float:left;}
+.part5 li ul li{width:95px;text-align: center; float:left;}
+.cha1.te2{color:#fff;}
+/*新股挂牌结束*/
+
+
+.modlist {
+	display: none;
+}
+
+
+#weight_list{border-collapse:collapse; text-align:center;}
+#weight_list tr{width: 388px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    border: 1px solid #ccc;}
+.store{background: #eee;}

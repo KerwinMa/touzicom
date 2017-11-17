@@ -1,0 +1,48 @@
+*{padding: 0;margin:0;font-family: "微软雅黑"}
+.banner{width: 100%;float:left;}
+a{text-decoration: none;}
+.banner img{width:100%;float:left;}
+.bt1{position: absolute;width:14%;height:40px;line-height: 40px;background:#ecca63;border-radius: 15px;margin-left:43%;margin-top:28%;text-align: center;color:#fff;font-size:25px;}
+.bt1 a{color:#fff;}
+.bt1 a:hover{color:#333;}
+body{background:#0b0507;}
+/*什么是Pre-IPO */
+#what{width:100%;height:630px;float:left;background:url(http://i1.buimg.com/578049/240da750ea176501.jpg) no-repeat top;}
+.what{width:1200px;margin:0 auto;}
+.line1{width:400px;height:160px;  background:url(../image/icon1-1.png) no-repeat bottom;float:left;margin:15px 400px;}
+.line1 p{width:400px;font-size: 45px;color:#d7bd63;text-align: center;line-height:60px;margin-top:30px;float:left; }
+.line1 span{width: 400px;line-height: 40px;display: block;text-align: center;font-size:22px;color:#eee;}
+.what_p{width: 1200px;float:left;}
+.what_p p{width:1100px;padding-bottom:15px; margin:10px 50px;float:left;font-size:24px;color:#fff;background:url(../image/bgcg.png) no-repeat center; line-height:40px;text-align: center;}
+.what_list{width:1200px;float:left;margin-top:35px;}
+.what_item{width:345px;float:left;margin-left: 40px;}
+.item1{width: 345px;height:70px;float:left;line-height: 70px;font-size:25px;border-bottom:1px dashed #ccc;color:#fff;}
+.item1 span{padding:15px;background:#bc9b58;color:#fff;font-size:30px;margin-right: 10px;background:url(../image/bgx.png) no-repeat center;}
+.detail1{font-size: 18px;line-height: 30px;padding:10px;float:left;color:#fff;}
+/*怎样可以赚钱开始*/
+#money{width:100%;float:left;border-bottom:1px dashed #ccc;padding-bottom: 20px;background:#0b0507;}
+.money{width:1200px;margin:0 auto;}
+.mtit{width: 1200px;text-align: center;line-height:120px;font-size:40px;color:#f8c234;background:url(http://i4.piimg.com/578049/d35effdc9fc52d7b.png) no-repeat center;float:left;}
+.mdetail{width: 1200px;float:left;margin:40px 0px;}
+.mdetail img{margin-left:189px;float:left;}
+.m_list{width: 1200px;float:left;margin-top:10px;}
+.m_item{width: 243px;float:left;margin-left:98px;border:1px dashed #f4de84;padding: 10px;margin-top:20px;}
+.m_item p{text-align: center;font-size: 30px;color:#fff;line-height:80px;}
+.bt{width:400px;height:64px;background:#c8a64d;float:left;border-radius: 20px; text-align: center;line-height:60px;font-size:25px;color:#fff;margin:30px 400px;}
+.bt a{color:#fff;text-decoration: none;}
+.bt a:hover{color:#333;}
+/*IPO提速开始*/
+#data{width:100%;float:left;padding-bottom:30px; border-bottom:1px dashed #666;background:url(../image/bg5.png) no-repeat bottom;background:#0b0507;}
+.data{width:1200px;margin:0 auto;}
+.data1{width:1100px;margin-left:50px;float:left;margin-top:20px;}
+.datal{width:1100px;padding: 20px;font-size: 20px;color:#fff;float:left;line-height:40px;}
+.datar{width: 800px;border-radius: 20px;border:1px dashed #f4de84;float:left;margin-left:40px;margin-left: 150px;}
+.datar img{width:760px;margin: 20px;}
+/*IPO企业开始*/
+#pre{width:100%;padding-bottom:50px; float:left;background:#0b0507;}
+.pre{width:1200px; margin:0 auto;}
+.pre_list{width:1200px;float:left;margin-bottom: 20px;}
+.pre_item{width:258px;float:left;border:2px solid #f8c234;margin-left:30px;margin-top:20px;border-radius: 20px;}
+.pre_item img{width:250px;border-radius: 20px;   margin:4px;}
+.pre_item p{text-align:center;font-size: 24px;line-height:40px;color:#fff;}
+.pre_item span{width:258px;text-align: center;font-size:18px;display: block;color:#ccc;margin-bottom:15px;}

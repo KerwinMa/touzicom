@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+<title>{xiao:$site_title}</title>
+<meta name="keywords" content="{xiao:$site_keywords}" />
+<meta name="description" content="{xiao:$site_description}" />
+<link rel="stylesheet" href="{xiao:$site_template}images/top.css">
+<link rel="stylesheet" href="{xiao:$site_template}images/pro.css">
+<script type="text/javascript" src="{xiao:$site_template}images/jquery-1.11.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+	    var $tabn = $('.newsitem');
+	        $tabn.click(function(){
+		    $(this).addClass('cur1').siblings().removeClass('cur1');
+		    var index = $tabn.index(this);
+		    $('div.xunitem').eq(index).show().siblings().hide();
+	    });	
+    });
+    </script>
+</head>
+<body>
+<!-- 头部开始-->
+<div class="top">
+  <div class="topic"><a href="http://www.touzitop.com/"><img src="{xiao:$site_template}images/main_logo.png" alt=""></a></div>
+  <form action="/plus/advancedsearch.php" method="post" style="display: -webkit-box;-webkit-box-flex: 1;">
+  <div class="sou">
+    <input type="hidden" name="mid" value="17" />
+    <input type="hidden" name="dopost" value="search" />
+    <input type="text" placeholder="请输入项目关键词"  name="q">
+    <div class="spic"><button style="border:none;"><img src="{xiao:$site_template}images/sou.png" alt=""></button></div>
+  </div>
+  </form>
+</div>
+<!-- 头部结束-->
+<!-- 分类导航-->
+<ul class="w1100 clearfix"> {xiao:php 
+
+ $list_url = array();
+
+ foreach ($_GET as $n=>$v) $list_url[$n] = Base::get($n);
+
+ $list_url[page]='[page]';
+
+ $urlrule = url('index',$list_url);
+
+ } 
+
+
+ <? $arr_leixing= array('新股增发'=>'新股增发','老股转让'=>'老股转让','风投项目'=>'风投项目','天使投资'=>'天使投资');?>
+
+ <? $arr_area= array('北京'=>'北京','天津'=>'天津','上海'=>'上海','江苏'=>'江苏','浙江'=>'浙江','安徽'=>'安徽','福建'=>'福建','山东'=>'山东','湖北'=>'湖北','广东'=>'广东','云南'=>'云南','湖南'=>'湖南','河北'=>'河北','河南'=>'河南','四川'=>'四川','辽宁'=>'辽宁','甘肃'=>'甘肃','其他'=>'其他');?>
+
+ <? $arr_industry= array('信息通讯'=>'信息通讯','移动互联'=>'移动互联','消费服务'=>'消费服务','节能环保'=>'节能环保','文化传媒'=>'文化传媒','生物制药'=>'生物制药','金融服务'=>'金融服务','工业制造'=>'工业制造','医疗器械'=>'医疗器械','能源材料'=>'能源材料','军工科技'=>'军工科技','农林牧渔'=>'农林牧渔','其他类别'=>'其他类别');?>
+
+  <li class="nav-li"> <a href="javascript:;" class="nav-head-a">所在地区<i class="ico_default"></i></a> 
+ 
+ 
+    <div class="hidden-ul"><span>全部</span>
+    
+    {xiao:loop $arr_area $k=>$t}
+
+<a title="{xiao:$k}" href="/index.php?catid={xiao:$catid}&leixing={xiao:$list_url['leixing']}&industry={xiao:$list_url['industry']}&area={xiao:$t}">{xiao:$k}</a>
+ {/xiao:loop}
+</div> 
+  </li>
+  <li class="nav-li"> <a href="javascript:;" class="nav-head-a">投资分类<i class="ico_default"></i></a>
+    <div class="hidden-ul"><span>全部</span>
+    {xiao:loop $arr_industry $k=>$t}
+    <a title="{xiao:$k}" href="/index.php?catid={xiao:$catid}&leixing={xiao:$list_url['leixing']}&industry={xiao:$list_url['area']}&industry={xiao:$t}">{xiao:$k}</a> {/xiao:loop}</div> 
+  </li>
+</ul>
+<!-- 分类导航结束-->
+<div class="content">
+  <!-- 股权项目开始 -->
+  <div class="gu">  
+    <div class="gulist"> {xiao:list catid=$catid xiaocms=1   leixing=$list_url[leixing] area=$list_url[area] industry=$list_url[industry]  urlrule=$urlrule page=$page  }
+        <div class="guitem"> <a href="{xiao:$xiao['url']}">
+        <div class="picg"><img src="{xiao:function.image($xiao[thumb])}" alt=""></div>
+        <div class="ptit">{xiao:$xiao['title']}</div>
+        <div class="pbiao">
+          <div class="pbl"> <img src="{xiao:$site_template}images/sort1.png" alt=""> <span>{xiao:$xiao['industry']}</span> </div>
+          <div class="pbl"> <img src="{xiao:$site_template}images/add1.png" alt=""> <span>{xiao:$xiao['area']}</span> </div>
+        </div>
+        </a> </div>
+      {/xiao:list}      
+    </div>
+  </div>
+  <!-- 股权项目结束 -->
+  <!--翻页开始-->
+  <div class="ye"> {xiao:$pagelist}
+</div>
+  <!--翻页开始-->
+</div>
+<div class="footspace"></div>
+<!--底部开始-->
+{xiao:template footer.html}
+
+ 
+
+<link rel="stylesheet" href="{xiao:$site_template}images/demo.css">
+<div class="theme-popover" style="margin:0 0 0 0; left:0; width:100%;" id="light">
+  <div class="theme-poptit"> <a href="javascript:void(0)" class="close" style="float:right;" onClick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"> ×</a>
+    <h3>在线预约</h3>
+  </div>
+  <div class="theme-popbod dform">
+<form action="/plus/diy.php" enctype="multipart/form-data" method="post" class="theme-signin" name="loginform" id="complain">
+
+      <input type="hidden" name="action" value="post" />
+
+      <input type="hidden" name="diyid" value="1" />
+
+      <input type="hidden" name="do" value="2" />
+
+<input type="hidden" name="dede_fields" value="name,text;phone,text;time,text;source,text" />
+
+<input type="hidden" name="dede_fieldshash" value="380d8623c254b3480204696bd657af73" />
+
+<input type='hidden' name='source' id='source' style='width:250px'  class='intxt' value='' />
+
+	<input type="hidden" name="time" id="time" value="">
+
+      <ol>
+
+        <li><strong>用户姓名：</strong>
+
+          <input class="ipt" type="text" name='name' id='name'  size="20" placeholder="用户姓名" />
+
+        </li>
+
+        <li><strong>手机号码：</strong>
+
+          <input class="ipt"  type='text' name='phone' id='phone' size="20" placeholder="手机号码" />
+
+        </li>
+
+        <li>
+
+          <input class="btn btn-primary" type="submit" name="submit" value=" 提 交 " />
+
+        </li>
+
+      </ol>
+
+    </form>
+  </div>
+</div>
+<div id="fade"></div>
+
+
+
+<script type="text/javascript" src="{xiao:$site_template}images/yxmobileslider.js"></script>
+
+<script>
+
+    $(".slider").yxMobileSlider({width:640,height:320,during:3000})
+
+  </script>
+  
+  
+
+ 
+<script type="text/javascript">
+	function stopPropagation(e) {  
+			if (e.stopPropagation)  
+				e.stopPropagation();  
+			else  
+				e.cancelBubble = true;  
+		}  
+	  //点击页面其他地方收
+    $(document).bind('click', function() {  
+        $('div.hidden-ul').css('display', 'none');  
+		$(".w1100 .nav-li .nav-head-a").css("color","#333").find("i").removeClass("ico_new");
+    });  
+  	//点击其他地方收起，除了下面两个外
+    $("ul.hidden-ul").bind('click', function(e) {  
+        stopPropagation(e);  
+    });  
+	$(".w1100 .nav-li .nav-head-a").bind('click', function(e) {  
+        stopPropagation(e);  
+    });
+	//点击其他地方收起，除了上面两个外	
+	$(".w1100 .nav-li .nav-head-a").click(function(){
+		if($(this).next("div.hidden-ul").is(":hidden")){//判断是否隐藏，返回true或者fasle
+			//显示下拉菜单
+			$(this).next().show()
+			//文字颜色切换和箭头切换		
+			$(this).css("color","#f5c67c").find("i").addClass("ico_new");			
+			}else{
+				//隐藏下拉菜单
+				$(this).next().hide();
+				//文字颜色切换和箭头切换
+				$(this).css("color","#333").find("i").removeClass("ico_new");				
+				}				
+				$(this).parent(".nav-li").siblings().find("div.hidden-ul").hide();//隐藏其他下面的下来菜单				
+				$(this).parent(".nav-li").siblings().find(".nav-head-a i").removeClass("ico_new");//初始化其他下面的三角按钮				
+				$(this).parent(".nav-li").siblings().find(".nav-head-a").css("color","#333");//初始化其他下面的文字颜		
+		});
+</script>
+</body>
+</html>

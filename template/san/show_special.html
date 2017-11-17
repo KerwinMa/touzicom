@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>得新三者板得天下-新三板投资</title>
+
+ 
+
+<link rel="stylesheet" href="{xiao:$site_template}images/demo.css">
+<link rel="stylesheet" href="{xiao:$site_template}images/{xiao:$style}.css">
+<link rel="stylesheet" href="{xiao:$site_template}images/main.css">
+
+<script type="text/javascript" src="{xiao:$site_template}images/jquery-1.7.1.min.js"></script>
+ 
+
+<script>
+
+
+
+jQuery(document).ready(function($) {
+
+	$('.theme-login').click(function(){
+
+		$('.theme-popover-mask').fadeIn(100);
+
+		$('.theme-popover').slideDown(200);
+
+	})
+
+	$('.theme-poptit .close').click(function(){
+
+		$('.theme-popover-mask').fadeOut(100);
+
+		$('.theme-popover').slideUp(200);
+
+	})
+
+})
+
+$(document).ready(function()
+
+   {
+
+    //验证
+
+    $('#complain').submit(function ()
+
+    {
+
+        if($('#name').val()==""){
+
+            $('#name').focus();
+
+            alert("用户名不能为空！");
+
+            return false;
+
+        }
+
+        if($('#phone').val()=="")
+
+        {
+
+            $('#phone').focus();
+
+            alert("联系电话不能为空！");
+
+            return false;
+
+        }
+
+		var myreg = /^1[34578]\d{9}$/; 
+
+		if(!myreg.test($("#phone").val())) 
+
+		{ 
+
+   			alert('请输入有效的手机号码！'); 
+
+    		return false; 
+
+		} 		
+
+    })  
+
+});
+
+</script>
+
+</head>
+
+<body>
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="{xiao:$site_template}images/common.css" />
+
+ 
+
+
+
+ 
+
+{xiao:template nav.html}
+
+
+
+<!-- top bar start -->
+
+
+
+{xiao:$content}
+
+{xiao:template footer.html}

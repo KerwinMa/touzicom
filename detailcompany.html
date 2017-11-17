@@ -1,0 +1,1327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>项目大全－新三板股权_新三板投资_新三板项目_新三板论坛_股权投资－中国第一股权门户网站！</title>
+<meta name="keywords" content="新三板,新三板论坛,新三板股票,新三板开户,新三板股权,股权论坛,股票论坛,理财论坛,金融论坛" />
+<meta name="description" content="中国第一股权门户网站－新三板投资圈、新三板股权投资圈、股票投资圈、P2P投资圈、金融理财投资圈－投资者最佳的理财知识网站！" />
+<link href="/template/san/images/1.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/template/san/images/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/template/san/images/base.js"></script>
+<script type="text/javascript" src="/template/san/images/com.js"></script>
+<script type="text/javascript" src="/template/san/images/jquery.pagination.js"></script>
+<link type="text/css" rel="stylesheet" href="/template/san/images/main.css">
+<link rel="stylesheet" type="text/css" href="/template/san/images/common.css" />
+ 
+</head>
+ 
+<script type="text/javascript">
+$(function() {
+	 var typeId = getQueryString("typeId");
+	 var tid = (typeId == null || typeId == "") ? $("#typeId").val() : typeId;
+	 //异步加载数据,默认加载
+	 //loadQuotationData(tid);
+	 if (tid == '0'){
+		 $("#stockDetail").click();
+	 }else if (tid == '1'){
+		 $("#companyDetail").click();
+	 }
+	 var comType = getQueryString("comType");
+	 var tp = getQueryString("typename");
+
+	 if (comType == '0' && (tp == 'L' || tp == 'A'|| tp == 'B')){
+	 	 $("#companyDetail").css("display","none");
+		 $("#companymessage").css("display","none");
+	 }
+	 
+});
+
+function loadQuotationData(typeId){
+	//公司代码
+	var companyCode = getQueryString("companyCode");
+	var zrlx = decodeURI(getQueryString("zrlx"));
+	var zqdm = ($("#companyCode").val() == null || $("#companyCode").val() == "") ? companyCode : $("#companyCode").val();
+	//type :'ALL'： 交易行情(所有)，'G':挂牌公司，'T':协议方式，'Z'：做市方式，'J':竞价方式，'L':两网及退市， 'A'：A股，'B':B股
+	var tp = getQueryString("typename");
+	var typename = (tp != null && tp != "") ? tp : $("#typename").val();
+	
+	//标题文本
+	setTitle($("#titlespan"), typename);
+	setTitle($("#titlespan2"), typename);
+	if(typeId == '0'){
+		$.ajax({
+			url : 'http://www.neeq.com.cn/nqhqController/nqhq.do',
+			data : {
+				page : $("#pageId").val(),
+				zqdm : zqdm
+			},
+			dataType : 'jsonp',
+			success : function(result) {
+				$("#detailcompany").empty();
+				$("#companymessage").empty();
+				document.title=""+result[0].content[0].hqzqjc+"("+result[0].content[0].hqzqdm+")-中国新三板股权投资平台_三个贝壳";
+				var source = "";
+				if (result[0].totalElements > 0) {
+					if (typename == 'X'){					
+						source += "<div class='quotation fix'>"
+						source += "<div class='name'>"
+						source += "<p><span>"+result[0].content[0].hqzqjc+"</span></p>"
+						source += "<p>股份代码：<span>"+result[0].content[0].hqzqdm+"</span></p>"
+						source += "</div>"
+						source += "<div class='time' style='width:190px;'>"+getDate(result[0].content[0].hqjsrq)+"个股行情</div>"
+						source += "<div class='btn'><span class='fl'><a href='quotation.html?tabId="+typename+"'>返回列表</a></span><span class='fl'></span></div></div>"
+						source += "<div class='list quolist'>"
+						source += "<table width='100%' border='0' cellpadding='0' cellspacing='0'>"
+						source += "<tr class='th2'>"
+						source += "<th>转让方式</th>"
+						source += "<th class='tc'>前收盘价<br/><span>(元股)</span></th>"
+						source += "<th class='tc'>最近成交价<br/><span>(元股)</span></th>"
+						source += "<th class='tc'>当日最高价<br/><span>(元股)</span></th>"
+						source += "<th class='tc'>当日最低价<br/><span>(元股)</span></th>"
+						source += "<th class='tc'>当日累计成交<br/><span>金额(万元)</span></th>"
+						source += "<th class='tc'>涨跌</th>"
+						source += "<th class='tc'>涨跌幅</th>"
+						source += "<th class='tc'>申报明细</th>"
+						source += "</tr>"
+						source += "<tr>"
+						source += "<td>"+result[0].content[0].xxzrlx+"</td>"
+						source += "<td class='tc'>"+result[0].content[0].hqzrsp.toFixed(2)+"</td>"
+						source += "<td class='tc'>"+result[0].content[0].hqzjcj.toFixed(2)+"</td>"
+						source += "<td class='tc'>"+result[0].content[0].hqzgcj.toFixed(2)+"</td>"
+						source += "<td class='tc'>"+result[0].content[0].hqzdcj.toFixed(2)+"</td>"
+						source += "<td class='tc'>"+(Math.round(result[0].content[0].hqcjje/10000*100)/100).toFixed(2)+"</td>"
+						source += "<td class='tc'>"+changeColor(result[0].content[0].hqzd.toFixed(2))+"</b></td>"
+						source += "<td class='tc'>"+changeColor(result[0].content[0].hqzdf.toFixed(2))+"%</b></td>"
+						source += "<td class='tc'>"+(Math.round(result[0].content[0].hqcjsl/10000*100)/100).toFixed(2)+"</td>"
+						source += "</tr></table></div>"
+						
+									
+						source += "<div class='price fix'>"
+						source += "<div  style='width:720px;float:left'><iframe src='http://www.touzitop.com/HQ_v3.html#sb_"+result[0].content[0].hqzqdm+"' name='ifm' width='620' height='502' marginheight='0' marginwidth='0' frameborder='0' scrolling='no'></iframe>"						
+						source += "</div>"
+						source += "<div class='cont'><table width='100%' border='0' cellpadding='0' cellspacing='0'>"
+						source += "<tr>"
+						source += "<th></th>"
+						source += "<th>申报价格</th>"
+						source += "<th>数量</th>"
+						source += "</tr>"
+						source += "<tr class='c2'>"
+						source += "<td>卖六</td>"
+						source += "<td>"+result[0].content[0].hqsjw6.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqssl6+"</td>"
+						source += "</tr>" 
+						source += "<tr class='c1'>"
+						source += "<td>卖五</td>"
+						source += "<td>"+result[0].content[0].hqsjw5.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqssl5+"</td>"
+						source += "</tr>" 
+						source += "<tr class='c2'>"
+						source += "<td>卖四</td>"
+						source += "<td>"+result[0].content[0].hqsjw4.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqssl4+"</td>"
+						source += "</tr>"
+						source += "<tr class='c1'>"
+						source += "<td>卖三</td>"
+						source += "<td>"+result[0].content[0].hqsjw3.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqssl3+"</td>"
+						source += "</tr>"
+						source += "<tr class='c2'>"
+						source += "<td>卖二</td>"
+						source += "<td>"+result[0].content[0].hqsjw2.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqssl2+"</td>"
+						source += "</tr>"
+						source += "<tr class='c1'>"
+						source += "<td>卖一</td>"
+						source += "<td>"+result[0].content[0].hqsjw1.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqssl1+"</td>"
+						source += "</tr>"
+						source += "</table></div>"
+						source += "<div class='cont'><table width='100%' border='0' cellpadding='0' cellspacing='0'>"
+						source += "<tr>"
+						source += "<th></th>"
+						source += "<th>申报价格</th>"
+						source += "<th>数量</th></tr>" 
+						source += "<tr class='c1'>"
+						source += "<td>买一</td>"
+						source += "<td>"+result[0].content[0].hqbjw1.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqbsl1+"</td>"
+						source += "</tr>"
+						source += "<tr class='c2'>"
+						source += "<td>买二</td><td>"+result[0].content[0].hqbjw2.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqbsl2+"</td>"
+						source += "</tr>"
+						source += "<tr class='c1'>"
+						source += "<td>买三</td><td>"+result[0].content[0].hqbjw3.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqbsl3+"</td>"
+						source += "</tr>"
+						source += "<tr class='c2'>"
+						source += "<td>买四</td>"
+						source += "<td>"+result[0].content[0].hqbjw4.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqbsl4+"</td>"
+						source += "</tr>"
+						source += "<tr class='c1'>"
+						source += "<td>买五</td><td>"+result[0].content[0].hqbjw5.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqbsl5+"</td>"
+						source += "</tr>"
+						source += "</table></div></div>";
+					}else if (typename == 'L' || typename == 'A' || typename == 'B'){
+						source += "<div class='quotation fix'>"
+						source += "<div class='name'>"
+						source += "<p><span>"+result[0].content[0].hqzqjc+"</span></p>"
+						source += "<p>股份代码：<span>"+result[0].content[0].hqzqdm+"</span></p>"
+						source += "</div>"
+						source += "<div class='time' style='width:190px;'>"+getDate(result[0].content[0].hqjsrq)+"个股行情</div>"
+						source += "<div class='btn'><span class='fl'><a href='quotation.html?tabId="+typename+"'>返回列表</a></span><span class='fl'></span></div></div>"
+						source += "<div class='list quolist'>"
+						source += "<table width='100%' border='0' cellpadding='0' cellspacing='0'>"
+						source += "<tr class='th2'>"
+						source += "<th>币种</th>"
+						source += "<th class='tc'>前收盘价<br/><span>(元股)</span></th>"
+						source += "<th class='tc'>最近成交价<br/><span>(元股)</span></th>"
+						source += "<th class='tc'>当日最高价<br/><span>(元股)</span></th>"
+						source += "<th class='tc'>当日最低价<br/><span>(元股)</span></th>"
+						source += "<th class='tc'>当日累计成交<br/><span>金额(万元)</span></th>"
+						source += "<th class='tc'>涨跌</th><th class='tc'>涨跌幅</th>"
+						source += "</tr>"
+						source += "<tr>"
+						source += "<td>"+result[0].content[0].xxhbzl+"</td>"
+						source += "<td class='tc'>"+result[0].content[0].hqzrsp.toFixed(2)+"</td>"
+						source += "<td class='tc'>"+result[0].content[0].hqzjcj.toFixed(2)+"</td>"
+						source += "<td class='tc'>"+result[0].content[0].hqzgcj.toFixed(2)+"</td>"
+						source += "<td class='tc'>"+result[0].content[0].hqzdcj.toFixed(2)+"</td>"
+						source += "<td class='tc'>"+(Math.round(result[0].content[0].hqcjje/10000*100)/100).toFixed(2)+"</td>"
+						source += "<td class='tc'>"+changeColor(result[0].content[0].hqzd.toFixed(2))+"</b></td>"
+						source += "<td class='tc'>"+changeColor(result[0].content[0].hqzdf.toFixed(2))+"%</b></td>"
+						source += "</tr>"
+						source += "</table></div>"
+						source += "<div class='price fix'>"
+						source += "<div class='cont'><table width='100%' border='0' cellpadding='0' cellspacing='0'>"
+						source += "<tr>"
+						source += "<th></th>"
+						source += "<th>申报价格</th>"
+						source += "<th>数量</th>"
+						source += "</tr>"
+						source += "<tr class='c2'>"
+						source += "<td>卖六</td>"
+						source += "<td>"+result[0].content[0].hqsjw6.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqssl6+"</td>"
+						source += "</tr>" 
+						source += "<tr class='c1'>"
+						source += "<td>卖五</td>"
+						source += "<td>"+result[0].content[0].hqsjw5.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqssl5+"</td>"
+						source += "</tr>" 
+						source += "<tr class='c2'>"
+						source += "<td>卖四</td>"
+						source += "<td>"+result[0].content[0].hqsjw4.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqssl4+"</td>"
+						source += "</tr>"
+						source += "<tr class='c1'>"
+						source += "<td>卖三</td>"
+						source += "<td>"+result[0].content[0].hqsjw3.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqssl3+"</td>"
+						source += "</tr>"
+						source += "<tr class='c2'>"
+						source += "<td>卖二</td>"
+						source += "<td>"+result[0].content[0].hqsjw2.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqssl2+"</td>"
+						source += "</tr>"
+						source += "<tr class='c1'>"
+						source += "<td>卖一</td>"
+						source += "<td>"+result[0].content[0].hqsjw1.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqssl1+"</td>"
+						source += "</tr>"
+						source += "</table></div>"
+						source += "<div class='cont'><table width='100%' border='0' cellpadding='0' cellspacing='0'>"
+						source += "<tr>"
+						source += "<th></th>"
+						source += "<th>申报价格</th>"
+						source += "<th>数量</th></tr>" 
+						source += "<tr class='c1'>"
+						source += "<td>买一</td>"
+						source += "<td>"+result[0].content[0].hqbjw1.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqbsl1+"</td>"
+						source += "</tr>"
+						source += "<tr class='c2'>"
+						source += "<td>买二</td><td>"+result[0].content[0].hqbjw2.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqbsl2+"</td>"
+						source += "</tr>"
+						source += "<tr class='c1'>"
+						source += "<td>买三</td><td>"+result[0].content[0].hqbjw3.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqbsl3+"</td>"
+						source += "</tr>"
+						source += "<tr class='c2'>"
+						source += "<td>买四</td>"
+						source += "<td>"+result[0].content[0].hqbjw4.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqbsl4+"</td>"
+						source += "</tr>"
+						source += "<tr class='c1'>"
+						source += "<td>买五</td><td>"+result[0].content[0].hqbjw5.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqbsl5+"</td>"
+						source += "</tr>"
+						source += "</table></div></div>";
+					}else if(typename == 'G' || typename == 'JC' || typename == 'CX'){
+						//处理挂牌公司从公司代码跳转后页面入口一致问题				
+						if (zrlx == "协议"){
+							source += "<div class='quotation fix'>"
+							source += "<div class='name'>"
+							source += "<p><span>"+result[0].content[0].hqzqjc+"</span></p>"
+							source += "<p>股份代码：<span>"+result[0].content[0].hqzqdm+"</span></p>"
+							source += "</div>"
+							source += "<div class='time' style='width:190px;'>"+getDate(result[0].content[0].hqjsrq)+"个股行情</div>"
+							source += "<div class='btn'><span class='fl'><a href='http://www.touzitop.com/index.php?catid=27?tabId="+typename+"'>返回列表</a></span><span class='fl'></span></div></div>"
+							source += "<div class='list quolist'>"
+							source += "<table width='100%' border='0' cellpadding='0' cellspacing='0'>"
+							source += "<tr class='th2'>"
+							source += "<th>转让方式</th>"
+							source += "<th class='tc'>前收盘价<br/><span>(元股)</span></th>"
+							source += "<th class='tc'>最近成交价<br/><span>(元股)</span></th>"
+							source += "<th class='tc'>当日最高价<br/><span>(元股)</span></th>"
+							source += "<th class='tc'>当日最低价<br/><span>(元股)</span></th>"
+							source += "<th class='tc'>当日累计成交<br/><span>金额(万元)</span></th>"
+							source += "<th class='tc'>当日成交股<br/><span>(万股)</span></th>"
+							source += "<th class='tc'>涨跌</th>"
+							source += "<th class='tc'>涨跌幅</th>"
+							source += "</tr>"
+							source += "<tr>"
+							source += "<td>"+result[0].content[0].xxzrlx+"</td>"
+							source += "<td class='tc'>"+result[0].content[0].hqzrsp.toFixed(2)+"</td>"
+							source += "<td class='tc'>"+result[0].content[0].hqzjcj.toFixed(2)+"</td>"
+							source += "<td class='tc'>"+result[0].content[0].hqzgcj.toFixed(2)+"</td>"
+							source += "<td class='tc'>"+result[0].content[0].hqzdcj.toFixed(2)+"</td>"
+							source += "<td class='tc'>"+(Math.round(result[0].content[0].hqcjje/10000*100)/100).toFixed(2)+"</td>"
+						    source += "<td class='tc'>"+(Math.round(result[0].content[0].hqcjsl/10000*100)/100).toFixed(2)+"</td>"
+							source += "<td class='tc'>"+changeColor(result[0].content[0].hqzd.toFixed(2))+"</b></td>"
+							source += "<td class='tc'>"+changeColor(result[0].content[0].hqzdf.toFixed(2))+"%</b></td>"
+							source += "</tr></table></div>"
+							
+										
+						source += "<div class='price fix'>"
+						source += "<div style='width:720px;float:left'><iframe src='http://www.touzitop.com/HQ_v3.html#sb_"+result[0].content[0].hqzqdm+"' name='ifm'width='650' height='502' marginheight='0' marginwidth='0' frameborder='0' scrolling='no'></iframe>"						
+						source += "</div>"
+							source += "<div class='cont'><table width='100%' border='0' cellpadding='0' cellspacing='0'>"
+							source += "<tr>"
+							source += "<th></th>"
+							source += "<th>申报价格</th>"
+							source += "<th>数量</th>"
+							source += "</tr>"
+							source += "<tr class='c1'>"
+							source += "<td>卖五</td>"
+							source += "<td>"+result[0].content[0].hqsjw5.toFixed(2)+"</td>"
+							source += "<td>"+result[0].content[0].hqssl5+"</td>"
+							source += "</tr>" 
+							source += "<tr class='c2'>"
+							source += "<td>卖四</td>"
+							source += "<td>"+result[0].content[0].hqsjw4.toFixed(2)+"</td>"
+							source += "<td>"+result[0].content[0].hqssl4+"</td>"
+							source += "</tr>"
+							source += "<tr class='c1'>"
+							source += "<td>卖三</td>"
+							source += "<td>"+result[0].content[0].hqsjw3.toFixed(2)+"</td>"
+							source += "<td>"+result[0].content[0].hqssl3+"</td>"
+							source += "</tr>"
+							source += "<tr class='c2'>"
+							source += "<td>卖二</td>"
+							source += "<td>"+result[0].content[0].hqsjw2.toFixed(2)+"</td>"
+							source += "<td>"+result[0].content[0].hqssl2+"</td>"
+							source += "</tr>"
+							source += "<tr class='c1'>"
+							source += "<td>卖一</td>"
+							source += "<td>"+result[0].content[0].hqsjw1.toFixed(2)+"</td>"
+							source += "<td>"+result[0].content[0].hqssl1+"</td>"
+							source += "</tr>"
+							source += "</table></div>"
+							source += "<div class='cont' style='margin-top:10px;'><table width='100%' border='0' cellpadding='0' cellspacing='0'>"
+							source += "<tr>"
+							source += "<th></th>"
+							source += "<th>申报价格</th>"
+							source += "<th>数量</th></tr>" 
+							source += "<tr class='c1'>"
+							source += "<td>买一</td>"
+							source += "<td>"+result[0].content[0].hqbjw1.toFixed(2)+"</td>"
+							source += "<td>"+result[0].content[0].hqbsl1+"</td>"
+							source += "</tr>"
+							source += "<tr class='c2'>"
+							source += "<td>买二</td><td>"+result[0].content[0].hqbjw2.toFixed(2)+"</td>"
+							source += "<td>"+result[0].content[0].hqbsl2+"</td>"
+							source += "</tr>"
+							source += "<tr class='c1'>"
+							source += "<td>买三</td><td>"+result[0].content[0].hqbjw3.toFixed(2)+"</td>"
+							source += "<td>"+result[0].content[0].hqbsl3+"</td>"
+							source += "</tr>"
+							source += "<tr class='c2'>"
+							source += "<td>买四</td>"
+							source += "<td>"+result[0].content[0].hqbjw4.toFixed(2)+"</td>"
+							source += "<td>"+result[0].content[0].hqbsl4+"</td>"
+							source += "</tr>"
+							source += "<tr class='c1'>"
+							source += "<td>买五</td><td>"+result[0].content[0].hqbjw5.toFixed(2)+"</td>"
+							source += "<td>"+result[0].content[0].hqbsl5+"</td>"
+							source += "</tr>"
+							source += "</table></div></div>";
+						}else{					
+							source += "<div class='quotation fix'>"
+							source += "<div class='name'>"
+							source += "<p><span>"+result[0].content[0].hqzqjc+"</span></p>"
+							source += "<p>股份代码：<span>"+result[0].content[0].hqzqdm+"</span></p>"
+							source += "</div>"
+							source += "<div class='time' style='width:190px;'>"+getDate(result[0].content[0].hqjsrq)+"个股行情</div>"
+							source += "<div class='btn'><span class='fl'><a href='quotation.html?tabId="+typename+"'>返回列表</a></span><span class='fl'></span></div></div>"
+							
+							
+							
+							
+							source += "<div class='list quolist'>"
+							source += "<table width='100%' border='0' cellpadding='0' cellspacing='0'>"
+							source += "<tr class='th2'>"
+							source += "<th>转让方式</th><th class='tc'>前收盘价<br/><span>(元股)</span></th>"
+							source += "<th class='tc'>最近成交价<br/><span>(元股)</span></th>"
+							source += "<th class='tc'>当日最高价<br/><span>(元股)</span></th>"
+							source += "<th class='tc'>当日最低价<br/><span>(元股)</span></th>"
+							source += "<th class='tc'>当日累计成交<br/><span>金额(万元)</span></th>"
+							source += "<th class='tc'>当然成交股<br/><span>(万股)</span></th>"
+							source += "<th class='tc'>涨跌</th><th class='tc'>涨跌幅</th>"
+							source += "</tr>"
+							source += "<tr>"
+							source += "<td>"+result[0].content[0].xxzrlx+"</td>"
+							source += "<td class='tc'>"+result[0].content[0].hqzrsp.toFixed(2)+"</td>"
+							source += "<td class='tc'>"+result[0].content[0].hqzjcj.toFixed(2)+"</td>"
+							source += "<td class='tc'>"+result[0].content[0].hqzgcj.toFixed(2)+"</td>"
+							source += "<td class='tc'>"+result[0].content[0].hqzdcj.toFixed(2)+"</td>"
+							source += "<td class='tc'>"+(Math.round(result[0].content[0].hqcjje/10000*100)/100).toFixed(2)+"</td>"
+						    source += "<td class='tc'>"+(Math.round(result[0].content[0].hqcjsl/10000*100)/100).toFixed(2)+"</td>"
+							source += "<td class='tc'>"+changeColor(result[0].content[0].hqzd.toFixed(2))+"</b></td>"
+							source += "<td class='tc'>"+changeColor(result[0].content[0].hqzdf.toFixed(2))+"%</b></td>"
+							source += "</tr>"
+							source += "</table></div>"
+										
+						    source += "<div class='price fix'>"
+						    source += "<div style='width:720px;float:left'><iframe src='http://www.touzitop.com/HQ_v3.html#sb_"+result[0].content[0].hqzqdm+"' name='ifm' width='650' height='502' marginheight='0' marginwidth='0' frameborder='0' scrolling='no'></iframe></div>"	
+							source += "<div class='cont'><table width='100%' border='0' cellpadding='0' cellspacing='0'>"
+							source += "<tr>"
+							source += "<th></th>"
+							source += "<th>申报价格</th>"
+							source += "<th>数量</th>"
+							source += "</tr>"
+							source += "<tr class='c1'>"
+							source += "<td>卖五</td>"
+							source += "<td>"+result[0].content[0].hqsjw5.toFixed(2)+"</td>"
+							source += "<td>"+result[0].content[0].hqssl5+"</td>"
+							source += "</tr>" 
+							source += "<tr class='c2'>"
+							source += "<td>卖四</td>"
+							source += "<td>"+result[0].content[0].hqsjw4.toFixed(2)+"</td>"
+							source += "<td>"+result[0].content[0].hqssl4+"</td>"
+							source += "</tr>"
+							source += "<tr class='c1'>"
+							source += "<td>卖三</td>"
+							source += "<td>"+result[0].content[0].hqsjw3.toFixed(2)+"</td>"
+							source += "<td>"+result[0].content[0].hqssl3+"</td>"
+							source += "</tr>"
+							source += "<tr class='c2'>"
+							source += "<td>卖二</td>"
+							source += "<td>"+result[0].content[0].hqsjw2.toFixed(2)+"</td>"
+							source += "<td>"+result[0].content[0].hqssl2+"</td>"
+							source += "</tr>"
+							source += "<tr class='c1'>"
+							source += "<td>卖一</td>"
+							source += "<td>"+result[0].content[0].hqsjw1.toFixed(2)+"</td>"
+							source += "<td>"+result[0].content[0].hqssl1+"</td>"
+							source += "</tr>"
+							source += "</table></div>"
+							source += "<div class='cont'  style='margin-top:10px;'><table width='100%' border='0' cellpadding='0' cellspacing='0'>"
+							source += "<tr>"
+							source += "<th></th>"
+							source += "<th>申报价格</th>"
+							source += "<th>数量</th></tr>" 
+							source += "<tr class='c1'>"
+							source += "<td>买一</td>"
+							source += "<td>"+result[0].content[0].hqbjw1.toFixed(2)+"</td>"
+							source += "<td>"+result[0].content[0].hqbsl1+"</td>"
+							source += "</tr>"
+							source += "<tr class='c2'>"
+							source += "<td>买二</td><td>"+result[0].content[0].hqbjw2.toFixed(2)+"</td>"
+							source += "<td>"+result[0].content[0].hqbsl2+"</td>"
+							source += "</tr>"
+							source += "<tr class='c1'>"
+							source += "<td>买三</td><td>"+result[0].content[0].hqbjw3.toFixed(2)+"</td>"
+							source += "<td>"+result[0].content[0].hqbsl3+"</td>"
+							source += "</tr>"
+							source += "<tr class='c2'>"
+							source += "<td>买四</td>"
+							source += "<td>"+result[0].content[0].hqbjw4.toFixed(2)+"</td>"
+							source += "<td>"+result[0].content[0].hqbsl4+"</td>"
+							source += "</tr>"
+							source += "<tr class='c1'>"
+							source += "<td>买五</td><td>"+result[0].content[0].hqbjw5.toFixed(2)+"</td>"
+							source += "<td>"+result[0].content[0].hqbsl5+"</td>"
+							source += "</tr>"
+							source += "</table></div></div>";
+						}
+					}else if(typename == 'Z'){					
+						source += "<div class='quotation fix'>"
+						source += "<div class='name'>"
+						source += "<p><span>"+result[0].content[0].hqzqjc+"</span></p>"
+						source += "<p>股份代码：<span>"+result[0].content[0].hqzqdm+"</span></p>"
+						source += "</div>"
+						source += "<div class='time' style='width:190px;'>"+getDate(result[0].content[0].hqjsrq)+"个股行情</div>"
+						source += "<div class='btn'><span class='fl'><a href='quotation.html?tabId="+typename+"'>返回列表</a></span><span class='fl'></span></div></div>"
+						source += "<div class='list quolist'>"
+						source += "<table width='100%' border='0' cellpadding='0' cellspacing='0'>"
+						source += "<tr class='th2'>"
+						source += "<th>转让方式</th><th class='tc'>前收盘价<br/><span>(元股)</span></th>"
+						source += "<th class='tc'>最近成交价<br/><span>(元股)</span></th>"
+						source += "<th class='tc'>当日最高价<br/><span>(元股)</span></th>"
+						source += "<th class='tc'>当日最低价<br/><span>(元股)</span></th>"
+						source += "<th class='tc'>当日累计成交<br/><span>金额(万元)</span></th>"
+						source += "<th class='tc'>涨跌</th><th class='tc'>涨跌幅</th>"
+						source += "</tr>"
+						source += "<tr>"
+						source += "<td>"+result[0].content[0].xxzrlx+"</td>"
+						source += "<td class='tc'>"+result[0].content[0].hqzrsp.toFixed(2)+"</td>"
+						source += "<td class='tc'>"+result[0].content[0].hqzjcj.toFixed(2)+"</td>"
+						source += "<td class='tc'>"+result[0].content[0].hqzgcj.toFixed(2)+"</td>"
+						source += "<td class='tc'>"+result[0].content[0].hqzdcj.toFixed(2)+"</td>"
+						source += "<td class='tc'>"+(Math.round(result[0].content[0].hqcjje/10000*100)/100).toFixed(2)+"</td>"
+						source += "<td class='tc'>"+changeColor(result[0].content[0].hqzd.toFixed(2))+"</b></td>"
+						source += "<td class='tc'>"+changeColor(result[0].content[0].hqzdf.toFixed(2))+"%</b></td>"
+						source += "</tr>"
+						source += "</table></div>"
+						
+									
+						source += "<div class='price fix'>"
+						source += "<div style='width:720px;float:left'><iframe src='http://www.touzitop.com/HQ_v3.html#sb_"+result[0].content[0].hqzqdm+"' name='ifm' width='620' height='502' marginheight='0' marginwidth='0' frameborder='0' scrolling='no'></iframe></div>"								
+						source += "<div class='cont'><table width='100%' border='0' cellpadding='0' cellspacing='0'>"
+						source += "<tr>"
+						source += "<th></th>"
+						source += "<th>申报价格</th>"
+						source += "<th>数量</th>"
+						source += "</tr>"
+						source += "<tr class='c1'>"
+						source += "<td>卖五</td>"
+						source += "<td>"+result[0].content[0].hqsjw5.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqssl5+"</td>"
+						source += "</tr>" 
+						source += "<tr class='c2'>"
+						source += "<td>卖四</td>"
+						source += "<td>"+result[0].content[0].hqsjw4.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqssl4+"</td>"
+						source += "</tr>"
+						source += "<tr class='c1'>"
+						source += "<td>卖三</td>"
+						source += "<td>"+result[0].content[0].hqsjw3.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqssl3+"</td>"
+						source += "</tr>"
+						source += "<tr class='c2'>"
+						source += "<td>卖二</td>"
+						source += "<td>"+result[0].content[0].hqsjw2.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqssl2+"</td>"
+						source += "</tr>"
+						source += "<tr class='c1'>"
+						source += "<td>卖一</td>"
+						source += "<td>"+result[0].content[0].hqsjw1.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqssl1+"</td>"
+						source += "</tr>"
+						source += "</table></div>"
+						source += "<div class='cont'><table width='100%' border='0' cellpadding='0' cellspacing='0'>"
+						source += "<tr>"
+						source += "<th></th>"
+						source += "<th>申报价格</th>"
+						source += "<th>数量</th></tr>" 
+						source += "<tr class='c1'>"
+						source += "<td>买一</td>"
+						source += "<td>"+result[0].content[0].hqbjw1.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqbsl1+"</td>"
+						source += "</tr>"
+						source += "<tr class='c2'>"
+						source += "<td>买二</td><td>"+result[0].content[0].hqbjw2.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqbsl2+"</td>"
+						source += "</tr>"
+						source += "<tr class='c1'>"
+						source += "<td>买三</td><td>"+result[0].content[0].hqbjw3.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqbsl3+"</td>"
+						source += "</tr>"
+						source += "<tr class='c2'>"
+						source += "<td>买四</td>"
+						source += "<td>"+result[0].content[0].hqbjw4.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqbsl4+"</td>"
+						source += "</tr>"
+						source += "<tr class='c1'>"
+						source += "<td>买五</td><td>"+result[0].content[0].hqbjw5.toFixed(2)+"</td>"
+						source += "<td>"+result[0].content[0].hqbsl5+"</td>"
+						source += "</tr>"
+						source += "</table></div></div>";
+					}
+						
+					$("#detailcompany").append(source);
+				}
+			}
+		});
+	}else if (typeId == '1') {
+		$("#detailcompany").empty();
+		$("#companymessage").empty();
+		var source = "";
+		//公司情况
+		$.ajax({
+			url : 'http://www.neeq.com.cn/nqhqController/detailCompany.do',
+			data : {
+				zqdm : zqdm
+			},
+			dataType : 'jsonp',
+			success : function(result) {
+				if (result != null && result != ""){
+					source += "<div class='minitab'>"
+					source += "<ul><li class='cur'><a onclick='changeTab();'><span>公司概况</span></a></li>"
+					source += "<li><a onclick='changeTab();'><span>高管人员</span></a></li>"
+					source += "<li><a onclick='changeTab();'><span>十大股东</span></a></li>" 
+					source += "<li><a onclick='changeTab();'><span>财务指标</span></a></li></ul>"
+					source += "</div>"
+					var source1="";
+					var source2="";
+					var source3="";
+					var source4="";
+					//公司慨况
+					if (result.baseinfo != "" && result.baseinfo != null){
+						source1 += "<div class='list_l' style='display:block;'>"
+						source1 += "<table width='100%' border='0' cellpadding='0' cellspacing='0'>"
+						source1 += "<tr>"
+						source1 += "<td width='130px' class='gray'>公司全称：</td>"
+						source1 += "<td>"+dealWith(result.baseinfo.name)+"</td>"
+						source1 += "</tr>"
+						source1 += "<tr>"
+						source1 += "<td class='gray'>公司代码：</td>"
+						source1 += "<td>"+dealWith(result.baseinfo.code)+"</td>"
+						source1 += "</tr>"
+						source1 += "<tr>"
+						source1 += "<td class='gray'>英文名称：</td>"
+						source1 += "<td>"+dealWith(result.baseinfo.englishName)+"</td>"
+						source1 += "</tr>"
+						source1 += "<tr>"
+						source1 += "<td class='gray'>公司简称：</td>"
+						source1 += "<td>"+dealWith(result.baseinfo.shortname)+"</td>"
+						source1 += "</tr>"
+						source1 += "<tr>"
+						source1 += "<td class='gray'>注册地址：</td>"
+						source1 += "<td>"+dealWith(result.baseinfo.address)+"</td>"
+						source1 += "</tr>"
+						source1 += "<tr>"
+						source1 += "<td class='gray'>法人代表：</td>"
+						source1 += "<td>"+dealWith(result.baseinfo.legalRepresentative)+"</td>"
+						source1 += "</tr>"
+						source1 += "<tr>"
+						source1 += "<td class='gray'>公司董秘：</td>"
+						source1 += "<td>"+dealWith(result.baseinfo.secretaries)+"</td>"
+						source1 += "</tr>"
+						source1 += "<tr>"
+						source1 += "<td class='gray'>行业分类：</td>"
+						source1 += "<td>"+dealWith(result.baseinfo.industry)+"</td>"
+						source1 += "</tr>"
+						source1 += "<tr>"
+						source1 += "<td class='gray'>挂牌日期：</td>"
+						source1 += "<td>"+dealWith(result.baseinfo.listingDate)+"</td>"
+						source1 += "</tr>"
+						source1 += "<tr>"
+						source1 += "<td class='gray'>总股本：</td>"
+						source1 += "<td>"+dealWith(result.baseinfo.totalStockEquity)+"</td>"
+						source1 += "</tr>"
+						source1 += "<tr>"
+						source1 += "<td class='gray'>邮政编码：</td>"
+						source1 += "<td>"+dealWith(result.baseinfo.postcode)+"</td>"
+						source1 += "</tr>"
+						source1 += "<tr>"
+						source1 += "<td class='gray'>公司电话：</td>"
+						source1 += "<td>"+dealWith(result.baseinfo.phone)+"</td>"
+						source1 += "</tr>"
+						source1 += "<tr>"
+						source1 += " <td class='gray'>公司传真：</td>"
+						source1 += "<td>"+dealWith(result.baseinfo.fax)+"</td>"
+						source1 += "</tr>"
+						source1 += "<tr>"
+						source1 += "<td class='gray'>公司网址：</td>"
+						source1 += "<td>"+dealWith(result.baseinfo.website)+"</td>"
+						source1 += "</tr>"
+						source1 += "<tr>"
+						source1 += "<td class='gray'>主办券商：</td>"
+						source1 += "<td>"+dealWith(result.baseinfo.broker)+"</td>"
+						source1 += "</tr>"
+						source1 += "<tr>"
+						source1 += "<td class='gray'>转让方式：</td>"
+						source1 += "<td>"+dealWith(result.baseinfo.transferMode)+"</td>"
+						source1 += "</tr>"
+						source1 += "</table>"
+						source1 += "</div>"
+					}else{
+						source1 += "<div class='list_l' style='display:none;'><em style='font-style: italic;font-weight:bold;margin-top:23%;margin-left:44%;'>暂无内容<em></div>";
+					}
+				
+					//高管人员
+					if (result.executives != "" && result.executives != null){
+						source2 += "<div class='list_l' style='display:none;'>"
+						source2 += "<table width='100%' border='0' cellpadding='0' cellspacing='0'>"
+						for (var i=0; i< result.executives.length; i++){
+							source2 += "<tr>"
+							source2 += "<td width='130px' class='gray'>"+dealWith(result.executives[i].job)+"：</td>"
+							source2 += "<td>"+dealWith(result.executives[i].name)+"</td>"
+							source2 += "</tr>"
+						}
+						source2 += "</table>"
+						source2 += "</div>"
+					}else{
+						source2 += "<div class='list_l' style='display:none;'><em style='font-style: italic;font-weight:bold;margin-top:23%;margin-left:44%;'>暂无内容<em></div>";
+					}
+				
+					//十大股东
+					if (result.topTenHolders != "" && result.topTenHolders != null){
+						source3 += "<div class='list_l' style='display:none;'>"
+						source3 += "<table width='100%' border='0' cellpadding='0' cellspacing='0' class='gpqk' style='border-top:none;'>"
+						source3 += "<thead>"
+						source3 += "<th width='20%'>截止日期</th>"
+						source3 += "<th width='40%'>股东名称</th>"
+						source3 += "<th width='15%'>持股数</th>"
+						source3 += "<th width='25%'>持股比例(%)</th>"
+						source3 += "</thead>"
+						
+						for (var j=0; j<result.topTenHolders.length;j++){
+							source3 += "<tr>"
+							source3 += "<td>"+dealWith(result.topTenHolders[j].date)+"</td>"
+							source3 += "<td>"+dealWith(result.topTenHolders[j].name)+"</td>"
+							source3 += "<td>"+dealWith(result.topTenHolders[j].quantity)+"</td>"
+							source3 += "<td>"+dealWith((result.topTenHolders[j].ratio*100).toFixed(2))+"%</td>"
+							source3 += "</tr>"
+						}
+						source3 += "</table>"
+						source3 += "</div>"
+					}else{
+						source3 += "<div class='list_l' style='display:none;'><em style='font-style: italic;font-weight:bold;margin-top:23%;margin-left:44%;'>暂无内容<em></div>";
+					}
+					
+					//财务指标
+					if (result.finance != "" && result.finance != null){
+						source4 += "<div class='list_l' style='display:none;'>"
+						source4 += "<table width='100%' border='0' cellpadding='0' cellspacing='0'>"
+						if (result.period != "" && result.period != null){
+							source4 += "<tr>"
+							source4 += "<td width='130px' class='gray'><strong>项目/报告期</strong></td>"
+							source4 += "<td align='center'><strong>"+dealWith(result.period)+"年度</strong></td>"
+							source4 += "</tr>"
+						}
+						source4 += "<tr>"
+						source4 += "<td width='130px' class='gray'>营业收入（元）：</td>"
+						source4 += "<td align='center'>"+dealWith(result.finance.income)+"</td>"
+						source4 += "</tr>"
+						source4 += "<tr>"
+						source4 += "<td class='gray'>营业利润（元）：</td>"
+						source4 += "<td align='center'>"+dealWith(result.finance.profit)+"</td>"
+						source4 += "</tr>"
+						source4 += "<tr>"
+						source4 += "<td class='gray'>净利润（元）：</td>"
+						source4 += "<td align='center'>"+dealWith(result.finance.netProfit)+"</td>"
+						source4 += "</tr>"
+						source4 += "<tr>"
+						source4 += "<td class='gray'>未分配利润（元）：</td>"
+						source4 += "<td align='center'>"+dealWith(result.finance.nonDistributefprofit)+"</td>"
+						source4 += "</tr>"
+						source4 += "<tr>"
+						source4 += "<td class='gray'>总资产（元）：</td>"
+						source4 += "<td align='center'>"+dealWith(result.finance.totalAssets)+"</td>"
+						source4 += "</tr>"
+						source4 += "<tr>"
+						source4 += "<td class='gray'>总负债（元）：</td>"
+						source4 += "<td align='center'>"+dealWith(result.finance.totalLiability)+"</td>"
+						source4 += "</tr>"
+						source4 += "<tr>"
+						source4 += "<td class='gray'>净资产（元）：</td>"
+						source4 += "<td align='center'>"+dealWith(result.finance.netAssets)+"</td>"
+						source4 += "</tr>"
+						source4 += "<tr>"
+						source4 += "<td class='gray'>每股收益（元）：</td>"
+						source4 += "<td align='center'>"+dealWith(result.finance.earningsPerShare)+"</td>"
+						source4 += "</tr>"
+						source4 += "<tr>"
+						source4 += "<td class='gray'>每股净资产（元）：</td>"
+						source4 += "<td align='center'>"+dealWith(result.finance.netAssetsPerShare)+"</td>"
+						source4 += "</tr>"
+						source4 += "<tr>"
+						source4 += "<td class='gray'>净资产收益率（%）：</td>"
+						source4 += "<td align='center'>"+dealWith((result.finance.netAssetsYield*100).toFixed(2))+"%</td>"
+						source4 += "</tr></table>"
+						source4 += "</div>";
+					}else{
+						source4 += "<div class='list_l' style='display:none;'><em style='font-style: italic;font-weight:bold;margin-top:23%;margin-left:44%;'>暂无内容<em></div>";
+					}
+					source +=source1+source2+source3+source4;
+					$("#declare").append("<p style='margin-left:120px;'>声明：挂牌公司相关信息请以其披露的公告为准，本栏目内容仅供参考。了解更多关于网站内容</br>的法律声明，请<a href='/index.php?catid=23' target='_blank' style='color:red;'>点击<a/>这里。</p>");
+				}else{
+					source += "<div style='margin: 20px 0; padding: 20px;'>暂无数据提供!</div>";
+				}
+				
+				$("#companymessage").append(source);
+			}
+		});
+	}
+}
+
+function changeTab(){
+	oTab(".affiche",".minitab",".list_l");
+}
+
+function changeType(type){
+	$("#typeId").val(type);
+	var typeId = $("#typeId").val();
+	loadQuotationData(typeId);
+}
+
+function queryByCondition() {
+	var code = $("#companyCode").val();
+	if (code != null && code.length <6){
+		alert("必须输入超过6个字符!");
+		return false;
+	}
+	loadQuotationData($("#typeId").val());
+}
+</script>
+<div>
+  <input type="hidden" id="pageId" value="0" />
+</div>
+<body>
+ 
+<div class="mod_topbar_nav">
+
+  <div class="layout_n clearfix">
+
+    <!-- top bar nav start-->
+
+    <div class="topmenu_wrap">
+
+      <ul class="mod_topmenu_list" id="yw0">
+
+        <li class="menu_item menu_item_idx"><a target="_blank" href="http://www.touzitop.com/">首页<em class="idx_sep"></em></a></li>
+
+        	
+        <li class="menu_item "><a target="_blank" href="/index.php?catid=1">股权项目</a></li>
+
+        <li class="sep"><span></span></li>
+
+    
+        <li class="menu_item "><a target="_blank" href="/index.php?catid=26">专题栏目</a></li>
+
+        <li class="sep"><span></span></li>
+
+    
+        <li class="menu_item "><a target="_blank" href="/index.php?catid=3">三板资讯</a></li>
+
+        <li class="sep"><span></span></li>
+
+    
+        <li class="menu_item "><a target="_blank" href="/index.php?catid=4">原创研究</a></li>
+
+        <li class="sep"><span></span></li>
+
+    
+        <li class="menu_item "><a target="_blank" href="/index.php?catid=5">视频中心</a></li>
+
+        <li class="sep"><span></span></li>
+
+    
+        <li class="menu_item "><a target="_blank" href="/index.php?catid=6">行情中心</a></li>
+
+        <li class="sep"><span></span></li>
+
+    
+        <li class="menu_item "><a target="_blank" href="/index.php?catid=7">关于我们</a></li>
+
+        <li class="sep"><span></span></li>
+
+    
+      </ul>
+
+    </div>
+
+    <!-- top bar nav end-->
+
+    <!-- tools start-->
+
+    <div class="tools_wrap">
+
+      <ul class="tools_list">
+
+        <li class="tools_item">
+
+          <div class="qrcode_tips j_tips">
+
+            <div class="tips_hd"> <span class="txt"><a href="http://ala.zoosnet.net/LR/Chatpre.aspx?id=ALA52875673&lng=cn">发布项目</a></span> </div>
+
+          </div>
+
+        </li>
+
+        <li class="seq"></li>
+
+        <li class="tools_item sns_wrap">
+
+          <div class="qrcode_tips j_tips">
+
+            <div class="tips_hd"> <span class="txt">关注我们</span> </div>
+
+            <div class="tips_bd"> <em class="arrow_up"></em> <img src="/template/san/images/wx_jfz_zx_d.jpg" alt=""> </div>
+
+          </div>
+
+        </li>
+
+        <li class="seq"></li>
+
+        <li class="tools_item"> <em class="mt_ico mt_ico_tel_1"></em> <span class="tel">400-805-4342</span> </li>
+
+        <li class="seq"></li>
+
+ 
+
+      </ul>
+
+    </div>
+
+    <!-- tools end-->
+
+  </div>
+
+</div>
+
+<!-- top bar end-->
+
+<div class="mod_head">
+
+  <div class="layout_n clearfix">
+
+    <div class="logo_wrap"> <a href="http://www.touzitop.com" class="logo" title="中国第一股权门户网站！"></a> </div>
+
+    <div class="mod_chanel_nav">
+
+      <ul class="mod_chanel_menulist">
+
+        <li class="menu_item"> <a href="http://www.touzitop.com/">首页<em class="idx_sep"></em></a> </li>
+
+       
+  <li class="menu_item"><a target="_blank" href="/index.php?catid=1">股权项目<em class="ico_hot"></em></a> </li>
+
+     	        <li class="menu_item "><a target="_blank" href="/index.php?catid=26">专题栏目</a> </li>
+
+     	        <li class="menu_item"><a target="_blank" href="/index.php?catid=3">三板资讯</a> </li>
+
+     	        <li class="menu_item"><a target="_blank" href="/index.php?catid=4">原创研究</a> </li>
+
+     	        <li class="menu_item"><a target="_blank" href="/index.php?catid=5">视频中心</a> </li>
+
+     	        <li class="menu_item"><a target="_blank" href="@">行情中心</a> </li>
+
+
+
+    
+        <li class="menu_search">
+
+          <form action="index.php" method="Get" name="formsearch" id="simuHeadSearchForm">
+<input type="hidden"  value="index"  name="c" />
+
+		<input type="hidden"  value="search"  name="a" />
+            <div class="search_wrap clearfix" style="width: 120px;">
+
+              <input name="kw" type="text" placeholder="请输入关键词" class="search_txt" id="search-keyword" name="keyword" style="width: 90px;">
+
+              <a >
+
+              <button type="submit" class="mt_ico mt_ico_search_2"></button>
+
+              </a> </div>
+
+            <em class="menu_search_right"></em>
+
+          </form>
+
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- top bar start -->
+
+
+<div class="container fix" style="margin-top:30px;">
+  <div class="content">
+    <div class="crmb_s mb25">
+      <div class="nysearch" style="margin-top:15px;">
+        <div class="suggestbox" style="float:right;">
+          <input id="typename" name="typename" value="G" type="hidden"/>
+          <input type="text" id="companyCode" class="arrcity" placeholder="请输入想查询的股票代码" />
+          <div class="suggest ac_results"></div>
+          <a class="z_btn" style="float:right;" onclick="queryByCondition();">查询</a> </div>
+      </div>
+    </div>
+    <!-- hr ==S -->
+    <div class="line">
+      <div class="line_re2"></div>
+    </div>
+    <!-- hr ==E -->
+    <div class="affiche">
+      <div class="tab">
+        <ul>
+          <li id="stockDetail" class="cur" onclick="changeType('0');"><span>个股行情</span></li>
+          <li id="companyDetail" onclick="changeType('1');"><span>公司资讯</span></li>
+          <input type="hidden" id="typeId" value="0" />
+        </ul>
+      </div>
+      <div class="modlist" style="display:block;">
+        <div id="detailcompany"></div>
+      </div>
+      <div class="modlist">
+        <div id="companymessage" style="width:800px; overflow:hidden; height:auto;"></div>
+        <div id="declare"></div>
+      </div>
+    </div>
+  </div>
+</div><!-- footer -->
+
+ 
+
+  <div class="mod_ft_license"> 
+
+   <div class="layout_n"> 
+
+    <div class="license_list_wrap"> 
+
+     <img class="license_list clearfix" src="/template/san/images/license.png" /> 
+
+    </div> 
+
+   </div> 
+
+  </div> 
+
+  <div class="mod_footer"> 
+
+   <div class="layout_n"> 
+
+    <div class="ft_wrap clearfix"> 
+
+     <div class="ft_item"> 
+
+      <div class="ft_item_tit">
+
+       关于我们
+
+      </div> 
+
+      <ul class="ft_links_list">  
+       <li class="ft_link"><a href="/index.php?catid=20" target="_blank" rel="nofollow"><em class="ico_circle"></em>公司简介</a></li> 
+
+
+       <li class="ft_link"><a href="/index.php?catid=21" target="_blank" rel="nofollow"><em class="ico_circle"></em>企业文化</a></li> 
+
+
+       <li class="ft_link"><a href="/index.php?catid=24" target="_blank" rel="nofollow"><em class="ico_circle"></em>加入我们</a></li> 
+
+
+       <li class="ft_link"><a href="/index.php?catid=25" target="_blank" rel="nofollow"><em class="ico_circle"></em>联系我们</a></li> 
+
+
+      </ul> 
+
+     </div> 
+
+     <div class="ft_item"> 
+
+      <div class="ft_item_tit">
+
+       帮助中心
+
+      </div> 
+
+      <ul class="ft_links_list"> 
+       <li class="ft_link"><a href="/index.php?catid=22" target="_blank" rel="nofollow"><em class="ico_circle"></em>安全保障</a></li> 
+
+
+       <li class="ft_link"><a href="/index.php?catid=23" target="_blank" rel="nofollow"><em class="ico_circle"></em>免责声明</a></li> 
+
+
+      </ul> 
+
+     </div> 
+
+     <div class="ft_item ft_item_sns"> 
+
+      <div class="ft_item_tit">
+
+       关注我们
+
+      </div> 
+
+      <ul class="ft_sns_list clearfix"> 
+
+       <li> 
+
+        <div class="wx_tips j_tips"> 
+
+         <div class="tips_hd"> 
+
+          <em class="ico_sns ico_weixin"></em> 
+
+          <span class="txt">微信公众号</span> 
+
+         </div> 
+
+         <div class="tips_bd"> 
+
+          <em class="arrow"></em> 
+
+          <img src="/template/san/images/wx_jfz_zx_d.jpg" alt="" /> 
+
+          <p class="txt">第一股权网微信公共平台</p> 
+
+         </div> 
+
+        </div> </li> 
+
+       <li> <a href="#" target="_blank" rel="nofollow"> <em class="ico_sns ico_sinawb"></em> <span class="txt">新浪微博</span> </a> </li> 
+
+       <li> <a href="/" target="_blank" rel="nofollow"> <em class="ico_sns ico_txwb"></em> <span class="txt">腾讯微博</span> </a> </li> 
+
+      </ul> 
+
+     </div> 
+
+     <div class="ft_item ft_item_contact"> 
+
+      <div class="contact_1"> 
+
+       <div class="ft_item_tit">
+
+        客服热线
+
+       </div> 
+
+       <div class="ft_contact_tel clearfix"> 
+
+        <span class="ico_tel"></span> 
+
+        <span class="txt">400-805-4342</span> 
+
+       </div> 
+
+      </div> 
+
+      <div class="contact_2"> 
+
+       <div class="ft_item_tit">
+
+        在线咨询
+
+       </div> 
+
+       <div class="ft_contact_qq clearfix"> 
+
+        <a href="http://ala.zoosnet.net/LR/Chatpre.aspx?id=ALA52875673&lng=cn" class="link" target="_blank" rel="nofollow"> <span class="ico_qq"></span> <span>在线咨询</span> </a> 
+
+        <span class="txt">08:00 - 23:00</span> 
+
+       </div> 
+
+      </div> 
+
+     </div> 
+
+    </div> 
+
+    <div class="friend_links clearfix"> 
+
+     <span class="tit">友情链接：</span> 
+
+     <p class="links_wrap"> </p> 
+
+    </div> 
+
+    <div class="about_links"> 
+
+     <a href="http://www.touzitop.com/" target="_blank">首页</a> 
+
+     <span class="sep">|</span> 
+
+      	
+     <a href="/index.php?catid=1" target="_blank">股权项目</a> 
+
+     <span class="sep">|</span> 
+
+ 
+     <a href="/index.php?catid=26" target="_blank">专题栏目</a> 
+
+     <span class="sep">|</span> 
+
+ 
+     <a href="/index.php?catid=3" target="_blank">三板资讯</a> 
+
+     <span class="sep">|</span> 
+
+ 
+     <a href="/index.php?catid=4" target="_blank">原创研究</a> 
+
+     <span class="sep">|</span> 
+
+ 
+     <a href="/index.php?catid=5" target="_blank">视频中心</a> 
+
+     <span class="sep">|</span> 
+
+ 
+     <a href="/index.php?catid=6" target="_blank">行情中心</a> 
+
+     <span class="sep">|</span> 
+
+ 
+     <a href="/sitemap.xml" target="_blank">网站地图</a> 
+
+    </div> 
+
+    <p class="copyright">&copy;2010-2018 http://www.touzitop.com 第一股权网版权所有 <a target="_blank" href="http://www.miibeian.gov.cn/" rel="nofollow">沪ICP备123444号-2</a> </p> 
+
+    <p class="risk_warning">公司名称：上海投鼎资产管理有限公司&nbsp;|联系电话：400-805-4342</p> 
+
+   </div> 
+
+  </div>   
+        <div id="fixed-box">
+    <!---->
+
+    <div class="fixed-item qqsever">
+        <a rel="nofollow" href="http://wpa.b.qq.com/cgi/wpa.php?ln=2&uin=200724919" target="_blank" class="item-icon-cont">
+            <i class="qq-icon"></i>
+            <p>咨询客服</p>
+        </a>
+        <div class="hover-drop" style="display:block;">
+            <div class="qq-drop-box">
+                <div class="clearfix zx-div ">
+                    <span class="fl zx-div-span">咨询客服:</span>
+                    <a href="http://wpa.b.qq.com/cgi/wpa.php?ln=2&uin=200724919" target="_blank" rel="nofollow" class="fl"><span class="click-zx"><i></i>点击咨询</span></a>
+                </div>
+                <p>客 服QQ：200724919</p>
+                <p>联系电话：400-805-4342 </p>
+                <p>工作时间：周一至周五 9:30 - 18:00</p>
+            </div>
+        </div>
+    </div>
+    <div class="fixed-item record">
+        <a rel="nofollow" href="http://ala.zoosnet.net/LR/Chatpre.aspx?id=ALA52875673&lng=cn" target="_blank" class="item-icon-cont">
+            <i class="rec-icon"></i>
+            <p>在线交流</p>
+        </a>
+    </div>
+    <div class="fixed-item ideawin" style="border-bottom-style: none;">
+        <div target="_blank" rel="nofollow" class="item-icon-cont">
+            <i class="yj-icon"></i>
+            <p>反馈意见</p>
+        </div>
+    </div>
+    <div class="fixed-item gotop" style="visibility: visible; opacity: 1;">
+        <div class="item-icon-cont">
+            <i class="bc-icon"></i>
+            <p>返回头部</p>
+        </div>
+    </div>
+</div>
+
+<!--意见反馈弹窗-->
+<div class="stPublic-win" id="feedback-win" style="display: none;">
+    <div class="stPublic-mask"></div>
+    <div class="stPublic-main">
+        <div class="feedback-cont">
+            <div class="tit-top clearfix">
+                <h3 class="fl">欢迎对第一股权网提出宝贵的建议或意见</h3>
+                <span class="closeBtn fr"></span>
+            </div>
+            <div class="form-mid iwm-cont">
+                  <form action="/index.php?c=index&a=form&modelid=11" method="post">
+                    <div class="from-item clearfix">
+                        <label class="fl">投诉建议:</label>
+                        <textarea class="fl from-put" name="data[tousujianyi]"></textarea>
+                    </div>
+                    <div class="from-item clearfix">
+                        <label class="fl">联系QQ:</label>
+                        <input type="text" name="data[qq]" class="fl from-put">
+                    </div>
+                    <div class="from-item clearfix">
+                        <label class="fl">常用E-mail:</label>
+                        <input type="text" name="data[email]" class="fl from-put">
+                    </div>
+                      <div class="form-submit">
+                    <p>请留下联系方式以便我们尽快解决您的问题</p>
+                       <input  class="subMit-btn"  type="submit" name="submit" value=" 提 交 " />
+     
+                </div>
+                </form>
+              
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footfix" style="display: block;">
+  <div id="close" class="closee">点击收起</div>
+  <div class="footfix">
+    <div class="lian"> <img src="/template/san/images/iphone.png" alt="">
+      <div class="numb"> <span class="number1">400-805-4342</span>
+        <p>第一股权网，获取资料</p>
+      </div>
+    </div>
+    <form action="/index.php?c=index&a=form&modelid=12" enctype="multipart/form-data" method="post">
+         <input type="hidden" name="data[dizhi]" value="http://www.touzitop.com/index.php?catid=28">
+      <div class="shu">
+        <div class="shu1"><img src="/template/san/images/name.png" alt="">
+          <input type="text" name="data[dxm]"  id="name" maxlength="4" placeholder="请输入中文名,如：王先生">
+        </div>
+        <div class="shu1"><img src="/template/san/images/pone.png" alt="">
+          <input type="text" name="data[tel]" maxlength="11" id="phone" placeholder="请输入手机号">
+        </div>
+      </div>
+      <div class="sub2">
+        <input type="submit" name="submit" class="cli" value="预约咨询">
+      </div>
+    </form>
+  </div>
+</div>
+<div id="footfix1" style="display: none;">
+  <div id="open" class="closee">点击展开</div>
+  <div class="footfix1">
+    <div class="lian1">
+      <p> 第一股权网：专业股权投资平台 </p>
+      <span class="number2"><img src="/template/san/images/pone.png" alt="">400-805-4342</span> </div>
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#close").click(function(){
+    $("#footfix").hide();
+    $("#footfix1").show();
+  });
+  $("#open").click(function(){
+    $("#footfix1").hide();
+    $("#footfix").show();
+  });
+});
+</script>
+
+
+<script type="text/javascript" src="/template/san/images/index-v2.7.js"></script>
+</body>
+</html>
+<script language="javascript" src="http://ala.zoosnet.net/JS/LsJS.aspx?siteid=ALA52875673&float=1&lng=cn"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d85d7770f82b4dfc7e94307ca5264fea";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>

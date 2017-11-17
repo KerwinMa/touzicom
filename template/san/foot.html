@@ -1,0 +1,434 @@
+<script>
+
+
+
+jQuery(document).ready(function($) {
+
+
+
+	$('.theme-login').click(function(){
+
+
+
+		$('.theme-popover-mask').fadeIn(100);
+
+
+
+		$('.theme-popover').slideDown(200);
+
+
+
+	})
+
+
+
+	$('.theme-poptit .close').click(function(){
+
+
+
+		$('.theme-popover-mask').fadeOut(100);
+
+
+
+		$('.theme-popover').slideUp(200);
+
+
+
+	})
+
+
+
+
+
+
+
+})
+
+
+
+$(document).ready(function()
+
+
+
+   {
+
+
+
+    //验证
+
+
+
+    $('#complain').submit(function ()
+
+
+
+    {
+
+
+
+        if($('#name').val()==""){
+
+
+
+            $('#name').focus();
+
+
+
+            alert("用户名不能为空！");
+
+
+
+            return false;
+
+
+
+        }
+
+
+
+        if($('#phone').val()=="")
+
+
+
+        {
+
+
+
+            $('#phone').focus();
+
+
+
+            alert("联系电话不能为空！");
+
+
+
+            return false;
+
+
+
+        }
+
+
+
+		var myreg = /^1[34578]\d{9}$/; 
+
+
+
+		if(!myreg.test($("#phone").val())) 
+
+
+
+		{ 
+
+
+
+   			alert('请输入有效的手机号码！'); 
+
+
+
+    		return false; 
+
+
+
+		} 
+
+
+
+		
+
+
+
+    })
+
+
+
+   
+
+
+
+});
+
+
+
+ 
+
+</script>
+
+
+
+<!-- footer -->
+
+<!-- footer -->
+
+<html>
+
+ <head></head>
+
+ <body>
+
+  <div class="mod_ft_license"> 
+
+   <div class="layout_n"> 
+
+    <div class="license_list_wrap"> 
+
+     <img class="license_list clearfix" src="{xiao:$site_template}images/license.png" /> 
+
+    </div> 
+
+   </div> 
+
+  </div> 
+
+  <div class="mod_footer"> 
+
+   <div class="layout_n"> 
+
+    <div class="ft_wrap clearfix"> 
+
+     <div class="ft_item"> 
+
+      <div class="ft_item_tit">
+
+       关于我们
+
+      </div> 
+
+      <ul class="ft_links_list">  {xiao:nav catid=20,21,24,25 }
+
+       <li class="ft_link"><a href="{xiao:$xiao['url']}" target="_blank" rel="nofollow"><em class="ico_circle"></em>{xiao:$xiao['catname']}</a></li> 
+
+{/xiao:nav}
+
+      </ul> 
+
+     </div> 
+
+     <div class="ft_item"> 
+
+      <div class="ft_item_tit">
+
+       帮助中心
+
+      </div> 
+
+      <ul class="ft_links_list"> {xiao:nav catid=22,23 }
+
+       <li class="ft_link"><a href="{xiao:$xiao['url']}" target="_blank" rel="nofollow"><em class="ico_circle"></em>{xiao:$xiao['catname']}</a></li> 
+
+{/xiao:nav}
+
+      </ul> 
+
+     </div> 
+
+     <div class="ft_item ft_item_sns"> 
+
+      <div class="ft_item_tit">
+
+       关注我们
+
+      </div> 
+
+      <ul class="ft_sns_list clearfix"> 
+
+       <li> 
+
+        <div class="wx_tips j_tips"> 
+
+         <div class="tips_hd"> 
+
+          <em class="ico_sns ico_weixin"></em> 
+
+          <span class="txt">微信公众号</span> 
+
+         </div> 
+
+         <div class="tips_bd"> 
+
+          <em class="arrow"></em> 
+
+          <img src="{xiao:$site_template}images/wx_jfz_zx_d.jpg" alt="" /> 
+
+          <p class="txt">第一股权网微信公共平台</p> 
+
+         </div> 
+
+        </div> </li> 
+
+       <li> <a href="#" target="_blank" rel="nofollow"> <em class="ico_sns ico_sinawb"></em> <span class="txt">新浪微博</span> </a> </li> 
+
+       <li> <a href="/" target="_blank" rel="nofollow"> <em class="ico_sns ico_txwb"></em> <span class="txt">腾讯微博</span> </a> </li> 
+
+      </ul> 
+
+     </div> 
+
+     <div class="ft_item ft_item_contact"> 
+
+      <div class="contact_1"> 
+
+       <div class="ft_item_tit">
+
+        客服热线
+
+       </div> 
+
+       <div class="ft_contact_tel clearfix"> 
+
+        <span class="ico_tel"></span> 
+
+        <span class="txt">{xiao:block 6}</span> 
+
+       </div> 
+
+      </div> 
+
+      <div class="contact_2"> 
+
+       <div class="ft_item_tit">
+
+        在线咨询
+
+       </div> 
+
+       <div class="ft_contact_qq clearfix"> 
+
+        <a href="http://ala.zoosnet.net/LR/Chatpre.aspx?id=ALA52875673&lng=cn" class="link" target="_blank" rel="nofollow"> <span class="ico_qq"></span> <span>在线咨询</span> </a> 
+
+        <span class="txt">08:00 - 23:00</span> 
+
+       </div> 
+
+      </div> 
+
+     </div> 
+
+    </div> 
+
+    <div class="friend_links clearfix"> 
+
+     <span class="tit">友情链接：</span> 
+
+     <p class="links_wrap"> </p> 
+
+    </div> 
+
+    <div class="about_links"> 
+
+     <a href="{xiao:$site_url}" target="_blank">首页</a> 
+
+     <span class="sep">|</span> 
+
+      	{xiao:nav num=6}
+
+     <a href="{xiao:$xiao['url']}" target="_blank">{xiao:$xiao['catname']}</a> 
+
+     <span class="sep">|</span> 
+
+ {/xiao:nav}
+
+     <a href="/sitemap.xml" target="_blank">网站地图</a> 
+
+    </div> 
+
+    <p class="copyright">&copy;2010-2018 http://www.touzitop.com 第一股权网版权所有 <a target="_blank" href="http://www.miibeian.gov.cn/" rel="nofollow"></a> </p> 
+
+    <p class="risk_warning">公司名称：上海投鼎资产管理有限公司&nbsp;|联系电话：{xiao:block 6}</p> 
+
+   </div> 
+
+  </div> 
+  
+ 
+    
+        <div id="fixed-box">
+    <!---->
+
+    <div class="fixed-item qqsever">
+        <a rel="nofollow" href="http://wpa.b.qq.com/cgi/wpa.php?ln=2&uin=200724919" target="_blank" class="item-icon-cont">
+            <i class="qq-icon"></i>
+            <p>咨询客服</p>
+        </a>
+        <div class="hover-drop" style="display:block;">
+            <div class="qq-drop-box">
+                <div class="clearfix zx-div ">
+                    <span class="fl zx-div-span">咨询客服:</span>
+                    <a href="http://wpa.b.qq.com/cgi/wpa.php?ln=2&uin=200724919" target="_blank" rel="nofollow" class="fl"><span class="click-zx"><i></i>点击咨询</span></a>
+                </div>
+                <p>客 服QQ：200724919</p>
+                <p>联系电话：400-805-4342 </p>
+                <p>工作时间：周一至周五 9:30 - 18:00</p>
+            </div>
+        </div>
+    </div>
+    <div class="fixed-item record">
+        <a rel="nofollow" href="http://ala.zoosnet.net/LR/Chatpre.aspx?id=ALA52875673&lng=cn" target="_blank" class="item-icon-cont">
+            <i class="rec-icon"></i>
+            <p>在线交流</p>
+        </a>
+    </div>
+    <div class="fixed-item ideawin" style="border-bottom-style: none;">
+        <div target="_blank" rel="nofollow" class="item-icon-cont">
+            <i class="yj-icon"></i>
+            <p>反馈意见</p>
+        </div>
+    </div>
+    <div class="fixed-item gotop" style="visibility: visible; opacity: 1;">
+        <div class="item-icon-cont">
+            <i class="bc-icon"></i>
+            <p>返回头部</p>
+        </div>
+    </div>
+</div>
+
+<!--意见反馈弹窗-->
+<div class="stPublic-win" id="feedback-win" style="display: none;">
+    <div class="stPublic-mask"></div>
+    <div class="stPublic-main">
+        <div class="feedback-cont">
+            <div class="tit-top clearfix">
+                <h3 class="fl">欢迎对第一股权网提出宝贵的建议或意见</h3>
+                <span class="closeBtn fr"></span>
+            </div>
+            <div class="form-mid iwm-cont">
+                  <form action="/index.php?c=index&a=form&modelid=11" method="post">
+                    <div class="from-item clearfix">
+                        <label class="fl">投诉建议:</label>
+                        <textarea class="fl from-put" name="data[tousujianyi]"></textarea>
+                    </div>
+                    <div class="from-item clearfix">
+                        <label class="fl">联系QQ:</label>
+                        <input type="text" name="data[qq]" class="fl from-put">
+                    </div>
+                    <div class="from-item clearfix">
+                        <label class="fl">常用E-mail:</label>
+                        <input type="text" name="data[email]" class="fl from-put">
+                    </div>
+                      <div class="form-submit">
+                    <p>请留下联系方式以便我们尽快解决您的问题</p>
+                       <input  class="subMit-btn"  type="submit" name="submit" value=" 提 交 " />
+     
+                </div>
+                </form>
+              
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.7.1/jquery.min.js"></script>
+    
+<script type="text/javascript" src="/template/san/images/index-v2.7.js"></script>
+ </body>
+ 
+</html>
+<script language="javascript" src="http://ala.zoosnet.net/JS/LsJS.aspx?siteid=ALA52875673&float=1&lng=cn"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d85d7770f82b4dfc7e94307ca5264fea";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>

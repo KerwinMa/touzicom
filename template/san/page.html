@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<title>{xiao:$site_title}</title>
+
+	<link rel="stylesheet" type="text/css" href="{xiao:$site_template}images/about.css">
+<style>
+/*#Acontain img{position:fixed;}*/
+#Declare_contain img{position:fixed;}
+#bg1 img{position:fixed;}
+/*安全保障开始*/
+
+#bao{width: 100%;height:1080px;float:left;background:url(http://i4.piimg.com/578049/a1eddde8a19f201e.jpg) no-repeat center;}
+
+.bao{width: 1000px;height:1080px; margin:0 auto;}
+
+.protit{width: 1000px;float:left;line-height:150px;font-size:50px;color:#fff;text-align: center;letter-spacing:20px;margin-top:20px;font-weight: bold;}
+
+.protit b{font-size:90px;}
+
+.bao_list{width: 1000px;height:800px; border-top: 3px solid #fff;float:left;}
+
+.bao_item{width:420px;float:left;color:#fff;margin-top:40px;margin-left:25px;background:rgba(22,24,30,0.5);border-radius: 30px; padding:20px;}
+
+.bao_item.te1{margin-left: 300px;}
+
+.baotit{text-align: center;font-size:30px;line-height:50px;font-weight: bold;}
+
+.baodetail{text-align: center;font-size:18px;line-height: 35px;}
+
+/*安全保障结束*/
+
+</style>
+</head>
+
+<body>
+
+<!--导航开始-->
+
+	<div id="Anav">
+
+		<div class="Anav">
+
+			<div class="Logo">
+
+				<div class="sort">
+
+					<ul class="Navor"> 
+
+					    <li class="Nav_item"><a href="/">首页</a></li>{xiao:nav num=7}
+
+						<li class="Nav_item"><a href="{xiao:$xiao['url']}">{xiao:$xiao['catname']}</a></li>
+
+				{/xiao:nav}
+
+				</ul>
+
+					<div class="sort1"><img src="{xiao:$site_template}images/logo3.png" alt=""></div>	
+
+				</div>
+
+			</div>
+
+			<ul class="Anav_list">
+
+            {xiao:nav parentid=7 }
+
+				<li class="Anav_item {xiao:if $current}active{/xiao:if} "><a href="{xiao:$xiao['url']}">{xiao:$xiao['catname']}</a></li>
+
+				{/xiao:nav}
+
+			</ul>	
+
+		</div>
+
+	</div>	
+
+	<!--导航结束-->
+
+
+
+	<!--头部banner开始-->
+
+{xiao:$content}
+
+	<!--头部banner结束-->
+
+	<div class="foot">
+
+	<div class="w_1200">
+
+	第一股权网 © 2015-2018   上海投鼎资产管理有限公司
+
+	</div>
+
+</div>
+
+</body>
+
+</html>

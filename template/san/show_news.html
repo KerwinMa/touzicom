@@ -1,0 +1,162 @@
+{xiao:template header.html}
+
+<script>
+
+$(function(){	
+
+	/*鼠标经过切换*/
+
+	$(".article-title i").mouseenter(function(){
+		$(this).addClass("selected").siblings().removeClass("selected");
+		var name = $(this).attr('name');
+		if(name == 'hotTop10') {
+			$("#hotArticleOrder").show();
+			$("#weekRecommendationArticle").hide();
+		}else {
+			$("#hotArticleOrder").hide();
+			$("#weekRecommendationArticle").show();
+		}
+	});	
+
+	/*Responsive Web design*/
+	if($(window).width()<800){
+		$("html").css({"font-size":$(window).width()/3.75+"px"}); 
+		$("#headNav").click(function(){
+			if($("#nav").is(":hidden")){
+				$("#headNav ul").show();
+			}else{
+				$("#headNav ul").hide();
+			}
+		});
+	}
+})
+
+ 
+</script>
+
+<!-- top bar end -->
+<div class="main detailmain">
+<div class="wd">
+  <p class="bannerBar"><a ><img   src="{xiao:block 8}"></a></p>
+  <div class="clearfix">
+    <div class="leftArea left">
+ 
+      <p class="title">{xiao:$title}</p>
+      <ul class="information clearfix">
+        <li id="ArticleType"><a href=""> {xiao:$catname}</a></li>
+        <li class="articlesource"><span>来源:第一股权网</span></li>
+        <li class="articlecreatedTime"><span>阅读量:
+          <script type="text/javascript" src="{xiao:function.url('api/hits',array('id'=>$id))}"></script>
+          </span></li>
+        <li class="articlecreatedTime"><span>发布时间:{xiao:function.date("Y-m-d H:i:s", $time)}</span></li>
+      </ul>
+      <p class="abstract"><i>摘要：</i><span>{xiao:$description}</span></p>
+      <div class="article-container"> 
+	{xiao:$content}
+	 
+ 
+<div class="blank20 clear"l></div>
+<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32">
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_weixin"></a>
+<a class="jiathis_button_renren"></a>
+<a class="jiathis_button_alibaba"></a>
+<a class="jiathis_button_tianya"></a>
+<a class="jiathis_button_caimi"></a>
+<a class="jiathis_button_cnfol"></a>
+<a class="jiathis_button_tifeng"></a>
+<a class="jiathis_button_hexun"></a>
+<a class="jiathis_button_txinhua"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	summary:"",
+	shortUrl:false,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+<br />
+   	<div class="bg">
+	<h2>评论</h2><br/><br/>
+                {xiao:list table=form_comment cid=$id status=1 order=time}
+             <div class="qh-cmt qh-reset-font"><div class="qh-cmt-bar"><div class="qh-avatar"><img src="https://p0.ssl.qhimg.com/dm/48_48_100/t00df551a583a87f4e9.jpg" alt=""></div><div class="qh-user-nt"><div class="qh-u-name">{xiao:$xiao[username]}</div><div class="qh-u-time">{xiao:function.date("Y-m-d H:i:s", $time)}</div></div></div><div class="qh-cmt-cont-wrap"><div class="qh-cmt-cont"><div class="qh-cmt-cont-t" data-content="{xiao:$xiao[pinglunneirong]}">{xiao:$xiao[pinglunneirong]}</div></div></div></div>
+              
+                {/xiao:list}</div>
+	<div class="blank20 clear"></div>
+    
+    
+    
+    
+ 
+    
+    
+    
+
+<form action="{xiao:function.url('index/form', array('modelid'=>4, 'cid'=>$id))}" method="post">
+			<table width="100%" class="bg ">
+			<tr>
+				<td ><h3>评论内容：</h3></td>
+			</tr>
+			<tr><td><textarea class="pinglunneirong" name="data[pinglunneirong]"></textarea></td></tr>
+			<tr>
+				<td></td>
+			</tr>
+			<tr>
+				<td style="border:none"><input type="submit" class="button" value="提 交" name="submit"></td>
+			</tr>
+			</table>
+</form>
+
+        <div class="keyword">关键词：<span>{xiao:$keywords}</span> </div>
+      </div>
+      <div class="related-reading clearfix">
+        <p class="title">相关阅读：</p>
+        {xiao:if $xiangguan}{xiao:list id=$xiangguan}
+		<p class="clearfix"><em class="articleleft-title"> <span class="related-title ellipsis clearfix" title="{xiao:$xiao['title']}"> <i></i> <a target="_blank" href="{xiao:$xiao['url']}">{xiao:$xiao['title']}</a> </span> <span class="right">{xiao:function.date("Y-m-d H:i:s", $time)}</span> <b class="vxlist_bt">阅读(：<script type="text/javascript" src="{xiao:function.url('api/hits',array('id'=>$id))}"></script>)</b> </em> </p>
+{/xiao:list}
+    {/xiao:if}  
+      </div>
+    </div>
+    
+
+<div class="rightArea left">
+
+  <p class="headline">本周排行</p>
+
+  <div class="hot-article">
+
+    <div class="article-title"> <i class="selected" name="hotTop10">热读排行</i><i name="recommendationTop10" class="">好文推荐</i> </div>
+
+    <div class="main-container" id="hotArticleOrder" style="display: block;"> 
+    {xiao:php $i = 1; }{xiao:list catid=$catid order=time status=3 num=10  }
+    <p title="{xiao:$xiao['title']}"><span class="orange{xiao:php echo $i;}">{xiao:php echo $i;}</span><a class="topion" target="_blank" href="{xiao:$xiao['url']}" title="{xiao:$xiao['title']}">{xiao:$xiao['title']}</a></p>
+ {xiao:php   $i++ ;}{/xiao:list}
+ </div>
+
+    <div class="main-container" id="weekRecommendationArticle" style="display: none;"> 
+     {xiao:php $i = 1; }{xiao:list catid=$catid order=time status=3 num=10  }
+     <p title="{xiao:$xiao['title']}"> <i class="articleleft-title"> <span class="orange{xiao:php echo $i;}">{xiao:php echo $i;}</span><a class="topion" target="_blank" href="{xiao:$xiao['url']}">{xiao:$xiao['title']}</a> <span class="vxlist_bt clearfix"> </span> </i> </p>
+ {xiao:php   $i++ ;}{/xiao:list}
+ </div>
+
+  </div>{xiao:list catid=1 order=time status=3 num=4  }
+<p class="img-internet"><a href="{xiao:$xiao['url']}" target="_blank"><img alt="{xiao:$xiao['title']}" src="{xiao:function.image($xiao[thumb])}"></a></p>
+{/xiao:list}
+
+</div>
+
+ </div>
+</div>
+<!--在线预约开始-->
+ 
+<div class="theme-popover-mask"></div>
+<!--在线预约结束-->
+{xiao:template footer.html}

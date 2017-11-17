@@ -1,0 +1,136 @@
+@charset "utf-8";
+/* CSS Document */
+*{ padding:0; margin:0; font-family:"微软雅黑"; color:#666;max-height:1080px; }
+ul{list-style:none;}
+a{text-decoration: none;}
+img{border: none;}
+#contain{width:100%;float:left;background:#f6f7fb;}
+#content{width:100%; float:left;background:#f6f7fb;}
+#top{width:100%;height:120px;float:left;background:#fff;}
+#top1{width:100%;height:80px;float:left;}
+.top{width:1200px;margin:0 auto;}
+.logo1{width:300px;float:left;margin-left:100px;}
+.logo1 img{width:300px;float:left;margin-right:50px;margin-top:25px;}
+.top h1{width:200px; text-align:center;font-size:20px;color:#f89901;line-height:120px;float:left;margin-left:130px;}
+.iphone{width:260px;float:left;line-height:120px;margin-left:450px;}
+.iphone img{width:25px;margin-top:50px;float:left;}
+.iphone a:hover{color:#f89901;}
+#contain1{width:100%;height:750px;float:left;}
+.contain1{width:800px;height:600px; margin:0 auto;background:#fff;margin-top:30px;}
+.contain1 h1{width:500px; text-align: center; font-size:20px;color:#333;line-height:80px;float:left;}
+.slogin{width:200px;float:left;line-height:70px;font-size:14px;}
+.slogin a{color:#f89901;}
+/*注册页面 */
+.formreg{
+	width:500px;
+	min-height:445px;
+	margin-top:10px;
+	float:left;
+	margin-left:150px;
+}
+.lx{margin-left:20px}
+.pin{width:500px;float:left;margin-top:18px;}
+.pin label{width:90px;height:40px;line-height:40px;font-size:14px;color:#666;float:left;text-align:right;}
+.pl{margin-left:20px;}
+.pin1{width:500px;float:left;margin-top:18px;}
+.pin1.te2 input{width:200px;}
+.pin1.te1 .yan{width:120px;}
+.pin1 label{
+	width:90px;
+	height:40px;
+	line-height:40px;
+	font-size:14px;
+	color:#666;
+	float:left;
+	text-align:right;
+}
+.pin1 input{
+	width:310px;
+	height:38px;
+	border-radius:5px;
+	border:#e5e5e5 solid 1px;
+	text-indent:1em;
+	float:left;
+	outline:medium;
+}
+.join{
+	width:300px;
+	height:20px;
+	margin-top:20px;
+	float:left;
+	margin-left:145px;
+}
+.join p{
+	width:150px;
+	height:20px;
+	float:left;
+	font-size:14px;
+	color:#666;
+}
+.join p a{
+	color:#fc5151;
+}
+.join p a:hover{
+	color:#ff0000;
+}
+.huo{width:80px;height:30px;background:#f89901;border-radius:10px;border:none;color:#fff;margin:5px;cursor: pointer; outline: none;margin-left:30px;}
+.aggree{
+	width:420px;
+	height:20px;
+	float:left;
+	font-size:14px;
+	text-indent:80px;
+	margin-top:20px;
+}
+.aggree a{
+	color:#fc5151;
+}
+.aggree a:hover{
+	color:#ff0000;
+}
+.lsubmit1{
+        cursor:pointer;
+	width:138px;
+	height:30px;
+	background:#f89901;
+	border:none;
+	color:#fff;
+	border-radius:5px;
+	margin-left:190px;
+	margin-top:30px;
+	text-align: center;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+.lsubmit2{
+   cursor:pointer;
+	width:138px;
+	height:30px;
+	background:#f89901;
+	border:none;
+	color:#fff;
+	border-radius:5px;
+	margin-left:150px;
+	margin-top:30px;
+	text-align: center;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	font-size:16px;
+}
+/*二维码*/
+.regr{width:250px;float:left; }
+.regr span{width:250px;text-align: center; line-height:60px;display: block;text-align: center;font-size:22px;color:#ba9755;margin-top:80px;}
+.regr img{width:180px;margin-left:30px;}
+/*登录页面 */
+#login1{width:100%;height:750px;float:left;}
+.formlogin{width:500px;margin-left:60px;}
+.login1{width:600px;height:500px;margin:0 auto;background:#fff;margin-top:30px;}
+.login1 h1{width:200px; text-align: center;font-size:22px;color:#f89901;line-height: 60px;float:left;margin-left:130px;margin-top:30px;}
+.login1 span{font-size:16px;color:#ff0000;float:left;line-height:60px;margin-top:30px;}
+.login1 span a{color:#ff0000;}
+
+/*底部*/
+#footer{width:100%; height:30px; float:left;}
+.footer{width:100%; height:30px; float:left; border-top:#e5e5e5 solid 1px;}
+.footerB{ width:1200px; height:30px; margin:0 auto; }
+.footerB span{ width:700px; height:30px; font-size:14px; color:#666;line-height:49px; float:left; margin-left:414px;}

@@ -1,0 +1,45 @@
+<!-- top bar start -->
+<div class="mod_topbar_nav" style=" position:fixed; width:100%;">
+  <div class="layout_n clearfix">
+    <!-- top bar nav start-->
+    <div class="topmenu_wrap">
+      <ul class="mod_topmenu_list" id="yw0">
+        <li class="menu_item menu_item_idx"><a target="_blank" href="{xiao:$site_url}">首页<em class="idx_sep"></em></a></li>
+        	{xiao:nav num=7}
+        <li class="menu_item"><a target="_blank" href="{xiao:$xiao['url']}">{xiao:$xiao['catname']}</a></li>
+        <li class="sep"><span></span></li>
+    {/xiao:nav}
+      </ul>
+    </div>
+    <!-- top bar nav end-->
+    <!-- tools start-->
+    <div class="tools_wrap">
+      <ul class="tools_list">  
+	   <li class="tools_item">
+          <div class="qrcode_tips j_tips">
+            <div class="tips_hd"> <span class="txt"><a href="http://www.touzitop.com/member/index.php?c=register">发布项目</a></span> </div>
+          </div>
+        </li>
+        <li class="seq"></li>
+        <li class="tools_item sns_wrap">
+          <div class="qrcode_tips j_tips">
+            <div class="tips_hd"> <span class="txt">关注我们</span> </div>
+            <div class="tips_bd"> <em class="arrow_up"></em> <img src="{xiao:$site_template}images/wx_jfz_zx_d.jpg" alt=""> </div>
+          </div>
+        </li>
+        <li class="seq"></li>
+        <li class="tools_item"> <em class="mt_ico mt_ico_tel_1"></em> <span class="tel">{xiao:block 6}</span> </li>
+        <li class="seq"></li>
+        <!--<li class="tools_item">
+          <div id="_userlogin">
+            <div class="userlogin">
+              <script language="javascript" type="text/javascript">CheckLogin();</script>
+              <a href="http://www.sangebeike.com/member/login.php" rel="nofollow">登录</a> <a href="http://www.sangebeike.com/member/index_do.php?fmdo=user&dopost=regnew" rel="nofollow">注册</a> </div>
+          </div>
+        </li>-->
+      </ul>
+    </div>
+    <!-- tools end-->
+  </div>
+</div>
+<!-- top bar end-->

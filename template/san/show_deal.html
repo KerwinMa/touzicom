@@ -1,0 +1,557 @@
+{xiao:template header.html}
+<link type="text/css" rel="stylesheet" href="{xiao:$site_template}images/project.css">
+<link type="text/css" rel="stylesheet" href="{xiao:$site_template}images/demo.css">
+<link type="text/css" rel="stylesheet" href="{xiao:$site_template}images/gl.css">
+<link type="text/css" rel="stylesheet" href="{xiao:$site_template}images/top.css">
+<script src="layer/layer.js"></script>
+
+<!-- top bar end -->
+<style>
+.w780 {
+width: 100%;
+}
+.news_right {
+width: 100%;
+}
+.rnews_item {
+    width: 99%;
+    line-height: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px dotted #ccc;
+    float: left;
+}
+.rnews_tit {
+    line-height: 40px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    color: #0B1F3C;
+    float: left;
+    text-indent: 1em;
+    font-weight: bold;
+}
+.news_rightdetail {
+height: 215px;
+}
+</style>
+<div id="project_detail">
+
+  <!--项目简介开始 -->
+
+  <div id="project_part1">
+
+    <div class="project_part1">
+
+      <div class="project_left"><img src="{xiao:$thumb}" alt="{xiao:$title}" ></div>
+
+      <div class="project_right">
+
+        <div class="right_part1"> <img class="project_img1" src="{xiao:$gslogo}" alt="{xiao:$title}" >
+
+          <div class="right_detail">
+
+            <h1>{xiao:$title}</h1>
+
+            <p>股权代码：<span style="color:#ff0000;">{xiao:$guquandaima}</span></p>
+
+            <p>{xiao:$mc}</p>
+            
+            <a class="te3"><i class="iconfont te1"></i>关注数:<span><script type="text/javascript" src="{xiao:function.url('api/hits',array('id'=>$id))}"></script></span></a> <a class="te2"><i class="iconfont te1"></i>预约数:<span>{xiao:$yy}</span></a> 
+
+          </div>
+
+        </div>
+
+        <ul class="right_list">
+
+          <li class="right_item"> <em class="project_item"><img src="{xiao:$site_template}images/picon1.png"></em>
+
+            <p class="project_item2"><span class="item2_type">所属行业:</span><span class="item2_detail">{xiao:$industry}</span></p>
+
+          </li>
+
+          <li class="right_item"> <em class="project_item"><img src="{xiao:$site_template}images/picon2.png"></em>
+
+            <p class="project_item2"><span class="item2_type">所属地区:</span><span class="item2_detail">{xiao:$area}</span></p>
+
+          </li>
+
+          <li class="right_item"> <em class="project_item"><img src="{xiao:$site_template}images/picon3.png"></em>
+
+            <p class="project_item2"><span class="item2_type">项目状态:</span><span class="item2_detail">{xiao:$state}</span></p>
+
+          </li>
+
+          <li class="right_item"> <em class="project_item"><img src="{xiao:$site_template}images/picon4.png"></em>
+
+            <p class="project_item2"><span class="item2_type">投资类型:</span><span class="item2_detail">{xiao:$leixing}</span></p>
+
+          </li>
+
+        </ul> 
+
+        <div class="btn1"><a href="http://ala.zoosnet.net/LR/Chatpre.aspx?id=ALA52875673&lng=cn">点击咨询</a><a class="theme-login" href="javascript:;">预约考察</a><a class="zixun"  onclick="layer.msg('索取资料请拨打400-8054-342');" >索取资料</a></div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!--项目简介结束-->
+
+  <div class="project_detail">
+
+    <div class="pnav"> <span class="pnav_item on">项目信息</span> </div>
+
+    <div class="w1200 clearfix">
+
+      <div class="w780 fl">
+          <style type="text/css">
+table.imagetable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #999999;
+	border-collapse: collapse;
+}
+table.imagetable th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #999999;
+}
+table.imagetable td {
+	border-width: 1px;
+    padding: 18px;
+    border-style: solid;
+    border-color: #999999;
+    text-align: center;
+}
+
+.pxbl ul{
+    width: 283px;
+    float: left;
+	margin-top: 30px;
+}
+.pxbl ul li{
+    font-size: 22px;
+    height: 38px;
+    padding-left: 40px;
+}
+.jt{
+	width:136px;
+	height:210px;
+	float:left;
+  background: url(/template/san/images/jt.png) no-repeat;
+}
+.tdown 
+{
+	width:326px;
+	height:210px;
+	float:left;
+	margin-top: 30px;
+ 
+}
+.dwn 
+{
+ 
+  width: 80px;
+    line-height: 50px;
+    background: #e3a732;
+    text-align: left;
+    padding: 10px 50px;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-left: 500px;
+    margin-top: -155px;
+}
+.dw
+{
+ 
+    color: #fff;
+    font-size: 20px;
+    width: 92px;
+    padding-left: -120px;
+    margin-left: -20px;
+}
+ 
+</style>
+
+<!-- Table goes in the document BODY -->
+
+<table width="100%" align="center" class="imagetable">
+<tr>
+	<th>锁定期限</th><th>注册资本</th><th>成立时间</th><th>主办券商</th>
+</tr>
+<tr>
+	<td>{xiao:$rq}</td><td>{xiao:$zczb}</td><td>{xiao:$cltime}</td><td>{xiao:$zbqs}</td>
+</tr>
+<tr>
+	<th>本次发行</th><th>剩余股数</th><th>净资产</th><th>总股本</th>
+</tr>
+<tr>
+	<td>{xiao:$bcfx}</td><td>{xiao:$cygs}</td><td>{xiao:$jingzichan}</td><td>{xiao:$zgb}</td>
+</tr>
+<tr>
+	<th>本次融资</th><th>每股股价</th><th>起投股数</th><th>市盈率</th>
+</tr>
+<tr>
+{xiao:if $member}{xiao:$member['username']}<td>{xiao:$bcrz}</td><td>{xiao:$djia}</td><td>{xiao:$qtgs}</td><td>{xiao:$shiyinglv}</td>{xiao:else}<td colspan="4"> <span style="color:#E53333;"><strong>游客您好，还不是会员请注册后继续查看！</strong></span><br /><a href="http://touzitop.com/member/index.php?c=register" target="_blank"><img src="/data/upload/image/201707/51565ef902706e4eb9b7efea95a16989.gif" width="104" height="35" /></a></td>{/xiao:if} 
+ 
+</tr>
+<tr>
+	<th>每股收益</th><th>预计挂牌</th><th>2016净盈利</th><th>2017预估收益</th>
+</tr>
+<tr>
+	<td>{xiao:$shouyi}</td><td>{xiao:$yujiguapai}</td><td>{xiao:$sshouyi}</td><td>{xiao:$yshouyi}</td>
+</tr>
+</table>
+<div style="clear:both"> </div>
+<div class="news_right">
+      <ul class="news_rightdetail">
+        <div class="rnews_tit"><span>企业新闻</span></div>
+      {xiao:php $i = 1; } {xiao:list id=$xgwz num=3 }
+		  <li class="rnews_item"> <span class="num{xiao:php echo $i ;}">{xiao:php echo $i ;}</span>
+          <p><a target="_blank" title="{xiao:$xiao['title']}" href="{xiao:$xiao['url']}">{xiao:function.strcut($xiao[title],40)}</a></p>
+          <i class="date">{xiao:function.date("Y-m-d", $time)}</i> </li>{xiao:php $i++;}{/xiao:list} 
+        
+      </ul>
+      <!--<div class="news3">
+        <div class="rnews_tit"><span>专属服务</span></div>
+        <div class="prodr2">
+          <div class="pitem">
+            <div class="iconfont te2"></div>
+            <a class="theme-login" href="javascript:void(0)">获取更多资料</a> </div>
+          <div class="pitem">
+            <div class="iconfont te2"></div>
+            <a class="theme-login" href="javascript:void(0)">开户咨询</a> </div>
+          <div class="pitem">
+            <div class="iconfont te2"></div>
+            <a class="theme-login" href="javascript:void(0)">实地调研</a> </div>
+          <div class="pitem">
+            <div class="iconfont te2"></div>
+            <a class="theme-login" href="javascript:void(0)">风险评估</a> </div>
+          <div class="pitem">
+            <div class="iconfont te2"></div>
+            <a class="theme-login" href="javascript:void(0)">募资明细</a> </div>
+          <div class="pitem">
+            <div class="iconfont te2"></div>
+            <a class="theme-login" href="javascript:void(0)">项目路演</a> </div>
+        </div>
+      </div>-->
+      <!--<div class="news3">
+        <div class="rnews_tit"><span>如何退出</span></div>
+        <div class="prodr2">
+          <div class="prlist"> <a class="theme-login" href="javascript:void(0)">协议转让</a> <a class="theme-login" href="javascript:void(0)">转板退出</a> <a class="theme-login" href="javascript:void(0)">并购重组</a> <a class="theme-login" href="javascript:void(0)">做市商转让</a> </div>
+        </div>
+      </div>-->
+     
+    
+
+    </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <ul class="padding">
+   <li id="item1">
+            <h3 class="lead-title">公司介绍</h3>
+            <div class="invest-reason"> 
+            {xiao:$qyjj}
+             </div>
+			
+          </li><!--{xiao:if $member}{xiao:$member['username']}您好，您是我们的会员请尽情观阅吧！
+          <li id="item2">
+            <h3 class="lead-title">融资计划</h3>
+            <div class="invest-reason">{xiao:$rzjh} </div>
+			
+          </li>
+          
+          {xiao:else}
+          
+           <li id="item2">
+            <h3 class="lead-title">融资计划</h3>
+            <div class="invest-reason">
+          
+          <span style="color:#E53333;"><strong>游客您好，还不是会员请注册后继续查看！</strong></span><a href="http://touzitop.com/member/index.php?c=register" target="_blank"><img src="/data/upload/image/201707/51565ef902706e4eb9b7efea95a16989.gif" width="204" height="65" /></a></div>
+			
+          </li>{/xiao:if} -->
+          <li id="item3">
+            <h3 class="lead-title">企业亮点</h3>
+            <div class="invest-reason"> {xiao:$qyld} </div>
+			
+          </li>
+          <li id="item4">
+            <h3 class="lead-title">市场价值</h3>
+            <div class="invest-reason"> {xiao:$scjz}
+ </div>
+			
+          </li>
+          {xiao:if $member}{xiao:$member['username']}您好，您是我们的会员请尽情观阅吧！
+          <li id="item5">
+            <h3 class="lead-title">上市回报分析</h3>
+            <div class="invest-reason">{xiao:$shjh}
+ </div>
+          </li>
+<!--          <li id="item7">
+            <h3 class="lead-title">回报分析</h3>
+            <div class="invest-reason"> {xiao:$hbfx}
+ </div>
+          </li>-->
+        {xiao:else}
+          <li id="item5">
+            <h3 class="lead-title">上市回报分析</h3>
+            <div class="invest-reason"><span style="color:#E53333;"><strong>游客您好，还不是会员请注册后继续查看！</strong></span><a href="http://touzitop.com/member/index.php?c=register" target="_blank"><img src="/data/upload/image/201707/51565ef902706e4eb9b7efea95a16989.gif" width="204" height="65" /></a> </div>
+          </li>
+<!--          <li id="item7">
+            <h3 class="lead-title">回报分析</h3>
+             <div class="invest-reason"> 游客您好，还不是会员请注册后继续查看！<a href="http://touzitop.com/member/index.php?c=register" target="_blank"><img src="/data/upload/image/201707/51565ef902706e4eb9b7efea95a16989.gif" width="204" height="65" /></a> </div>
+          </li>-->
+{/xiao:if} 
+            
+   </ul> 
+    <div class="news3">
+        <div class="rnews_tit"><span>联系董秘</span></div>
+        <div class="prodr2"> <img src="/data/upload/image/201711/ede5fc064b789aada3aa9ba7d0575fa5.png"" alt="">
+          <div class="hr">
+            <div class="hrtit">{xiao:$title}董秘</div>
+            <div class="hrd">接受800人的项目咨询，让500人获得最大收益</div>
+          </div>
+          <div class="hrt"></div>
+          <div class="bt4"><a href="http://ala.zoosnet.net/LR/Chatpre.aspx?id=ALA52875673&lng=cn">点击咨询</a></div>
+        </div>
+      </div>
+   
+   <div class="blank20 clear"l></div>
+<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32">
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_weixin"></a>
+<a class="jiathis_button_renren"></a>
+<a class="jiathis_button_alibaba"></a>
+<a class="jiathis_button_tianya"></a>
+<a class="jiathis_button_caimi"></a>
+<a class="jiathis_button_cnfol"></a>
+<a class="jiathis_button_tifeng"></a>
+<a class="jiathis_button_hexun"></a>
+<a class="jiathis_button_txinhua"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	summary:"",
+	shortUrl:false,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+
+
+<br />
+
+	<div class="blank20 clear"></div>
+	<div class="blank20 clear"></div>
+   	<div class="bg">
+	<h2>评论</h2><br/><br/>
+                {xiao:list table=form_comment cid=$id status=1 order=time}
+             <div class="qh-cmt qh-reset-font"><div class="qh-cmt-bar"><div class="qh-avatar"><img src="https://p0.ssl.qhimg.com/dm/48_48_100/t00df551a583a87f4e9.jpg" alt=""></div><div class="qh-user-nt"><div class="qh-u-name">{xiao:$xiao[username]}</div><div class="qh-u-time">{xiao:function.date("Y-m-d H:i:s", $time)}</div></div></div><div class="qh-cmt-cont-wrap"><div class="qh-cmt-cont"><div class="qh-cmt-cont-t" data-content="{xiao:$xiao[pinglunneirong]}">{xiao:$xiao[pinglunneirong]}</div></div></div></div>
+              
+                {/xiao:list}</div>
+                
+                
+                
+	<div class="blank20 clear"></div>
+    
+    
+    
+    
+ 
+    
+    
+    
+
+<form action="{xiao:function.url('index/form', array('modelid'=>4, 'cid'=>$id))}" method="post">
+			<table width="100%" class="bg ">
+			<tr>
+				<td ><h3>评论内容：</h3></td>
+			</tr>
+			<tr><td><textarea class="pinglunneirong" name="data[pinglunneirong]"></textarea></td></tr>
+			<tr>
+				<td></td>
+			</tr>
+			<tr>
+				<td style="border:none"><input type="submit" class="button dp" value="提 交" name="submit"></td>
+			</tr>
+			</table>
+</form>
+
+<div class="blank20 clear"></div>
+
+<!--PC和WAP自适应版-->
+<!-- <div id="SOHUCS" ></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = 'cyt7q3whv'; 
+var conf = 'prod_8a65a426bde5ad158522ddf47fe053eb'; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script> -->
+
+<div class="pxf">
+
+ 
+
+		    	
+
+		    
+<!--
+		    	<div class="spacetit">怎么投好项目？</div>
+
+		    	<div class="pxbt"><img src="{xiao:$site_template}images/bpic.png" alt=""></div>-->
+
+        
+
+          <!--火爆项目开始-->
+
+          
+
+          <!--火爆项目结束-->
+
+          <!--优质项目开始-->
+
+          
+
+          <!--优质项目结束-->
+
+        </div>
+        
+        
+        
+      </div>
+
+ <!--<div class="w360 fr">
+        <ul class="navigation-bar" style="position: static; left: 0px; top: 0px;">
+          <li id="item1" class="active">公司简介</li>
+          <li id="item2">融资用途</li>
+          <li id="item3">企业亮点</li>
+          <li id="item4">市场价值</li>
+          <li id="item5">投资流程</li>
+          <li id="item6">上市计划</li>
+          <li id="item7">回报分析</li> 
+          <li id="item8"><font><a style=" font-weight:bold; font-size:18px;color:#FF0000;" href="http://www.touzitop.com/member/" target="_blank">会员中心</a></font></li>
+        </ul>
+      </div>-->
+
+
+</div>
+
+
+
+<div class="theme-popover-mask"></div>
+
+ 
+<script type="text/javascript">
+
+	$(".navigation-bar li").click(function(){
+
+		//获取点击索引
+
+		var index = $(this).index();
+
+		// 可视高度＝文本高度－滚动条高度
+
+		var Ttop=$(".padding li").eq(index).offset().top-document.documentElement.scrollTop;
+
+		//以动画方式改变滚动条位置		
+
+		$("html,body").stop().animate({"scrollTop":Ttop},300);
+
+		//把所需要的样式加到对应点击的li上面			
+
+		$(this).addClass("active").siblings().removeClass("active");
+
+		});
+
+	$(window).scroll(function(){
+
+		//判断右侧点击列表所在位置
+
+		if($(".w360").offset().top-$(document).scrollTop()<0){//如果超出距离就浮动，就改成浮动
+
+			var L=$(".padding").offset().left+780+280;
+
+			$(".navigation-bar").css({"position":"fixed","left":L+"px"});
+
+			$(".navigation-bar").css({"position":"fixed","top":0+"px"});
+
+			}else{
+
+				$(".navigation-bar").css({"position":"static","left":0});
+
+				}
+
+				
+
+			//鼠标滚动的时候切换样式
+
+			var top = $(document).scrollTop();          //定义变量，获取滚动条的高度
+
+			var menu = $(".navigation-bar");                      //定义变量，抓取.navigation-bar
+
+			var items = $(".padding").find("li");    //定义变量，查找li	
+
+			var curId = "";                             //定义变量，当前所在的楼层li #id 	
+
+			items.each(function(){
+
+				var m = $(this);                        //定义变量，获取当前类
+
+				var itemsTop = m.offset().top;        //定义变量，获取当前类的top偏移量
+
+				if(top > itemsTop-10){
+
+					curId = m.attr("id");
+
+				}else{
+
+					return false;
+
+				}
+
+			});	
+
+			//给相应的楼层设置active,取消其他楼层的active
+
+			var curLink = menu.find(".active");
+
+			if( curId && curLink.attr("id") != curId ){
+
+				curLink.removeClass("active");
+
+				menu.find( "[id=" + curId + "]" ).addClass("active");
+
+			}
+
+		});
+
+</script>
+
+
+
+{xiao:template footer.html}

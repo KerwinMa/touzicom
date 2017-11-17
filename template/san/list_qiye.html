@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>企业信息大全</title>
+<!-- jQuery library (served from Google) -->
+<script type="text/javascript" src="/template/san/images/jquery-1.8.2.js"></script>
+<!-- bxSlider Javascript file -->
+<script src="{xiao:$site_template}images/jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS file -->
+<link href="{xiao:$site_template}images/jquery.bxslider.css" rel="stylesheet" />
+<link href="{xiao:$site_template}images/index-style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="nav-main" style="zoom: 1.1125;">
+  <div id="search" >  
+    <div id="searchout">
+      <div id="search_type" >
+        <div class="search_top_type" type="web" >企业信息大全</div>
+      
+      </div>
+        
+      <div id="searchform">  
+        <form action="http://www.touzitop.com/index.php?c=index&a=sear" method="Get" name="formsearch"  >
+        <input type="hidden"  value="index"  name="c" />
+
+		<input type="hidden"  value="sear"  name="a" />
+        <input type="text" id="search_input" name="kw" >  
+        <input id="searchbutton" type="submit" value=""> 
+        </form>
+      </div>
+      <div id="search_sg">
+        <div id="site_sg">
+            
+        </div>
+        <div id="sousuo_sg">
+            
+        </div>
+      </div>
+    </div>
+  </div>     
+</div>
+
+
+
+<div id="main">
+
+
+<ul class="bxslider">
+<?php  $aa=0;  ?>
+ {xiao:list catid=1 num=24 cache=36000} 
+ <?php if($aa%2==0){  ?>
+  <li>
+    <ul>  
+    <?php   }   ?>
+        <li>
+          <div class="case_w">
+              <img src="{xiao:function.image($xiao[thumb])}" />
+             <div class="fire"></div> 
+            <a href="{xiao:$xiao['url']}" class="x">看项目</a>
+            <a href="http://www.touzitop.com/index.php?c=index&a=sear&kw={xiao:$xiao['title']}" class="y">看新闻</a>
+          </div>
+        </li>   
+  
+      
+      <?php  $aa++; ?>
+   <?php if($aa%2==0&&$aa!=0){  ?>   
+   </ul>
+</li> 
+ <?php   }   ?>
+ {/xiao:list}
+ 
+
+</ul>
+</div>
+<script type="text/javascript">
+$(function(){
+  $(".bxslider li ul li").hover(function(){ 
+    $(".x",this).stop().css({'left':'35px'}).animate({'left':"40px"},400).show();
+    $(".y",this).stop().css({'right':'35px'}).animate({'right':"40px"},400).show();
+    $('.fire',this).fadeIn(500);
+  },function(){
+    // $('.x, .y',this).stop().animate({"top":"30px"},400);
+    $('.fire, .x, .y',this).fadeOut(500);
+  }); 
+});
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+ 	 	$('.bxslider').bxSlider({
+ 	 		  minSlides: 4,
+			  maxSlides: 4,
+			  nextSelector: '#slider-next',
+  			prevSelector: '#slider-prev',
+  			slideWidth: 240,
+        slideMargin:0,
+			  auto: false
+ 	 	});
+	});
+</script>
+
+<div id="slider-prev" class="switch_button">
+</div>
+<div id="slider-next" class="switch_button">
+</div>
+</body>
+</html>

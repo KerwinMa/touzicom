@@ -1,0 +1,442 @@
+{xiao:template header.html}
+
+
+
+
+
+ <style>.filter a {
+    font-weight: bold;
+    padding-right: 9px;
+    padding-left: 4px;
+    line-height: 30px;
+    font-size: 14px;
+    margin: 0px 3px;
+    border-radius: 3px;
+    display: inline-table;
+    border-radius: 3px;
+    color: #666666;
+}
+.on {
+    background-color: #ef4d4b;
+	color: #fff!important;
+}
+ </style>
+
+ <script type="text/javascript"> 
+ $(function(){function getLocSearchObj(search){
+    var searchObj ={}, url =search || window.location.search;
+    if (url.indexOf("?") != -1) {
+        var str = url.substr(1),strs = str.split("&");
+        for (var i = 0; i < strs.length; i++) {
+            searchObj[strs[i].split("=")[0]] = decodeURIComponent(strs[i].split("=")[1]);
+        }
+    }
+    return searchObj;
+}
+var o_localSearch =getLocSearchObj();
+for(i in o_localSearch){
+    if(!o_localSearch[i]){
+        o_localSearch[i]="全部"
+    }
+}
+var $filterType =$(".filter .fenlei"),
+    $state =$($filterType[0]),
+    $leixing =$($filterType[1]),
+    $area =$($filterType[2]),
+    $industry =$($filterType[3]);
+
+$state.find('a:contains('+o_localSearch.state+')').addClass("on");
+$leixing.find('a:contains('+o_localSearch.leixing+')').addClass("on");
+$area.find('a:contains('+o_localSearch.area+')').addClass("on");
+$industry.find('a:contains('+o_localSearch.industry+')').addClass("on");
+});
+ 
+</script>  
+
+<div class="filter">  {xiao:php 
+
+ $list_url = array();
+
+ foreach ($_GET as $n=>$v) $list_url[$n] = Base::get($n);
+
+ $list_url[page]='[page]';
+
+ $urlrule = url('index',$list_url);
+
+ } 
+
+ <? $arr_state= array('进行中'=>'进行中','已结束'=>'已结束');?>
+
+ <? $arr_leixing= array('新股增发'=>'新股增发','老股转让'=>'老股转让','风投项目'=>'风投项目','天使投资'=>'天使投资','影视众筹'=>'影视众筹');?>
+
+ <? $arr_area= array('北京'=>'北京','天津'=>'天津','上海'=>'上海','江苏'=>'江苏','浙江'=>'浙江','安徽'=>'安徽','福建'=>'福建','山东'=>'山东','湖北'=>'湖北','广东'=>'广东','云南'=>'云南','湖南'=>'湖南','河北'=>'河北','河南'=>'河南','四川'=>'四川','辽宁'=>'辽宁','甘肃'=>'甘肃','其他'=>'其他');?>
+
+ <? $arr_industry= array('信息通讯'=>'信息通讯','移动互联'=>'移动互联','消费服务'=>'消费服务','节能环保'=>'节能环保','文化传媒'=>'文化传媒','生物制药'=>'生物制药','金融服务'=>'金融服务','工业制造'=>'工业制造','医疗器械'=>'医疗器械','能源材料'=>'能源材料','军工科技'=>'军工科技','农林牧渔'=>'农林牧渔','其他类别'=>'其他类别');?>
+
+  <h3 class="template">项目状态：</h3><div class="fenlei"><a title="{xiao:$k}" href="/index.php?catid={xiao:$catid}&leixing={xiao:$list_url['leixing']}&area={xiao:$list_url['area']}&industry={xiao:$list_url['industry']}" target="_self"><span> 全部</span></a>
+
+  {xiao:loop $arr_state $k=>$t}
+
+  <a title="进行中"   href="/index.php?catid={xiao:$catid}&leixing={xiao:$list_url['leixing']}&area={xiao:$list_url['area']}&industry={xiao:$list_url['industry']}&state={xiao:$t}" target="_self">{xiao:$k}</a>
+
+{/xiao:loop}
+
+  </div>
+
+
+
+  <h3 class="template">投资类型：</h3><div class="fenlei"><a title="{xiao:$k}" href="/index.php?catid={xiao:$catid}&state={xiao:$list_url['state']}&area={xiao:$list_url['area']}&industry={xiao:$list_url['industry']}" target="_self"><span> 全部</span></a>
+
+  {xiao:loop $arr_leixing $k=>$t}
+
+  <a title="{xiao:$k}" {xiao:if $current}on{/xiao:if} href="/index.php?catid={xiao:$catid}&state={xiao:$list_url['state']}&area={xiao:$list_url['area']}&industry={xiao:$list_url['industry']}&leixing={xiao:$t}" target="_self">{xiao:$k}</a>
+
+{/xiao:loop}</div>
+
+
+
+  <h3 class="template">所在地区：</h3><div class="fenlei"><a title="{xiao:$k}" href="/index.php?catid={xiao:$catid}&state={xiao:$list_url['state']}&leixing={xiao:$list_url['leixing']}&industry={xiao:$list_url['industry']}" target="_self"><span> 全部</span></a>
+
+    {xiao:loop $arr_area $k=>$t}
+
+  <a title="{xiao:$k}" href="/index.php?catid={xiao:$catid}&state={xiao:$list_url['state']}&leixing={xiao:$list_url['leixing']}&industry={xiao:$list_url['industry']}&area={xiao:$t}" target="_self">{xiao:$k}</a>
+
+ {/xiao:loop}
+
+ </div> 
+
+
+
+   <h3 class="template">所属行业：</h3><div class="fenlei"><a title="{xiao:$k}" href="/index.php?catid={xiao:$catid}&state={xiao:$list_url['state']}&leixing={xiao:$list_url['leixing']}&industry={xiao:$list_url['area']}" target="_self"><span> 全部</span></a>
+
+     {xiao:loop $arr_industry $k=>$t}
+
+   <a title="{xiao:$k}" href="/index.php?catid={xiao:$catid}&state={xiao:$list_url['state']}&leixing={xiao:$list_url['leixing']}&industry={xiao:$list_url['area']}&industry={xiao:$t}" target="_self">{xiao:$k}</a>
+
+    {/xiao:loop}</div>	</div>
+
+
+
+<div id="J_wrap">
+
+
+
+  <div class="blank20"></div>
+
+
+
+  <div class="ui-deals wrap" style="overflow:hidden;">
+
+
+
+    <div class="blank20"></div>
+
+
+
+    <div id="pin_box">
+
+
+
+      <div class="deal_item_list">
+
+
+
+        <style type="text/css">
+
+
+
+	.nav_item1 .ui-progress ,
+
+
+
+	.nav_item1 .ui-success{
+
+
+
+		height:12px;
+
+
+
+	}
+
+
+
+	.nav_item1 .ui-progress span,.ui-success span{
+
+
+
+		height:12px;
+
+
+
+		line-height:12px;
+
+
+
+		font-size:12px;
+
+
+
+		color:#fff;
+
+
+
+		text-align:right;
+
+
+
+	}
+
+
+
+</style>
+
+  {xiao:list catid=$catid xiaocms=1  state=$list_url[state] leixing=$list_url[leixing] area=$list_url[area] industry=$list_url[industry]  urlrule=$urlrule page=$page pagesize=12 }
+
+        <div class="nav_items">
+
+
+
+		
+
+
+
+          <div class="invest_status"> <i class="invest_status_icon in_progress">进行中</i> </div>
+
+
+
+          <div class="nav_item nav_item1 f_l first"> <a href="{xiao:$xiao['url']}" target="_blank" style="display:block;overflow:hidden">
+
+
+
+            <div class="project_image"> <img src='{xiao:function.image($xiao[thumb])}'/></div>
+
+
+
+            <div class="project_text"> <span class="project_title" style="text-align:center;">{xiao:$xiao['title']} <img src="{xiao:$site_template}images/huo.png" style="display:none" width="25px" height="25px" />
+
+
+
+		</span>
+
+
+
+               <ul class="right_list">
+
+
+
+
+
+
+
+          <li class="right_item"> <em class="project_item"><img src="{xiao:$site_template}images/picon1.png"></em>
+
+
+
+
+
+
+
+            <p class="project_item2"><span class="item2_type">所属行业:</span><span class="item2_detail">{xiao:$xiao['industry']}</span></p>
+
+
+
+
+
+
+
+          </li>
+
+
+
+
+
+
+
+          <li class="right_item"> <em class="project_item"><img src="{xiao:$site_template}images/picon2.png"></em>
+
+
+
+
+
+
+
+            <p class="project_item2"><span class="item2_type">所属地区:</span><span class="item2_detail">{xiao:$xiao['area']}</span></p>
+
+
+
+
+
+
+
+          </li>
+
+
+
+
+
+
+
+          <li class="right_item"> <em class="project_item"><img src="{xiao:$site_template}images/picon3.png"></em>
+
+
+
+
+
+
+
+            <p class="project_item2"><span class="item2_type">项目状态:</span><span class="item2_detail">{xiao:$xiao['state']}</span></p>
+
+
+
+
+
+
+
+          </li>
+
+
+
+
+
+
+
+
+
+          <li class="right_item"> <em class="project_item"><img src="{xiao:$site_template}images/picon4.png"></em>
+
+
+
+
+
+
+
+            <p class="project_item2"><span class="item2_type">投资类型:</span><span class="item2_detail">{xiao:$xiao['leixing']}</span></p>
+
+
+
+
+
+
+
+          </li>
+
+
+
+
+
+
+
+        </ul>
+
+
+
+            </div>
+
+
+     <div class="jindu"> 项目进度：</div>
+  <div class="progress">
+     <span style="width: {xiao:$xiao['xiangmujindu']}%;"><span>{xiao:$xiao['xiangmujindu']}%</span></span>
+    </div>
+
+
+            </a> </div>
+
+
+
+        </div>
+
+    {/xiao:list}     
+
+        
+
+        
+
+        
+
+        
+
+        
+
+       </div>
+
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+  		<style type="text/css">
+
+
+
+		.page li{    background-color: #f1f1f1;
+
+
+
+    display: inline-block;
+
+
+
+    color: #000000;
+
+
+
+	min-width:50px;
+
+
+
+    margin-left: 8px;
+
+
+
+    min-height: 30px;
+
+
+
+    line-height: 30px;
+
+
+
+    text-align: center;
+
+
+
+    border: 1px solid #e5e5e5;
+
+
+
+}
+
+
+
+.page li a{ color:#666666}
+
+
+
+		 </style>
+
+
+
+        <div id="pageInfo" class="clearfix">
+
+
+
+          <p class="pagempage"></p>
+
+ {xiao:$pagelist}
+
+
+
+        </div>
+
+
+
+</div>
+ 
+
+{xiao:template footer.html}

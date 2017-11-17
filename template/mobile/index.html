@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+<title>{xiao:$site_title}</title>
+<link rel="stylesheet" href="{xiao:$site_template}images/top.css">
+<link rel="stylesheet" href="{xiao:$site_template}images/content.css">
+<link rel="stylesheet" href="{xiao:$site_template}images/swiper.min.css">
+<script type="text/javascript" src="{xiao:$site_template}images/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="{xiao:$site_template}images/jquery.min.js"></script>
+<script type="text/javascript" src="{xiao:$site_template}images/swiper.min.js"></script>
+<script>
+	$(document).ready(function(){
+	    var $tabn = $('.newsitem');
+	        $tabn.click(function(){
+		    $(this).addClass('cur1').siblings().removeClass('cur1');
+		    var index = $tabn.index(this);
+		    $('div.xunitem').eq(index).show().siblings().hide();
+		    $('div.htitle').eq(index).show().siblings().hide();
+	    });	
+    });
+    </script>
+</head>
+<body>
+<!-- 头部开始-->
+<div class="top">
+  <div class="topic"><a href="/m"><img src="{xiao:$site_template}images/main_logo.png" alt=""></a></div>
+  <form action="/plus/advancedsearch.php" method="post" style="display: -webkit-box;-webkit-box-flex: 1;">
+  <div class="sou">
+    <input type="hidden" name="mid" value="17" />
+    <input type="hidden" name="dopost" value="search" />
+    <input type="text" placeholder="请输入项目关键词"  name="q">
+    <div class="spic"><button style="border:none;"><img src="{xiao:$site_template}images/sou.png" alt=""></button></div>
+  </div>
+  </form>
+</div>
+<!-- 头部结束-->
+<!-- 大图开始 -->
+<div class="slider">
+  <ul>
+    <li><a href="#" target="_blank"><img src="{xiao:block 4}" alt=""></a></li>
+<li><a href="#" target="_blank"><img src="{xiao:block 2}" alt=""></a></li>
+<li><a href="#" target="_blank"><img src="{xiao:block 3}" alt=""></a></li>
+<li><a href="#" target="_blank"><img src="{xiao:block 1}" alt=""></a></li>
+<li><a href="#" target="_blank"><img src="{xiao:block 5}" alt=""></a></li>
+
+  </ul>
+</div>
+<!-- 大图结束 -->
+<div class="content">
+  <!-- 图标导航开始 -->
+  <div class="icon_list"> <div class="icon_item"> <a href="/index.php?catid=1">
+      <div class="picon"><img src="{xiao:$site_template}images/icon1.png" alt=""></div>
+      <div class="icond">股权项目</div>
+      </a> </div><div class="icon_item"> <a href="/index.php?catid=3">
+      <div class="picon"><img src="{xiao:$site_template}images/icon2.png" alt=""></div>
+      <div class="icond">三板资讯</div>
+      </a> </div><div class="icon_item"> <a href="/index.php?catid=26">
+      <div class="picon"><img src="{xiao:$site_template}images/icon5.png" alt=""></div>
+      <div class="icond">专题栏目</div>
+      </a> </div> </div>
+  <!-- 图标导航结束 -->
+  <!-- 热门话题开始 -->
+  <div class="hot">
+    <div class="htit"> <span>热门•专题</span> <a href="/index.php?catid=26">更多></a></div>
+    <div class="warp1">
+      <div class="swiper-container"> 
+        <div class="swiper-wrapper"> {xiao:list catid=26    num=8 cache=0  xiaocms=1  }
+		<div class="swiper-slide"> <a href="{xiao:$xiao['url']}"><img src="{xiao:$xiao['shouyetupian']}" alt="">
+            <p>{xiao:$xiao['title']}</p>
+            </a> </div>
+{/xiao:list}
+
+		   </div>
+        <!-- Add Pagination -->
+      </div>
+    </div>
+  </div>
+  <!-- 热门话题结束 -->
+  <!-- 股权项目开始 -->
+  <div class="gu">
+    <div class="htit"> <span>精选•项目</span> <a href="">更多></a> </div>
+    <div class="gulist"> {xiao:list catid=1    num=12 cache=0  xiaocms=1  }
+    <div class="guitem"> <a href="{xiao:$xiao['url']}">
+        <div class="picg"><img src="{xiao:function.image($xiao[thumb])}" alt=""></div>
+        <div class="ptit">{xiao:$xiao['title']}</div>
+        <div class="pbiao">
+          <div class="pbl"> <img src="{xiao:$site_template}images/sort1.png" alt=""> <span>{xiao:$xiao['leixing']}</span> </div>
+          <div class="pbl"> <img src="{xiao:$site_template}images/add1.png" alt=""> <span>{xiao:$xiao['area']}</span> </div>
+        </div>
+        </a> </div>
+ {/xiao:list}
+ </div>
+  </div>
+  <!-- 股权项目结束 -->
+  <!-- 资讯开始 -->
+  <div class="xun">
+    <div class="htitle" style=" display:block;"> <span>三板头条</span> <a href="/index.php?catid=8">更多></a></div>
+    <div class="htitle" style="display:none;"> <span>行业解析</span> <a href="/index.php?catid=9">更多></a></div>
+    <div class="htitle" style="display:none;"> <span>三板百科</span> <a href="/index.php?catid=19">更多></a></div>
+  </div>
+  <ul class="newsv">
+    <li class="newsitem cur1">三板头条</li>
+    <li class="newsitem">行业解析</li>
+    <li class="newsitem">三板百科</li>
+  </ul>
+  <div class="xunlist">
+    <div class="xunitem" style="display: block;"> 
+    {xiao:list catid=8 num=5 cache=0 }
+<a href="{xiao:$xiao['url']}">
+      <div class="xpic"> <img src="{xiao:function.image($xiao[thumb])}" alt=""> </div>
+      <div class="xpicr">
+        <div class="xptit">{xiao:function.strcut($xiao[title],30)}...</div>
+        <div class="newsd"><span><img src="{xiao:function.image($xiao[thumb])}" alt=""></span>{xiao:function.date("Y-m-d", $xiao['time'])}</div>
+      </div>
+      </a>
+{/xiao:list}
+ </div>
+    <div class="xunitem"> 
+     {xiao:list catid=9 num=5 cache=0 }
+<a href="{xiao:$xiao['url']}">
+      <div class="xpic"> <img src="{xiao:function.image($xiao[thumb])}" alt=""> </div>
+      <div class="xpicr">
+        <div class="xptit">{xiao:function.strcut($xiao[title],30)}...</div>
+        <div class="newsd"><span><img src="{xiao:function.image($xiao[thumb])}" alt=""></span>{xiao:function.date("Y-m-d", $xiao['time'])}</div>
+      </div>
+      </a>
+{/xiao:list}
+ </div>
+    <div class="xunitem">  
+    {xiao:list catid=19 num=5 cache=0 }
+<a href="{xiao:$xiao['url']}">
+      <div class="xpic"> <img src="{xiao:function.image($xiao[thumb])}" alt=""> </div>
+      <div class="xpicr">
+        <div class="xptit">{xiao:function.strcut($xiao[title],30)}...</div>
+        <div class="newsd"><span><img src="{xiao:function.image($xiao[thumb])}" alt=""></span>{xiao:function.date("Y-m-d", $xiao['time'])}</div>
+      </div>
+      </a>
+{/xiao:list}
+ </div>
+  </div>
+  <!-- 资讯结束 -->
+</div>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView:2.6,
+        spaceBetween:5,
+        freeMode: true
+    });
+    </script>
+<script>
+    var swiper = new Swiper('.swiper-container1', {
+        pagination: '.swiper-pagination',
+        slidesPerView:1,
+        paginationClickable: true,
+        spaceBetween:0,
+        freeMode: true
+    });
+    </script>
+{xiao:template footer.html}
+
+
+<script>
+$(document).ready(function()
+   {
+    //验证
+    $('#light').submit(function ()
+    {
+        if($('#name').val()==""){
+            $('#name').focus();
+            alert("用户名不能为空！");
+            return false;
+        }
+        if($('#phone').val()=="")
+        {
+            $('#phone').focus();
+            alert("联系电话不能为空！");
+            return false;
+        }
+		var myreg = /^1[34578]\d{9}$/; 
+		if(!myreg.test($("#phone").val())) 
+		{ 
+   			alert('请输入有效的手机号码！'); 
+    		return false; 
+		} 
+    })
+});
+
+window.onload = function(){
+
+    var nowDate = new Date();
+
+    var str = nowDate.getFullYear()+"-"+(nowDate.getMonth() + 1)+"-"+nowDate.getDate()+" "+nowDate.getHours()+":"+nowDate.getMinutes()+":"+nowDate.getSeconds();
+
+    document.getElementById("time").value=str;
+
+}
+
+</script>
+
+<link rel="stylesheet" href="{xiao:$site_template}images/demo.css">
+<div class="theme-popover" style="margin:0 0 0 0; left:0; width:100%;" id="light">
+  <div class="theme-poptit"> <a href="javascript:void(0)" class="close" style="float:right;" onClick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"> ×</a>
+    <h3>在线预约</h3>
+  </div>
+  <div class="theme-popbod dform">
+<form action="/plus/diy.php" enctype="multipart/form-data" method="post" class="theme-signin" name="loginform" id="complain">
+
+      <input type="hidden" name="action" value="post" />
+
+      <input type="hidden" name="diyid" value="1" />
+
+      <input type="hidden" name="do" value="2" />
+
+<input type="hidden" name="dede_fields" value="name,text;phone,text;time,text;source,text" />
+
+<input type="hidden" name="dede_fieldshash" value="380d8623c254b3480204696bd657af73" />
+
+<input type='hidden' name='source' id='source' style='width:250px'  class='intxt' value='' />
+
+	<input type="hidden" name="time" id="time" value="">
+
+      <ol>
+
+        <li><strong>用户姓名：</strong>
+
+          <input class="ipt" type="text" name='name' id='name'  size="20" placeholder="用户姓名" />
+
+        </li>
+
+        <li><strong>手机号码：</strong>
+
+          <input class="ipt"  type='text' name='phone' id='phone' size="20" placeholder="手机号码" />
+
+        </li>
+
+        <li>
+
+          <input class="btn btn-primary" type="submit" name="submit" value=" 提 交 " />
+
+        </li>
+
+      </ol>
+
+    </form>
+  </div>
+</div>
+<div id="fade"></div>
+
+
+
+<script type="text/javascript" src="{xiao:$site_template}images/yxmobileslider.js"></script>
+
+<script>
+
+    $(".slider").yxMobileSlider({width:640,height:120,during:3000})
+
+  </script>
+  
+ 
+</body>
+</html>

@@ -1,0 +1,559 @@
+<script>
+
+
+
+jQuery(document).ready(function($) {
+
+
+
+	$('.theme-login').click(function(){
+
+
+
+		$('.theme-popover-mask').fadeIn(100);
+
+
+
+		$('.theme-popover').slideDown(200);
+
+
+
+	})
+
+
+
+	$('.theme-poptit .close').click(function(){
+
+
+
+		$('.theme-popover-mask').fadeOut(100);
+
+
+
+		$('.theme-popover').slideUp(200);
+
+
+
+	})
+
+
+
+
+
+
+
+})
+
+
+
+$(document).ready(function()
+
+
+
+   {
+
+
+
+    //验证
+
+
+
+    $('#complain').submit(function ()
+
+
+
+    {
+
+
+
+        if($('#name').val()==""){
+
+
+
+            $('#name').focus();
+
+
+
+            alert("用户名不能为空！");
+
+
+
+            return false;
+
+
+
+        }
+
+
+
+        if($('#phone').val()=="")
+
+
+
+        {
+
+
+
+            $('#phone').focus();
+
+
+
+            alert("联系电话不能为空！");
+
+
+
+            return false;
+
+
+
+        }
+
+
+
+		var myreg = /^1[34578]\d{9}$/; 
+
+
+
+		if(!myreg.test($("#phone").val())) 
+
+
+
+		{ 
+
+
+
+   			alert('请输入有效的手机号码！'); 
+
+
+
+    		return false; 
+
+
+
+		} 
+
+
+
+		
+
+
+
+    })
+
+
+
+   
+
+
+
+});
+
+
+
+ 
+
+</script>
+
+<div class="theme-popover">
+
+  <div class="theme-poptit"> <a href="javascript:;" title="关闭" class="close">×</a>
+
+    <h3>在线预约</h3>
+
+  </div>
+
+  <div class="theme-popbod dform">
+
+    <form action="/index.php?c=index&a=form&modelid=9" enctype="multipart/form-data" method="post" class="theme-signin" name="loginform" id="complain">
+
+ 
+
+      <ol>
+
+        <li><strong>用户姓名：</strong>
+
+          <input class="ipt" type="text" name="data[xm]" id='name'  size="20" placeholder="用户姓名" />
+
+        </li>
+
+        <li><strong>手机号码：</strong>
+
+          <input class="ipt"  type='text' name="data[tel]" id='phone' size="20" placeholder="手机号码" />
+
+        </li>
+
+        <li>
+
+          <input class="btn btn-primary" type="submit" name="submit" value=" 提 交 " />
+
+        </li>
+
+      </ol>
+
+    </form>
+
+  </div>
+
+</div>
+
+<!-- footer -->
+
+<!-- footer -->
+
+ 
+
+  <div class="mod_ft_license"> 
+
+   <div class="layout_n"> 
+
+    <div class="license_list_wrap"> 
+
+     <img class="license_list clearfix" src="{xiao:$site_template}images/license.png" /> 
+
+    </div> 
+
+   </div> 
+
+  </div> 
+
+  <div class="mod_footer"> 
+
+   <div class="layout_n"> 
+
+    <div class="ft_wrap clearfix"> 
+
+     <div class="ft_item"> 
+
+      <div class="ft_item_tit">
+
+       关于我们
+
+      </div> 
+
+      <ul class="ft_links_list">  {xiao:nav catid=20,21,24,25 }
+
+       <li class="ft_link"><a href="{xiao:$xiao['url']}" target="_blank" rel="nofollow"><em class="ico_circle"></em>{xiao:$xiao['catname']}</a></li> 
+
+{/xiao:nav}
+
+      </ul> 
+
+     </div> 
+
+     <div class="ft_item"> 
+
+      <div class="ft_item_tit">
+
+       帮助中心
+
+      </div> 
+
+      <ul class="ft_links_list"> {xiao:nav catid=22,23 }
+
+       <li class="ft_link"><a href="{xiao:$xiao['url']}" target="_blank" rel="nofollow"><em class="ico_circle"></em>{xiao:$xiao['catname']}</a></li> 
+
+{/xiao:nav}
+
+      </ul> 
+
+     </div> 
+
+    <div class="ft_item ft_item_sns"> 
+
+      <div class="ft_item_tit">
+
+       关注我们
+
+      </div> 
+
+      <ul class="ft_sns_list clearfix"> 
+      <div class="tips_bd"> 
+
+          <em class="arrow"></em> 
+
+          <img class="fl" src="{xiao:$site_template}images/wx_jfz_zx_d.jpg" alt="" width="150" /> 
+<p>扫一扫关注<br>
+    实时了解新三板<br>
+    企业动态</p>
+
+         </div>
+
+ 
+
+      </ul> 
+
+     </div> 
+
+     <div class="ft_item ft_item_contact"> 
+
+      <div class="contact_1"> 
+
+       <div class="ft_item_tit">
+
+        客服热线
+
+       </div> 
+
+       <div class="ft_contact_tel clearfix"> 
+
+        <span class="ico_tel"></span> 
+
+        <span class="txt">{xiao:block 6}</span> 
+
+       </div> 
+
+      </div> 
+
+      <div class="contact_2"> 
+
+       <div class="ft_item_tit">
+
+        在线咨询
+
+       </div> 
+
+       <div class="ft_contact_qq clearfix"> 
+
+        <a href="http://ala.zoosnet.net/LR/Chatpre.aspx?id=ALA52875673&lng=cn" class="link" target="_blank" rel="nofollow"> <span class="ico_qq"></span> <span>在线咨询</span> </a> 
+
+        <span class="txt">08:00 - 23:00</span> 
+
+       </div> 
+
+      </div> 
+
+     </div> 
+
+    </div> 
+
+    <div class="friend_links clearfix"> 
+
+     <span class="tit">友情链接：</span> 
+
+     <p class="links_wrap"> </p> 
+
+    </div> 
+
+    <div class="about_links"> 
+
+     <a href="{xiao:$site_url}" target="_blank">首页</a> 
+
+     <span class="sep">|</span> 
+
+      	{xiao:nav num=6}
+
+     <a href="{xiao:$xiao['url']}" target="_blank">{xiao:$xiao['catname']}</a> 
+
+     <span class="sep">|</span> 
+
+ {/xiao:nav}
+
+     <a href="/sitemap.xml" target="_blank">网站地图</a> 
+
+    </div> 
+
+    <p class="copyright">&copy;2010-2018 http://www.touzitop.com 第一股权网版权所有 <a target="_blank" href="http://www.miibeian.gov.cn/" rel="nofollow">沪ICP备17037011号-1</a> </p> 
+
+    <p class="risk_warning">公司名称：上海投鼎资产管理有限公司&nbsp;|联系电话：{xiao:block 6}</p> 
+
+   </div> 
+
+  </div>   
+        <div id="fixed-box">
+    <!---->
+
+    <div class="fixed-item qqsever">
+        <a rel="nofollow" href="http://wpa.b.qq.com/cgi/wpa.php?ln=2&uin=200724919" target="_blank" class="item-icon-cont">
+            <i class="qq-icon"></i>
+            <p>咨询客服</p>
+        </a>
+        <div class="hover-drop" style="display:block;">
+            <div class="qq-drop-box">
+                <div class="clearfix zx-div ">
+                    <span class="fl zx-div-span">咨询客服:</span>
+                    <a href="http://wpa.b.qq.com/cgi/wpa.php?ln=2&uin=200724919" target="_blank" rel="nofollow" class="fl"><span class="click-zx"><i></i>点击咨询</span></a>
+                </div>
+                <p>客 服QQ：200724919</p>
+                <p>联系电话：400-805-4342 </p>
+                <p>工作时间：周一至周五 9:30 - 18:00</p>
+            </div>
+        </div>
+    </div>
+    <div class="fixed-item record">
+        <a rel="nofollow" href="http://ala.zoosnet.net/LR/Chatpre.aspx?id=ALA52875673&lng=cn" target="_blank" class="item-icon-cont">
+            <i class="rec-icon"></i>
+            <p>在线交流</p>
+        </a>
+    </div>
+    <div class="fixed-item ideawin" style="border-bottom-style: none;">
+        <div target="_blank" rel="nofollow" class="item-icon-cont">
+            <i class="yj-icon"></i>
+            <p>反馈意见</p>
+        </div>
+    </div>
+    <div class="fixed-item gotop" style="visibility: visible; opacity: 1;">
+        <div class="item-icon-cont">
+            <i class="bc-icon"></i>
+            <p>返回头部</p>
+        </div>
+    </div>
+</div>
+
+<!--意见反馈弹窗-->
+<div class="stPublic-win" id="feedback-win" style="display: none;">
+    <div class="stPublic-mask"></div>
+    <div class="stPublic-main">
+        <div class="feedback-cont">
+            <div class="tit-top clearfix">
+                <h3 class="fl">欢迎对第一股权网提出宝贵的建议或意见</h3>
+                <span class="closeBtn fr"></span>
+            </div>
+            <div class="form-mid iwm-cont">
+                  <form action="/index.php?c=index&a=form&modelid=11" method="post">
+                    <div class="from-item clearfix">
+                        <label class="fl">投诉建议:</label>
+                        <textarea class="fl from-put" name="data[tousujianyi]"></textarea>
+                    </div>
+                    <div class="from-item clearfix">
+                        <label class="fl">联系QQ:</label>
+                        <input type="text" name="data[qq]" class="fl from-put">
+                    </div>
+                    <div class="from-item clearfix">
+                        <label class="fl">常用E-mail:</label>
+                        <input type="text" name="data[email]" class="fl from-put">
+                    </div>
+                      <div class="form-submit">
+                    <p>请留下联系方式以便我们尽快解决您的问题</p>
+                       <input  class="subMit-btn"  type="submit" name="submit" value=" 提 交 " />
+     
+                </div>
+                </form>
+              
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footfix" style="display: block;">
+  <div id="close" class="closee">点击收起</div>
+  <div class="footfix">
+    <div class="lian"> 
+    <ul>
+		 {xiao:php $rr=food();}
+     <?php  foreach($rr as $v){ ?>
+    
+		<li><a>恭喜<b><?php  echo $v; ?></b>成为第一股权网会员</a></li>  
+        
+        <?php  }?>
+    </ul> 
+      </div>
+    </div>
+     <div class="vip">
+     <div class="tq fl">会员特权</div>
+     <div class="tl fl">
+     <ul>
+     <li>  会员享受免费解决投资难题</li>
+     <li>  会员特权资料查看</li>
+     <li>  线下1对1投顾服务 </li>
+     </ul>
+     </div>
+ 
+  </div>     
+    <div class="fl regt"><a href="http://touzitop.com/member/index.php?c=register" target="_blank"><img src="/data/upload/image/201707/51565ef902706e4eb9b7efea95a16989.gif" width="104" height="35" data-bd-imgshare-binded="1"></a></div>
+</div>
+<style>
+.lian li{display:block; text-decoration:none;background:url(/template/san/images/lingdang.gif) no-repeat left center;}
+
+.lian,.aa{ width:350px; height:150px; overflow:hidden;}
+.lian a,.aa a{ width:100%; height:30px; line-height:30px; margin-left:30px; color:#fff;}
+.aa {word-wrap:break-word;line-height:50px;  color:#1B96EE;}
+.vip { color:#fff;width:650px; height:150px; overflow:hidden;float:left;margin-left:20px;margin-top:5px;background:url(/template/san/images/vip.png) no-repeat;}
+.tq {margin:35px 10px 10px 45px}
+.tl {margin:13px 10px 10px 60px}
+.tl li{margin-top:3px; line-height:20px}
+.regt {margin:32px 10px 10px 0px}
+
+
+
+</style>
+<script type="text/javascript"> 
+	  function autoScroll(obj){  
+			$(obj).find("ul").animate({  
+				marginTop : "-30px"  
+			},500,function(){  
+				$(this).css({marginTop : "0px"}).find("li:first").appendTo(this);  
+			})  
+		}  
+		$(function(){  
+ 
+			setInterval('autoScroll(".lian")',1000);
+			  
+		}) 
+		
+</script> 
+
+ 
+<div id="footfix1" style="display: none;">
+  <div id="open" class="closee">点击展开</div>
+  <div class="footfix1">
+    <div class="lian1">
+      <p> 第一股权网：专业股权投资平台 </p>
+      <span class="number2"><img src="/template/san/images/pone.png" alt="">{xiao:block 6}</span> </div>
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#close").click(function(){
+    $("#footfix").hide();
+    $("#footfix1").show();
+  });
+  $("#open").click(function(){
+    $("#footfix1").hide();
+    $("#footfix").show();
+  });
+});
+</script>
+
+
+<script type="text/javascript" src="/template/san/images/index-v2.7.js"></script>
+</body>
+</html>
+ 
+ 
+ 
+<script language="javascript" src="http://ala.zoosnet.net/JS/LsJS.aspx?siteid=ALA52875673&float=1&lng=cn"></script>
+
+
+
+
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d85d7770f82b4dfc7e94307ca5264fea";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script>
+(function(){
+   var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?6c5561e958252c67b9559beabe78c9e5":"https://jspassport.ssl.qhimg.com/11.0.1.js?6c5561e958252c67b9559beabe78c9e5";
+   document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>

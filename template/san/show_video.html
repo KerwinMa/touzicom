@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="user-scalable=yes,width=1200" />
+<title>{xiao:$site_title}</title>
+<meta name="keywords" content="{xiao:$site_keywords}" />
+<meta name="description" content="{xiao:$site_description}" />
+<link rel="stylesheet" type="text/css" href="{xiao:$site_template}images/common.css" />
+<link rel="stylesheet" type="text/css" href="{xiao:$site_template}images/module.css" />
+<link type="text/css" rel="stylesheet" href="{xiao:$site_template}images/reset.css">
+<link type="text/css" rel="stylesheet" href="{xiao:$site_template}images/main.css">
+<script type="text/javascript" src="{xiao:$site_template}images/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="{xiao:$site_template}images/common.js"></script>
+<script type="text/javascript" src="{xiao:$site_template}images/jquery.qrcode.min.js"></script>
+</head>
+<body class="date_20161121 jinfuzi">
+<link type="text/css" rel="stylesheet" href="{xiao:$site_template}images/mediaquery-index.css">
+<script>
+$(function(){
+ 
+	
+	$(".article-title i").mouseenter(function(){
+		$(this).addClass("selected").siblings().removeClass("selected");
+		var name = $(this).attr('name');
+		if(name == 'hotTop10') {
+			$("#hotArticleOrder").show();
+			$("#weekRecommendationArticle").hide();
+		}else {
+			$("#hotArticleOrder").hide();
+			$("#weekRecommendationArticle").show();
+		}
+	
+	});
+	
+ 
+	 
+	/*Responsive Web design*/
+	if($(window).width()<800){
+		$("#headNav").click(function(){
+			if($("#nav").is(":hidden")){
+				$("#headNav ul").show();
+			}else{
+				$("#headNav ul").hide();
+			}
+		});
+		$("html").css({"font-size":$(window).width()/3.75+"px"}); 
+	}
+	
+})
+
+ 
+
+function getCookie(objName){//获取指定名称的cookie的值 
+    var arrStr = document.cookie.split("; "); 
+    for (var i = 0; i < arrStr.length; i++) { 
+        var temp = arrStr[i].split("="); 
+        if (temp[0] == objName) 
+            return unescape(temp[1]); 
+    } 
+} 
+
+ 
+ 
+ 
+</script>
+ 
+{xiao:template head.html}
+
+<!-- top bar end -->
+<div class="main detailmain">
+  <div class="wd">
+    <p class="bannerBar"><a ><img   src="{xiao:block 8}"></a></p>
+    <div class="clearfix">
+      <div class="leftArea left">
+        
+        <p class="title">{xiao:$title}</p>
+        <ul class="information clearfix">
+          <li id="ArticleType"><a href="">视频中心</a></li>
+          <li class="articlesource"><span>来源:第一股权网</span></li>
+          <li class="articlecreatedTime"><span>阅读量:<script type="text/javascript" src="{xiao:function.url('api/hits',array('id'=>$id))}"></script></span></li>
+               <li class="articlecreatedTime"><span>发布时间:{xiao:function.date("Y-m-d H:i:s", $time)}</span></li>
+          <li>
+             
+          </li>
+        </ul>
+       <p class="abstract"><i>摘要：</i><span>{xiao:$description}</span></p>
+        <div class="article-container">
+			{xiao:$content}
+
+          <div class="keyword">关键词：<span>{xiao:$keywords}</span> </div>
+        </div>
+        
+        <div id="share">
+          <dl class="clearfix">
+            <dd>分享：</dd>
+            <dd class="share2"><i></i></dd>
+            <!-- 朋友圈 -->
+            <dd class="share4"><i></i></dd>
+            <!-- QQ -->
+            <dd class="share3"><i></i></dd>
+            <!-- 微博 -->
+            <dd class="upright"><i></i></dd>
+            <dd class="praise likes" likes="on"><i></i></dd>
+          </dl>
+        </div>
+        <div class="related-reading clearfix">
+          <p class="title">相关阅读：</p>
+           {xiao:if $xiangguan}{xiao:list id=$xiangguan}
+		  <p class="clearfix"> <em class="articleleft-title"> <span class="related-title ellipsis clearfix" title="{xiao:$xiao['title']}"> <i></i> <a target="_blank" href="{xiao:$xiao['url']}">{xiao:$xiao['title']}</a> </span> <span class="right">{xiao:function.date("Y-m-d H:i:s", $time)}</span></em> </p>
+{/xiao:list}
+ {/xiao:if}  
+          
+        </div>
+      </div>
+     
+     
+
+<div class="rightArea left">
+
+  <p class="headline">本周排行</p>
+
+  <div class="hot-article">
+
+    <div class="article-title"> <i class="selected" name="hotTop10">热读排行</i><i name="recommendationTop10" class="">好文推荐</i> </div>
+
+    <div class="main-container" id="hotArticleOrder" style="display: block;"> 
+    {xiao:php $i = 1; }{xiao:list catid=$catid order=time status=3 num=10  }
+    <p title="{xiao:$xiao['title']}"><span class="orange{xiao:php echo $i;}">{xiao:php echo $i;}</span><a class="topion" target="_blank" href="{xiao:$xiao['url']}" title="{xiao:$xiao['title']}">{xiao:$xiao['title']}</a></p>
+ {xiao:php   $i++ ;}{/xiao:list}
+ </div>
+
+    <div class="main-container" id="weekRecommendationArticle" style="display: none;">  </div>
+   {xiao:php $i = 1; }{xiao:list catid=$catid order=time status=3 num=10  }
+    <p title="{xiao:$xiao['title']}"><span class="orange{xiao:php echo $i;}">{xiao:php echo $i;}</span><a class="topion" target="_blank" href="{xiao:$xiao['url']}" title="{xiao:$xiao['title']}">{xiao:$xiao['title']}</a></p>
+ {xiao:php   $i++ ;}{/xiao:list}
+  </div>
+ {xiao:list catid=1 order=time status=3 num=4  }
+<p class="img-internet"><a href="{xiao:$xiao['url']}" target="_blank"><img alt="{xiao:$xiao['title']}" src="{xiao:function.image($xiao[thumb])}"></a></p>
+{/xiao:list}
+
+</div>
+
+
+    </div>
+  </div>
+</div>
+{xiao:template footer.html}

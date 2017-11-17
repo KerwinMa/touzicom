@@ -1,0 +1,425 @@
+{xiao:template headerr.html}
+ 
+<link rel="stylesheet" type="text/css" href="{xiao:$site_template}images/subject_list.css">
+ 
+
+
+
+
+
+
+<!--头部banner开始-->
+
+
+
+<div id="topbanner">
+
+
+
+  <div class="topbanner">
+
+
+
+    <div class="banner_left"> <a target="_blank" href="{xiao:$xiao['url']}"><img src="{xiao:$site_template}images/1-1F401110I2B9.jpg" alt="{xiao:$xiao['title']}" height="306px" width="587px"></a>
+
+</div>
+
+
+
+    <div class="banner_right">
+
+
+
+      <ul class="banner_list">
+{xiao:php $i = 1; }
+  {xiao:list catid=26 num=4  status=3}
+
+	  <li class="banner_item"> <a target="_blank" href="{xiao:$xiao['url']}"> <img src="{xiao:function.image($xiao[thumb])}" alt="{xiao:$xiao['title']}" width="290px" height="150px">
+
+
+
+          <div class="cover1 item{xiao:php echo $i ;}">
+
+
+
+            <h1 class=""></h1>
+
+
+
+            <span>{xiao:$xiao['title']}</span> </div>
+
+
+
+          </a> </li>
+
+{xiao:php $i++;} {/xiao:list}
+
+
+
+      </ul>
+
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+</div>
+
+
+
+<!--头部banner结束-->
+
+
+
+<!--专题列表开始-->
+
+
+
+<div id="subject">
+
+
+
+  <div class="subject">
+
+
+
+    <div class="subject_left">
+
+
+
+      <div class="stittle"> <em></em> 最新专题 </div>
+
+
+
+      <ul class="subject_detail">
+
+  {xiao:list catid=$catid page=$page cache=36000}
+
+	  <li class="detail_list"> <a target="_blank" href="{xiao:$xiao['url']}" class="pro_img"><img src="{xiao:function.image($xiao[thumb])}" ></a>
+
+
+
+          <div class="product_detail">
+
+
+
+            <div class="pro_type"> <a target="_blank" href="{xiao:$xiao['url']}" class="ptype1">{xiao:$xiao['title']}</a></div>
+
+
+
+            <div class="pro_detail">
+
+
+
+              <p>...</p>
+
+
+
+            </div>
+
+
+
+            <div class="pro_date"> <span class="icon1"></span> <span class="date">{xiao:function.date("Y-m-d", $xiao['time'])}</span> </div>
+
+
+
+          </div>
+
+
+
+        </li>  {/xiao:list}     
+
+
+
+      </ul>
+
+     <!--分页开始-->
+
+        <style type="text/css">
+
+
+
+		.page li{    background-color: #f1f1f1;
+
+
+
+    display: inline-block;
+
+
+
+    color: #000000;
+
+
+
+	width:50px;
+
+
+
+    margin-left: 8px;
+
+
+
+    height: 30px;
+
+
+
+    line-height: 30px;
+
+
+
+    text-align: center;
+
+
+
+    border: 1px solid #e5e5e5;
+
+
+
+}
+
+
+
+		 </style>
+
+        <div id="pageInfo" class="clearfix">
+
+          <p class="pagempage"></p>
+
+          <ul class="page clearfix">
+
+{xiao:$pagelist}
+
+          </ul>
+
+        </div>
+
+        <!--分页结束-->
+
+    </div>
+
+
+
+    <div class="subject_right">
+
+
+
+      <div class="right-list">
+
+
+
+        <div class="stittle item1"> <em></em> 项目分析<a href="http://www.touzitop.com/index.php?catid=15">更多></a></div>
+
+
+
+        <ul class="right-detail">
+
+{xiao:php $i = 1; }{xiao:list catid=$catid order=time status=3 num=10  }
+
+		<li class="right-item "><span class="bg1 item{xiao:php echo $i ;}">{xiao:php echo $i ;}</span><a href="{xiao:$xiao['url']}" class="right-item1">{xiao:function.strcut($xiao[title],36,'')}</a></li>
+
+ {xiao:php   $i++ ;}{/xiao:list}
+
+
+
+
+
+        </ul>
+
+
+
+      </div>
+
+
+
+      <div class="space"></div>
+
+
+
+      <div class="live-detail">
+
+
+
+        <div class="stittle item1"> <em></em> 火爆项目推荐</div>
+
+
+
+        <ul class="video_detail">
+
+{xiao:list catid=1 order=time status=3 num=4  }
+
+		<li class="live_list"> <a class="theme-login" href="javascript:;"> <img src="{xiao:function.image($xiao[thumb])}" alt="{xiao:$xiao['title']}">
+
+
+
+            <p class="live_mes">{xiao:$xiao['title']}</p></a> </li>
+
+{/xiao:list}
+
+
+
+
+
+
+
+        </ul>
+
+
+
+      </div>
+
+
+
+      <div class="space"></div>
+
+
+
+    </div>
+
+
+
+    <!--加载更多-->
+
+
+
+  </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!--在线预约开始-->
+
+
+
+<div class="theme-popover">
+
+
+
+  <div class="theme-poptit"> <a href="javascript:;" title="关闭" class="close">×</a>
+
+
+
+    <h3>在线预约</h3>
+
+
+
+  </div>
+
+
+
+  <div class="theme-popbod dform">
+
+
+
+    <form action="/plus/diy.php" enctype="multipart/form-data" method="post" class="theme-signin" name="loginform" id="complain">
+
+
+
+      <input type="hidden" name="action" value="post" />
+
+
+
+      <input type="hidden" name="diyid" value="1" />
+
+
+
+      <input type="hidden" name="do" value="2" />
+
+
+
+<input type="hidden" name="dede_fields" value="name,text;phone,text;time,text;source,text" />
+
+
+
+<input type="hidden" name="dede_fieldshash" value="380d8623c254b3480204696bd657af73" />
+
+
+
+<input type='hidden' name='source' id='source' style='width:250px'  class='intxt' value='' />
+
+
+
+	<input type="hidden" name="time" id="time" value="">
+
+
+
+      <ol>
+
+
+
+        <li><strong>用户姓名：</strong>
+
+
+
+          <input class="ipt" type="text" name='name' id='name'  size="20" placeholder="用户姓名" />
+
+
+
+        </li>
+
+
+
+        <li><strong>手机号码：</strong>
+
+
+
+          <input class="ipt"  type='text' name='phone' id='phone' size="20" placeholder="手机号码" />
+
+
+
+        </li>
+
+
+
+        <li>
+
+
+
+          <input class="btn btn-primary" type="submit" name="submit" value=" 提 交 " />
+
+
+
+        </li>
+
+
+
+      </ol>
+
+
+
+    </form>
+
+
+
+  </div>
+
+
+
+</div>
+
+
+
+<div class="theme-popover-mask"></div>
+
+
+
+<!--在线预约结束-->
+
+
+
+<!--专题列表结束-->
+
+
+
+{xiao:template footer.html}

@@ -1,0 +1,76 @@
+*{
+margin:0;
+padding:0;
+font-size:16px;
+font-family:"Microsoft YaHei";
+}
+a, abbr, acronym, address, applet, b, big, blockquote, body, caption, center, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, tt, u, ul, var {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: 0 0;
+    text-decoration: none;
+}
+img{  border:none;vertical-align: middle; }
+ul{
+list-style:none;}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+/*banner开始*/
+.sbanner{width:100%;height:413px; background: url(guquan_banner.png) no-repeat center;float: left;margin-top: 36px;}
+/*主体开始*/
+#contain{width: 100%;height:3700px; float: left;background: #eee;}
+.contain{width:1200px;height:760px;margin: 0 auto;}
+/*投资方式*/
+.spart1{width:1200px;height:760px;float: left; }
+.s_titt1{width: 1200px;height: 60px; line-height: 60px;color: #e6b70b;font-size:30px; text-align: center;margin-top:50px;float: left;}
+.titt_pic{margin-right:30px;}
+.way{width: 1200px;height:583px;background: url(bg1.png) no-repeat center; background-color: #fff;float: left;margin-top: 50px;}
+.way1{width:920px;margin:60px 140px;float: left; }
+.way1_tittle{width:110px; font-size:31px;color: #fff;margin-top:30px;text-align: center;float: left;}
+.way1_tittle.te1{margin-left:235px;float: left;}
+.way1_2{width:400px;float: left;margin-left:60px;margin-top: 30px;}
+.way1_2.te2{margin-left: 0px;}
+.way1_2.te3{margin-left:300px;}
+.way1_detail{font-size:18px;color:#666; line-height:30px;text-align: center;}
+.way1_tittle1{font-size: 32px; color: #313c63;   text-align: center;}
+.way2{width:1000px;margin:50px 80px;float: left; }
+.way2_item{width:115px;margin-left: 83px;font-size: 25px;float: left;color: #fff; }
+.way3{width:1200px;margin:40px 0px;float: left;}
+/*个人为什么适合股权投资*/
+#spart2{width: 100%;height: 1350px;background-color: #fff;float: left;margin-top: 50px}
+.spart2{width: 1200px;height: 1350px;margin: 0 auto;}
+.s_titt2{width:1200px;height:50px;float: left;text-align: center;margin-top: 50px; }
+.s_titt3{width:426px;height:50px;background-color:#f9e054;margin: 0 auto;display: block;line-height:50px;color: #fff;font-size:25px;}
+.suit_list{width:800px;height:1026px;  margin-left: 200px;background: url(bg_line.png) no-repeat center;float: left;}
+.suit_item{width: 800px;height:190px;float: left;margin-top: 80px; }
+.suit_item.te4{margin-top:0px;float: left;}
+.suit_tit{width: 360px;height:45px;line-height: 45px;color: #fff;text-align: center;background:#f3cf07;font-size: 21px;margin-left:370px; }
+.suit_tit.te4{margin-left:80px;}
+.suit_detail{width:360px;margin-left:420px;font-size:18px;color: #666;line-height:30px;margin-top: 20px;}
+.suit_detail.te4{margin-left: 30px;text-align: right;}
+/*为什么选择三个贝壳*/
+#spart3{width: 100%;height:860px;float: left;background: url(bgg.png) no-repeat bottom;}
+.spart3{width: 1200px;height:860px;margin: 0 auto;}
+.check_list{width: 1000px;float: left;margin-left: 100px;margin-top:70px;}
+.check_item{width: 300px;height: 200px; float: left;margin-right:30px;}
+.check_item.te1{margin-left:160px;margin-top: 0px;}
+.check_item.te2{margin-left:330px;margin-top:-20px;}
+.check_tittle{width: 120px;margin-left:110px; text-align: center;font-size:20px;color:#c3a100;border-bottom: 2px #ccc solid;margin-top: 10px;line-height: 30px;}
+.check_article{text-align: center; line-height: 30px;font-size: 18px;margin-left:30px;margin-top: 20px;color: #666;}
+.check_eng{width:200px;margin-left:80px; text-align: center;font-size:16px;color:#c3a100;float:left;line-height:20px;}
+/*推荐项目*/
+#spart4{width: 100%;height:720px;float: left;background-color: #fff;}
+.spart4{width: 1200px;height:720px;margin: 0 auto;}
+.pro_list{width: 1200px;float: left;margin-top:40px;}
+.pro_item{width:315px;height: 206px;float: left;margin: 15px 33px;}
+.pro_item img{position: absolute;width:315px;height: 206px;}
+.cover{width: 315px;height: 206px; position: relative;background-color: rgba(0, 0, 0, 0.6);}
+.cover a{color: #fff; }
+.cover a h1{ width: 315px; line-height: 40px;font-size:28px;text-align: center;margin-top:30px; float: left;}
+.cover a p{ width: 315px;text-align: center;font-size:18px;line-height: 30px;}
+.cover a span{text-align: center; width:95px;height: 25px;background-color: #efc425;margin: 30px auto;display: block; }
+.cover a span:hover{color: #333;}

@@ -1,0 +1,122 @@
+﻿
+html {height: 100%;}
+body { position: relative; font-family:"微软雅黑";height: 100%; margin: 0 auto; }
+body h1,body h2,body h3,body h4,body h5,body h6,body strong,body em {font-weight:normal; } /*微软雅体 将原有的bold属性去掉*/
+
+textarea:focus,input:focus { border: 1px solid #71b643; }
+
+/*sprite图片合并*/
+.css_sprite01 { background-image:url(f23be6b00d734f5387d21d1f286801e9.woff);
+}
+.cloud--small{ top:65px;
+  -webkit-animation-duration:6s;
+     -moz-animation-duration:6s;
+   	      animation-duration:6s;
+
+  -webkit-transform: scale(0.5);
+     -moz-transform: scale(0.5); 
+          transform: scale(0.5);
+}
+.cloud--medium{ top:95px;
+  -webkit-animation-duration:5s;
+     -moz-animation-duration:5s;
+          animation-duration:5s;
+
+  -webkit-animation-delay:1s;
+     -moz-animation-delay:1s;
+          animation-delay:1s;
+
+  -webkit-transform: scale(0.7);
+     -moz-transform: scale(0.7); 
+          transform: scale(0.7); 
+}
+.cloud--large{ top:95px;
+  -webkit-animation-duration:4.5s;
+     -moz-animation-duration:4.5s;
+          animation-duration:4.5s;
+
+  -webkit-animation-delay:2.5s;
+     -moz-animation-delay:2.5s;
+          animation-delay:2.5s;
+  
+  -webkit-transform: scale(0.8);
+     -moz-transform: scale(0.8); 
+          transform: scale(0.8);
+}
+
+/*飞机*/
+@keyframes anim-plane{ 
+  to{
+    transform:translateY(95px);
+  }    
+}
+@-webkit-keyframes anim-plane{ 
+  to{
+    -webkit-transform:translateY(95px);
+  }    
+}
+@-moz-keyframes anim-plane{ 
+  to{
+    -moz-transform:translateY(95px);
+  }    
+}
+
+/*云*/
+@keyframes fade{
+  0%{ opacity: 0;}
+  10%{ opacity: 1;}
+  90%{ opacity:1;}
+  100%{ opacity:0;}
+}
+@-webkit-keyframes fade{
+  0%{ opacity: 0;}
+  10%{ opacity: 1;}
+  90%{ opacity:1;}
+  100%{ opacity:0;}
+}
+@-moz-keyframes fade{
+  0%{ opacity: 0;}
+  10%{ opacity: 1;}
+  90%{ opacity:1;}
+  100%{ opacity:0;}
+}
+
+@keyframes move{  
+  from{ 
+    left:200px; 
+  }
+  to{ 
+    left:0px; 
+  }
+}
+@-webkit-keyframes move{  
+  from{ 
+    left:200px; 
+  }
+  to{ 
+    left:0px; 
+  }
+}
+@-moz-keyframes move{  
+  from{ 
+    left:200px; 
+  }
+  to{ 
+    left:0px; 
+  }
+}
+
+
+/*播放按钮*/
+@-webkit-keyframes video_btnPlay{
+	0%{-webkit-transform: scale(1); opacity: 0.8;}
+	100%{-webkit-transform: scale(2); opacity: 0.3;}
+}
+@-moz-keyframes video_btnPlay{
+	0%{-moz-transform: scale(1); opacity: 0.8;}
+	100%{-moz-transform: scale(2); opacity: 0.3;}
+}
+@keyframes video_btnPlay{
+	0%{transform: scale(1); opacity: 0.8;}
+	100%{transform: scale(2); opacity: 0.3;}
+}

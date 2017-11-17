@@ -1,0 +1,15 @@
+﻿<div class="foot">
+  <ul class="ipone">
+    <div class="circle"><a href="<?php if($member['username']){echo 'http://www.touzitop.com/member/';}else{echo 'http://www.touzitop.com/member/index.php?c=register';} ?>"><img src="{xiao:$site_template}images/phone.png" alt=""></a>
+      <p><?php if($member['username']){echo '个人中心';}else{echo '注册会员';} ?></p>
+    </div>
+    <li class="ipone1"><a href="http://www.touzitop.com/"><img src="{xiao:$site_template}images/icon4.png" alt=""><span>主页</span></a></li>
+    
+
+    <li class="ipone1"> <a href="/index.php?catid=1"><img src="{xiao:$site_template}images/icon1.png" alt=""><span>股权项目</span></a></li>
+
+    <li class="ipone1 te1"> <a href="/index.php?catid=3"><img src="{xiao:$site_template}images/icon2.png" alt=""><span>三板资讯</span></a></li>
+    <li class="ipone1"><a href="/index.php?catid=7"><img src="{xiao:$site_template}images/about.png" alt=""><span>关于我们</span></a></li>
+	
+  </ul>
+</div>

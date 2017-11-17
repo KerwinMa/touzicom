@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+<link rel="stylesheet" href="{xiao:$site_template}images/top.css">
+<link rel="stylesheet" href="{xiao:$site_template}images/news.css">
+<title>{xiao:$site_title}</title>
+<meta name="keywords" content="{xiao:$site_keywords}" />
+<meta name="description" content="{xiao:$site_description}" />
+</head>
+<body>
+<!--头部开始 -->
+<div class="top">
+  <div class="topic"><a href="http://www.touzitop.com/"><img src="{xiao:$site_template}images/main_logo.png" alt=""></a></div>
+  <form action="/plus/advancedsearch.php" method="post" style="display: -webkit-box;-webkit-box-flex: 1;">
+  <div class="sou">
+    <input type="hidden" name="mid" value="17" />
+    <input type="hidden" name="dopost" value="search" />
+    <input type="text" placeholder="请输入项目关键词"  name="q">
+    <div class="spic"><button style="border:none;"><img src="{xiao:$site_template}images/sou.png" alt=""></button></div>
+  </div>
+  </form>
+</div>
+<!--头部结束 -->
+<!--资讯开始-->
+<div class="newsx">
+  <div class="line1"></div>
+  <div class="newstit"> {xiao:$title} </div>
+  <div class="newsbiao">
+    <div class="ndate"> 来源：<span>第一股权网</span> </div>
+    <div class="ndate"> 时间：<span>{xiao:function.date("Y-m-d H:i:s", $time)} </span> </div>
+  </div>
+  <div class="article1"> 
+ {xiao:$content}
+ </div>
+  <div class="line1"></div>
+  <div class="tui">
+    <div class="tui_tit">推荐文章</div> {xiao:if $xiangguan}{xiao:list id=$xiangguan}
+    <div class="tui_item"><b>▌</b><a href="{xiao:$xiao['url']}">{xiao:$xiao['title']}</a></div>
+{/xiao:list}{/xiao:if} 
+
+  </div>
+</div>
+<div class="footspace"></div>
+<!--底部开始 -->
+{xiao:template footer.html}
+
+
+<script>
+$(document).ready(function()
+   {
+    //验证
+    $('#light').submit(function ()
+    {
+        if($('#name').val()==""){
+            $('#name').focus();
+            alert("用户名不能为空！");
+            return false;
+        }
+        if($('#phone').val()=="")
+        {
+            $('#phone').focus();
+            alert("联系电话不能为空！");
+            return false;
+        }
+		var myreg = /^1[34578]\d{9}$/; 
+		if(!myreg.test($("#phone").val())) 
+		{ 
+   			alert('请输入有效的手机号码！'); 
+    		return false; 
+		} 
+    })
+});
+
+window.onload = function(){
+
+    var nowDate = new Date();
+
+    var str = nowDate.getFullYear()+"-"+(nowDate.getMonth() + 1)+"-"+nowDate.getDate()+" "+nowDate.getHours()+":"+nowDate.getMinutes()+":"+nowDate.getSeconds();
+
+    document.getElementById("time").value=str;
+
+}
+
+</script>
+
+<link rel="stylesheet" href="{xiao:$site_template}images/demo.css">
+<div class="theme-popover" style="margin:0 0 0 0; left:0; width:100%;" id="light">
+  <div class="theme-poptit"> <a href="javascript:void(0)" class="close" style="float:right;" onClick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"> ×</a>
+    <h3>在线预约</h3>
+  </div>
+  <div class="theme-popbod dform">
+<form action="/plus/diy.php" enctype="multipart/form-data" method="post" class="theme-signin" name="loginform" id="complain">
+
+      <input type="hidden" name="action" value="post" />
+
+      <input type="hidden" name="diyid" value="1" />
+
+      <input type="hidden" name="do" value="2" />
+
+<input type="hidden" name="dede_fields" value="name,text;phone,text;time,text;source,text" />
+
+<input type="hidden" name="dede_fieldshash" value="380d8623c254b3480204696bd657af73" />
+
+<input type='hidden' name='source' id='source' style='width:250px'  class='intxt' value='' />
+
+	<input type="hidden" name="time" id="time" value="">
+
+      <ol>
+
+        <li><strong>用户姓名：</strong>
+
+          <input class="ipt" type="text" name='name' id='name'  size="20" placeholder="用户姓名" />
+
+        </li>
+
+        <li><strong>手机号码：</strong>
+
+          <input class="ipt"  type='text' name='phone' id='phone' size="20" placeholder="手机号码" />
+
+        </li>
+
+        <li>
+
+          <input class="btn btn-primary" type="submit" name="submit" value=" 提 交 " />
+
+        </li>
+
+      </ol>
+
+    </form>
+  </div>
+</div>
+<div id="fade"></div>
+
+
+
+<script type="text/javascript" src="{xiao:$site_template}images/yxmobileslider.js"></script>
+
+<script>
+
+    $(".slider").yxMobileSlider({width:640,height:320,during:3000})
+
+  </script>
+  
+  
+ 
+<!--底部结束 -->
+</body>
+</html>
