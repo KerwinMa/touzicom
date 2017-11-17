@@ -48,6 +48,7 @@ top.document.getElementById('position').innerHTML = '会员列表';
 			<th width="150" align="left">注册时间</th>
 
 			<th width="120" align="left">注册IP</th>
+			<th width="120" align="left">设备</th>
 
 			<th  width="150" align="left">操作</th>
 
@@ -82,6 +83,7 @@ if ($t['regip']=='223.167.33.43') {
 	echo $t['regip'];
 	}
 ?></td>
+            <td align="left"><?php echo $t['device']; ?></td>
 
 			<td align="left"><a href="<?php echo url('member/edit',array('id'=>$t['id'])); ?>">详细</a> | 
 
