@@ -46,7 +46,7 @@
 
             <tr>
 
-                <td  align="left"><input name="deletec" id="deletec" type="checkbox" onclick="setC()"></td>
+<!--                <td  align="left"><input name="deletec" id="deletec" type="checkbox" onclick="setC()"></td>-->
 
                 <td align="left">ID </td>
 
@@ -68,12 +68,12 @@
 
                 <tr >
 
-                    <td ><input name="member[]" value="<?php echo $t['id']; ?>"  type="checkbox" class="deletec"></td>
+<!--                    <td ><input name="member[]" value="--><?php //echo $t['id']; ?><!--"  type="checkbox" class="deletec"></td>-->
 
                     <td align="left"><?php echo $t['userid']; ?></td>
                     <td align="left"><?php echo $t['desc']; ?></td>
 
-                    <td align="left"><a  target="_blank" href="<?php echo 'http://'.$t['url'];?>"><?php echo $t['url'];?></a></td>
+                    <td align="left"><a  target="_blank" href="<?php echo 'http://'.$t['url'];?>">详情链接</a></td>
 
 
 

@@ -34,13 +34,14 @@
 
                 <th align="left">用户名</th>
 
-                <th width="100" align="left">URL</th>
+                <th align="left">URL</th>
+                <th align="left">说明</th>
 
-                <th width="150" align="left">访问IP</th>
+                <th align="left">访问IP</th>
 
-                <th width="120" align="left">刷新时间</th>
+                <th align="left">刷新时间</th>
 
-                <th  width="150" align="left">次数</th>
+                <th align="left">次数</th>
 
             </tr>
 
@@ -57,8 +58,9 @@
                     <td align="left"><?php echo $t['id']; ?></td>
                     <td align="left"><?php echo $t['userid']; ?></td>
 
-                    <td align="left"><a  target="_blank" href="<?php echo 'http://'.$t['url'];?>"><?php echo $t['url'];?></a></td>
+                    <td align="left"><a  target="_blank" href="<?php echo 'http://'.$t['url'];?>">详情链接</a></td>
 
+                    <td align="left"><?php echo $t['desc']; ?></td>
                     <td align="left"><?php echo $t['ip']; ?></td>
 
                     <td align="left"><?php echo date('Y-m-d H:i:s', $t['time']); ?></td>
@@ -71,7 +73,7 @@
 
             <tr >
 
-                <td colspan="7" align="left" style="border-bottom:0px;">
+                <td colspan="8" align="left" style="border-bottom:0px;">
 
                     <div class="pageleft">
 
