@@ -233,7 +233,7 @@ class member extends Admin {
 
         $pagesize = empty($this->admin['list_size']) ? 10 : $this->admin['list_size'];
 
-        $urlparam = array();
+        $urlparam = array('id'=>$userid);
         $listArr = $this->db->setTableName('user_count')->where('userid='.$userid)->page($page, $pagesize,null,'id DESC');
         $list = $listArr['list'];
 
