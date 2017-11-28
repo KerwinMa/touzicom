@@ -11,7 +11,7 @@
 <!-- 头部开始-->
 <div class="top">
   <div class="topic"><a href="http://www.touzitop.com/"><img src="{xiao:$site_template}images/main_logo.png" alt=""></a></div>
-  <form action="/plus/advancedsearch.php" method="post" style="display: -webkit-box;-webkit-box-flex: 1;">
+  <form action="/index.php?c=index&a=search" method="post" style="display: -webkit-box;-webkit-box-flex: 1;">
   <div class="sou">
     <input type="hidden" name="mid" value="17" />
     <input type="hidden" name="dopost" value="search" />
@@ -33,7 +33,7 @@
       <div class="newsd"><span><img src="{xiao:$site_template}images/date.png" alt=""></span>2017-09-20</div>
     </div>
     </a>{/xiao:list}
-    
+
   </div>
   <!-- 资讯结束 -->
   <!--翻页开始-->
@@ -62,12 +62,12 @@ $(document).ready(function()
             alert("联系电话不能为空！");
             return false;
         }
-		var myreg = /^1[34578]\d{9}$/; 
-		if(!myreg.test($("#phone").val())) 
-		{ 
-   			alert('请输入有效的手机号码！'); 
-    		return false; 
-		} 
+		var myreg = /^1[34578]\d{9}$/;
+		if(!myreg.test($("#phone").val()))
+		{
+   			alert('请输入有效的手机号码！');
+    		return false;
+		}
     })
 });
 
@@ -141,9 +141,9 @@ window.onload = function(){
     $(".slider").yxMobileSlider({width:640,height:320,during:3000})
 
   </script>
-  
-  
 
- 
+
+
+
 </body>
 </html>

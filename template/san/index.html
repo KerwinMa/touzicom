@@ -1,6 +1,6 @@
 {xiao:template header.html}
 
- 
+
 
 <div id="banner">
 
@@ -107,7 +107,7 @@
 
   <!--标题1结束-->
 
-  <div class="pro-list"> 
+  <div class="pro-list">
 
   {xiao:list catid=1 xiaocms=1   num=4 cache=0   status=3}
 
@@ -259,7 +259,7 @@
           <li class="btn1"><a href="{xiao:$xiao['url']}">查看详情</a></li>
 
           </ul> {xiao:php $i++;} {/xiao:list}</div>
- 
+
         <div class="form1" style="display:none;">
 
           <ul class="formtittle">
@@ -297,8 +297,8 @@
           <li class="btn1"><a href="{xiao:$xiao['url']}">查看详情</a></li>
 
           </ul> {xiao:php $i++;} {/xiao:list} </div>
-          
-   
+
+
 
         <div class="form1" style="display:none;">
 
@@ -591,7 +591,7 @@
 
 <div class="title1"> <em></em><a target="_blank" href="{xiao:$cats[4][url]}"> 原创·研究</a> <a class="ptype" target="_blank" href="{xiao:$cats[4][url]}">查看更多</a> </div>
 
-<div class="report-list"> 
+<div class="report-list">
 
   <div class="report-item item1">
 
@@ -687,15 +687,15 @@
 
     <ul class="news-nav">
 
-        {xiao:php $i = 0; }{xiao:nav num=10 parentid=3} 
+        {xiao:php $i = 0; }{xiao:nav num=10 parentid=3}
 
       <li class="nav-item {xiao:if $i==0} select{/xiao:if}"> <a href='{xiao:$xiao['url']}'>{xiao:$xiao['catname']}</a></li>
 
-  {xiao:php $i++;}{/xiao:nav} 
+  {xiao:php $i++;}{/xiao:nav}
 
     </ul>
 
-    <div> 	 
+    <div>
 
       <div class="news-item">
 
@@ -895,7 +895,7 @@
 
     <div class="title1"> <em></em> <a target="_blank" href="{xiao:$cats[16][url]}"> 投资资讯</a> <a class="ptype" target="_blank" href="{xiao:$cats[16][url]}">查看更多</a> </div>
 
-    <div class="class-list"> 
+    <div class="class-list">
 
       <div class="class-list1 item">
 
@@ -903,7 +903,7 @@
 
           <ul class="class-msg">{xiao:list catid=17 num=5 cache=0 }
 
-          
+
 
             <li class="class-item"><em></em><a href="{xiao:$xiao['url']}">【投资要闻】{xiao:function.strcut($xiao[title],30)}</a></li>
 

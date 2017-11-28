@@ -18,7 +18,7 @@
 		    var index = $tabn.index(this);
 		    $('div.xunitem').eq(index).show().siblings().hide();
 		    $('div.htitle').eq(index).show().siblings().hide();
-	    });	
+	    });
     });
     </script>
 </head>
@@ -26,7 +26,7 @@
 <!-- 头部开始-->
 <div class="top">
   <div class="topic"><a href="/m"><img src="{xiao:$site_template}images/main_logo.png" alt=""></a></div>
-  <form action="/plus/advancedsearch.php" method="post" style="display: -webkit-box;-webkit-box-flex: 1;">
+  <form action="/index.php?c=index&a=search&kw=唐人街" method="post" style="display: -webkit-box;-webkit-box-flex: 1;">
   <div class="sou">
     <input type="hidden" name="mid" value="17" />
     <input type="hidden" name="dopost" value="search" />
@@ -65,7 +65,7 @@
   <div class="hot">
     <div class="htit"> <span>热门•专题</span> <a href="/index.php?catid=26">更多></a></div>
     <div class="warp1">
-      <div class="swiper-container"> 
+      <div class="swiper-container">
         <div class="swiper-wrapper"> {xiao:list catid=26    num=8 cache=0  xiaocms=1  }
 		<div class="swiper-slide"> <a href="{xiao:$xiao['url']}"><img src="{xiao:$xiao['shouyetupian']}" alt="">
             <p>{xiao:$xiao['title']}</p>
@@ -106,7 +106,7 @@
     <li class="newsitem">三板百科</li>
   </ul>
   <div class="xunlist">
-    <div class="xunitem" style="display: block;"> 
+    <div class="xunitem" style="display: block;">
     {xiao:list catid=8 num=5 cache=0 }
 <a href="{xiao:$xiao['url']}">
       <div class="xpic"> <img src="{xiao:function.image($xiao[thumb])}" alt=""> </div>
@@ -117,7 +117,7 @@
       </a>
 {/xiao:list}
  </div>
-    <div class="xunitem"> 
+    <div class="xunitem">
      {xiao:list catid=9 num=5 cache=0 }
 <a href="{xiao:$xiao['url']}">
       <div class="xpic"> <img src="{xiao:function.image($xiao[thumb])}" alt=""> </div>
@@ -128,7 +128,7 @@
       </a>
 {/xiao:list}
  </div>
-    <div class="xunitem">  
+    <div class="xunitem">
     {xiao:list catid=19 num=5 cache=0 }
 <a href="{xiao:$xiao['url']}">
       <div class="xpic"> <img src="{xiao:function.image($xiao[thumb])}" alt=""> </div>
@@ -178,12 +178,12 @@ $(document).ready(function()
             alert("联系电话不能为空！");
             return false;
         }
-		var myreg = /^1[34578]\d{9}$/; 
-		if(!myreg.test($("#phone").val())) 
-		{ 
-   			alert('请输入有效的手机号码！'); 
-    		return false; 
-		} 
+		var myreg = /^1[34578]\d{9}$/;
+		if(!myreg.test($("#phone").val()))
+		{
+   			alert('请输入有效的手机号码！');
+    		return false;
+		}
     })
 });
 
@@ -257,7 +257,7 @@ window.onload = function(){
     $(".slider").yxMobileSlider({width:640,height:120,during:3000})
 
   </script>
-  
- 
+
+
 </body>
 </html>

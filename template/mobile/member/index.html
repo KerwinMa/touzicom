@@ -1,34 +1,176 @@
-{xiao:template header.html}
-<div class="mainbody">
-	    <div class="w210 fl">
-		{xiao:template member/left.html}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+    <link rel="stylesheet" type="text/css" href="/template/mobile/images/projectx.css"/>
+    <link rel="stylesheet" type="text/css" href="/template/mobile/images/top.css"/>
+    <link rel="stylesheet" type="text/css" href="/template/mobile/images/css.css"/>
+    <script src="/template/mobile/images/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <title>神农本草 - 股权项目 - 第一股权网</title>
+    <meta name="keywords" content="神农本草(已签署IPO辅导协议)," />
+    <meta name="description" content="中国第一股权网站－新三板股权投资、新三板开户业务－投资者最佳的理财知识网站！" />
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var $pro_li = $('.nav_item');
+            $pro_li.click(function(){
+                $(this).addClass('selected').siblings().removeClass('selected');
+                var index = $pro_li.index(this);
+                $('.prod_item').eq(index).show().siblings().hide();
+            });
+        });
+    </script>
+    <style type="text/css">
+        .border {
+            border-bottom: 1px #222222 solid;
+
+        }
+        .border span {
+            border-bottom: 4px #e40000 solid;
+        }
+        table,tr td{
+            border: 1px #222222 solid;
+            text-align: center;
+            line-height: 50px;
+        }
+        .mainbody {
+            width: 100%;
+        }
+        .w210 {
+            width: 38%;
+        }
+        .w740 {
+            width: 60%;
+        }
+    </style>
+</head>
+<body>
+<!--头部开始 -->
+<div class="top">
+    <div class="topic"><a href="http://www.touzitop.com/"><img src="../../img/main_logo.png" alt=""></a></div>
+    <form action="/plus/advancedsearch.php" method="post" style="display: -webkit-box;-webkit-box-flex: 1;">
+        <div class="sou">
+            <input type="hidden" name="mid" value="17" />
+            <input type="hidden" name="dopost" value="search" />
+            <input type="text" placeholder="请输入项目关键词"  name="q">
+            <div class="spic"><button style="border:none;"><img src="img/sou.png" alt=""></button></div>
         </div>
-	    <div class="w740 fr">
-		<div class="pag bg">
-		    <div class="newslist">
-				{xiao:if !$member['status']} <h3><span class="bt" style="color:#F00"><b>您还没有通过审核！</b></span></h3> {/xiao:if}	
-		   <div class="blank10 clear"></div>
-                <h3><span class="bt"> 我发布的内容</span></h3> 	
-			    <ul class="noborder">
-                {xiao:list status=0 username=$member[username] num=10 }
-			    <li>
-				<span class="date">{xiao:function.date("Y-m-d H:i:s", $xiao['time'])}</span>
-				<a href="{xiao:$xiao['url']}" target="_blank">
-				<font color="#FF0000">[未审]</font>
-				{xiao:$xiao['title']}
-				</a>
-				</li>
-				{/xiao:list}
-                {xiao:list  username=$member[username] num=10 }
-			    <li>
-				<span class="date">{xiao:function.date("Y-m-d H:i:s", $xiao['time'])}</span>
-				<a href="{xiao:$xiao['url']}" target="_blank">{xiao:$xiao['title']}</a>
-				</li>
-				{/xiao:list}
-                 </ul>
-		   </div>		
-		   <div class="blank10 clear"></div>		
-		</div>
-        </div>
+    </form>
 </div>
-{xiao:template mfooter.html}
+<!--头部结束 -->
+<!--项目详情开始-->
+<div class="prod_list">
+    <div class="prod_item">
+
+        <!-- top bar end --><div class="mainbody">
+        <div class="w210 fl">
+            <div class="sidenav bg">
+                <div class="title"><s></s>会员中心</div>
+                <div class="leftbox">
+                    <ul>
+                        <li><s></s><a href="/member/index.php?c=index&a=edit">会员资料</a></li>
+                        <li><s></s><a href="/member/index.php?c=index&a=password">修改密码</a></li>
+                        <!--<li ><s></s><a href="/member/index.php?c=content&modelid=1">文章模型</a></li>
+                        <li ><s></s><a href="/member/index.php?c=content&modelid=2">产品模型</a></li>
+                        <li ><s></s><a href="/member/index.php?c=content&modelid=6">股权项目</a></li>
+                        <li ><s></s><a href="/member/index.php?c=content&modelid=7">专项栏目</a></li>
+                        <li ><s></s><a href="/member/index.php?c=content&modelid=8">视频中心</a></li>
+                        <li ><s></s><a href="/member/index.php?c=content&modelid=13">行情中心</a></li>
+                        <li ><s></s><a href="/member/index.php?c=content&modelid=15">企业专栏</a></li>
+                        -->
+                    </ul>
+                </div>
+            </div>        </div>
+        <div class="w740 fr">
+            <div class="pag bg">
+                <div class="newslist">
+                    {xiao:if !$member['status']} <h3><span class="bt" style="color:#F00"><b>您还没有通过审核！</b></span></h3> {/xiao:if}
+
+                    <div class="blank10 clear"></div>
+                    <h3><span class="bt"> 我发布的内容</span></h3>
+                    <ul class="noborder">
+                        {xiao:list status=0 username=$member[username] num=10 }
+                        <li>
+                        <span class="date">{xiao:function.date("Y-m-d H:i:s", $xiao['time'])}</span>
+                        <a href="{xiao:$xiao['url']}" target="_blank">
+                        <font color="#FF0000">[未审]</font>
+                        {xiao:$xiao['title']}
+                        </a>
+                        </li>
+                        {/xiao:list}
+                        {xiao:list  username=$member[username] num=10 }
+                        <li>
+                        <span class="date">{xiao:function.date("Y-m-d H:i:s", $xiao['time'])}</span>
+                        <a href="{xiao:$xiao['url']}" target="_blank">{xiao:$xiao['title']}</a>
+                        </li>
+                        {/xiao:list}
+                    </ul>
+                </div>
+                <div class="blank10 clear"></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</div>
+<!--底部结束-->
+{xiao:template footer.html}
+
+<script>
+    $(document).ready(function()
+    {
+        //验证
+        $('#light').submit(function ()
+        {
+            if($('#name').val()==""){
+                $('#name').focus();
+                alert("用户名不能为空！");
+                return false;
+            }
+            if($('#phone').val()=="")
+            {
+                $('#phone').focus();
+                alert("联系电话不能为空！");
+                return false;
+            }
+            var myreg = /^1[34578]\d{9}$/;
+            if(!myreg.test($("#phone").val()))
+            {
+                alert('请输入有效的手机号码！');
+                return false;
+            }
+        })
+    });
+
+    window.onload = function(){
+
+        var nowDate = new Date();
+
+        var str = nowDate.getFullYear()+"-"+(nowDate.getMonth() + 1)+"-"+nowDate.getDate()+" "+nowDate.getHours()+":"+nowDate.getMinutes()+":"+nowDate.getSeconds();
+
+        document.getElementById("time").value=str;
+
+    }
+
+</script>
+
+<link rel="stylesheet" href="img/demo.css">
+
+<div id="fade"></div>
+
+
+
+<script type="text/javascript" src="img/yxmobileslider.js"></script>
+
+<script>
+
+    $(".slider").yxMobileSlider({width:640,height:320,during:3000})
+
+</script>
+
+
+
+
+</body>
+</html>

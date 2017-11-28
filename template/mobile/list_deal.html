@@ -16,7 +16,7 @@
 		    $(this).addClass('cur1').siblings().removeClass('cur1');
 		    var index = $tabn.index(this);
 		    $('div.xunitem').eq(index).show().siblings().hide();
-	    });	
+	    });
     });
     </script>
 </head>
@@ -35,7 +35,7 @@
 </div>
 <!-- 头部结束-->
 <!-- 分类导航-->
-<ul class="w1100 clearfix"> {xiao:php 
+<ul class="w1100 clearfix"> {xiao:php
 
  $list_url = array();
 
@@ -45,7 +45,7 @@
 
  $urlrule = url('index',$list_url);
 
- } 
+ }
 
 
  <? $arr_leixing= array('新股增发'=>'新股增发','老股转让'=>'老股转让','风投项目'=>'风投项目','天使投资'=>'天使投资');?>
@@ -54,27 +54,27 @@
 
  <? $arr_industry= array('信息通讯'=>'信息通讯','移动互联'=>'移动互联','消费服务'=>'消费服务','节能环保'=>'节能环保','文化传媒'=>'文化传媒','生物制药'=>'生物制药','金融服务'=>'金融服务','工业制造'=>'工业制造','医疗器械'=>'医疗器械','能源材料'=>'能源材料','军工科技'=>'军工科技','农林牧渔'=>'农林牧渔','其他类别'=>'其他类别');?>
 
-  <li class="nav-li"> <a href="javascript:;" class="nav-head-a">所在地区<i class="ico_default"></i></a> 
- 
- 
+  <li class="nav-li"> <a href="javascript:;" class="nav-head-a">所在地区<i class="ico_default"></i></a>
+
+
     <div class="hidden-ul"><span>全部</span>
-    
+
     {xiao:loop $arr_area $k=>$t}
 
 <a title="{xiao:$k}" href="/index.php?catid={xiao:$catid}&leixing={xiao:$list_url['leixing']}&industry={xiao:$list_url['industry']}&area={xiao:$t}">{xiao:$k}</a>
  {/xiao:loop}
-</div> 
+</div>
   </li>
   <li class="nav-li"> <a href="javascript:;" class="nav-head-a">投资分类<i class="ico_default"></i></a>
     <div class="hidden-ul"><span>全部</span>
     {xiao:loop $arr_industry $k=>$t}
-    <a title="{xiao:$k}" href="/index.php?catid={xiao:$catid}&leixing={xiao:$list_url['leixing']}&industry={xiao:$list_url['area']}&industry={xiao:$t}">{xiao:$k}</a> {/xiao:loop}</div> 
+    <a title="{xiao:$k}" href="/index.php?catid={xiao:$catid}&leixing={xiao:$list_url['leixing']}&industry={xiao:$list_url['area']}&industry={xiao:$t}">{xiao:$k}</a> {/xiao:loop}</div>
   </li>
 </ul>
 <!-- 分类导航结束-->
 <div class="content">
   <!-- 股权项目开始 -->
-  <div class="gu">  
+  <div class="gu">
     <div class="gulist"> {xiao:list catid=$catid xiaocms=1   leixing=$list_url[leixing] area=$list_url[area] industry=$list_url[industry]  urlrule=$urlrule page=$page  }
         <div class="guitem"> <a href="{xiao:$xiao['url']}">
         <div class="picg"><img src="{xiao:function.image($xiao[thumb])}" alt=""></div>
@@ -84,7 +84,7 @@
           <div class="pbl"> <img src="{xiao:$site_template}images/add1.png" alt=""> <span>{xiao:$xiao['area']}</span> </div>
         </div>
         </a> </div>
-      {/xiao:list}      
+      {/xiao:list}
     </div>
   </div>
   <!-- 股权项目结束 -->
@@ -97,7 +97,7 @@
 <!--底部开始-->
 {xiao:template footer.html}
 
- 
+
 
 <link rel="stylesheet" href="{xiao:$site_template}images/demo.css">
 <div class="theme-popover" style="margin:0 0 0 0; left:0; width:100%;" id="light">
@@ -157,45 +157,45 @@
     $(".slider").yxMobileSlider({width:640,height:320,during:3000})
 
   </script>
-  
-  
 
- 
+
+
+
 <script type="text/javascript">
-	function stopPropagation(e) {  
-			if (e.stopPropagation)  
-				e.stopPropagation();  
-			else  
-				e.cancelBubble = true;  
-		}  
+	function stopPropagation(e) {
+			if (e.stopPropagation)
+				e.stopPropagation();
+			else
+				e.cancelBubble = true;
+		}
 	  //点击页面其他地方收
-    $(document).bind('click', function() {  
-        $('div.hidden-ul').css('display', 'none');  
+    $(document).bind('click', function() {
+        $('div.hidden-ul').css('display', 'none');
 		$(".w1100 .nav-li .nav-head-a").css("color","#333").find("i").removeClass("ico_new");
-    });  
-  	//点击其他地方收起，除了下面两个外
-    $("ul.hidden-ul").bind('click', function(e) {  
-        stopPropagation(e);  
-    });  
-	$(".w1100 .nav-li .nav-head-a").bind('click', function(e) {  
-        stopPropagation(e);  
     });
-	//点击其他地方收起，除了上面两个外	
+  	//点击其他地方收起，除了下面两个外
+    $("ul.hidden-ul").bind('click', function(e) {
+        stopPropagation(e);
+    });
+	$(".w1100 .nav-li .nav-head-a").bind('click', function(e) {
+        stopPropagation(e);
+    });
+	//点击其他地方收起，除了上面两个外
 	$(".w1100 .nav-li .nav-head-a").click(function(){
 		if($(this).next("div.hidden-ul").is(":hidden")){//判断是否隐藏，返回true或者fasle
 			//显示下拉菜单
 			$(this).next().show()
-			//文字颜色切换和箭头切换		
-			$(this).css("color","#f5c67c").find("i").addClass("ico_new");			
+			//文字颜色切换和箭头切换
+			$(this).css("color","#f5c67c").find("i").addClass("ico_new");
 			}else{
 				//隐藏下拉菜单
 				$(this).next().hide();
 				//文字颜色切换和箭头切换
-				$(this).css("color","#333").find("i").removeClass("ico_new");				
-				}				
-				$(this).parent(".nav-li").siblings().find("div.hidden-ul").hide();//隐藏其他下面的下来菜单				
-				$(this).parent(".nav-li").siblings().find(".nav-head-a i").removeClass("ico_new");//初始化其他下面的三角按钮				
-				$(this).parent(".nav-li").siblings().find(".nav-head-a").css("color","#333");//初始化其他下面的文字颜		
+				$(this).css("color","#333").find("i").removeClass("ico_new");
+				}
+				$(this).parent(".nav-li").siblings().find("div.hidden-ul").hide();//隐藏其他下面的下来菜单
+				$(this).parent(".nav-li").siblings().find(".nav-head-a i").removeClass("ico_new");//初始化其他下面的三角按钮
+				$(this).parent(".nav-li").siblings().find(".nav-head-a").css("color","#333");//初始化其他下面的文字颜
 		});
 </script>
 </body>
