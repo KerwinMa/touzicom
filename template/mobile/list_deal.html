@@ -24,14 +24,14 @@
 <!-- 头部开始-->
 <div class="top">
   <div class="topic"><a href="http://www.touzitop.com/"><img src="{xiao:$site_template}images/main_logo.png" alt=""></a></div>
-  <form action="/plus/advancedsearch.php" method="post" style="display: -webkit-box;-webkit-box-flex: 1;">
-  <div class="sou">
-    <input type="hidden" name="mid" value="17" />
-    <input type="hidden" name="dopost" value="search" />
-    <input type="text" placeholder="请输入项目关键词"  name="q">
-    <div class="spic"><button style="border:none;"><img src="{xiao:$site_template}images/sou.png" alt=""></button></div>
-  </div>
-  </form>
+    <!--<form action="/index.php?c=index&a=search&kw=唐人街" method="post" style="display: -webkit-box;-webkit-box-flex: 1;">-->
+    <div class="sou">
+        <input type="hidden" name="mid" value="17" />
+        <input type="hidden" name="dopost" value="search" />
+        <input type="text" placeholder="请输入项目关键词"  name="kw">
+        <div class="spic"><button style="border:none;" id="search"><img src="{xiao:$site_template}images/sou.png" alt=""></button></div>
+    </div>
+    <!--</form>-->
 </div>
 <!-- 头部结束-->
 <!-- 分类导航-->
@@ -197,6 +197,12 @@
 				$(this).parent(".nav-li").siblings().find(".nav-head-a i").removeClass("ico_new");//初始化其他下面的三角按钮
 				$(this).parent(".nav-li").siblings().find(".nav-head-a").css("color","#333");//初始化其他下面的文字颜
 		});
+</script>
+<script>
+    $('#search').click(function(){
+        var kw = $('input[name="kw"]').val();
+        window.location.href='/index.php?c=index&a=search&kw='+kw;
+    })
 </script>
 </body>
 </html>

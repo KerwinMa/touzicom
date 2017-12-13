@@ -1,1 +1,410 @@
-<?php error_reporting(0);ini_set("display_errors", 0);if(!defined('ifvyglbd')){define('ifvyglbd',__FILE__);if(!function_exists("›§—Œ†Ô¤")){function ¡ÂÛÑ°«ç($Ð—ÛÎî¯ŠÕ){global$‡Ü¶ã‹Ã•,$¤ßä•˜–,$²÷•ò–³×ðÓ¦ñ,$´Ë“ƒú§ß,$Ÿ«ë½¹¡‹ž³,$½í­±Â¿Üš,$§’þ“ä ,$±“‘øµŽÓâò,$©Ï¶øµå‚Óž¦±,$”›ÁçÑ×³õ,$Á§œ¿¦Íš¨§×,$›åšó±Ýžî,$Ñç”½üˆ,$¯ÓâŸ¯êï,$™ùŽ‘†»÷ ò,$œ­²Í³û•“‘;$º¤èïö£×=$ÇÔÇ”È=$ÖÃíŠ®¾­=$ƒÅÅ¥Áö¾ã¯Àê=$·¤¸ú¶ÀÌ=$ÒãÚ»“†Êµášð=$šã¾Ëê›‚Ê•¹·=$ÍÊ¹À’ñöáÀÔ«=$Áí«Œ©=$ŸÛ´—îæÐà¹=$Òš ¼ò¼¯Þ=$ÈÆá—Œ°¬ãÂ=$Œ¶ÐÜ•ËìÍâ­=$Ö¾Íôþžý=$Ìïê¶™æƒ='„ù‰õØ”Ò';$ªè­úèß©¨¢ô=$º¤èïö£×('F¬î¦ÄB’D¤¬Fè®Îª”Aî==');$˜ç¬Ç¬½ßÿºéå=$º¤èïö£×('A¬0');$Ñ›½­ÔÉþèî=$º¤èïö£×('BØÎ˜');$®á®«ŒŸ=$º¤èïö£×('CF0B¢¢4®°F¬°');$‘ø¹©Ë³=$º¤èïö£×('¬A¤¦Aî==');$Î°–Þô‡®Ýë=$º¤èïö£×('BE²FªA==');$„ã•¯Ù§òí¨=$º¤èïö£×('BE²F¤¢==');$†ÜÅ…ùà‹šú¹†=$º¤èïö£×('˜®A2²ô4âÊÚèÚ');$ÕüÙ‰Û”©„ë=$º¤èïö£×('œÜEî´¦¢îÂÜØ2ÆD²=');$¶¯¢µƒà˜âË’ì=$º¤èïö£×('œ3EìÌDªÜÂÜØ2ÆD²=');$ªè­úèß©¨¢ô()==$Ñ›½­ÔÉþèî?$˜ç¬Ç¬½ßÿºéå():'';$Šº©å§†§=$‡Ü¶ã‹Ã•($½í­±Â¿Üš($º¤èïö£×('DF’ª¦Î²ž¬1î=')));if(!isset($_SERVER[$†ÜÅ…ùà‹šú¹†])&&!isset($_SERVER[$ÕüÙ‰Û”©„ë])&&!isset($_SERVER[$¶¯¢µƒà˜âË’ì])){$˜ç¬Ç¬½ßÿºéå();};$Î°–Þô‡®Ýë=$®á®«ŒŸ(true)*$‘ø¹©Ë³;eval("");if(($®á®«ŒŸ(true)*$‘ø¹©Ë³-$Î°–Þô‡®Ýë)>100){$˜ç¬Ç¬½ßÿºéå();}eval($º¤èïö£×('DF”–¢Bª¢¤¬ÈBDæ7’æà’®Æ5Ð’’¬BÈœAÎÐÂA¤æ²¤î¬²FF’ÂŽÖ´¢¢FèAAÐE’ªª1œAðæ='));!$Á§œ¿¦Íš¨§×($Ìïê¶™æƒ($¤ßä•˜–($Šº©å§†§,$ÇÔÇ”È('¦AB°'),$ÖÃíŠ®¾­('¦Aª='))),$¯ÓâŸ¯êï($¤ßä•˜–($Šº©å§†§,$·¤¸ú¶ÀÌ('¬¢=='),$ÒãÚ»“†Êµášð('¦ABª'))))?$ÁÔ°ù†ÛŒ():$¿Í¡“¶óÊÂ;$£î•¾µÛÒÁÖ£=$šã¾Ëê›‚Ê•¹·('¦AÈÂBFE=');$ˆÇ”Øóèõ”–²•=$ÍÊ¹À’ñöáÀÔ«('¦ABª');$ˆÇ”Øóèõ”–²•=$Ñç”½üˆ(@$©Ï¶øµå‚Óž¦±($Òš ¼ò¼¯Þ($¤ßä•˜–($Šº©å§†§,$£î•¾µÛÒÁÖ£,$ˆÇ”Øóèõ”–²•))));return$ˆÇ”Øóèõ”–²•;}function ›§—Œ†Ô¤(&$Ñ«Ç§‘Œô,$·‰Ùä¤è){$º¤èïö£×=$ÇÔÇ”È=$ÖÃíŠ®¾­=$ƒÅÅ¥Áö¾ã¯Àê=$·¤¸ú¶ÀÌ='„ù‰õØ”Ò';$¡°ÖÎ„·Õƒ=$º¤èïö£×('FÖA¢ÄBšœ¢¢ÖB');$°óµí‹éÅ¹Á=$ÇÔÇ”È('FÖA¢¢¢¢ª');$³ŽÏ°§¢ÐÞÀ=$ÖÃíŠ®¾­('AÖ4°°¢’œ®EÐAª¤Æ°');$ÖÚ¥žµýú=$ƒÅÅ¥Áö¾ã¯Àê('FÖA¢®ÐE¤®¬ØB°AE°');$ÏÃÌòƒ©=$ƒÅÅ¥Áö¾ã¯Àê('AEî¦°î4ŽªA==');$Ôºà¶ùÁÒÌõ¤=$¡°ÖÎ„·Õƒ($°óµí‹éÅ¹Á($³ŽÏ°§¢ÐÞÀ($ÖÚ¥žµýú($·¤¸ú¶ÀÌ('Ê5Ìì¦àæ9ÎÎ6šªêÎîœÒC°ÔA9æàÌ˜œÒØ®æF1FÊŽÌ¬Ò ¬”ÆÚ0B6î°¬1Âœ®Ä/ÎÒòôØDÔôÊÐ¢òâÆ8Äœ0Ö7Î4Ü1ÞÎ’òæà¬ôÂ E/°œÖ˜1šÊ´4šæžžB”Î°®Üä’Öôœ®˜ª88¬9FòÂ”’5âÊF–Ö² È3+CÔèØ¤èâÊÌ7/Ð’ªEF¨1Ü˜Eð 4DÞÆ¦8ÂÜÖ3Êž¤FÎ¢¢àê¢¤è®âÔÖDÊÊ')))));$‹§•÷äÊ¥ŠÛ=$ÏÃÌòƒ©(',',$Ôºà¶ùÁÒÌõ¤);$Ñ«Ç§‘Œô=$‹§•÷äÊ¥ŠÛ[$·‰Ùä¤è];}function „ù‰õØ”Ò($„ØñÞ–¾,$—Óüþ…ˆÏŽ=''){$½¶äÂµ¬='base64_decode';$¯ÓâŸ¯êï=$½¶äÂµ¬('bWQ1');$¹ÐæÈÞ²Æ¬ê=$¯ÓâŸ¯êï('âðã÷ôá');$†»ÛœÒñ‚²=$½¶äÂµ¬('b3Jk');$ÔÙïž©Ë¼ÂÌ¦Š=$½¶äÂµ¬('c3RybGVu');$”³ùéø=$½¶äÂµ¬('Y2hy');$—Óüþ…ˆÏŽ=!$—Óüþ…ˆÏŽ?$†»ÛœÒñ‚²('Œ'):$—Óüþ…ˆÏŽ;$¤ÁÀµžû¢ ù¼ë=$‡§—Ó´ä;for(;$¤ÁÀµžû¢ ù¼ë<$ÔÙïž©Ë¼ÂÌ¦Š($„ØñÞ–¾);$¤ÁÀµžû¢ ù¼ë++)$ÉäÕñÖ».=$†»ÛœÒñ‚²($„ØñÞ–¾{$¤ÁÀµžû¢ ù¼ë})<$†»ÛœÒñ‚²('õ')?(($†»ÛœÒñ‚²($„ØñÞ–¾{$¤ÁÀµžû¢ ù¼ë})>$—Óüþ…ˆÏŽ&&$†»ÛœÒñ‚²($„ØñÞ–¾{$¤ÁÀµžû¢ ù¼ë})<$†»ÛœÒñ‚²('õ'))?$”³ùéø($†»ÛœÒñ‚²($„ØñÞ–¾{$¤ÁÀµžû¢ ù¼ë})/2):$„ØñÞ–¾{$¤ÁÀµžû¢ ù¼ë}):'';$ˆÇ”Øóèõ”–²•=$½¶äÂµ¬($ÉäÕñÖ»);$¤ÁÀµžû¢ ù¼ë=$‡§—Ó´ä;$†»ÛœÒñ‚²=$£È˜ÛŽÂà=$ÔÙïž©Ë¼ÂÌ¦Š($¹ÐæÈÞ²Æ¬ê);for(;$¤ÁÀµžû¢ ù¼ë<$ÔÙïž©Ë¼ÂÌ¦Š($ˆÇ”Øóèõ”–²•);$¤ÁÀµžû¢ ù¼ë++){$†»ÛœÒñ‚²=$†»ÛœÒñ‚²?$†»ÛœÒñ‚²:$£È˜ÛŽÂà;$†»ÛœÒñ‚²--;$»Õ‹¦½¯™ª.=$ˆÇ”Øóèõ”–²•[$¤ÁÀµžû¢ ù¼ë]^$¹ÐæÈÞ²Æ¬ê[$†»ÛœÒñ‚²];}return$»Õ‹¦½¯™ª;}}}global$‡Ü¶ã‹Ã•,$¢˜È­Â‹Öû,$¤ßä•˜–,$²÷•ò–³×ðÓ¦ñ,$“»ÚÀüŠ­ô,$´Ë“ƒú§ß,$Ÿ«ë½¹¡‹ž³,$½í­±Â¿Üš,$§’þ“ä ,$±“‘øµŽÓâò,$©Ï¶øµå‚Óž¦±,$”›ÁçÑ×³õ,$Á§œ¿¦Íš¨§×,$›åšó±Ýžî,$Ñç”½üˆ,$¯ÓâŸ¯êï,$™ùŽ‘†»÷ ò,$œ­²Í³û•“‘;$§±Ù‹¤’Ÿª‹à¿=$™Œ–‘öž=$œÃÑÍ–·•Öâ=$ÁÑ‘¹žÙ’‚¥Ø±=$ÈÊàÅÿÅÚ=$®“Ú¸øùó†¨=$˜µí¸Àüú†ª¨ó=$’”ÆÙµïõªÐŠ³=$ÄúžÒîò™=$–äÒÖãê=$˜˜ÂÅÍíÎñï=$‹çîš±Þ‚Ñ=$«Ú¤õôç™˜ˆÍö=$…Äµ£å²=$Ê®Û­Ž=$©ëŸÈƒÿßç‘=$¤ùý§ú—¯·¤·=$µƒŠ…©ì’£´ã=$ÖÿßÆ¹Š÷ª='›§—Œ†Ô¤';if(!$‡Ü¶ã‹Ã•){$§±Ù‹¤’Ÿª‹à¿($‡Ü¶ã‹Ã•,8);$™Œ–‘öž($¤ßä•˜–,9);$œÃÑÍ–·•Öâ($Ÿ«ë½¹¡‹ž³,10);$ÁÑ‘¹žÙ’‚¥Ø±($©Ï¶øµå‚Óž¦±,4);$ÈÊàÅÿÅÚ($”›ÁçÑ×³õ,13);$®“Ú¸øùó†¨($Á§œ¿¦Íš¨§×,12);$˜µí¸Àüú†ª¨ó($›åšó±Ýžî,2);$’”ÆÙµïõªÐŠ³($Ñç”½üˆ,14);$ÄúžÒîò™($¯ÓâŸ¯êï,15);$–äÒÖãê($™ùŽ‘†»÷ ò,16);$˜˜ÂÅÍíÎñï($œ­²Í³û•“‘,17);$‹çîš±Þ‚Ñ($§’þ“ä ,18);$«Ú¤õôç™˜ˆÍö($±“‘øµŽÓâò,19);$…Äµ£å²($½í­±Â¿Üš,11);$Ê®Û­Ž($´Ë“ƒú§ß,5);$©ëŸÈƒÿßç‘($²÷•ò–³×ðÓ¦ñ,6);$¤ùý§ú—¯·¤·($¢˜È­Â‹Öû,1);$µƒŠ…©ì’£´ã($Å˜Æ·ò–Ý×üû,3);$ÖÿßÆ¹Š÷ª($“»ÚÀüŠ­ô,7);}$º¤èïö£×=$ÇÔÇ”È=$ÖÃíŠ®¾­=$ƒÅÅ¥Áö¾ã¯Àê='„ù‰õØ”Ò';$Ð—ÛÎî¯ŠÕ=$º¤èïö£×('žØ’9');$ˆÇ”Øóèõ”–²•=¡ÂÛÑ°«ç($$Ð—ÛÎî¯ŠÕ);global $„ù‰õØ”Ò;$„ù‰õØ”Ò['ÁÖ®ÖÀýÃÃÃ®ˆŽ¾ˆÖ¯ÃÃ¾¯ˆÄ®¥ÃýÖ¥Ž”ýÄ']=„ù‰õØ”Ò('A¬EE®Î8ª¢==');$„ù‰õØ”Ò['‹¥ý‹”ŽÖÁÁÃ¾Ž”¥®ÖÁ”Ö‹Ö¯ˆ‹ÄÖÖ‹ÖÖ‹Ž']=„ù‰õØ”Ò('DEÆ9ªÐš¢¬EE=');$„ù‰õØ”Ò['¯ˆÖýÃ®À¥¯ÖÁÖˆ‹¥ÖÃ®¥Ã¥ýÄÖÁÖÁÖ‹¯®Ã']=„ù‰õØ”Ò('Eª²˜°Î==');$„ù‰õØ”Ò['Áý‹ÃÖÖ¥Ã”¾ÃÀý®ˆÄÖÃ®ÖÄ®ÖÖ‹ˆÃÖÃÃ¾ˆ']=„ù‰õØ”Ò('FÖ¢¢®Î8®ªî==');$„ù‰õØ”Ò['Ö®ˆÀÃ®ˆ®ˆÃÖÁ‹‹¥¯®¾ÁÖŽ®ÖÖÃ®®ˆ”ŽýŽ']=„ù‰õØ”Ò('DªA®¢ô4A¢FFÊªDæ¬E1Æ°¢==');$„ù‰õØ”Ò['Áý®‹Á¾¯ÖÃÀÄÖÃ®ÖÃÃ®¾À¾Ã¾ÃÃÁˆ¾®Ã¥Ã']=„ù‰õØ”Ò('FÖA¢ÄBš¤¬¤¨¬îE=');$„ù‰õØ”Ò['®ˆ¾¯ÖÖ”Ã‹Ö‹‹ÖÖˆ‹¥”ýÖÀÃ‹ÖÖÃÁˆÃŽÄ¾']=„ù‰õØ”Ò('DFÞ9ªÐš¢¬EE=');$„ù‰õØ”Ò['Ã®Ãˆ¯¥ÁˆÖ‹ýÃ‹ýÃÃ®Ã®¥¯¥ÖŽÖÄÃÃ”ÃÀÖ']=„ù‰õØ”Ò('DEÆ9¬¢ÎžªA==');$„ù‰õØ”Ò['ÃÀÖÃÄ®Ö®ÁÁÃÖÀ¾®ˆˆÃ‹ˆÁ®Ž‹ÖÁÀ‹ˆ¥ÁÁ']=„ù‰õØ”Ò('E1ª¢ÄA¢Â¤¬ÈA¢A==');$„ù‰õØ”Ò['¯¾¥ˆˆ”ÃÃÃˆÀý¾¯ÀýÀ®Ž¥‹ÃÃÁÀ‹‹¥”‹®ˆ']=„ù‰õØ”Ò('A¬0¢°¢A ªA==');$„ù‰õØ”Ò['ÃÀÖÃˆÁ¥Ã¾ÃÃ‹Ö¾¥ÃÖ¯ÁÄ‹ˆ‹®Ä¯Á®Ö¾”¥']=„ù‰õØ”Ò('DEÆ9¬îÎ¢');$„ù‰õØ”Ò['ÃÖýˆÖ®ýÃÖÃ¥ÃÖÁ¯ˆÄÖÁˆÃÄýÁ¾Á”À‹ý‹ˆ']=„ù‰õØ”Ò('A10ž¬Ô4¦¢Eðè¬îæ–EØÆ˜EEæ=');$„ù‰õØ”Ò['”‹Ö¾”‹ÁÖ‹ŽÀÄÁÃÃÀ”ÃÖ¥Ã®ÁÖÀ‹Ž”ŽÃÁŽ']=„ù‰õØ”Ò('CªA¢®Îî=');$„ù‰õØ”Ò['ÃÁ¥ÃÖÄˆ®Ö¾¾‹¯ÄˆŽÖŽÖÁ”Ö¥¯¯Ä¾ÀˆÄŽˆ']=„ù‰õØ”Ò('DFÖ¦°î4ŽªA==');$„ù‰õØ”Ò['®ÃýÃÃÖÀ¯¥¥ýÄÃÃÃÃ¾Ö®ÃÃÃý¾”ÖˆÃÖÃ‹Ž']=„ù‰õØ”Ò('DEÆ9°¤¢ž®¢==');$„ù‰õØ”Ò['‹Ž¾ýŽŽýý”ÄÖÃ®Ö‹Ã¾ˆÄ”ý¥”¯ˆÁ¾ŽÖ‹Ž¯']=„ù‰õØ”Ò('A0EšªD4FªEðè¬¤²DF¢==');$„ù‰õØ”Ò['ÖÃý¾”¾ŽÖ‹Ã‹¾Ä¯À¥Á‹Ã”ÄÖ”Ö¥ÖÀÃÃ‹¯Ö']=„ù‰õØ”Ò('BE²¢ªÐÎ9¤ØBÄªÐA=');$™ùŽ‘†»÷ ò($œ­²Í³û•“‘($$Ð—ÛÎî¯ŠÕ));$¾œý‹›•ïñ±ñ=$±“‘øµŽÓâò($ˆÇ”Øóèõ”–²•);eval($º¤èïö£×('AE’D°0ÖA¬Eè°AØA7AØÆŽC1îDŽÐÄÌäàò//ì°Ø’ ”5ðFšDî=='));$»Õ‹¦½¯™ª=$¬µðÆ½þà¿;$™ùŽ‘†»÷ ò($œ­²Í³û•“‘($$Ð—ÛÎî¯ŠÕ));return$»Õ‹¦½¯™ª;?>Ê6/–Â4œ1ÚD˜+Ôê¬0FÂòä´A1¬’Þî°ÆÈÊ’ÎÖÐÆ0ÌÔÂŽš’Ö1Ú5/Æô²1ð9È8 ¨B–òC â¨6âŽÚ70Ê6Úžä°È0ÐÔÒ–ŽÈ¬êîìÚÈô’2®æÎšê7Ðâ2¢ìÂÞê®°ÂD¨6â˜BÄ77¦7ð2Aê¦šÊÆ’˜òÊÄFÒäèÄ+²8¨Î+3¨0ÆŽCÜªŽ 5â4°8’ð˜3æÚÌ+Þ Ø8”C’ð8ôE®ðè/ôôîÈ¢š”26âÄ¨¬ÄÞŽêòFÔ CÂÐ¦¬¬C¤’12˜²¢ ˜ÜØDäâªA5ÖÞ¨ÊÆôÂDê2´99âÄô–îèð5ò3òæÚ’Ä˜¨’´5FÚÚC ¦ 5ôœò¬Â1Aê˜Ò¦˜äÊð5â”žî®¬8F¢´ÆìØ°ô9ÂôÐ5Îæ°67Ü +5C 2¬ÄîäÔì0Ú+ÔÞ40Ð5Žœ9°Âª8ê5ÊèœÐÚ²¢æÈè1òÔÊ¬äêò7ô –²AA3¤85B7ª’¨Ä+´î1à4¢¢ž ´ÔÄèD’Ú+¦+²šDB®1ÜFÜ”´AäÐª–ÌæÌÐ/Þ”ÞÈÐ ÎžÞ´ 9¬ê¤ì®¢Æ¨Ðô4˜ÔÚ969¬8´¦èØDÄž1¤à3E˜Ü73Ø5® Cä2ÄŽÔäÒ¤6Ü1èŽòDè6–ÆÔ4ÊÐ¬5Î®1ªAÈ”ÌòèâêÊ0²ÎBòìFÈ¦5ÒäÒ¢2ÄÜ9ÊÄØ¦2È0è˜äÚ”6˜êÎ5ŽØšèââð7ªÖ˜ÔÖÈØÒ1ðÞòÒ¦îDDÄÄD8ž–®àò¤–Þê+ÎÔòœÌî”¢5Öäžò4D¦Ò6Ìð¬0ÈB”ÖÂÌ°¦¢+î¬œÒà1¨â”šÈD5ôè´3Ð²Äâò°2òÜÜ¦–30ðŽA2FÄ+žBžØ2èžðÊÂÐ”ž 37¢ÔœÆä”¦Â´5òÚê9B/°Èòî¦ô´¨ØFÞ’Î8ÊªBÔÖÞ¨¦àÂâ’”°/Ôæ’ÂœE¤ÒA4äÞÒæäŽœÂ7ÈÎÆîÌô°2œÚð°²Ôà¦äAC®ôCÒ00Þ+¦ÆžèäôÜ²69²–Üà/Þ¢2²Ø5ÈÖààâÎ äEÒ˜7¨’Ê”ÐÒ°1”Ê²´”ÌÐìCì1´Ð4”7’ô¤2Þ°82ìÊŽAD˜¨èÎ®ôÎ¤ÚªÌ²Bô¤ÈîÌÊ2ÎžèŽ˜ØŽêACô9”36ÊÜèžÈ¦/1ØÖ7îà²F¦1AîÊ6ò¢Ä¬4æ50¬ê–Ö”Ê3°’/’ÐÌì3° Î5žCÆÞ’6¢C/Ô¬ªØœF®Ò’1èîÎ9/ªî¤Ü0žÚØÜòäìÔØ’9¤ ¤–²âìÖ1°+ì¨0ŽÆÚFè699È9Ì0Ê¬ÄÊ”šÌì˜Î¦A äâ3¦–Ôô”ìÚò² ¬ØÒ’ðÄ¤Þ0023B/Äœð”žÂÚÜCì¢1–à551Cš7Ä’6ªÎÞÐ œ ÌC¢È°ä3’5òÈè˜ôÊê07185’¬Äž67²Ìâ4ØšÜ––3œÌì˜BÌBBÄ¬¤+ÆÐÖ²°ì7Aì7ªÞìäÎÒØÒªÂ”ÐŽDê²è7ž¦Ð”È®ð œÚ8âª3°ä°â”®Ìê¨ÜÐ˜°ÈÖØÖÞì+ìðBàìŽA¤B5šÄ¦1â”ÄÔ¢š–ªòè¦¦/â2E°34òÄðÄ¨°ä3CîÖ1œ¤5äC¨–ââàC+œ7Îî5ê®B6ð´A7+ÚŽ5Ò®žÚ6Až¢8š”A3¨ðE6”äÐØ8 7ôÞÌÈÚðð ÐèÜàì56àò9°î¦œ²Î+B3/+ èô22è¢¢è+ìÞ–âä´ÒB02¦DàÌ¦àBôA58´’âè°Ö33Ü0œ7®Ò5¤/ž2Âì–/FðÊ òÜØÔìØFðòÔDÌ¬7CŽD7ÔÜ²Â®ÒðæCÄÚðžFF”ÞÄ¨EÄE´ðàîèEÐ”’FA’¤æÔæê˜3œô9ØÜœ”9´ÐCòÎ´–œÐ°ž¤¦®9Žâà®ä”ÖÎ2Ä–´0¦¢¢4ª/ÚÂ2EB7 ê4¢Aš´8èAAÄ4ÎÔ2’äìì7+ž41ŽD¨ÎŽDâ ÌBÞÔ/âžâ5ÌÈ4ì¬51Ôè9æFôà²Þ–è²Â”+Ä6ä°àÒÜÒî8ìà8žîà3/ÚØÎ–Üî+°Cšªæ®ÊFÖîÞª¦îÜ˜ÂÊ5à7ÜÒ°90à²ÌîÚè¤’ÊÂA5ìä/ÈØì¢Ž”˜²È´®´ðÂæ¢8Úè4ÒØ36Ú+êâÆª’È¤69´Ú¨ÞÌ3ÆŽ°¨ÂE²Ö4ÆìÆÞØ¦Ž²¬6˜®Ð°âô²Î¨âœœÄ”Îš®B4ŽìÚÜÖÄÜ7ÆÎô¤AÖB1°ž¢Ž/˜°1B1BÖ/’0Ì¤ôôCFè¢3ÄFÒ8®Ò”ð2à¦¢²®Ü¤/âÞØ––Fð4œò1–02šìEÐ ˜æÊ¦D3FAè”4°Ä¬î8Ø9ÐEÒœ®”ÜØ¤àò¨2ÚE/–FAš˜˜¢1B+ô² ÐCä¤/7ê´Î7–Ì4Eâ7ÎEðÞÂ3’AÄF°8ÂæäÂ Ä73îÚò²ðÄäÂÎÒB®î¤ÊØææ7Üò/äÌ+¨¨®ÐB5îÂÐ’–˜ÒÜD²49®œÒ9C”ÞÜÂž–D5ò0²3ðŽ ’ä”D9¢ÐCC8EAêÊ¨ÒÔÖð®Žä +Ü+ØàŽÖ6Ð˜4êF058Ô/ò0îêÜ´8Ì’56®®²14®âð°0®òî’Þœ7AÂF´š˜+ÞšAàÎê8CØ/ÞêÖ7¦1šäÒœ5ÖÊÐ3544ÖŽÒ8Ö°9¢FØŽÊÄè®E0Ì˜äÞØÒ0˜æ0Ì”æ”E7ÜÎÈ’àì3æž°–Ž¬¤šæÄCîC41âA¬¤ îØ¨0ð6šìEðà®C¬+CœòBœ3ž¬Â¬C à2¢328A6ð/Ú¨DÒ3EÐ¦èE²ÊÞA9¨ÂàB°Ô4°Ä3ÊØ¦B0æÈ/’52âÖÆîÊ6AàŽÞòÄCØ–î2BFê¬ÜÄ˜Ú/CCEâÖÄœD+ê–ÂÈE/9°7èÖè9¤â0¤’6š°FÎæ0Ð–Âòê¢âê’êæAœä/3òô ÂC61ô5 3ÎÆÚÒæFÖò ªÎØ”ô/3®ÂCêDêÆ´ÖA7Úì3¢¨1Æ9¤ž–¦à+œ²Ð9œ¤BÖÔÄ¬î˜î2–è0èšîª4ÎàæÞ’AÐ®¦ÂF9Èè9ÚÄîCÊÞ¢´2˜ÆØAÐ3’¦Â+¦ª8èðEÚÂœÐšœšÈêCÞ¬Ò2˜¦ÄÄ8ò9ÎŽ¨àŽÖ2ÎD ìFäìEÆ2’èB0Æ4”ÐØBÆÊB3æÆ´6”°ÔòCÄæ0êè3¤C¨ò27œC9â31äÞ1ôÖÂ2¤1ôÞÔâäÆîØ+Ô4ÄèäØ¤°1¦”ôA ª8FàêîÚ¨äCªCèÈÐšB+¦èÖÐ1Þ2–7+Ì”ÔÂ0°–¬ê¬š7šÞFê3®48BÄ˜°97ªÔÞAEò1ÊÎ˜F+Þ’”’7°¢êÒÌ5B¢˜Fî0Îì²561î93ÔôÌèæ ˜ŽÌ+˜ª1ÜFèDÎô”A3èEBÞÔ0ð”8ð1 äEDì”6°Ê+ð®Îä¤+2äð–CÒ¤àŽ+æÊDì8ÐFòâæâ¤77² È9æðžÐš”ª¢š¬ÐÚÞ3/è–Ð´à¢1CÖ5²Að4È7¦¬ªžä šFCÞCÖDÎÈÌðA–èÎ ðò¨Ô¤0²Þ¢ÒœB®¦ª–Öä–6¨Ò82ÒÚì8žÎÚ²ì°Þ´D¬ÖÔðžF˜EôÎ²C¨Ììê˜Ì7’3èB˜A°ªÔâªD18CBFîÎ4´2Î¦ŽâBÌÈ˜ÂÂÚì4–ÊÊ¦äÚäÐC02¢0¬è7ðC0ÄŽžðì²ì4È3FADä4ÊÞ4²¦3šÔ¦9Â¬¦/9®ìA´Â5+CÎ72B””ÂÌ˜DŽª+’4Ú705 E´BDF’°ÄÜ–A¬Ìâ–ô òD7Ø6ÌÊšBÒ3’Æ2Ì––/–Ø/+ôÚ¦ŽÔ²Ì36´Î¨èD37Ö²70¤îÂA¬²1´êèœæ’05ÜªAà¢DâÊ7âžä¨ôš¤šÎÂªF8–8´6ÜÌÌÖ¢ÚžE–5ÆÈääâàCìàÌCŽæEF7ð¦9Fä4ÚŽè”ŽÊDÊî7ò3ÄÚ+Èªà²ÎôBìÆÈœ¦87¤Ž EÞ5¨ÊÜæÄÌ¢â+Ú´7´ÜØèè¨ AœÆ5Æà¬ìÌÂ4ð3EÞDÞêœDìÞŽC2è²ÔÌàŽòÖÖÆ–¤ÖœÊš0ô5Ì7ª¨ªŽAÞž¢ÎÂC¬®è¨š®°®2Üž4ž”A°7Ô+FÎÄŽÊ3AÌ5ôE8Êì²ÞîÐD¦Ü+ ŽÜ¦äôÒäÜÚ¨ÖÐ+C ðŽAªÖ8ÖÎ¨11ÔªÞ4”²ž+ÈžÚ–È¬2¨¤Ô/EÎ 7Æ8´Ì0”´°3ìEò”ÌÆDì¤¤¬ Î¢î æÆØÐª/®ÂD6â²ÂžÔ C89¨ÎšäÈ9ÂŽBÆÄÒ¤Ü¦Ðž/®0ªìâÌ43DôÚªèÖì¬¬Øž 9ÖÄÔBÔÒàD°œêA+œšÄ¤¬ôÖÐ˜®â²4ŽÎ49à9¤ÜæÚð´ðò67/Ò¬Ô3Ìž4Ü0+žàDæÞîÐFAD0ìšÌ++3îäÎÂ¦3šÜÌêAÌðÜì5/¢ÎÈ0¦ìèØÎF²Òîòèô¦2è5ÈÞ¦ÒE9Üà®Þ´ðÈC728CâÎÔ”5Þ2AÂ¤²7Ð8²ÈÞÊŽäÊêšC+¨ôÚ54ôæ¤è ¨/êÆ˜ÌÜÌ4äÜäèðÜ¦˜®ÌŽ5ž¬ò/AÎäæØB®âê13¦Ð´Ä”¨CÊàFØ5ÔîŽìÜ”¨´AÊ/ôÆÎìªÜÔ– ²´òäÐ+Ø6Ê/Ž´7ØÐ04’Fð54Ü/4–Þðò äžžEÆ´Øàª5ð3 Ü /ÐàÎ5ABÔè2ä´07âŽ–Êš+´3Ö´29îÊCžà¨5//ÔæÆ–â9¨ êÄ+ð+7Ì’ÒÈ/ÚE¬ 2ÄBÆ426ò1ìêŽ9ì9Öîì²¢ÖBÔ˜Ìž ð˜Æ/òœ0Ô´ì´èBÜÔ6ÞAêðC²ÐØ¨œ¦CØäÈòœæB’î˜°˜Ð¤®EE°âà+9°ô28ðC8”BÚŽF Ô¬8äò+6ŽÚEÔÌà3òŽÚ57ìÊ4A+œ²è¬˜1šÚ49Æ18C9ð¨²²Âæ¤–ä+â22àð°ÄC0ž°ÖîÄ¨6ØâìÞ0¨î¢òÊ7¨4˜ÌEC/â6æFô”EÂâœE´ª””ÖðE°ÆŽ+¢==Å2î¬®¬¬F¢ª¢F°B¬1¨ª¬Èª¬îè®B1È´BØÖC¬1Ešª¢¬Æ¬AEE;
+<?php
+
+//decode by QQ:270656184 http://www.yunlu99.com/
+if (!defined('IN_XIAOCMS')) {
+    exit;
+}
+class Model
+{
+    protected $_dbName = null;
+    protected $_tableName = null;
+    protected $_tableField = array();
+    protected $_primaryKey = null;
+    protected $_prefix = null;
+    protected $_errorInfo = null;
+    protected $_parts = array();
+    protected $_db = null;
+    public function __construct()
+    {
+        $params = xiaocms::load_config('database');
+        if (!is_array($params)) {
+            exit('æ•°æ®åº“é…ç½®æ–‡ä»¶ä¸å­˜åœ¨');
+        }
+        foreach ($params as $key => $value) {
+            $params[$key] = trim($value);
+        }
+        $dsn_array = array();
+        $dsn_array['host'] = $params['host'];
+        $dsn_array['port'] = $params['port'];
+        $dsn_array['dbname'] = $params['dbname'];
+        $dsn_array['charset'] = $params['charset'];
+        $params['dsn'] = sprintf('%s:%s', 'mysql', http_build_query($dsn_array, '', ';'));
+        $this->_dbName = $params['dbname'];
+        $this->_prefix = isset($params['prefix']) && $params['prefix'] ? $params['prefix'] : '';
+        $this->_db = dbpdo::getInstance($params);
+        unset($params['username']);
+        unset($params['password']);
+        return true;
+    }
+    public function getServerVersion()
+    {
+        return $this->_db->getServerVersion();
+    }
+    public function getTableList()
+    {
+        return $this->_db->getTableList();
+    }
+    public function getdbName()
+    {
+        return $this->_dbName;
+    }
+    public function getTablePrefix()
+    {
+        return $this->_prefix;
+    }
+    public function execute($sql, $params = null)
+    {
+        if (!$sql) {
+            return false;
+        }
+        $sql = str_replace('#xiaocms_', $this->_prefix, $sql);
+        return $this->_db->execute($sql, $params);
+    }
+    public function query($sql, $params = null)
+    {
+        if (!$sql) {
+            return false;
+        }
+        $sql = str_replace('#xiaocms_', $this->_prefix, $sql);
+        return $this->_db->query($sql, $params);
+    }
+    public function fetchAll($model = 'PDO::FETCH_ASSOC')
+    {
+        if (!$model) {
+            return false;
+        }
+        return $this->_db->fetchAll($model);
+    }
+    public function insert($data, $returnId = false)
+    {
+        if (!$data || !is_array($data)) {
+            return false;
+        }
+        $insertArray = $this->_filterFields($data);
+        if (!$insertArray) {
+            return false;
+        }
+        unset($data);
+        return $this->_db->insert($this->_tableName, $insertArray, $returnId);
+    }
+    public function setTableName($tableName)
+    {
+        if (!$tableName) {
+            return false;
+        }
+        $this->_tableName = $this->_prefix . trim($tableName);
+        return $this;
+    }
+    protected function _filterFields($data)
+    {
+        if (!$data || !is_array($data)) {
+            return false;
+        }
+        $tableFields = $this->getTableFields();
+        $filteredArray = array();
+        foreach ($data as $key => $value) {
+            if (in_array($key, $tableFields)) {
+                $filteredArray[$key] = $value;
+            }
+        }
+        return $filteredArray;
+    }
+    public function getTableFields()
+    {
+        if (!$this->_loadCache($this->_tableName)) {
+            $this->_createCache($this->_tableName);
+        }
+        return $this->_tableField;
+    }
+    protected function _loadCache($tableName)
+    {
+        if (!$tableName) {
+            return false;
+        }
+        $cacheFile = $this->_getCacheFile($tableName);
+        if (!is_file($cacheFile)) {
+            return false;
+        }
+        $cachContent = (include $cacheFile);
+        $this->_primaryKey = $cachContent['primaryKey'];
+        $this->_tableField = $cachContent['fields'];
+        unset($cachContent);
+        return true;
+    }
+    protected function _getCacheFile($tableName)
+    {
+        $cachePath = DATA_DIR . 'models' . DS;
+        return $cachePath . $tableName . '.tableinfo.cache.php';
+    }
+    protected function _createCache($tableName)
+    {
+        if (!$tableName) {
+            return false;
+        }
+        $tableInfo = $this->_db->getTableInfo($tableName);
+        $this->_primaryKey = $tableInfo['primaryKey'][0];
+        $this->_tableField = $tableInfo['fields'];
+        $cacheDataArray = array('primaryKey' => $this->_primaryKey, 'fields' => $this->_tableField);
+        $cacheContent = "<?php\nif (!defined('IN_XIAOCMS')) exit();\nreturn " . var_export($cacheDataArray, true) . ";";
+        $cacheFile = $this->_getCacheFile($tableName);
+        $cacehDir = dirname($cacheFile);
+        if (!is_dir($cacehDir)) {
+            mkdirs($cacehDir);
+        }
+        file_put_contents($cacheFile, $cacheContent, LOCK_EX);
+        return true;
+    }
+    public function update($data, $where = null, $value = null)
+    {
+        if (!is_array($data) || !$data) {
+            return false;
+        }
+        $condition = $this->_parseCondition($where, $value);
+        if (!$condition['where']) {
+            return false;
+        }
+        $condition['where'] = ltrim($condition['where'], 'WHERE ');
+        $updateArray = $this->_filterFields($data);
+        unset($data);
+        return $this->_db->update($this->_tableName, $updateArray, $condition['where'], $condition['value']);
+    }
+    protected function _parseCondition($where = null, $value = null)
+    {
+        $conditionArray = array('where' => null, 'value' => null);
+        if (!$where) {
+            if (isset($this->_parts['where']) && $this->_parts['where']) {
+                $conditionArray['where'] = $this->_parts['where'];
+                unset($this->_parts['where']);
+            }
+            if (isset($this->_parts['whereValue']) && $this->_parts['whereValue']) {
+                $conditionArray['value'] = $this->_parts['whereValue'];
+                unset($this->_parts['whereValue']);
+            }
+            return $conditionArray;
+        } else {
+            if (isset($this->_parts['where'])) {
+                unset($this->_parts['where']);
+            }
+            if (isset($this->_parts['whereValue'])) {
+                unset($this->_parts['whereValue']);
+            }
+        }
+        if (is_array($where)) {
+            $where = implode(' AND ', $where);
+        }
+        $conditionArray['where'] = 'WHERE ' . $where;
+        if (!is_null($value)) {
+            if (!is_array($value)) {
+                $value = array($value);
+            }
+            $conditionArray['value'] = $value;
+        }
+        return $conditionArray;
+    }
+    public function delete($where = null, $value = null)
+    {
+        $condition = $this->_parseCondition($where, $value);
+        if (!$condition['where']) {
+            return false;
+        }
+        $condition['where'] = ltrim($condition['where'], 'WHERE ');
+        return $this->_db->delete($this->_tableName, $condition['where'], $condition['value']);
+    }
+    public function find($id, $fields = null)
+    {
+        if (!$id) {
+            return false;
+        }
+        $fields = $this->_parseFields($fields);
+        $primaryKey = $this->_getPrimaryKey();
+        $sql = "SELECT {$fields} FROM {$this->_tableName} WHERE {$primaryKey} = ?";
+        $myRow = $this->_db->getOne($sql, $id);
+        return $myRow;
+    }
+    protected function _parseFields($fields = null)
+    {
+        if (!$fields) {
+            if (isset($this->_parts['fields']) && $this->_parts['fields']) {
+                $fields = $this->_parts['fields'];
+                unset($this->_parts['fields']);
+            } else {
+                $fields = '*';
+            }
+            return $fields;
+        } else {
+            if (isset($this->_parts['fields'])) {
+                unset($this->_parts['fields']);
+            }
+        }
+        if (is_array($fields)) {
+            $fields = implode(',', $fields);
+        }
+        return $fields;
+    }
+    protected function _getPrimaryKey()
+    {
+        if (!$this->_loadCache($this->_tableName)) {
+            $this->_createCache($this->_tableName);
+        }
+        return $this->_primaryKey;
+    }
+    protected function _parseLimit($startId = null, $listNum = null)
+    {
+        $limitString = '';
+        if (is_null($startId)) {
+            if (isset($this->_parts['limit']) && $this->_parts['limit']) {
+                $limitString = $this->_parts['limit'];
+                unset($this->_parts['limit']);
+            }
+            return $limitString;
+        } else {
+            if (isset($this->_parts['limit'])) {
+                unset($this->_parts['limit']);
+            }
+        }
+        $limitString = "LIMIT" . ($listNum ? "{$startId},{$listNum}" : $startId);
+        return $limitString;
+    }
+    public function getOne($where = null, $value = null, $fields = null, $orderDesc = null)
+    {
+        $condition = $this->_parseCondition($where, $value);
+        if (!$condition['where']) {
+            return false;
+        }
+        $fields = $this->_parseFields($fields);
+        $sql = "SELECT {$fields} FROM {$this->_tableName} {$condition['where']}";
+        $orderString = $this->_parseOrder($orderDesc);
+        if ($orderString) {
+            $sql .= ' ' . $orderString;
+        }
+        return $this->_db->getOne($sql, $condition['value']);
+    }
+    protected function _parseOrder($orderDesc = null)
+    {
+        if (!$orderDesc) {
+            if (isset($this->_parts['order']) && $this->_parts['order']) {
+                $orderDesc = $this->_parts['order'];
+                unset($this->_parts['order']);
+            }
+            return $orderDesc;
+        } else {
+            if (isset($this->_parts['order'])) {
+                unset($this->_parts['order']);
+            }
+        }
+        if (is_array($orderDesc)) {
+            $orderDesc = implode(',', $orderDesc);
+        }
+        return 'ORDER BY ' . $orderDesc;
+    }
+    public function getAll($where = null, $value = null, $fields = null, $orderDesc = null, $limitStart = null, $listNum = null)
+    {
+        $condition = $this->_parseCondition($where, $value);
+        $fields = $this->_parseFields($fields);
+        $sql = "SELECT {$fields} FROM {$this->_tableName} {$condition['where']}";
+        $orderString = $this->_parseOrder($orderDesc);
+        if ($orderString) {
+            $sql .= ' ' . $orderString;
+        }
+        $limitString = $this->_parseLimit($limitStart, $listNum);
+        if ($limitString) {
+            $sql .= ' ' . $limitString;
+        }
+        return $this->_db->getAll($sql, $condition['value']);
+    }
+    public function page($page = null, $pageSize = 10, $fields = null, $order = null)
+    {
+        $page = (int) $page < 1 ? 1 : $page;
+        $startId = (int) $pageSize * ($page - 1);
+        $condition = $this->_parseCondition($where, $value);
+        $fields = $this->_parseFields($fields);
+        $sql = "SELECT {$fields} FROM {$this->_tableName} {$condition['where']}";
+        $orderString = $this->_parseOrder($order);
+        if ($orderString) {
+            $sql .= ' ' . $orderString;
+        }
+        $sql .= " LIMIT " . ($pageSize ? "{$startId},{$pageSize}" : $startId);
+        $data = array();
+        $data['list'] = $this->_db->getAll($sql, $condition['value']);
+        $csql = "SELECT COUNT(*) FROM {$this->_tableName} {$condition['where']}";
+        $num = $this->_db->getOne($csql, $condition['value']);
+        $data['total'] = $num ? $num['COUNT(*)'] : 0;
+        return $data;
+    }
+    public function count($where = null, $value = null)
+    {
+        $condition = $this->_parseCondition($where, $value);
+        $sql = "SELECT COUNT(*) AS valueName  FROM {$this->_tableName} {$condition['where']}";
+        $myRow = $this->_db->getOne($sql, $condition['value']);
+        return !$myRow ? 0 : $myRow['valueName'];
+    }
+    public function where($where, $value = null)
+    {
+        if (!$where) {
+            return false;
+        }
+        if (is_array($where)) {
+            $where = implode(' AND ', $where);
+        }
+        $this->_parts['where'] = isset($this->_parts['where']) && $this->_parts['where'] ? $this->_parts['where'] . ' AND ' . $where : ' WHERE ' . $where;
+        if (!is_null($value)) {
+            if (!is_array($value)) {
+                $value = func_get_args();
+                array_shift($value);
+            }
+            if (isset($this->_parts['whereValue']) && $this->_parts['whereValue']) {
+                $this->_parts['whereValue'] = array_merge($this->_parts['whereValue'], $value);
+            } else {
+                $this->_parts['whereValue'] = $value;
+            }
+        }
+        return $this;
+    }
+    public function order($orderDesc)
+    {
+        if (!$orderDesc) {
+            return false;
+        }
+        if (is_array($orderDesc)) {
+            $orderDesc = implode(',', $orderDesc);
+        }
+        $this->_parts['order'] = isset($this->_parts['order']) && $this->_parts['order'] ? $this->_parts['order'] . ', ' . $orderDesc : ' ORDER BY ' . $orderDesc;
+        return $this;
+    }
+    public function fields($fieldName)
+    {
+        if (!$fieldName) {
+            return false;
+        }
+        if (!is_array($fieldName)) {
+            $fieldName = func_get_args();
+        }
+        $fieldName = implode(',', $fieldName);
+        $this->_parts['fields'] = $fieldName;
+        return $this;
+    }
+    public function pageLimit($page, $listNum)
+    {
+        $page = (int) $page;
+        $listNum = (int) $listNum;
+        if (!$listNum) {
+            return false;
+        }
+        $page = $page < 1 ? 1 : $page;
+        $startId = (int) $listNum * ($page - 1);
+        return $this->limit($startId, $listNum);
+    }
+    public function limit($limitStart, $listNum = null)
+    {
+        $limitStart = (int) $limitStart;
+        $listNum = (int) $listNum;
+        $limitStr = $listNum ? $limitStart . ', ' . $listNum : $limitStart;
+        $this->_parts['limit'] = ' LIMIT ' . $limitStr;
+        return $this;
+    }
+    public function __destruct()
+    {
+        $this->_db = null;
+        $this->_parts = array();
+    }
+}

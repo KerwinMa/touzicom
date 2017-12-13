@@ -17,13 +17,13 @@
 		$(this).addClass('selected').siblings().removeClass('selected');
 		var index = $pro_li.index(this);
 		$('.prod_item').eq(index).show().siblings().hide();
-	});	
+	});
 });
 </script>
 <style type="text/css">
 		.border {
 			border-bottom: 1px #222222 solid;
-			
+
 		}
 		.border span {
 			border-bottom: 4px #e40000 solid;
@@ -57,11 +57,11 @@
   <div class="order_item"> <img src="{xiao:$site_template}images/sort1.png" alt=""><span>{xiao:$industry}</span> </div>
   <div class="order_item te1"> <img src="{xiao:$site_template}images/add1.png" alt=""><span>{xiao:$area}</span> </div>
   <div class="order_item"> <img src="{xiao:$site_template}images/sort2.png" alt=""><span>
-   {xiao:$guquandaima}  
+   {xiao:$guquandaima}
   </span> </div>
 </div>
 <div style="width: 100%;">
-	<table width="100%" align="center" class="imagetable border" 
+	<table width="100%" align="center" class="imagetable border"
 <tr>
 	<td>锁定期限</td>
 	<td>注册资本</td>
@@ -89,12 +89,12 @@
 	</strong>
 1.会员认购送三版账户<br />
 2.会员特权资料查看<br />
-3.线下1对1投顾服务 
+3.线下1对1投顾服务
 </span>
-	
-	<br /><a href="http://touzitop.com/member/index.php?c=register" target="_blank"><img src="img/51565ef902706e4eb9b7efea95a16989.gif" width="104" height="35" /></a></td> 
- 
-</tr>{/xiao:if} 
+
+	<br /><a href="http://touzitop.com/member/index.php?c=register" target="_blank"><img src="img/51565ef902706e4eb9b7efea95a16989.gif" width="104" height="35" /></a></td>
+
+</tr>{/xiao:if}
 <tr>
 	<td>每股收益</td><td>预计挂牌</td><td>2016净盈利</td><td>2017预估收益</td>
 </tr>
@@ -105,7 +105,7 @@
 </div>
 <!--
 	<div class="order"> <a href="javascript:;" onClick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">咨询股价</a> </div>
-	
+
 -->
 <!--项目详情结束-->
 <!--公司详情开始-->
@@ -120,50 +120,50 @@
     -->
 
   <div class="prod_list">
-    <div class="prod_item"> 
+    <div class="prod_item">
 <p class="border"><strong><span style="font-size:20px;color:#000000;"><span>企业介绍</span>：</span></strong></p>
-<p><img src="img/fcf4f4933486c011fa7d2603298dd231.png" alt="" width="750" height="395" title="" align="" /> </p>
+<!--<p><img src="img/fcf4f4933486c011fa7d2603298dd231.png" alt="" width="750" height="395" title="" align="" /> </p>-->
 {xiao:$qyjj}
  </div>
- 
-  <div class="prod_item"> 
+
+  <div class="prod_item">
 <p class="border"><strong><span style="font-size:20px;color:#000000;"><span>企业亮点</span>：</span></strong></p>
 {xiao:$qyld}
  </div>
- 
-     <div class="prod_item"> 
+
+     <div class="prod_item">
 <p class="border"><strong><span style="font-size:20px;color:#000000;"><span>市场价值 </span>：</span></strong></p>
 {xiao:$scjz}
  </div>
-    <div class="prod_item"> 
+    <div class="prod_item">
 <p class="border"><strong><span style="font-size:20px;color:#000000;"><span>上市回报分析 </span>：</span></strong></p><br />
 
  {xiao:if $member}{xiao:$member['username']}{xiao:$shjh}{xiao:else}
 	<p><span style="color:#E53333;"><strong>游客您好，注册会员享受特权！</strong><br />
 	1.会员认购送三版账户<br />
 	2.会员特权资料查看<br />
-	3.线下1对1投顾服务 
+	3.线下1对1投顾服务
 	</span></p>
 	<a href="http://touzitop.com/member/index.php?c=register" target="_blank">
-	<img src="img/51565ef902706e4eb9b7efea95a16989.gif" width="104" height="35" /></a></td> 
- {/xiao:if} 
+	<img src="img/51565ef902706e4eb9b7efea95a16989.gif" width="104" height="35" /></a></td>
+ {/xiao:if}
 </p>
  </div>
- 
- 
- 
- 
+
+
+
+
   </div>
 </div>
 <!--公司详情结束-->
 <!--火爆项目预约开始-->
 <div class="hot">
-  <h1 class="hot_tit">推荐项目</h1>  
+  <h1 class="hot_tit">推荐项目</h1>
   {xiao:list catid=1 xiaocms=1   num=4 cache=0   status=3}<div class="hot_item"> <img src="{xiao:function.image($xiao[thumb])}" alt="">
     <div class="yu1"><a href="javascript:;" onClick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">预约咨询</a></div>
   </div>
 {/xiao:list}
- 
+
 </div>
 <!--火爆项目预约结束-->
 <!--底部结束-->
@@ -186,12 +186,12 @@ $(document).ready(function()
             alert("联系电话不能为空！");
             return false;
         }
-		var myreg = /^1[34578]\d{9}$/; 
-		if(!myreg.test($("#phone").val())) 
-		{ 
-   			alert('请输入有效的手机号码！'); 
-    		return false; 
-		} 
+		var myreg = /^1[34578]\d{9}$/;
+		if(!myreg.test($("#phone").val()))
+		{
+   			alert('请输入有效的手机号码！');
+    		return false;
+		}
     })
 });
 
@@ -215,7 +215,7 @@ window.onload = function(){
   <div class="theme-popbod dform">
 <form action="/index.php?c=index&a=form&modelid=9" enctype="multipart/form-data" method="post" class="theme-signin" name="loginform" id="complain">
 
- 
+
 
 <input type="hidden" name="dede_fields" value="name,text;phone,text;time,text;source,text" />
 
@@ -261,9 +261,9 @@ window.onload = function(){
     $(".slider").yxMobileSlider({width:640,height:320,during:3000})
 
   </script>
-  
-  
 
- 
+
+
+
 </body>
 </html>

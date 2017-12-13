@@ -26,57 +26,73 @@
 <!-- 头部开始-->
 <div class="top">
   <div class="topic"><a href="/m"><img src="{xiao:$site_template}images/main_logo.png" alt=""></a></div>
-  <form action="/index.php?c=index&a=search&kw=唐人街" method="post" style="display: -webkit-box;-webkit-box-flex: 1;">
+  <!--<form action="/index.php?c=index&a=search&kw=唐人街" method="post" style="display: -webkit-box;-webkit-box-flex: 1;">-->
   <div class="sou">
     <input type="hidden" name="mid" value="17" />
     <input type="hidden" name="dopost" value="search" />
-    <input type="text" placeholder="请输入项目关键词"  name="q">
-    <div class="spic"><button style="border:none;"><img src="{xiao:$site_template}images/sou.png" alt=""></button></div>
+    <input type="text" placeholder="请输入项目关键词"  name="kw">
+    <div class="spic"><button style="border:none;" id="search"><img src="{xiao:$site_template}images/sou.png" alt=""></button></div>
   </div>
-  </form>
+  <!--</form>-->
 </div>
 <!-- 头部结束-->
 <!-- 大图开始 -->
 <div class="slider">
   <ul>
-    <li><a href="#" target="_blank"><img src="{xiao:block 4}" alt=""></a></li>
-<li><a href="#" target="_blank"><img src="{xiao:block 2}" alt=""></a></li>
-<li><a href="#" target="_blank"><img src="{xiao:block 3}" alt=""></a></li>
-<li><a href="#" target="_blank"><img src="{xiao:block 1}" alt=""></a></li>
-<li><a href="#" target="_blank"><img src="{xiao:block 5}" alt=""></a></li>
+    <li><a href="#"><img src="{xiao:block 4}" alt=""></a></li>
+    <li><a href="#"><img src="{xiao:block 2}" alt=""></a></li>
+    <li><a href="#"><img src="{xiao:block 3}" alt=""></a></li>
+    <li><a href="#"><img src="{xiao:block 1}" alt=""></a></li>
+    <li><a href="#"><img src="{xiao:block 5}" alt=""></a></li>
 
   </ul>
 </div>
 <!-- 大图结束 -->
 <div class="content">
   <!-- 图标导航开始 -->
-  <div class="icon_list"> <div class="icon_item"> <a href="/index.php?catid=1">
-      <div class="picon"><img src="{xiao:$site_template}images/icon1.png" alt=""></div>
-      <div class="icond">股权项目</div>
-      </a> </div><div class="icon_item"> <a href="/index.php?catid=3">
-      <div class="picon"><img src="{xiao:$site_template}images/icon2.png" alt=""></div>
-      <div class="icond">三板资讯</div>
-      </a> </div><div class="icon_item"> <a href="/index.php?catid=26">
-      <div class="picon"><img src="{xiao:$site_template}images/icon5.png" alt=""></div>
-      <div class="icond">专题栏目</div>
-      </a> </div> </div>
+  <div class="icon_list">
+      <div class="icon_item">
+          <a href="/index.php?catid=1">
+          <div class="picon"><img src="{xiao:$site_template}images/icon1.png" alt=""></div>
+          <div class="icond">股权项目</div>
+           </a>
+      </div>
+      <div class="icon_item">
+          <a href="/index.php?catid=3">
+          <div class="picon"><img src="{xiao:$site_template}images/icon2.png" alt=""></div>
+          <div class="icond">三板资讯</div>
+          </a>
+      </div>
+      <!--<div class="icon_item">-->
+          <!--<a href="/index.php?catid=26">-->
+          <!--<div class="picon"><img src="{xiao:$site_template}images/icon5.png" alt=""></div>-->
+          <!--<div class="icond">专题栏目</div>-->
+      <!--</a>-->
+      <!--</div>-->
+      <div class="icon_item">
+          <a href="/index.php?catid=7">
+              <div class="picon"><img src="{xiao:$site_template}images/about.png" alt=""></div>
+              <div class="icond">关于我们</div>
+          </a>
+      </div>
+</div>
   <!-- 图标导航结束 -->
   <!-- 热门话题开始 -->
-  <div class="hot">
-    <div class="htit"> <span>热门•专题</span> <a href="/index.php?catid=26">更多></a></div>
-    <div class="warp1">
-      <div class="swiper-container">
-        <div class="swiper-wrapper"> {xiao:list catid=26    num=8 cache=0  xiaocms=1  }
-		<div class="swiper-slide"> <a href="{xiao:$xiao['url']}"><img src="{xiao:$xiao['shouyetupian']}" alt="">
-            <p>{xiao:$xiao['title']}</p>
-            </a> </div>
-{/xiao:list}
+  <!--<div class="hot">-->
+    <!--<div class="htit"> <span>热门•专题</span> <a href="/index.php?catid=26">更多></a></div>-->
+    <!--<div class="warp1">-->
+      <!--<div class="swiper-container">-->
+        <!--<div class="swiper-wrapper"> {xiao:list catid=26    num=8 cache=0  xiaocms=1  }-->
+		<!--<div class="swiper-slide"> <a href="{xiao:$xiao['url']}"><img src="{xiao:$xiao['shouyetupian']}" alt="">-->
+            <!--<p>{xiao:$xiao['title']}</p>-->
+            <!--</a> </div>-->
+<!--{/xiao:list}-->
 
-		   </div>
-        <!-- Add Pagination -->
-      </div>
-    </div>
-  </div>
+		   <!--</div>-->
+        <!--&lt;!&ndash; Add Pagination &ndash;&gt;-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
   <!-- 热门话题结束 -->
   <!-- 股权项目开始 -->
   <div class="gu">
@@ -254,10 +270,15 @@ window.onload = function(){
 
 <script>
 
-    $(".slider").yxMobileSlider({width:640,height:120,during:3000})
+    $(".slider").yxMobileSlider({width:640,height:120,during:6000})
 
   </script>
 
-
+<script>
+    $('#search').click(function(){
+        var kw = $('input[name="kw"]').val();
+        window.location.href='/index.php?c=index&a=search&kw='+kw;
+    })
+</script>
 </body>
 </html>

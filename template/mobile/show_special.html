@@ -1,53 +1,67 @@
-﻿<!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
 <link rel="stylesheet" href="{xiao:$site_template}images/top.css">
-<link rel="stylesheet" href="{xiao:$site_template}images/news.css">
+<link rel="stylesheet" href="{xiao:$site_template}images/projectx.css">
+<link rel="stylesheet" href="{xiao:$site_template}images/{xiao:$style}.css">
+
+<script type="text/javascript" src="{xiao:$site_template}images/jquery-1.11.1.min.js"></script>
 <title>{xiao:$site_title}</title>
 <meta name="keywords" content="{xiao:$site_keywords}" />
 <meta name="description" content="{xiao:$site_description}" />
+<script type="text/javascript">
+	$(document).ready(function(){
+	var $pro_li = $('.nav_item');
+	$pro_li.click(function(){
+		$(this).addClass('selected').siblings().removeClass('selected');
+		var index = $pro_li.index(this);
+		$('.prod_item').eq(index).show().siblings().hide();
+	});
+});
+</script>
+<style type="text/css">
+		.border {
+			border-bottom: 1px #222222 solid;
+
+		}
+		.border span {
+			border-bottom: 4px #e40000 solid;
+		}
+	table,tr td{
+		border: 1px #222222 solid;
+		text-align: center;
+		line-height: 50px;
+	}
+</style>
 </head>
 <body>
 <!--头部开始 -->
 <div class="top">
-  <div class="topic"><a href="http://www.touzitop.com/"><img src="{xiao:$site_template}images/main_logo.png" alt=""></a></div>
-  <form action="/plus/advancedsearch.php" method="post" style="display: -webkit-box;-webkit-box-flex: 1;">
-  <div class="sou">
-    <input type="hidden" name="mid" value="17" />
-    <input type="hidden" name="dopost" value="search" />
-    <input type="text" placeholder="请输入项目关键词"  name="q">
-    <div class="spic"><button style="border:none;"><img src="{xiao:$site_template}images/sou.png" alt=""></button></div>
-  </div>
-  </form>
+  <div class="topic"><a href="http://www.touzitop.com/"><img src="img/main_logo.png" alt=""></a></div>
+    <!--<form action="/index.php?c=index&a=search" method="post" style="display: -webkit-box;-webkit-box-flex: 1;">-->
+    <div class="sou">
+        <input type="hidden" name="mid" value="17" />
+        <input type="hidden" name="dopost" value="search" />
+        <input type="text" placeholder="请输入项目关键词"  name="kw">
+        <div class="spic"><button style="border:none;" id="search"><img src="img/sou.png" alt=""></button></div>
+    </div>
+    <!--</form>-->
 </div>
 <!--头部结束 -->
-<!--资讯开始-->
-<div class="newsx">
-  <div class="line1"></div>
-  <div class="newstit"> {xiao:$title} </div>
-  <div class="newsbiao">
-    <div class="ndate"> 来源：<span>第一股权网</span> </div>
-    <div class="ndate"> 时间：<span>{xiao:function.date("Y-m-d H:i:s", $time)} </span> </div>
-  </div>
-  <div class="article1">
- {xiao:$content}
- </div>
-  <div class="line1"></div>
-  <div class="tui">
-    <div class="tui_tit">推荐文章</div> {xiao:if $xiangguan}{xiao:list id=$xiangguan}
-    <div class="tui_item"><b>▌</b><a href="{xiao:$xiao['url']}">{xiao:$xiao['title']}</a></div>
-{/xiao:list}{/xiao:if}
-
-  </div>
+<!--项目详情开始-->
+<div class="propic">
+    {xiao:$content}
 </div>
-<div class="footspace"></div>
-<!--底部开始 -->
-{xiao:template footer.html}
 
 
-<script>
+
+<!--底部结束-->
+﻿{xiao:template footer.html}
+
+ <script>
 $(document).ready(function()
    {
     //验证
@@ -91,13 +105,9 @@ window.onload = function(){
     <h3>在线预约</h3>
   </div>
   <div class="theme-popbod dform">
-<form action="/plus/diy.php" enctype="multipart/form-data" method="post" class="theme-signin" name="loginform" id="complain">
+<form action="/index.php?c=index&a=form&modelid=9" enctype="multipart/form-data" method="post" class="theme-signin" name="loginform" id="complain">
 
-      <input type="hidden" name="action" value="post" />
 
-      <input type="hidden" name="diyid" value="1" />
-
-      <input type="hidden" name="do" value="2" />
 
 <input type="hidden" name="dede_fields" value="name,text;phone,text;time,text;source,text" />
 
@@ -111,13 +121,13 @@ window.onload = function(){
 
         <li><strong>用户姓名：</strong>
 
-          <input class="ipt" type="text" name='name' id='name'  size="20" placeholder="用户姓名" />
+          <input class="ipt" type="text" name="data[xm]"  id='name'  size="20" placeholder="用户姓名" />
 
         </li>
 
         <li><strong>手机号码：</strong>
 
-          <input class="ipt"  type='text' name='phone' id='phone' size="20" placeholder="手机号码" />
+          <input class="ipt"  type='text' name="data[tel]"  id='phone' size="20" placeholder="手机号码" />
 
         </li>
 
@@ -145,7 +155,12 @@ window.onload = function(){
   </script>
 
 
+<script>
+    $('#search').click(function(){
+        var kw = $('input[name="kw"]').val();
+        window.location.href='/index.php?c=index&a=search&kw='+kw;
+    })
+</script>
 
-<!--底部结束 -->
 </body>
 </html>

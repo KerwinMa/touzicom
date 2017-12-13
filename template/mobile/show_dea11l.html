@@ -16,7 +16,7 @@
 		$(this).addClass('selected').siblings().removeClass('selected');
 		var index = $pro_li.index(this);
 		$('.prod_item').eq(index).show().siblings().hide();
-	});	
+	});
 });
 </script>
 </head>
@@ -42,7 +42,7 @@
   <div class="order_item"> <img src="{xiao:$site_template}images/sort1.png" alt=""><span>{xiao:$industry}</span> </div>
   <div class="order_item te1"> <img src="{xiao:$site_template}images/add1.png" alt=""><span>{xiao:$area}</span> </div>
   <div class="order_item"> <img src="{xiao:$site_template}images/sort2.png" alt=""><span>
-   {xiao:$guquandaima}  
+   {xiao:$guquandaima}
   </span> </div>
 </div>
 <table width="100%" align="center" class="imagetable">
@@ -62,8 +62,8 @@
 	<th>本次融资</th><th>每股股价</th><th>起投股数</th><th>市盈率</th>
 </tr>
 <tr>
-{xiao:if $member}{xiao:$member['username']}<td>{xiao:$bcrz}</td><td>{xiao:$djia}</td><td>{xiao:$qtgs}</td><td>{xiao:$shiyinglv}</td>{xiao:else}<td colspan="4"> <span style="color:#E53333;"><strong>游客您好，还不是会员请注册后继续查看！</strong></span><br /><a href="http://touzitop.com/member/index.php?c=register" target="_blank"><img src="/data/upload/image/201707/51565ef902706e4eb9b7efea95a16989.gif" width="104" height="35" /></a></td>{/xiao:if} 
- 
+{xiao:if $member}{xiao:$member['username']}<td>{xiao:$bcrz}</td><td>{xiao:$djia}</td><td>{xiao:$qtgs}</td><td>{xiao:$shiyinglv}</td>{xiao:else}<td colspan="4"> <span style="color:#E53333;"><strong>游客您好，还不是会员请注册后继续查看！</strong></span><br /><a href="http://touzitop.com/member/index.php?c=register" target="_blank"><img src="/data/upload/image/201707/51565ef902706e4eb9b7efea95a16989.gif" width="104" height="35" /></a></td>{/xiao:if}
+
 </tr>
 <tr>
 	<th>每股收益</th><th>预计挂牌</th><th>2016净盈利</th><th>2017预估收益</th>
@@ -97,7 +97,7 @@
     <div class="yu1"><a href="javascript:;" onClick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">预约咨询</a></div>
   </div>
 {/xiao:list}
- 
+
 </div>
 <!--火爆项目预约结束-->
 <!--底部结束-->
@@ -121,12 +121,12 @@ $(document).ready(function()
             alert("联系电话不能为空！");
             return false;
         }
-		var myreg = /^1[34578]\d{9}$/; 
-		if(!myreg.test($("#phone").val())) 
-		{ 
-   			alert('请输入有效的手机号码！'); 
-    		return false; 
-		} 
+		var myreg = /^1[34578]\d{9}$/;
+		if(!myreg.test($("#phone").val()))
+		{
+   			alert('请输入有效的手机号码！');
+    		return false;
+		}
     })
 });
 
@@ -150,7 +150,7 @@ window.onload = function(){
   <div class="theme-popbod dform">
 <form action="/index.php?c=index&a=form&modelid=9" enctype="multipart/form-data" method="post" class="theme-signin" name="loginform" id="complain">
 
- 
+
 
 <input type="hidden" name="dede_fields" value="name,text;phone,text;time,text;source,text" />
 
@@ -196,9 +196,9 @@ window.onload = function(){
     $(".slider").yxMobileSlider({width:640,height:320,during:3000})
 
   </script>
-  
-  
 
- 
+
+
+
 </body>
 </html>

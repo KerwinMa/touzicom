@@ -25,9 +25,10 @@
         <?php } ?>
         <select class="select" name="" id="" onchange="jump(options[selectedIndex].value)">
             <option value="0" <?php if(isset($d) && $d=='0'){echo 'selected';}?>>选择时间</option>
-            <option value="1" <?php if(isset($d) && $d=='1'){echo 'selected';}?>>近1天</option>
             <option value="3" <?php if(isset($d) && $d=='3'){echo 'selected';}?>>近3天</option>
-            <option value="5" <?php if(isset($d) && $d=='5'){echo 'selected';}?>>近5天</option>
+            <option value="5" <?php if(isset($d) && $d=='7'){echo 'selected';}?>>近5天</option>
+            <option value="10" <?php if(isset($d) && $d=='10'){echo 'selected';}?>>近10天</option>
+            <option value="15" <?php if(isset($d) && $d=='15'){echo 'selected';}?>>近15天</option>
         </select>
 
 

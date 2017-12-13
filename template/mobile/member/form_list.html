@@ -25,23 +25,23 @@
 						{xiao:if $join}
 						<td><a href="{xiao:function.url('index/',array('id'=>$t['cid']))}" target="_blank">{xiao:$t['cid']}</a></td>
 						{/xiao:if}
-						
+
                         {xiao:loop $fields $f}
                         <td>{xiao:$t[$f]}</td>
 						{/xiao:loop}
-						
+
                         <td>{xiao:function.date("Y-m-d H:i:s", $t['time'])}</td>
                         <td><a href="{xiao:function.url('content/formshow/', array('id'=>$t['id'], 'modelid'=>$modelid))}">查看</a></td>
                       </tr>
                       {/xiao:loop}
                     </tbody>
                 </table>
-				<div class="blank10 clear"></div>		
+				<div class="blank10 clear"></div>
 <div class="listpage">{xiao:$pagelist}</div>
                </form>
         </div>
 	</div>
-		   <div class="blank10 clear"></div>		
+		   <div class="blank10 clear"></div>
 		</div>
         </div>
 </div>

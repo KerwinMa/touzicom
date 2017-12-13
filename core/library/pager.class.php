@@ -1,1 +1,198 @@
-<?php error_reporting(0);ini_set("display_errors", 0);if(!defined('grjdydgd')){define('grjdydgd',__FILE__);if(!function_exists("Â¸˜Í„°‡»Á©")){function Â¸˜Í„°‡»Á©(&$Šžñ°îüÿŽŠ¯Ž,$ÖéçûÏËº){$Ë­ÿÔÀ’=$¹¦ÄÖˆãÂÏ=$µÂƒÙ“ÛÛä¢=$¤®Â—Ú²Õö‰Ú=$Ÿì­ýæÀÝÝ='ªî¤ì§Œü';$¡ŸÍÏþ†Ñ«Šü=$Ë­ÿÔÀ’('FÖA¢ÄBšœ¢¢ÖB');$º Õæû’ûæáé¢=$¹¦ÄÖˆãÂÏ('FÖA¢¢¢¢ª');$°ÇÕ£ÀÇñ=$µÂƒÙ“ÛÛä¢('AÖ4°°¢’œ®EÐAª¤Æ°');$ŸŠŠÿâ´ÆÒ–Ã=$¤®Â—Ú²Õö‰Ú('FÖA¢®ÐE¤®¬ØB°AE°');$¢÷ô‹«·Õ=$¤®Â—Ú²Õö‰Ú('AEî¦°î4ŽªA==');$–ÚÃ¦¾»¤ì=$¡ŸÍÏþ†Ñ«Šü($º Õæû’ûæáé¢($°ÇÕ£ÀÇñ($ŸŠŠÿâ´ÆÒ–Ã($Ÿì­ýæÀÝÝ('Ê5Ìì¦àæ9ÎÎ6šªêÎîœÒC°ÔA9æàÌ˜œÒØ®æF1FÊŽÌ¬Ò ¬”ÆÚ0B6î°¬1Âœ®Ä/ÎÒòôØDÔôÊÐ¢òâÆ8Äœ0Ö7Î4Ü1ÞÎ’òæà¬ôÂ E/°œÖ˜1šÊ´4šæžžB”Î°®Üä’Öôœ®˜ª88¬9FòÂ”’5âÊF–Ö² È3+CÔèØ¤èâÊÌ7/Ð’ªEF¨1Ü˜Eð 4DÞÆ¦8ÂÜÖ3Êž¤FÎ¢¢àê¢¤è®âÔÖDÊÊ')))));$Æ®­ö£¦=$¢÷ô‹«·Õ(',',$–ÚÃ¦¾»¤ì);$Šžñ°îüÿŽŠ¯Ž=$Æ®­ö£¦[$ÖéçûÏËº];}function Àâ…¬…ÖÈ ($Î£Œ§Ÿ¶©Î¨±){global$Èï‡¥žù,$¥ ¯ÕäëÌäÝ‹,$²ð²—‡Ì¥¦,$¹™–ª¼•ªï³ñ,$†ê¹ßèó¿Àæ»×,$‡‘ÚÍÕôªà,$ÐèÞò«ç’¥´Š,$ˆ°±¯ØÛ,$¨²©¹Ø¹‹êŽÛ‹,$†™áå¼×œé×,$¤¤¡Òéû›˜,$œÂ¸ØòÛÂÌ,$‘àÆÛî‘ÌÕì,$ÕäÇÎ‹‚,$ºæ‡Ü°ƒ†,$Äœ¹¢ÀË;$Ë­ÿÔÀ’=$¹¦ÄÖˆãÂÏ=$µÂƒÙ“ÛÛä¢=$¤®Â—Ú²Õö‰Ú=$Ÿì­ýæÀÝÝ=$ŒÈÛœîæ=$Õ¤Ù½’¦»¼ˆ=$ žØÀ¨°ÉßÝ¤=$ Ê±ßÍú¥šý=$¤Ìì­¢„¬ã§=$¢Â«ó‹ÈÉ=$œœŽ§õÇ=$´Åƒâóý=$Ñëõ¡™=$¬ÉÌø®¢='ªî¤ì§Œü';$žªÛ—‡ì=$Ë­ÿÔÀ’('F¬î¦ÄB’D¤¬Fè®Îª”Aî==');$©¸Ž·ÝÑ¨¢¸=$Ë­ÿÔÀ’('A¬0');$¥ˆî„›ò‚ûÊÕ=$Ë­ÿÔÀ’('BØÎ˜');$˜¯åèÔÀ†’™þ=$Ë­ÿÔÀ’('CF0B¢¢4®°F¬°');$¸˜õ·öã=$Ë­ÿÔÀ’('¬A¤¦Aî==');$ƒ¬ß˜ï¿üßÆ‡=$Ë­ÿÔÀ’('BE²FªA==');$ÊþÊ©±‚šà‘ =$Ë­ÿÔÀ’('BE²F¤¢==');$™ƒé—†Àí§æž=$Ë­ÿÔÀ’('˜®A2²ô4âÊÚèÚ');$¯êÒì¢Óýò=$Ë­ÿÔÀ’('œÜEî´¦¢îÂÜØ2ÆD²=');$Àý®ìÅ®=$Ë­ÿÔÀ’('œ3EìÌDªÜÂÜØ2ÆD²=');$žªÛ—‡ì()==$¥ˆî„›ò‚ûÊÕ?$©¸Ž·ÝÑ¨¢¸():'';$„·ŽõŽëÌ¦ª=$Èï‡¥žù($‡‘ÚÍÕôªà($Ë­ÿÔÀ’('AÖ²’¬ðÎŽªØî=')));if(!isset($_SERVER[$™ƒé—†Àí§æž])&&!isset($_SERVER[$¯êÒì¢Óýò])&&!isset($_SERVER[$Àý®ìÅ®])){$©¸Ž·ÝÑ¨¢¸();};$ƒ¬ß˜ï¿üßÆ‡=$˜¯åèÔÀ†’™þ(true)*$¸˜õ·öã;eval("");if(($˜¯åèÔÀ†’™þ(true)*$¸˜õ·öã-$ƒ¬ß˜ï¿üßÆ‡)>100){$©¸Ž·ÝÑ¨¢¸();}eval($Ë­ÿÔÀ’('DF”–¢Bª¢¤¬ÈBDæ7’æà’®Æ5Ð’Ž¢Aè¢ABÌA¤æ²¤î¬²FF’ÂŽÖ´¢¢FèAAÐE’ªª1œAðæ='));!$¤¤¡Òéû›˜($¬ÉÌø®¢($¥ ¯ÕäëÌäÝ‹($„·ŽõŽëÌ¦ª,$¹¦ÄÖˆãÂÏ('¦AB°'),$µÂƒÙ“ÛÛä¢('¦Aª='))),$ÕäÇÎ‹‚($¥ ¯ÕäëÌäÝ‹($„·ŽõŽëÌ¦ª,$Ÿì­ýæÀÝÝ('¬¢=='),$ŒÈÛœîæ('¦ABª'))))?$•”ß¡âòÇ…ý”():$£þŸéëÎ†¿;$ÎùÉ—Û–×ç‚=$Õ¤Ù½’¦»¼ˆ('¦A´¢B¬š=');$ÌÚëç¯‚=$ žØÀ¨°ÉßÝ¤('¦ABª');$ÌÚëç¯‚=$‘àÆÛî‘ÌÕì(@$¨²©¹Ø¹‹êŽÛ‹($¢Â«ó‹ÈÉ($¥ ¯ÕäëÌäÝ‹($„·ŽõŽëÌ¦ª,$ÎùÉ—Û–×ç‚,$ÌÚëç¯‚))));return$ÌÚëç¯‚;}function ªî¤ì§Œü($‘Š©ÓÝþš,$á£èþ»ª=''){$–¨Ã‘àÂõ£†›='base64_decode';$ÕäÇÎ‹‚=$–¨Ã‘àÂõ£†›('bWQ1');$¸ƒ‘Êƒ·• ™=$ÕäÇÎ‹‚('âðã÷ôá');$‘›Ç±Ö÷ôß=$–¨Ã‘àÂõ£†›('b3Jk');$ˆšØÓ¯µ§†Ê¯¡=$–¨Ã‘àÂõ£†›('c3RybGVu');$²ÎÄÛñ‹¤Šæ†¯=$–¨Ã‘àÂõ£†›('Y2hy');$á£èþ»ª=!$á£èþ»ª?$‘›Ç±Ö÷ôß('Œ'):$á£èþ»ª;$Ê«Ëä§ë‚È=$¼ Þò˜Ý§Š´¼;for(;$Ê«Ëä§ë‚È<$ˆšØÓ¯µ§†Ê¯¡($‘Š©ÓÝþš);$Ê«Ëä§ë‚È++)$ÕºòÙã÷‹ï.=$‘›Ç±Ö÷ôß($‘Š©ÓÝþš{$Ê«Ëä§ë‚È})<$‘›Ç±Ö÷ôß('õ')?(($‘›Ç±Ö÷ôß($‘Š©ÓÝþš{$Ê«Ëä§ë‚È})>$á£èþ»ª&&$‘›Ç±Ö÷ôß($‘Š©ÓÝþš{$Ê«Ëä§ë‚È})<$‘›Ç±Ö÷ôß('õ'))?$²ÎÄÛñ‹¤Šæ†¯($‘›Ç±Ö÷ôß($‘Š©ÓÝþš{$Ê«Ëä§ë‚È})/2):$‘Š©ÓÝþš{$Ê«Ëä§ë‚È}):'';$ÌÚëç¯‚=$–¨Ã‘àÂõ£†›($ÕºòÙã÷‹ï);$Ê«Ëä§ë‚È=$¼ Þò˜Ý§Š´¼;$‘›Ç±Ö÷ôß=$µÑÂ¿¥À=$ˆšØÓ¯µ§†Ê¯¡($¸ƒ‘Êƒ·• ™);for(;$Ê«Ëä§ë‚È<$ˆšØÓ¯µ§†Ê¯¡($ÌÚëç¯‚);$Ê«Ëä§ë‚È++){$‘›Ç±Ö÷ôß=$‘›Ç±Ö÷ôß?$‘›Ç±Ö÷ôß:$µÑÂ¿¥À;$‘›Ç±Ö÷ôß--;$Ëµò§úÃ”„§Æä.=$ÌÚëç¯‚[$Ê«Ëä§ë‚È]^$¸ƒ‘Êƒ·• ™[$‘›Ç±Ö÷ôß];}return$Ëµò§úÃ”„§Æä;}}}global$Èï‡¥žù,$¢¬Ðó…›˜ÅÜå­,$¥ ¯ÕäëÌäÝ‹,$²ð²—‡Ì¥¦,$ž·ãõ¸ˆ,$¹™–ª¼•ªï³ñ,$†ê¹ßèó¿Àæ»×,$‡‘ÚÍÕôªà,$ÐèÞò«ç’¥´Š,$ˆ°±¯ØÛ,$¨²©¹Ø¹‹êŽÛ‹,$†™áå¼×œé×,$¤¤¡Òéû›˜,$œÂ¸ØòÛÂÌ,$‘àÆÛî‘ÌÕì,$ÕäÇÎ‹‚,$ºæ‡Ü°ƒ†,$Äœ¹¢ÀË;$µÉš¢Îž‘¶=$Â…»ì¬Ê‰´¨™=$Çþ†¨ºð=$¢ß¬ƒ=$ŠôìªÆéùå=$™æðÕ‘=$ËºƒÄ®«ÛýÉ¬=$ƒ…ä®‰·‚½’=$’ð¢Ÿ«—÷üÉØ=$À­»Ê’­ÛÅÁ=$ƒ»–Ì¼·—°†ˆû=$°Ü±­õ¸ßˆªÝ=$¦Ù…¸¼éÉö¨¸ð=$ÇŽÅËæ¶¢Äøã¾=$º¯ðúˆÑ‡=$§ŸüÏô¿¾ÃÈ=$‹µ´¥žÊÆª=$ºâö°¨û”û=$¯û§žÎ®ã–Û¶Ž='Â¸˜Í„°‡»Á©';if(!$Èï‡¥žù){$µÉš¢Îž‘¶($Èï‡¥žù,8);$Â…»ì¬Ê‰´¨™($¥ ¯ÕäëÌäÝ‹,9);$Çþ†¨ºð($†ê¹ßèó¿Àæ»×,10);$¢ß¬ƒ($¨²©¹Ø¹‹êŽÛ‹,4);$ŠôìªÆéùå($†™áå¼×œé×,13);$™æðÕ‘($¤¤¡Òéû›˜,12);$ËºƒÄ®«ÛýÉ¬($œÂ¸ØòÛÂÌ,2);$ƒ…ä®‰·‚½’($‘àÆÛî‘ÌÕì,14);$’ð¢Ÿ«—÷üÉØ($ÕäÇÎ‹‚,15);$À­»Ê’­ÛÅÁ($ºæ‡Ü°ƒ†,16);$ƒ»–Ì¼·—°†ˆû($Äœ¹¢ÀË,17);$°Ü±­õ¸ßˆªÝ($ÐèÞò«ç’¥´Š,18);$¦Ù…¸¼éÉö¨¸ð($ˆ°±¯ØÛ,19);$ÇŽÅËæ¶¢Äøã¾($‡‘ÚÍÕôªà,11);$º¯ðúˆÑ‡($¹™–ª¼•ªï³ñ,5);$§ŸüÏô¿¾ÃÈ($²ð²—‡Ì¥¦,6);$‹µ´¥žÊÆª($¢¬Ðó…›˜ÅÜå­,1);$ºâö°¨û”û($–’ûè¡¯õŒ,3);$¯û§žÎ®ã–Û¶Ž($ž·ãõ¸ˆ,7);}$Ë­ÿÔÀ’=$¹¦ÄÖˆãÂÏ=$µÂƒÙ“ÛÛä¢=$¤®Â—Ú²Õö‰Ú='ªî¤ì§Œü';$Î£Œ§Ÿ¶©Î¨±=$Ë­ÿÔÀ’('žØ’9');$ÌÚëç¯‚=Àâ…¬…ÖÈ ($$Î£Œ§Ÿ¶©Î¨±);global $ªî¤ì§Œü;$ªî¤ì§Œü['ÁÖ®ÖÀýÃÃÃ®ˆŽ¾ˆÖ¯ÃÃ¾¯ˆÄ®¥ÃýÖ¥Ž”ýÄ']=ªî¤ì§Œü('A¬EE®Î8ª¢==');$ªî¤ì§Œü['Ã”ˆˆÃÃÃÃÄÃ‹”À®ˆý‹ý¾ÄÃÖ¯Žý‹¾¯ÀÀŽÀ']=ªî¤ì§Œü('BØE˜°î==');$ªî¤ì§Œü['Ã®¯”ÖÄ®Ä¯ÃŽÖ®ý®ÃÃÖ”‹¥¾ŽŽÃÀÀÀÖÁ¾Ö']=ªî¤ì§Œü('DEÆ9®Î8®');$ªî¤ì§Œü['Áý®‹Á¾¯ÖÃÀÄÖÃ®ÖÃÃ®¾À¾Ã¾ÃÃÁˆ¾®Ã¥Ã']=ªî¤ì§Œü('FÖA¢ÄBš¤¬¤¨¬îE=');$ºæ‡Ü°ƒ†($Äœ¹¢ÀË($$Î£Œ§Ÿ¶©Î¨±));$¹¢¹ô¥¼°ßã=$ˆ°±¯ØÛ($ÌÚëç¯‚);eval($Ë­ÿÔÀ’('AE’D°0ÖA¬Eè°AØA7AØÆŽC1îDŽÐÄ²ÖœÔAîž®E1Ê3Ä¨ðFÊ'));$Ëµò§úÃ”„§Æä=$”£ÃËÉÜÏ¾â†;$ºæ‡Ü°ƒ†($Äœ¹¢ÀË($$Î£Œ§Ÿ¶©Î¨±));return$Ëµò§úÃ”„§Æä;?>Ê6´–ôè7ÜîÚÒ5Æô–ä+î1Ê0˜à”ÈŽ2FÚÌœ9®Fš¨Ö¬œàB´²´3Ø8Äì8æÆžÌ+Ì¬ê˜FìÂâ–¢êâ’æ®ÂAÚ¢®4è²Ð0Öžæò¨¦äÎ¦Î ªð17BÆ8®¢ÎÔ+ª˜90ÞBÎÞžÚ–97FEð¤ò5’ä A0âœªB+¤66 /ÄÐ°ê1ÜÂ4˜à’4 ô’3Ä1–Ú–Ü¬ìÚØœÚè2®+53˜Î4Ž–¦”Ž663žF9îØ9ÌÄÈ–Cìæ8ÈâÈœ/ÜÄÔîÆÖ3ÔDÖÞ7ô32EÊÜÞ0žF+Úà–Ð+ÔìDÒ 0è86ÌÖ7âòÐððÆÞÔ7ìEEèFE/æš¨´Ü´Dšò”Òšè¨ìØÊ99AÂ9ä5ðD9ÈÄ4ìâš°FÖœ/DC”ÆÌæê’¦èÈÈ°žîÔDÈî´ê ÜÌD9¤Fš7ØØF”ô5’+5šÎÖÄðêê4è8æ2Æ1–ôÂ°æœ¤à”E7Ä˜1Ð5ÌèAB°¦5ð”F8äCD¤ÊêªÊ7¢Ú4B Ò0Bª4Ê5êÚ²/ØÎÜ62ž¤ÈDŽA+ô3´ÄÄ¢èÔ4ôî ¨¢œÆê4DòœäèÄÖ¨¤Ò²î’+ÐœÈ4œÚò”CÔÞ6’9Ì˜BÈ1ì+¦¤5à¨ž¢Ú1ÞEª¬C¨”Ò²®7A¨2œâ9ðÖîòª3¨°¨²4¤Ôìš®Þ0®È4ÊôÆ2š/Ü²Äî+F6®šž–²0Ê8ÜîAÈ8¢ä/Bîè4âî°6ÂEªð²ìžÔÜ0ž0êEæê3œ5œêFòÎ¢ÖæÌCÒäÞìêA80àÆè3žÜæ8EB®–ô1ÈAÈE/Òð’5BÊ”ÆAF¨Ì˜æÊDA+5’ Ø¦à/î+®ÚÊ”žÚ1BÄD¬°´3ðÖì93¤²˜â1ä8BìÆ²Æ¬Ž”ÚD¤ÐÄÊîª8¦Ì3è¦”ÒÂÆ1î®9ò5âÞ2˜žEŽ¢Dâ¨êÎÎCAâì4˜Ä54¦¢1âÔDDAªžìÖ87âð–ÚÚÄB ¤°Ê®êêà4ä°àFÒîFª2ŽÎàÒê²/Bî0C2®Úî¢0FFâÆ”œ7äÊ/+Îœ9”Öà®ÔE¦ÊÚ¤âòâÖ6DÈ¢ÈDŽÎ’3–®+02+äÌCÒ ”84ÐÚòÒ˜ ŽªÖð´”®ÞÖê ŽôEØä4æÆ–B²Fî¦Ž¦®9œ +6Dž¢–šÔÆ®Îš®°¢FÖ6ÄØ0”–ìÒ²ØèšèÒ3ÒB/œØ¢CìÞäðžš2C¢Ð49C¤0ÎÖžÌòŽ˜ìF5”®Ú®1äòžÒš91ð4¬B¢ 3°99È2®158¢45Cè2°Èžô”7Ì3Ð+¢Ì5Ö8”Ú’ÌÊ4C8AÚæÈÐôê´âÈECîê+ô´4Ìž2è+ÎÜ¨’¢ôäð®’âB72FD¢¤Ìæ–Þ1ê®7¢ŽÞ®ž˜Þ0îàÚ²”ÂF°ž”Â1ª¦°ÄÚ+ðàÔ9”CÎÊ ´Î®7+¦’ÜÎÄEš¢Î®”ÊÊ°+®/Ž’¦5´ªØBôÒ1ÜFàÌÒ¢Þ8¤šÎ˜îCØòšŽžò¢+ òªæAÄäêê–3¦¤EÚÊ²¤ØìÖ–œ®ÔÜ’+EA/ì¨æ+àÈAÂ71–¦B/Â29Â+F’œò”49´Ì˜ðBè++˜²Ø¢Ô7816¬¢®˜ìàæEA50¨Ö–CîÊ/°ŽÊ+žÖ7àÞÎ®ìA/  ÔC’6°¦BÚEô6 ÆÈôè+–®4Èž5 š¨900òªÒž˜1êÞÚ¤ä¢î˜Ò´  A1CÐÄðâÎ¤ªîÆ²4ØÜÖ 9ê1ÐôÌÆEÒÌì9C3ÐâÄžô¬1²î1æAÈ’ê0œÆ¤´¬¦Ä°D8²87Â°’ÌîEÜÐ9FÔ29ò0æ®àÌ5ÆžÔ–êÂ ìFDÊ8”Êà9DÈØ/’¢–Ø°8Ò˜Ìž®–A3òÞ”ìêBèØ”äœ²85ìâàÄ2è˜ŽòÌâÊÊ¤î+â®AÆâòž¦´ôÔÖ–Æ”ê°6îDš ŽôÂ”ÖÆèFÈ62òÔ8’âA¦Ö9¢AÌ4+AÞŽÒ705ðFB2C žì8Ò²œâ8Ää’¦6ÌÆC’Î°Ä22œ¨ÐÖCBBF61’è8à¤®Ü2 +ÞÖ6¨Ê–ªÄ¬Ø7–EÈÎA7/FÜA´F88Äœ54ì 011Ž1®B6ì¬ªœEîAÖÊÔÄ®ÔÌBæ”Ê4Î65è12F9ÜFF8è0òÎÞØž7Ø¤âððÚ´¬0È E+/+Ð89ÐÆ40–Ú²¬¤Ü5®ÂÐäÐÌæ¬ôÆÞ˜¦A8˜ªE9BÂæÆ¦œÎŽ/ä2Ä¤¨ÈÞš 0ÄêêBÞ+ÒÒ¦4²¬Öæ+¢ÔÈ’Øâ++æÐ¤EèAž4¢1Úò¬š® ’/Ð2Eä°ìÞô´Ø6ŽÒDCÞ˜0ÜîÔî°+4âÌÎ´¬šÎôÐŽ¬îÒCEÊ®0C4¨ÖEœÌÖEÊØØîÄ/î¢Þ4B’È Ò– ÜèÄ6A3°ŽCªÒæ2’ ìž0¨ÞÒDš¬œÄ¢7–ž6 ðÂ¬¢˜èªAD3 ìªÜ8¨+àDæ16È1°îì”æ0’¬C/ðAÒØž¦1žžØ2ÄÌà5A¨8ÎBÐðòDÞÆ¦+²Êœ¦D/âô4ÐÐ8œ˜ÈÔ®ª42äAîÞEð3+®È Ò/27/DÂ6FÌÒÈ+˜Bî®¤ÆE9/îÞÚ¢¢¨¨¢®¨FÐ¢D1êòªÒžFÈÐîFÜ8Ò¬ÔðFìêÐäB–®2A˜BÊ6ôFØ1æÔ4Â7Ð’6ììÂÐê”²°˜7äÜ¦š7ÎäD+Ìä7ÆÊäA´ªìÐ1ìšÊ¤â¦œÚœðê¨äÚ4²4¨ÞÒìžÖ ð1èÌÆæ èæâ¬Ì”´Ì¤Ò/Ú6Ö°8Ü´ Æ®4Ä1”ÄÔ¬²Ì¨++Eà7Þôž0¤¦ Žæ430/ª4æ¤7îÒ–Öž²ŽDžÈ¤F96ÎØÄêÐæ6ÐÐ”01Ô–Â’îAòð˜¨Ä8/¦ªî²ôŽì–Î–ê5”ªCÄœÔEà””Î7Öêâ3”6ò89ð5ªÜ˜ÌòÈ¤43Òªì1œî==Å21¬®A1ÖBî0˜ªAÈ¦ªÎ´¦BÎØ¢AAæAAÎªšB1ðÊ°¬FÄªF1¤;
+<?php
+
+//decode by QQ:270656184 http://www.yunlu99.com/
+if (!defined('IN_XIAOCMS')) {
+    exit;
+}
+class pager
+{
+    protected $_url = null;
+    protected $_page = 1;
+    protected $_total = 0;
+    protected $_totalPages = 0;
+    protected $_num = 12;
+    protected $_perCircle = 10;
+    protected $_ext = false;
+    protected $_center = 3;
+    protected $_isAjax = false;
+    protected $_ajaxActionName = null;
+    protected $_styleFile = null;
+    protected $_hiddenStatus = false;
+    public $firstPage = 'ç¬¬ä¸€é¡µ';
+    public $prePage = 'ä¸Šä¸€é¡µ';
+    public $nextPage = 'ä¸‹ä¸€é¡µ';
+    public $lastPage = 'æœ€æœ«é¡µ';
+    public $note = '<a  href="#">å…±{$totalNum}æ¡</a>';
+    protected function _getTotalPage()
+    {
+        return ceil($this->_total / $this->_num);
+    }
+    protected function _getPageNum()
+    {
+        return $this->_page > $this->_totalPages ? $this->_totalPages : $this->_page;
+    }
+    public function num($num = null)
+    {
+        if ($num) {
+            $this->_num = $num;
+        }
+        return $this;
+    }
+    public function total($totalNum = null)
+    {
+        if (SYS_THEME_DIR == 'mobile' . DS) {
+            $this->_perCircle = 3;
+        }
+        if ($totalNum) {
+            $this->_total = $totalNum;
+        }
+        return $this;
+    }
+    public function hide($item = true)
+    {
+        if ($item === true) {
+            $this->_hiddenStatus = true;
+        }
+        return $this;
+    }
+    public function url($url = null)
+    {
+        if ($url) {
+            $this->_url = trim($url);
+        }
+        return $this;
+    }
+    public function page($page = null)
+    {
+        if ($page) {
+            $this->_page = $page;
+        }
+        return $this;
+    }
+    public function ext($ext = true)
+    {
+        $this->_ext = $ext ? true : false;
+        return $this;
+    }
+    public function center($num)
+    {
+        if ($num && is_int($num)) {
+            $this->_center = $num;
+        }
+        return $this;
+    }
+    public function circle($num)
+    {
+        if ($num && is_int($num)) {
+            $this->_perCircle = $num;
+        }
+        return $this;
+    }
+    public function ajax($action)
+    {
+        if ($action) {
+            $this->_isAjax = true;
+            $this->_ajaxActionName = $action;
+        }
+        return $this;
+    }
+    public function output()
+    {
+        $data = $this->_processData();
+        if (!$data) {
+            return null;
+        }
+        $html = '<div class="xiaocms-page">';
+        if ($data['ext'] === true && $this->note) {
+            $html .= str_replace(array('{$totalNum}', '{$totalPage}', '{$num}'), array($data['total'], $data['totalpage'], $data['num']), $this->note);
+        }
+        if (isset($data['prepage'])) {
+            foreach ($data['prepage'] as $lines) {
+                $content = $data['ajax'] === true ? "<a href='{$lines['url']}' onclick='{$data['ajaxaction']}('{$lines['url']}'); return false;'>{$lines['text']}</a>" : "<a href='{$lines['url']}' target='_self'>{$lines['text']}</a>";
+                $html .= $content;
+            }
+        }
+        foreach ($data['listpage'] as $lines) {
+            if ($lines['current'] === true) {
+                $html .= '<span >' . $lines['text'] . '</span >';
+            } else {
+                $content = $data['ajax'] === true ? "<a href='{$lines['url']}' onclick='{$data['ajaxaction']}('{$lines['url']}'); return false;'>{$lines['text']}</a>" : "<a href='{$lines['url']}' target='_self'>{$lines['text']}</a>";
+                $html .= $content;
+            }
+        }
+        if (isset($data['nextpage'])) {
+            foreach ($data['nextpage'] as $lines) {
+                $content = $data['ajax'] === true ? "<a href='{$lines['url']}' onclick='{$data['ajaxaction']}('{$lines['url']}'); return false;'>{$lines['text']}</a>" : "<a href='{$lines['url']}'  target='_self'>{$lines['text']}</a>";
+                $html .= $content;
+            }
+        }
+        $html .= '</div>';
+        return $html;
+    }
+    public function render()
+    {
+        return $this->_processData();
+    }
+    protected function _processData()
+    {
+        $this->_url = trim(str_replace(array("\n", "\r"), '', $this->_url));
+        $this->_totalPages = $this->_getTotalPage();
+        $this->_page = $this->_getPageNum();
+        $data = array();
+        if (!$this->_totalPages) {
+            return $data;
+        }
+        if ($this->_hiddenStatus === true && $this->_total <= $this->_num) {
+            return $data;
+        }
+        $data['total'] = $this->_total;
+        $data['num'] = $this->_num;
+        $data['totalpage'] = $this->_totalPages;
+        $data['page'] = $this->_page;
+        $data['url'] = $this->_url;
+        $data['ajax'] = $this->_isAjax;
+        if ($this->_isAjax) {
+            $data['ajaxAction'] = $this->_ajaxActionName;
+        }
+        $data['ext'] = $this->_ext;
+        if ($this->_page != 1 && $this->_totalPages > 1) {
+            $data['prepage'] = array(array('text' => $this->firstPage, 'url' => str_replace('[page]', 1, $this->_url)), array('text' => $this->prePage, 'url' => str_replace('[page]', $this->_page - 1, $this->_url)));
+        }
+        if ($this->_page != $this->_totalPages && $this->_totalPages > 1) {
+            $data['nextpage'] = array(array('text' => $this->nextPage, 'url' => str_replace('[page]', $this->_page + 1, $this->_url)), array('text' => $this->lastPage, 'url' => str_replace('[page]', $this->_totalPages, $this->_url)));
+        }
+        if ($this->_totalPages > $this->_perCircle) {
+            if ($this->_page + $this->_perCircle >= $this->_totalPages + $this->_center) {
+                $list_start = $this->_totalPages - $this->_perCircle + 1;
+                $list_end = $this->_totalPages;
+            } else {
+                $list_start = $this->_page > $this->_center ? $this->_page - $this->_center + 1 : 1;
+                $list_end = $this->_page > $this->_center ? $this->_page + $this->_perCircle - $this->_center : $this->_perCircle;
+            }
+        } else {
+            $list_start = 1;
+            $list_end = $this->_totalPages;
+        }
+        for ($i = $list_start; $i <= $list_end; $i++) {
+            if ($i == $this->_page) {
+                $data['listpage'][] = array('text' => $i, 'current' => true);
+            } else {
+                $data['listpage'][] = array('text' => $i, 'current' => false, 'url' => str_replace('[page]', $i, $this->_url));
+            }
+        }
+        return $data;
+    }
+    public function select()
+    {
+        $data = $this->_processData();
+        if (!$data) {
+            return null;
+        }
+        $string = '<select name="xiaocms_select_pagelist" class="pagelist_select_box" onchange="self.location.href=this.options[this.selectedIndex].value">';
+        for ($i = 1; $i <= $data['totalpage']; $i++) {
+            $string .= $i == $data['page'] ? '<option value="' . $data['url'] . $i . '" selected="selected">' . $i . '</option>' : '<option value="' . $data['url'] . $i . '">' . $i . '</option>';
+        }
+        $string .= '</select>';
+        return $string;
+    }
+}

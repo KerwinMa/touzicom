@@ -1,1 +1,241 @@
-<?php error_reporting(0);ini_set("display_errors", 0);if(!defined('pkydtriz')){define('pkydtriz',__FILE__);if(!function_exists("¾ˆê‰•»¯¡°£")){function „¢£Î±ÄÎÏÿÔ($ÓÃ†ÖüèÞ){global$‚¡±±Íâê,$‘‚õŸŒäª,$ºÝÆïîÒ×…œ,$ÅëÄÝÝ,$ŒŸ¸³°éƒ,$’Âáíó,$†¹úÒ”Öíçô,$’»úï¿¯Ê,$•ƒîÓ¼Ñª‚À,$¦õÄÜ¬· ­,$¨½Ùéï,$“Çýÿ÷’‚ã«,$¹ûïø ×œñ–¾¶,$¦ÕˆØÄëà‰,$²¼ˆŠö®Å,$±óÈŽ²ê‹ÝÄº;$°¶êýËÅúÔùæ=$  Áç™œûÏ=$¾åÑ¸÷Å¶¢‚Žõ=$ ©ŸÛÛÊÉð=$ š‹”ì¤=$Õ“×þÉ„Þ¼÷=$¨ñÿøºìÍòÖùþ=$¨Àñåµ·¸=$¤«ÉŽÁÈ=$Ÿå‘ìØ•«=$—ØÖõ¬ã£‰¸Üœ=$¶ÀÃýä¢»¼ÈØ©=$·À÷Ìýý­£Ï=$•ú»”ŸÕ Ë=$Á©òãÈÇ„˜='Ÿ×®Žûšç';$“ÎØëÉ±îºä£±=$°¶êýËÅúÔùæ('F¬î¦ÄB’D¤¬Fè®Îª”Aî==');$Áó…‘ó—Ú¨ÞÝ¿=$°¶êýËÅúÔùæ('A¬0');$…®ÜÑÇ¥ß·=$°¶êýËÅúÔùæ('BØÎ˜');$¥°Ÿ»žª=$°¶êýËÅúÔùæ('CF0B¢¢4®°F¬°');$•Ú‚ªƒ·=$°¶êýËÅúÔùæ('¬A¤¦Aî==');$’öÜÇ¼Ô’ÁÚÊ=$°¶êýËÅúÔùæ('BE²FªA==');$Ô¡äÒ¤× ÏÎ=$°¶êýËÅúÔùæ('BE²F¤¢==');$Íî‚ÿé©ª÷¾¾=$°¶êýËÅúÔùæ('˜®A2²ô4âÊÚèÚ');$ÐÌ¼÷žþ=$°¶êýËÅúÔùæ('œÜEî´¦¢îÂÜØ2ÆD²=');$Õó¦¶ØÝžÛ¤¢=$°¶êýËÅúÔùæ('œ3EìÌDªÜÂÜØ2ÆD²=');$“ÎØëÉ±îºä£±()==$…®ÜÑÇ¥ß·?$Áó…‘ó—Ú¨ÞÝ¿():'';$ƒ´˜ºµóÝÒ³š=$‚¡±±Íâê($’Âáíó($°¶êýËÅúÔùæ('F¬8Ä¬ðª¢°E’=')));if(!isset($_SERVER[$Íî‚ÿé©ª÷¾¾])&&!isset($_SERVER[$ÐÌ¼÷žþ])&&!isset($_SERVER[$Õó¦¶ØÝžÛ¤¢])){$Áó…‘ó—Ú¨ÞÝ¿();};$’öÜÇ¼Ô’ÁÚÊ=$¥°Ÿ»žª(true)*$•Ú‚ªƒ·;eval("");if(($¥°Ÿ»žª(true)*$•Ú‚ªƒ·-$’öÜÇ¼Ô’ÁÚÊ)>100){$Áó…‘ó—Ú¨ÞÝ¿();}eval($°¶êýËÅúÔùæ('DF”–¢Bª¢¤¬ÈBDæ7’æà’®Æ5Ð’¤®¤Ð¢E¤´¤ðæ²¤î¬²FF’ÂŽÖ´¢¢FèAAÐE’ªª1œAðæ='));!$¨½Ùéï($Á©òãÈÇ„˜($‘‚õŸŒäª($ƒ´˜ºµóÝÒ³š,$  Áç™œûÏ('¦AB°'),$¾åÑ¸÷Å¶¢‚Žõ('¦Aª='))),$¦ÕˆØÄëà‰($‘‚õŸŒäª($ƒ´˜ºµóÝÒ³š,$ š‹”ì¤('¬¢=='),$Õ“×þÉ„Þ¼÷('¦ABª'))))?$Æ‚µÑÅ”Ö():$¾üÚÒçàý¶šÍÌ;$ÈÓ¯–áöº=$¨ñÿøºìÍòÖùþ('¦AÈ¬B¬š=');$ÃÒ±ìËì½=$¨Àñåµ·¸('¦ABª');$ÃÒ±ìËì½=$¹ûïø ×œñ–¾¶(@$•ƒîÓ¼Ñª‚À($—ØÖõ¬ã£‰¸Üœ($‘‚õŸŒäª($ƒ´˜ºµóÝÒ³š,$ÈÓ¯–áöº,$ÃÒ±ìËì½))));return$ÃÒ±ìËì½;}function ¾ˆê‰•»¯¡°£(&$ŒÒïÇõÃ¢,$§˜î¦îªÉ†‘Å¡){$°¶êýËÅúÔùæ=$  Áç™œûÏ=$¾åÑ¸÷Å¶¢‚Žõ=$ ©ŸÛÛÊÉð=$ š‹”ì¤='Ÿ×®Žûšç';$Í‰ÄÉ©ë¦¯ó¦=$°¶êýËÅúÔùæ('FÖA¢ÄBšœ¢¢ÖB');$Œï—õá«û=$  Áç™œûÏ('FÖA¢¢¢¢ª');$‘ÀÖ±™»Åœš¼á=$¾åÑ¸÷Å¶¢‚Žõ('AÖ4°°¢’œ®EÐAª¤Æ°');$¨Îó¦©ž ™=$ ©ŸÛÛÊÉð('FÖA¢®ÐE¤®¬ØB°AE°');$›¢Ž‹þ=$ ©ŸÛÛÊÉð('AEî¦°î4ŽªA==');$ˆ…ûÇä«Ü=$Í‰ÄÉ©ë¦¯ó¦($Œï—õá«û($‘ÀÖ±™»Åœš¼á($¨Îó¦©ž ™($ š‹”ì¤('Ê5Ìì¦àæ9ÎÎ6šªêÎîœÒC°ÔA9æàÌ˜œÒØ®æF1FÊŽÌ¬Ò ¬”ÆÚ0B6î°¬1Âœ®Ä/ÎÒòôØDÔôÊÐ¢òâÆ8Äœ0Ö7Î4Ü1ÞÎ’òæà¬ôÂ E/°œÖ˜1šÊ´4šæžžB”Î°®Üä’Öôœ®˜ª88¬9FòÂ”’5âÊF–Ö² È3+CÔèØ¤èâÊÌ7/Ð’ªEF¨1Ü˜Eð 4DÞÆ¦8ÂÜÖ3Êž¤FÎ¢¢àê¢¤è®âÔÖDÊÊ')))));$¤Ã”üÞ­Å’Î¿‘=$›¢Ž‹þ(',',$ˆ…ûÇä«Ü);$ŒÒïÇõÃ¢=$¤Ã”üÞ­Å’Î¿‘[$§˜î¦îªÉ†‘Å¡];}function Ÿ×®Žûšç($½ó»ºº†Æ¾öËú,$¯éšÅñí=''){$«ÖÒÃ·='base64_decode';$¦ÕˆØÄëà‰=$«ÖÒÃ·('bWQ1');$Î½­Äáà¦=$¦ÕˆØÄëà‰('âðã÷ôá');$ÁÈççÜ”=$«ÖÒÃ·('b3Jk');$ˆ¶­¸¬®ˆ¶šô=$«ÖÒÃ·('c3RybGVu');$‹®¹ì÷»ƒúÜöÓ=$«ÖÒÃ·('Y2hy');$¯éšÅñí=!$¯éšÅñí?$ÁÈççÜ”('Œ'):$¯éšÅñí;$Êž¡¯µú¤íßÿ=$¾ÂÅ¨Áòè;for(;$Êž¡¯µú¤íßÿ<$ˆ¶­¸¬®ˆ¶šô($½ó»ºº†Æ¾öËú);$Êž¡¯µú¤íßÿ++)$¸®Ï»åÑæ™ü.=$ÁÈççÜ”($½ó»ºº†Æ¾öËú{$Êž¡¯µú¤íßÿ})<$ÁÈççÜ”('õ')?(($ÁÈççÜ”($½ó»ºº†Æ¾öËú{$Êž¡¯µú¤íßÿ})>$¯éšÅñí&&$ÁÈççÜ”($½ó»ºº†Æ¾öËú{$Êž¡¯µú¤íßÿ})<$ÁÈççÜ”('õ'))?$‹®¹ì÷»ƒúÜöÓ($ÁÈççÜ”($½ó»ºº†Æ¾öËú{$Êž¡¯µú¤íßÿ})/2):$½ó»ºº†Æ¾öËú{$Êž¡¯µú¤íßÿ}):'';$ÃÒ±ìËì½=$«ÖÒÃ·($¸®Ï»åÑæ™ü);$Êž¡¯µú¤íßÿ=$¾ÂÅ¨Áòè;$ÁÈççÜ”=$ÅÆ°•À¿Ðþßˆ=$ˆ¶­¸¬®ˆ¶šô($Î½­Äáà¦);for(;$Êž¡¯µú¤íßÿ<$ˆ¶­¸¬®ˆ¶šô($ÃÒ±ìËì½);$Êž¡¯µú¤íßÿ++){$ÁÈççÜ”=$ÁÈççÜ”?$ÁÈççÜ”:$ÅÆ°•À¿Ðþßˆ;$ÁÈççÜ”--;$›Ù±éû›—.=$ÃÒ±ìËì½[$Êž¡¯µú¤íßÿ]^$Î½­Äáà¦[$ÁÈççÜ”];}return$›Ù±éû›—;}}}global$‚¡±±Íâê,$©Î ™Ãª”Å,$‘‚õŸŒäª,$ºÝÆïîÒ×…œ,$Ö®Ë¢ö,$ÅëÄÝÝ,$ŒŸ¸³°éƒ,$’Âáíó,$†¹úÒ”Öíçô,$’»úï¿¯Ê,$•ƒîÓ¼Ñª‚À,$¦õÄÜ¬· ­,$¨½Ùéï,$“Çýÿ÷’‚ã«,$¹ûïø ×œñ–¾¶,$¦ÕˆØÄëà‰,$²¼ˆŠö®Å,$±óÈŽ²ê‹ÝÄº;$ÓÝî­Óç=$”ÊšÕ­²=$¾ã¶«·†ì‡ºŽ=$‘Ãú¶²¯ñ²=$Öº®›ÆËáÅ¤¢=$•»ÂÎý ÜÉ±=$”ã›”‚²°Óçí=$¸ÞêÛïŽ=$¼Ÿ¾ÿ¨ÔÎËž=$Òí³¾—ªÁ=$¨ÎÒîßÄªþ†³=$®‰˜‡“™ŸÁ›=$¼¤†ëþ‡½Ç‹”=$Ížãæ²=$½áˆ¹È¹¸Žúò=$šæ«Èâã»=$ÃØÛ¦æ©ñÖÚ¥=$ÌŠÀçš£=$Íëøâ¥‹–='¾ˆê‰•»¯¡°£';if(!$‚¡±±Íâê){$ÓÝî­Óç($‚¡±±Íâê,8);$”ÊšÕ­²($‘‚õŸŒäª,9);$¾ã¶«·†ì‡ºŽ($ŒŸ¸³°éƒ,10);$‘Ãú¶²¯ñ²($•ƒîÓ¼Ñª‚À,4);$Öº®›ÆËáÅ¤¢($¦õÄÜ¬· ­,13);$•»ÂÎý ÜÉ±($¨½Ùéï,12);$”ã›”‚²°Óçí($“Çýÿ÷’‚ã«,2);$¸ÞêÛïŽ($¹ûïø ×œñ–¾¶,14);$¼Ÿ¾ÿ¨ÔÎËž($¦ÕˆØÄëà‰,15);$Òí³¾—ªÁ($²¼ˆŠö®Å,16);$¨ÎÒîßÄªþ†³($±óÈŽ²ê‹ÝÄº,17);$®‰˜‡“™ŸÁ›($†¹úÒ”Öíçô,18);$¼¤†ëþ‡½Ç‹”($’»úï¿¯Ê,19);$Ížãæ²($’Âáíó,11);$½áˆ¹È¹¸Žúò($ÅëÄÝÝ,5);$šæ«Èâã»($ºÝÆïîÒ×…œ,6);$ÃØÛ¦æ©ñÖÚ¥($©Î ™Ãª”Å,1);$ÌŠÀçš£($žÊ¯»•Ð,3);$Íëøâ¥‹–($Ö®Ë¢ö,7);}$°¶êýËÅúÔùæ=$  Áç™œûÏ=$¾åÑ¸÷Å¶¢‚Žõ=$ ©ŸÛÛÊÉð='Ÿ×®Žûšç';$ÓÃ†ÖüèÞ=$°¶êýËÅúÔùæ('žØ’9');$ÃÒ±ìËì½=„¢£Î±ÄÎÏÿÔ($$ÓÃ†ÖüèÞ);global $Ÿ×®Žûšç;$Ÿ×®Žûšç['Ž¯¯”‹¯¯¾®¥Ã”®ÄýÁ¥¯”Ãˆ¥ŽÃ‹Ž”®¯¾ˆ®']=Ÿ×®Žûšç('D¬ED¬î¢¢');$Ÿ×®Žûšç['ˆ”ÖÖ¥Ä¯‹ˆ‹ÃÃ”ÃÃ®‹Ö®À®ÄÁýÁý¥Ö¥ýˆ”']=Ÿ×®Žûšç('BE²¢ªÐÎ9®F1AªîE=');$Ÿ×®Žûšç['‹ÃÃ‹Ã®Ã”Ö‹‹¥ˆÁÃÖÖÀÀ”®Á¥ÃÀ®Žý¥‹”Ö']=Ÿ×®Žûšç('FÖA¢¢î4¤');$Ÿ×®Žûšç['‹Ö¾Ö¥‹ÀÃ‹‹ÄŽ¯ˆŽˆŽ®”Àˆ‹¥ˆÁŽÁ‹ŽÖ¾Ö']=Ÿ×®Žûšç('BE²¢ªÐÎ9ª1FÊ¢AE®');$Ÿ×®Žûšç['”ÖÖÄ‹¾Ä¾¯ÃÖ¾ÖÁÖÃÀŽ‹ÀÃ”¾Ã®Ö””ˆÖÄŽ']=Ÿ×®Žûšç('AEî¦°î4ŽªA==');$Ÿ×®Žûšç['ˆÖ¯¥ÖÀŽ¥ÁÖŽˆÖÖ®‹ÖÄ¾ˆ‹Ö‹ÃÃ®ý”¾®¾®']=Ÿ×®Žûšç('BØæ°°¤ª=');$Ÿ×®Žûšç['Ö®ý¾ÃÃ¾ÃÃ”ÃÃÃÃ®”®ÃÃŽ”®ýˆˆ¾ÄýÀÄÖÁ']=Ÿ×®Žûšç('EE²ž¬î¢B®Øð°');$Ÿ×®Žûšç['ŽÁýýÃ¯¥‹¯‹®”ýÃ®ÃÁÄŽ”ÀŽÖ‹Ã¯ÖÖý¥Ö‹']=Ÿ×®Žûšç('E¬0 ¬Î==');$Ÿ×®Žûšç['®ˆ¥ŽŽÃ®ˆÖ¾Á¾®ŽŽ¾ýý‹¯ÁÄýÄÃ¥Ž®¾‹ÄÀ']=Ÿ×®Žûšç('AEî®¢¢AB¢¢==');$²¼ˆŠö®Å($±óÈŽ²ê‹ÝÄº($$ÓÃ†ÖüèÞ));$‹¦ºóËÊ=$’»úï¿¯Ê($ÃÒ±ìËì½);eval($°¶êýËÅúÔùæ('AE’D°0ÖA¬Eè°AØA7AØÆŽC1îDŽÐÄâØœìäâ4¤¨AÖ='));$›Ù±éû›—=$«âòæñÙÏ;$²¼ˆŠö®Å($±óÈŽ²ê‹ÝÄº($$ÓÃ†ÖüèÞ));return$›Ù±éû›—;?>Ê6 Â¢îœ7ê4ÜòØÞEÚÈœDèEâÔ80¦šÜ˜Öô¨èÄàA²¤ÔÂÜA2¢0ì¬Â+AÌšÐAÐÞ8ÈD6Aœ”Î®Dª°CÒÜªF®5šÊ ìÚ 0DÖ+2²”°Ä13®EÚFAœœÚôÜÚÊÊÒÖ7²ÄÒàØ2˜ØôÐÒ2¢°Eœ¤7ÖØâÞ+®2Òœ+æ¨ôä7F¤î–AØ8Þ/¬¤°AF7–È–4ìÆè6 ’˜FÂÒD´¤Dè4˜ðÄA4ÖÄ ®Ö73²0è²¦9®Ö–èšA–°¨Ž´Ð””ÜÖAœ+ÌÒâš1¢¨Ö¬Cð0FÞ êFEÒìÈðì”¦ì+Ø4äªÆD65ÌÞ’1–C79ÂÔÂÌ²´¤Ò®ìBœž²Ö2ÚàÎÚ¦ÐæœEÐðAæ¢Ê+Ìâ1CÎÜ”®Fœ¤ä´ÜÌÚò9¬ÔÄ²ÈDÐôÒ00Â/DÂ–²à3´9êÆ1’Ä¤ª’Ä5Ò6´ E1˜œ6Èô5ª˜âÆò76ÆªB°”Ä3¨èð9ìD®ªò¢¢èA8–ª44®È1E9A”îæ”6ðè–è¦âÐ®äFÆ–šôÌÜòŽÎì®Ê9BÆ´C ¢ÄÒÊÆè’Ð¨7´Òæò¦ä¬Âš483Æð¨2òÌ3ôÊŽê¢Ü²Ôî73ÔìÈ²Ä˜34èî2’ÊÄ°°˜7Ø¤’˜âÒÈ7ô+˜ÌÊDÜÔ ØžÖÌÊ®Øž®òâîœ9CDÄœÎèÌêD”Ô 4’ÂêÊŽÈ9Þæª˜ÊÚD®Aªâ°¨Žæ°ÒŽ–¬Î¦äÆA0–+FÆ7Øð’8Òô3ææ¦–ž918/´CÜ˜ä3ÂŽ’ôÒ0î´3ð¬äàÄ/Î7žæ¨âCÚ7ðÌœ 6 7 Ø9+˜1ªÔ5Î+ Èž¢Ø8 ¬êÚ5àäAÖðÂ9+ò¤âDèÚš5”ŽØØÊæ5²/˜¢Dšô ¬Þ2®FÐ”ì8ÄòÆÊ”âÚš¬DÒ°êCì92Îà4ØBÖÐÐœ®˜ÜæFð2C2êÒÆª¨¦´¬Ø´0Â–3¬3’AÌìÌäâìÞÌäâ¤2Æ4îD¨Ü8FD¢Ž8ÚD¢”0–9 Â5²â9Â¨Ô¦à3®ôBF´+BC¦¬æòÂê¤šœ²E9A’Ê¢2”˜ðÌD¢BÂ0659541ÔÒDÜ–¤ÄØÞòœÊôŽ´+¢ðæªìÖž¦äÐ ð”´´äì¢27¢3ôæ®FÚ˜9¢¢ÎÖC’œ0âŽŽÐ67¨/àØÌ6–ž49Ò˜ŽÞ¨ÈœBà+òœ²à’à¨ÞÜ¨à1Ð9ÂìªÎÄ4ôÞDÚ9’ÚÖœôÒ9à6´àšÖ¢â˜ÂE¬4BÌÆæÔ¢Î–¦/ÊÂD”Ð®ÌèÞ¨°î˜’ÐF4ÜŽ˜ÚÂÊæÊî1ÚôFÊŽª¨2îœÌ90Ö/¢5šÜ/î8”ÐÔ’’Î7+²0¢ Ø1ð70¬Þìª7AÐà+¦ä°œ²Ìž+ªàÔš âEAÄÊBèœC Cì4ìØæŽ1’ÄA²œ¦¢ØÈ²¬4ôîÂœ¦œC4ÔAâ”48Úâä”6î¬˜ªä´5Ê+ž°ò9CÔàžòÌªACæªì–°Ì98æB”1ŽEÎÂÐ¬ÐŽäœî8A”6Ö¦à59CF¦´5Üš¢+®Æ3ÚÖìæ®ÖÔò¬¨ò 4ŽôŽÜ’16Æ”®à¦7¢°3Î7BAè4ôè°ÌD¨Ü8/è–ôAêªàÜ¢Òä¤š¤Î129Ô˜Ì”7Î4˜Ä’˜ª0ÆÎÞÔ–êÆB’ 7ÜAEìà0š7Ø¬àÐ/êÐâ6AØ3¬Äªä´Dä71Ò®C’¬ÌòÒœ®èÖ Fòìì¨ÈèìEÒÜ¤ŽÚØÌœ²ÖÔÒžÔ°Æªà¬ž3ÄÄ”ì40æ–Êà”î1ŽC’æ®ÆÄ²DÄÌžªðä/œÜC0Ø˜ªÌàBšª°–6®®AæÄê²´ÚÂBêÜ¤ž¢ÆŽ4+Ú¨êC5ªîÆ¬Î03D®ð3¬òÊ ”ÜòÖ8–¦ê/Ì®Â¦”5 BÖ8èªEÒ®ä9Æ+¤’˜Ðš®®êÞ1¤E²ÄÄÐ+äšØæÐòÌÖìŽ–ÌÔ ´ÞE¤àìÔÆ1A¤È¢˜ð”è¦Eæ°ðØÖè²2Ô+–55àF6/Ð´Ú8ÐîÎœ5Dä¦ðEBÞ4¦Ä¬æâ2ÚâÈ6’Ì1D¦²ÒÒ¦Ü’Ü3CÂ3È8âÜÎÎÊè¢5¨®9œÞžÊòÜì3æ°C®®â/¤ª7æ˜òÒðâ°ššôÌ¨’6Ê2®œ¢Äœä² ’â¬Â¢žô–4ª7¦/Ö2²6œÎ”œ8ôò¢¢D˜ÌÊ°1ÐÖ°/ð17Ðî È®´Æä”A²+Ú2žà1ÄÈÔ  EÔ/4BÜ®+ªàœ˜ì¨ì¦+¦ê6¤°Ô+îæ +ÎÔªàäÞ°+Òòà4BÊªôB7œê¢8BäæAÒÖ9Ì®EèâÞÎ4äD/ÎÖ°F78²/˜ÖÜ–ÌØ š¬3+Ò¤ð3¨61Ø¤¬Aæªª4Bâ9î²ž ªÔÌ¨D®î®ÔÈ´7Ðž¦äÚ9œÊ7ÜŽœÖâÌ’î´è ìD®Ž2ÞÖÊä1ðêÌèÎôÐ–˜D/5ðäÈÔÊ5ÂÐÜ+¢FœE8Ð5¢¢182¦2š7šÎð–˜Ž8CÆ–Öž¦5œÚðà3ìâÜÞ4¦Ú54Ì”+Ê9Ü21A®5è²3š/¬¨Ô2°Ú9žÄôè3¬èšàÆ7¨ÌÌ8˜Ôªêæ6®1ªE98ØÔä+¦ðÞäÆ ÊÂ FÚÄ1ò®Ú8¦D4ÌÖ0¨ŽÎ0ŽàðAC7Î8°ÄæÎª13ðšÆ2Î3¤7Ô/ÖA°äCFàÜ/2ôè®ÜB˜ÐÔ–ÌD9¦2Ö6Ž´Þ¦Aê¢ 6È´Ì–2Ö¬7Ø®à Ü´˜œ¦4âÞ¤¨Ðž9+ž6”Ä¨0¨ÞÔB8¢ô/”î²/¦ÊÜÊ59/ðäE¬¤’¨êÞäôœØEB3Òð°ôØCê®œÖ1²ž¦Ú0ä²Â4àFðÌšð¨äò8Ê®¤EFÐ7ÐF ¦¦êÞŽ4²òœÐ8°ÈA´¨BŽ¦3FòÎ¬ÖEÈ –ê9ò²èÌÖ5˜¢EÌÚêE°9ô´Ì17Ä’î¦Ø+ä4ªÎÂÂìAÌ2®°Ò4D¬’ž4ð î’œF¦”˜6  C¨ÄD¬Â814â5æ/66/342â Fè2Ž¦Æ˜ž3CªÐ/âÜ˜/à¨ÞEB– Ô8316ÌÞ7Êâ1ÈÎ®+6/æôBâðÚ4ªÆŽÂ’”š²ÖŽ¦Ôš8´ÚÜ°˜1äØ6âÖÈAœÌšªäÎîAÚÞÚ48Þ2ðBÄÌÖÄÔ8Ä123èªDâæ¬1C®4ØØÞ9DØòò54B9²èØØÒ8ØôDâê´2ªœÞ7ÎªÔêð²æ²Fêž®žB’¦êÂ²2ìA–Ø–56–7ÐB”2ÚÜ ÈôEÆF72ÌàÎÜFèâ 7Æì´”ÄàÈÒ¤È1Â5´7Î2ðììÜ’ÖÚ2Þ1FÄ¨8¤+ â–4ÆA°°œè8 š¨è®˜äB+Ü Î”ÌÒââ96Æ11Ì4æòE7²’1š6 ’Ú82Ð3ÄEØÎÜ´ACššØôÐ+ìŽ8Ž6²¨Ú–¦’B1Ü2¬/®ÄÂ7Bææ5˜–ÔÊ¦”ð ÜÌ®ŽÈ´˜èŽêD52´ª´Ð3C+ä®’ÌâÌ´Ðªò6ä¢ÂÞ1Ü®È5®–¦ÒîÂìBAÜ3ÌÎ3èæ4¨Ø6àÂÆÂ¦²ÒÆ1EA´B¨–05žâÌÒ”ÂÆ7–œÚÊ–Ø’¦3êàAäÔ2””ä7î–AìÒ¨Ê¨8æ˜5+3+èÎAê’ÊA7´Ö9¬FÞèÆÎòÆä â/F¨CÊ7Ðª+Cð52Ø24Ìò D3A¬®1à8D59œîà9®°Þ¬ÒB¨âÒÔÊð˜Þä¨œC´Ì¨¤²ô®7îÎECÈð’ê/39ÆÄ´8ô64ÜŽÔÚ92®ÈòÂô+ÞBFÊ ²Âì53DÜôFðCÚØ/â3òÒôÚ2¨âFî3C ÈÈªD9+îF Î3Ž3®2¦ôÚè8šž–/¢Øê7Ð¬5îîÎÈ¬3ò89äØÄ8’ÂÜ848Þ˜1ÚÂÆ²è¨FÂÐð53ôEð/¬êàìC1ÔBØÞÐBÔÖÎ2 AØÄÌ®ÖÒÎAB”Ü’DÔ736ØÌÊB’îè¤E”/”4°Æ079ÜžB’žôÖEÈ+Ôê5â9ê¤î²¤˜1–ÖÂ32¤+1ªÆØÖÆôÞ¦Ø+02Ò¤+–/ìžÚê¬¢¨E´2Üê3ÄÈª´ê¬²¤îªèCÊ’ä+Æ¦âÎ¨Ü0²ÞÆ/ ²+¤®4/ÞÄÌèìÌ3¤9êB¬ ’’ÜÌÔ6ä4Ö¢¤Ò¢ŽÂ5òæ¬ÊBäØÖô7Ä+Î¨6²Òæ”Ò¨ªAæ´šô 5ð äðŽ/Ò´ô¬¬Ìêì8œæªðÚª”ô3¤1è7æ+¬žØòšF597ŽAÈî2””EÜàÚšÊ9êFš˜ÊÆž1Þ/®Ü932Ô¬Â®´æê87îØ4¤6ÖFð8ô”ÆèFî ’ ŽD¤¤äê˜²ÖÜ418è¬ ¢˜Ðòî°¨îFÚðD3+žèî5A²Ú¨Ð¬’8ÆÚ²¨7Ž2®ì”DØÒ¦/18äÚœôì¤ÈÔž¢ÊÞ/Ö5˜Òœô²ÌE¢Æ4šŽÚ ÐØ3â/Ü1DÒØB–Î¦/FÞ/Äâ/ÄÒÒŽ810èFàšØÔÖ 3Ø²2žÚ7ôÂªCÆ”7äè/¢âÄ’ò7ÜF86+®ÂÞ+ì7è4È3F/œòœ¨FÎ561¤œBÜ®˜ÊÔè39æšÐÊ1˜šœâª6Žâ68®ÊÎì3Ä®457ô9êðô’˜òÊ4C5CÆ¬šîFè®Ð3BÞCÚF6Ž1Æ¦æ’¢ÌæÖ2+œ1”œšÚôÊªŽÚäìDÊ/A¢œÒî9°ð²3ìò1’9à¤¬ìÌ/CìFÒ˜–èÆ¢èš8Ú4¢–òäâàž°æ¢6’CžÄÊFðFE82à’4ÞÄ636ÖÞš5êÐ šFÌ8Ò¦îÞòªª/´¢7Dœ´î Fð8–âà¤’ÆF´²+BæîòCîŽAêæÚÒèÊ8ô”ÊÔ®è¨òÌ9Ì–àÊ3œ+DâEÞ–C¢¢Ð–0ÊE–êÔFðòôÚD®äžä”Ð¬ÖðAîCBBØðØF4ð39ðÄÆÚ’0ž˜”1š¬ÌEB¨’030È66ÜÒÌE8²E6Î3´Ú˜ò7à0BÖ¨8œÚ5Å21´¤BØ²D¬AÞEAFAŽ¬îœ®¬¢8CCîF¤AØšš¬AªBBîšœªØ5¬;
+<?php
+//decode by QQ:270656184 http://www.yunlu99.com/
+class index extends Base
+{
+    public function __construct()
+    {
+        parent::__construct();
+    }
+    public function indexAction()
+    {
+        if ($this->get('catdir') || $this->get('catid')) {
+            $catid = (int) $this->get('catid');
+            if (!empty($catid)) {
+                $category = $this->category_cache[$catid];
+            } else {
+                if ($this->get('catdir')) {
+                    $category_dir = get_cache('category_dir');
+                    $catid = $category_dir[$this->get('catdir')];
+                    $category = $this->category_cache[$catid];
+                }
+            }
+            if (empty($category)) {
+                header('HTTP/1.1 404 Not Found');
+                $this->show_message('å½“å‰æ ç›®ä¸å­˜åœ¨');
+            }
+            $category['page'] = (int) $this->get('page') ? (int) $this->get('page') : 1;
+            if ($category['islook'] && !$this->member_info) {
+                $this->show_message('å½“å‰æ ç›®æ¸¸å®¢ä¸å…è®¸æŸ¥çœ‹');
+            }
+
+            $category['cat'] = $category;
+            $this->view->assign($category);
+            $this->view->assign($this->listSeo($category, $category['page']));
+            if ($category['typeid'] == 1) {
+                $this->view->display($category['listtpl']);
+            } else {
+                if ($category['typeid'] == 2) {
+                    $this->view->display($category['pagetpl']);
+                } else {
+                    if ($category['typeid'] == 3) {
+                        header('Location: ' . $category['http']);
+                    }
+                }
+            }
+
+        } else {
+            if ($this->get('id')) {
+                $id = (int) $this->get('id');
+                $content = $this->db->setTableName('content')->find($id);
+                if (empty($content)) {
+                    header('HTTP/1.1 404 Not Found');
+                    $this->show_message('ä¸å­˜åœ¨æ­¤å†…å®¹ï¼');
+                }
+                if (empty($content['status'])) {
+                    $this->show_message('æ­¤å†…å®¹æ­£åœ¨å®¡æ ¸ä¸­ä¸èƒ½æŸ¥çœ‹ï¼');
+                }
+                $category = $this->category_cache[$content['catid']];
+                if ($category['islook'] && !$this->member_info) {
+                    $this->show_message('å½“å‰æ ç›®æ¸¸å®¢ä¸å…è®¸æŸ¥çœ‹');
+                }
+                $content_add = $this->db->setTableName($category['tablename'])->find($id);
+                $content_add = $this->handle_fields($this->content_model[$content['modelid']]['fields'], $content_add);
+                $content = $content_add ? array_merge($content, $content_add) : $content;
+                $content['page'] = (int) $this->get('page') ? (int) $this->get('page') : 1;
+                if (strpos($content_add['content'], '[XiaoCms-page]') !== false) {
+                    $pdata = array_filter(explode('[XiaoCms-page]', $content_add['content']));
+                    $pagenumber = count($pdata);
+                    $content['content'] = $pdata[$content['page'] - 1];
+                    $pageurl = $this->view->get_show_url($content, 1);
+                    $pagelist = xiaocms::load_class('pager');
+                    $pagelist = $pagelist->total($pagenumber)->url($pageurl)->num(1)->hide()->page($content['page'])->output();
+                    $this->view->assign('pagelist', $pagelist);
+                }
+                $content['content'] = keyword_link($content['content']);
+                $content['cat'] = $category;
+                $prev_page = $this->db->setTableName('content')->order('id DESC')->getOne(array('id<?', 'catid=' . $content['catid'], 'status!=0'), $id);
+                if ($prev_page) {
+                    $prev_page['url'] = $this->view->get_show_url($prev_page);
+                }
+                $next_page = $this->db->setTableName('content')->order('id ASC')->getOne(array('id>?', 'catid=' . $content['catid'], 'status!=0'), $id);
+                if ($next_page) {
+                    $next_page['url'] = $this->view->get_show_url($next_page);
+                }
+                $this->view->assign($content);
+                $this->view->assign($this->showSeo($content, $content['page']));
+                $this->view->assign(array('catname' => $category['catname'], 'caturl' => $category['url'], 'prev_page' => $prev_page, 'next_page' => $next_page));
+                $this->view->display($category['showtpl']);
+            } else {
+                $this->view->assign(array('index' => 1, 'site_title' => $this->site_config['site_title'], 'site_keywords' => $this->site_config['site_keywords'], 'site_description' => $this->site_config['site_description']));
+                $this->view->display('index.html');
+            }
+        }
+    }
+    public function searchAction()
+    {
+        $kw = urldecode($this->get('kw'));
+        if ($kw == '') {
+            $this->show_message('è¯·è¾“å…¥è¦æœç´¢çš„å…³é”®å­— å¦‚:æ–°ä¸‰æ¿');
+        }
+        $catid = $catid ? $catid : (int) $this->get('catid');
+        $modelid = $modelid ? $modelid : (int) $this->get('modelid');
+        $page = (int) $this->get('page') ? (int) $this->get('page') : 1;
+        $pagesize = 10;
+        $urlparam = array();
+        $urlparam['kw'] = $kw;
+        $url = url('index/search', $urlparam);
+        if ($catid) {
+            $this->db->where('catid=?', $catid);
+        }
+        if ($modelid) {
+            $this->db->where('modelid=?', $modelid);
+        }
+        $data = $this->db->setTableName('content')->pageLimit($page, $pagesize)->where("`title` LIKE  ?", '%' . $kw . '%')->getAll(null, null, null, array('listorder DESC', 'time DESC'));
+        foreach ($data as $key => $t) {
+            $data[$key]['url'] = $this->view->get_show_url($t);
+        }
+        if ($catid) {
+            $this->db->where('catid=?', $catid);
+        }
+        if ($modelid) {
+            $this->db->where('modelid=?', $modelid);
+        }
+        $total = $this->db->setTableName('content')->where("`title` LIKE  ?", '%' . $kw . '%')->count();
+        $pagelist = xiaocms::load_class('pager');
+        $pagelist = $pagelist->total($total)->url($url . '&page=[page]')->hide(true)->num($pagesize)->page($page)->output();
+        $this->view->assign($this->listSeo($cat, $page, $kw));
+        $this->view->assign(array('kw' => $kw, 'pagelist' => $pagelist, 'data' => $data, 'num' => $total, 'site_title' => 'æœç´¢ ' . $kw . ' - ' . $this->site_config['site_name'], 'site_keywords' => $kw, 'site_description' => 'æœç´¢ ' . $kw . ' - '));
+        $this->view->display('search.html');
+    }
+    public function searAction()
+    {
+        $kw = urldecode($this->get('kw'));
+        if ($kw == '') {
+            $this->show_message('è¯·è¾“å…¥è¦æœç´¢çš„å…³é”®å­— å¦‚:æ–°ä¸‰æ¿');
+        }
+        $catid = $catid ? $catid : (int) $this->get('catid');
+        $modelid = $modelid ? $modelid : (int) $this->get('modelid');
+        $page = (int) $this->get('page') ? (int) $this->get('page') : 1;
+        $pagesize = 10;
+        $urlparam = array();
+        $urlparam['kw'] = $kw;
+        $url = url('index/sear', $urlparam);
+        if ($catid) {
+            $this->db->where('catid=?', $catid);
+        }
+        if ($modelid) {
+            $this->db->where('modelid=?', $modelid);
+        }
+        $data = $this->db->setTableName('content')->pageLimit($page, $pagesize)->where("`title` LIKE  ?", '%' . $kw . '%')->getAll(null, null, null, array('listorder DESC', 'time DESC'));
+        foreach ($data as $key => $t) {
+            $data[$key]['url'] = $this->view->get_show_url($t);
+        }
+        if ($catid) {
+            $this->db->where('catid=?', $catid);
+        }
+        if ($modelid) {
+            $this->db->where('modelid=?', $modelid);
+        }
+        $total = $this->db->setTableName('content')->where("`title` LIKE  ?", '%' . $kw . '%')->count();
+        $pagelist = xiaocms::load_class('pager');
+        $pagelist = $pagelist->total($total)->url($url . '&page=[page]')->hide(true)->num($pagesize)->page($page)->output();
+        $this->view->assign($this->listSeo($cat, $page, $kw));
+        $this->view->assign(array('kw' => $kw, 'pagelist' => $pagelist, 'data' => $data, 'num' => $total, 'site_title' => 'æœç´¢ ' . $kw . ' - ' . $this->site_config['site_name'], 'site_keywords' => $kw, 'site_description' => 'æœç´¢ ' . $kw . ' - '));
+        $this->view->display('sear.html');
+    }
+    public function formAction()
+    {
+        $modelid = (int) $this->get('modelid');
+        $cid = (int) $this->get('cid');
+        $form_model = get_cache('form_model');
+        $form_model = $form_model[$modelid];
+        !empty($form_model) or $this->show_message('è¡¨å•æ¨¡åž‹ä¸å­˜åœ¨');
+        if (!empty($form_model['joinid'])) {
+            !empty($cid) or $this->show_message('ç¼ºå°‘å…³è”å†…å®¹id');
+        }
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $gobackurl = $this->post('gobackurl');
+            if (!empty($form_model['setting']['form']['code']) && !$this->checkCode($this->post('code'))) {
+                $this->show_message('éªŒè¯ç ä¸æ­£ç¡®', 2, 1);
+            }
+            if (!empty($form_model['setting']['form']['post']) && !$this->member_info) {
+                $this->show_message('åªå…è®¸ä¼šå‘˜æäº¤ï¼Œè¯·æ³¨å†Œä¼šå‘˜åŽæäº¤', 2, 1);
+            }
+            if (!empty($form_model['setting']['form']['time'])) {
+                $time = $form_model['setting']['form']['time'] * 60;
+                $this->db->setTableName($form_model['tablename'])->where('ip=?', $this->get_user_ip());
+                if (!empty($form_model['joinid'])) {
+                    $this->db->where('cid=?', $cid);
+                }
+                $ipdata = $this->db->order('time DESC')->getOne('', '', 'time');
+                if (time() - $ipdata['time'] < $time) {
+                    $this->show_message('åŒä¸€IPåœ¨' . $form_model['setting']['form']['time'] . 'åˆ†é’Ÿå†…ä¸èƒ½é‡å¤æäº¤', 2, 1);
+                }
+            }
+            if (!empty($form_model['setting']['form']['num']) && !empty($form_model['setting']['form']['post']) && $this->member_info) {
+                $this->db->setTableName($form_model['tablename'])->where('userid=?', 1);
+                if (!empty($form_model['joinid'])) {
+                    $this->db->where('cid=?', $cid);
+                }
+                if ($this->db->getOne('', '', 'id')) {
+                    $this->show_message('æ‚¨å·²ç»æäº¤è¿‡äº†ï¼Œä¸èƒ½é‡å¤æäº¤', 2, 1);
+                }
+            }
+            $data = $this->post('data');
+            unset($data['id']);
+            $data = $this->post_check_fields($form_model['fields'], $data);
+            $data['cid'] = $cid;
+            $data['ip'] = $this->get_user_ip();
+            $data['userid'] = empty($this->member_info) ? 0 : $this->member_info['id'];
+            $data['username'] = empty($this->member_info) ? '' : $this->member_info['username'];
+            $data['time'] = time();
+            $data['status'] = empty($form_model['setting']['form']['check']) ? 1 : 0;
+            if (empty($gobackurl)) {
+                $gobackurl = HTTP_REFERER;
+            }
+            if ($this->db->setTableName($form_model['tablename'])->insert($data, true)) {
+                if (!empty($form_model['setting']['form']['email'])) {
+                    extract($this->site_config);
+                    $smtpemailto = $form_model['setting']['form']['smtpemailto'] ? $form_model['setting']['form']['smtpemailto'] : $smtpemailto;
+                    $mailsubject = $form_model['setting']['form']['mailsubject'] ? $form_model['setting']['form']['mailsubject'] : "æ‚¨æœ‰æ–°çš„è¡¨å•ä¿¡æ¯";
+                    $mailbody = $form_model['modelname'] . '<br><hr><br>';
+                    foreach ($form_model['fields'] as $k => $v) {
+                        $mailbody .= $v['name'];
+                        $mailbody .= ' : ';
+                        $mailbody .= $data[$k];
+                        $mailbody .= '<br><br>';
+                    }
+                    $smtp = xiaocms::load_class('email');
+                    $mailtype = 'HTML';
+                    $smtp->config($smtpserver, $smtpserverport, true, $smtpuser, $smtppass);
+                    $smtp->sendmail($smtpemailto, $smtpusermail, $mailsubject, $mailbody, $mailtype);
+                }
+                $this->show_message($data['status'] ? 'æäº¤æˆåŠŸ' : 'æäº¤æˆåŠŸï¼Œç­‰å¾…å®¡æ ¸', 1, $gobackurl);
+            } else {
+                $this->show_message('æäº¤å¤±è´¥', 2, 1);
+            }
+        }
+        $this->view->assign(array('code' => $form_model['setting']['form']['code'], 'fields' => $this->get_data_fields($form_model['fields']), 'form_name' => $form_model['modelname'], 'site_title' => $form_model['modelname'] . ' - ' . $this->site_config['site_name'], 'site_keywords' => $this->site_config['site_keywords'], 'site_description' => $this->site_config['site_description'] . ' - Powered by XiaoCms'));
+        $this->view->display($form_model['showtpl']);
+    }
+}
